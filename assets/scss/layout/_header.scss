@@ -1,0 +1,18 @@
+@use '../base/media' as *;
+@use '../base/mixins' as *;
+
+.header {
+    position: sticky;
+    top: 0;
+    &__top {
+        padding-block: 11px 13px;
+        backdrop-filter: blur(12px);
+        background: var(--sea-blue);
+    }
+
+    &__bot {
+        backdrop-filter: blur(12px);
+        padding-block: 12px 10px;
+        background: var(--white);
+    }
+}

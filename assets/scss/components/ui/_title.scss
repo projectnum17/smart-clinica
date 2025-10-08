@@ -1,0 +1,15 @@
+@use '../../base/media' as *;
+@use '../../base/mixins' as *;
+
+.content-title {
+    font: 400 68px / 100% var(--ff-base);
+    letter-spacing: -1px;
+
+    &--smart {
+        letter-spacing: -3px;
+    }
+
+    span {
+        color: var(--sea-blue);
+    }
+}
