@@ -66,6 +66,10 @@ section:not(:last-child) {
     margin-bottom: var(--section-mb);
 }
 
+section:last-child {
+    margin-bottom: 80px;
+}
+
 // .js-animation {
 //     opacity: 0;
 //     transform: translateY(15px);

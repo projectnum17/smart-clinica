@@ -1,0 +1,30 @@
+@use '../../base/media' as *;
+@use '../../base/mixins' as *;
+
+.partners {
+    &__head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        margin-bottom: 40px;
+    }
+
+    &__items {
+        &-wrapper {
+            &.is-centered {
+                justify-content: center;
+            }
+        }
+    }
+
+    .partners-box {
+        padding: 12px;
+
+        img {
+            width: 206px;
+            height: 72px;
+            object-fit: contain;
+        }
+    }
+}

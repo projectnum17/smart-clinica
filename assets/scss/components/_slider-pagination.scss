@@ -1,0 +1,12 @@
+@use '../base/media' as *;
+@use '../base/mixins' as *;
+
+.slider-progress {
+    position: relative;
+    height: 2px !important;
+    background: rgba(0, 92, 144, 0.1);
+
+    .swiper-pagination-progressbar-fill {
+        background: var(--sea-blue) !important;
+    }
+}

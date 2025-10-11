@@ -1,0 +1,10 @@
+@use '../../base/media' as *;
+@use '../../base/mixins' as *;
+
+.main--home {
+    .services {
+        &__title {
+            margin-bottom: 40px;
+        }
+    }
+}

@@ -1,0 +1,12 @@
+@use '../base/media' as *;
+@use '../base/mixins' as *;
+
+@use 'slider-navigation';
+@use 'slider-pagination';
+
+.slider-controls {
+    padding-top: 28px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}

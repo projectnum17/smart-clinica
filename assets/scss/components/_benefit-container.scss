@@ -1,0 +1,30 @@
+@use '../base/media' as *;
+@use '../base/mixins' as *;
+
+.benefits-container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+    &__cards {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__thumb {
+        width: 640px;
+        position: absolute;
+        left: 50%;
+        top: -57px;
+        transform: translateX(-50%);
+        pointer-events: none;
+        img {
+            width: 100%;
+        }
+
+        @media (max-width: 1510px) {
+            z-index: -1;
+        }
+    }
+}

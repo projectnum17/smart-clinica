@@ -4,7 +4,7 @@
 .header {
     position: sticky;
     top: 0;
-    z-index: 2;
+    z-index: 10;
     &__top {
         padding-block: 11px 13px;
         background: var(--sea-blue);
@@ -315,15 +315,6 @@
             color: var(--ball-blue);
             @include transitions(0.2s, ease-in);
         }
-    }
-
-    &__cons {
-        font: 500 14px / 100% var(--ff-nort);
-        text-transform: uppercase;
-        padding: 15px 20px;
-        border-radius: 10px;
-        color: var(--white);
-        background: var(--ball-blue);
     }
 
     .dd-menu {

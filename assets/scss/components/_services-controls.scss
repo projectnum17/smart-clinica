@@ -1,0 +1,185 @@
+@use '../base/media' as *;
+@use '../base/mixins' as *;
+
+.services-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 40px;
+
+    & > div {
+        flex: 1;
+    }
+
+    &__search {
+        position: relative;
+
+        img {
+            position: absolute;
+            top: 50%;
+            left: 27px;
+            width: 20px;
+            height: 20px;
+            transform: translateY(-50%);
+        }
+
+        input {
+            font: 400 18px / 100% var(--ff-nort);
+            width: 100%;
+            outline: none;
+            min-height: 61px;
+            padding: 15px 20px 15px 55px;
+            border-radius: 10px;
+            border: 1px solid #d4dbde;
+            background: linear-gradient(
+                90deg,
+                #ffffff 0%,
+                rgba(255, 255, 255, 0.3) 100%
+            );
+
+            &::placeholder {
+                color: rgba(62, 62, 64, 0.6);
+            }
+
+            &[type='search']::-webkit-search-cancel-button {
+                -webkit-appearance: none;
+                appearance: none;
+            }
+
+            &[type='search']::-webkit-search-decoration {
+                -webkit-appearance: none;
+                appearance: none;
+            }
+
+            &[type='search'] {
+                -moz-appearance: textfield;
+            }
+
+            &[type='search'] {
+                appearance: none;
+            }
+        }
+    }
+
+    &__dd {
+        width: 100%;
+        position: relative;
+
+        .select-hidden {
+            position: absolute;
+            opacity: 0;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .select-wrap {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            font-size: 18px;
+            width: 100%;
+        }
+
+        .select-styled {
+            font: 400 18px / 160% var(--ff-nort);
+            position: relative;
+            min-height: 61px;
+            border-radius: 12px;
+            padding: 15px 27px;
+            border: 1px solid #d4dbde;
+            background: linear-gradient(
+                90deg,
+                #ffffff 0%,
+                rgba(255, 255, 255, 0.3) 100%
+            );
+
+            @include transitions(0.3s, ease-out);
+
+            &.placeholder {
+                color: rgba(62, 62, 64, 0.6);
+            }
+
+            &::after {
+                content: '';
+                width: 24px;
+                height: 24px;
+                display: inline-flex;
+                flex-shrink: 0;
+                position: absolute;
+                right: 18px;
+                top: 50%;
+                transform: translateY(-50%) rotate(0deg);
+                background: url('../img/icons/icoDrop_blue.svg') no-repeat
+                    center center;
+                @include transitions(0.3s, ease-out);
+            }
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            &:focus,
+            &.active {
+                border: 1px solid #d4dbde;
+
+                &::after {
+                    transform: translateY(-50%) rotate(180deg);
+                }
+            }
+        }
+
+        .select-options {
+            position: absolute;
+            right: 0;
+            left: 0;
+            bottom: 0px;
+            transform: translateY(100%);
+            z-index: 2;
+            border-radius: 12px;
+            max-height: 170px;
+            overflow: scroll;
+            background: var(--white);
+            border: 1px solid #d4dbde;
+            @include transitions(0.3s, ease-out);
+
+            li {
+                font: 400 18px / 160% var(--ff-nort);
+                padding: 12px 0;
+                text-indent: 15px;
+                @include transitions(0.3s, ease-out);
+
+                &:first-child {
+                    display: none;
+                }
+
+                &:hover {
+                    background: #dfe1e3;
+                }
+
+                &.is-selected {
+                    background: var(--ball-blue);
+                    color: var(--white);
+                }
+
+                &[rel='hide'] {
+                    display: none;
+                }
+            }
+
+            &.hidden {
+                opacity: 0;
+                visibility: hidden;
+            }
+
+            &.show {
+                opacity: 1;
+                bottom: -2px;
+                visibility: visible;
+            }
+        }
+    }
+}

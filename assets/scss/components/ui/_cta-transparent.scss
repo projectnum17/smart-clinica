@@ -1,0 +1,18 @@
+@use '../../base/media' as *;
+@use '../../base/mixins' as *;
+
+.cta {
+    &--transparent {
+        font: 500 16px / 100% var(--ff-nort);
+        text-transform: uppercase;
+        padding: 16px 26px;
+        border-radius: 10px;
+        border: 2px solid var(--ball-blue);
+        background: transparent;
+        @include transitions(0.2s, ease-in);
+        @include hover {
+            background: var(--ball-blue);
+            color: var(--white);
+        }
+    }
+}

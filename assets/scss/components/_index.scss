@@ -1,1 +1,7 @@
 @use 'ui';
+@use 'content';
+@forward 'benefit-card';
+@forward 'benefit-container';
+@forward 'services-controls';
+@forward 'services-items';
+@forward 'slider-controls';
