@@ -1,7 +1,11 @@
 @use 'ui';
 @use 'content';
+@use 'mod';
 @forward 'benefit-card';
 @forward 'benefit-container';
 @forward 'services-controls';
 @forward 'services-items';
 @forward 'slider-controls';
+@forward 'interest-box';
+@forward 'breadcrumbs';
+@forward 'feedback-form';

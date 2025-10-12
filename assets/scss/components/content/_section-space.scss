@@ -34,11 +34,6 @@
 
     &__items {
         overflow: visible;
-        &-wrapper {
-            &.is-centered {
-                justify-content: center;
-            }
-        }
 
         &-slide {
             width: auto;

@@ -130,11 +130,41 @@ const sliders = () => {
         });
     };
 
+    const interestSlider = () => {
+        const sliderEl = document.querySelector('.js-interest-slider');
+        const navPanel = document.querySelector('.js-interest-nav');
+        if (!sliderEl || !navPanel) return;
+
+        const slideCount = sliderEl.querySelectorAll('.swiper-slide');
+        const sliderWrapper = sliderEl.querySelector('.swiper-wrapper');
+
+        if (slideCount.length <= 4) {
+            navPanel.style.display = 'none';
+            sliderWrapper.classList.add('is-centered');
+        }
+
+        new Swiper(sliderEl, {
+            spaceBetween: 20,
+            slidesPerView: 4,
+            grabCursor: true,
+            speed: 900,
+            navigation: {
+                prevEl: '.js-interest-prev',
+                nextEl: '.js-interest-next',
+            },
+            pagination: {
+                el: '.js-interest-progress',
+                type: 'progressbar',
+            },
+        });
+    };
+
     heroNewsSlider();
     doctorsSlider();
     reviewsSlider();
     spaceSlider();
     partnersSlider();
+    interestSlider();
 };
 
 export default sliders;

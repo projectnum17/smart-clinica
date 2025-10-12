@@ -1,0 +1,32 @@
+@use '../base/media' as *;
+@use '../base/mixins' as *;
+
+.breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    li {
+        font: 400 16px / 100% var(--ff-nort);
+
+        a {
+            font: inherit
+        }
+
+        &:not(:first-child) {
+            opacity: .4;
+            display: inline-flex;
+            align-items: center;
+            gap: 13px;
+
+            &::before {
+                content: '';
+                display: inline-flex;
+                align-items: center;
+                width: 24px;
+                height: 24px;
+                background: url('../img/icons/ico-bread.svg') no-repeat center center;
+            }
+        }
+    }
+}

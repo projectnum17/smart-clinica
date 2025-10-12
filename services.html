@@ -1,0 +1,2213 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/img/favicon/favicon.svg" type="image/svg+xml" />
+    <meta name="description" content="Smart Clinic | Home">
+    <title>Smart Clinic | Services</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./assets/css/style.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script defer type="module" src="./assets/js/main.js"></script>
+</head>
+
+<body>
+    <div class="video-modal js-video-modal" id="videoModal">
+        <div class="video-modal__inner">
+            <div class="video-modal__wrapper js-video-modal__wrapper">
+                <button class="video-modal__close js-video-modal__close">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 5L5.00068 14.9993M14.9993 15L5 5.00071" stroke="#26aacc" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <button class="video-modal__play js-video-modal__play">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M26.1868 17.128C25.7155 18.9187 23.4883 20.184 19.0336 22.7148C14.7273 25.1612 12.5743 26.3845 10.8391 25.8928C10.1217 25.6895 9.46814 25.3035 8.941 24.7716C7.66602 23.4852 7.66602 20.9901 7.66602 16C7.66602 11.0099 7.66602 8.5148 8.941 7.22843C9.46814 6.6966 10.1217 6.31051 10.8391 6.10723C12.5743 5.61553 14.7273 6.83876 19.0336 9.28524C23.4883 11.816 25.7155 13.0813 26.1868 14.872C26.3813 15.6112 26.3813 16.3888 26.1868 17.128Z"
+                            fill="white"></path>
+                    </svg>
+                </button>
+                <div class="video-modal__video">
+                    <video controls playsinline id="videoPlayer"></video>
+                </div>
+            </div>
+        </div>
+    </div>
+    <header class="header">
+        <div class="header__top">
+            <div class="container">
+                <div class="header__search">
+                    <img width="20" height="20" src="./assets/img/icons/ico-search.svg" alt="Icon">
+                    <input class="header__search-field" type="search" name="headerSearch" id="headerSearch"
+                        placeholder="Введіть запит для пошуку">
+                </div>
+                <div class="header__info">
+                    <div class="header__location">
+                        <img width="20" height="20" src="./assets/img/icons/ico-pin.svg" alt="Icon">
+                        <span>пр-т Петра Григоренка, 22/20</span>
+                    </div>
+                    <div class="header__time">
+                        <img width="20" height="20" src="./assets/img/icons/ico-clock.svg" alt="Icon">
+                        <span>Пн-Нд: 07:30 - 21:00</span>
+                    </div>
+                </div>
+                <button type="button" class="header__marquee">
+                    <span>Важливе оголошення&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    <span>Важливе оголошення&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    <span>Важливе оголошення&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    <span>Важливе оголошення&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                </button>
+                <div class="header__panel">
+                    <a href="tel:+380976000303" class="header__phone">
+                        <img width="20" height="20" src="./assets/img/icons/ico-phone.svg" alt="Icon">
+                        <span>(097) 600-03-03</span>
+                    </a>
+                    <ul class="header__lang">
+                        <li class="header__lang-current">
+                            <span class="header__lang-label">UA</span>
+                        </li>
+                        <div class="header__lang-inner">
+                            <ul class="header__lang-list">
+                                <li class="header__lang-item header__lang-item--active">
+                                    <span class="header__lang-link">
+                                        UA
+                                    </span>
+                                </li>
+                                <li class="header__lang-item">
+                                    <a class="header__lang-link" href="#!">
+                                        EN
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="header__bot">
+            <div class="container">
+                <a href="#!" class="header__logo">
+                    <img src="./assets/img/icons/logoSm_blue.svg" alt="Logotype">
+                </a>
+                <nav class="header__nav">
+                    <ul class="header__menu">
+                        <li class="header__menu-item">
+                            <a href="#!" class="header__menu-link">Дорослим</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="#!" class="header__menu-link">Дітям</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="#!" class="header__menu-link">Лікарі</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="#!" class="header__menu-link">Акції</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="#!" class="header__menu-link">Ціни</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="#!" class="header__menu-link">Відгуки</a>
+                        </li>
+                        <li class="header__menu-item dd-menu js-dd-menu">
+                            <a href="#!" class="header__menu-link">Про клініку</a>
+                            <div class="dd-menu__container">
+                                <ul>
+                                    <li>
+                                        <a href="#!">Про Smart klinika</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!">Вакансії</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!">Інтернатура</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!">Контакти</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!">Оплата</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!">Блог</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!">Документи</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!">Соц. програми</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header__control">
+                    <a href="#!" class="header__cabinet">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12.75 6.375C12.75 4.30393 11.071 2.625 9 2.625C6.92893 2.625 5.25 4.30393 5.25 6.375C5.25 8.44605 6.92893 10.125 9 10.125C11.071 10.125 12.75 8.44605 12.75 6.375Z"
+                                stroke="#26AACC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M14.25 15.375C14.25 12.4755 11.8995 10.125 9 10.125C6.10051 10.125 3.75 12.4755 3.75 15.375"
+                                stroke="#26AACC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <span>Мій кабінет</span>
+                    </a>
+                    <button type="button" class="header__cons js-appointment cta cta--light">Записатись</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main main--services">
+        <section class="hero">
+            <div class="container--right">
+                <div class="hero__about">
+                    <ul class="breadcrumbs">
+                        <li>
+                            <a href="#!">Головна</a>
+                        </li>
+                        <li>
+                            <a href="#!">Алергологія</a>
+                        </li>
+                    </ul>
+                    <ul class="hero__tags">
+                        <li class="hero__tag">Клініка</li>
+                        <li class="hero__tag">Дорослим</li>
+                    </ul>
+                    <h1 class="hero__title content-title">Алергологія</h1>
+                    <p class="hero__text">
+                        У Smart klinika висококваліфіковані лікарі-алергологи допомагають встановити точний діагноз,
+                        підібрати належне лікування та перевести хронічну хворобу на стан тривалої ремісії, коли
+                        проблема абсолютно не турбуватиме.
+                    </p>
+                    <button class="hero__cons js-appointment cta cta--light cta--lg">
+                        Запис на прийом
+                    </button>
+                    <ul class="hero__services">
+                        <li class="hero__services-item">
+                            <img src="./assets/img/icons/ico-service_1.svg" alt="Icon">
+                            <span>Консультація лікаря</span>
+                        </li>
+                        <li class="hero__services-item">
+                            <img src="./assets/img/icons/ico-service_2.svg" alt="Icon">
+                            <span>Шкірні алергопроби</span>
+                        </li>
+                        <li class="hero__services-item">
+                            <img src="./assets/img/icons/ico-service_3.svg" alt="Icon">
+                            <span>Лабораторний алергоскринінг</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="hero__thumbnail">
+                    <img src="./assets/img/hero-service.jpg" alt="Thumbnail">
+                </div>
+            </div>
+        </section>
+        <section class="process">
+            <div class="container">
+                <div class="process__content">
+                    <div class="process__reception">
+                        <h3 class="process__title">
+                            Як проходить прийом лікаря-алерголога?
+                        </h3>
+                        <div class="process__cards">
+                            <div class="process__card">
+                                <h4 class="process__card-title">
+                                    Збір анамнезу і опитування
+                                </h4>
+                                <p class="process__card-text">
+                                    Алерголог розпитає вас, коли з’явилися перші ознаки хвороби, як вони розвивалися.
+                                    Необхідно перерахувати всі скарги, розповісти про перенесені захворювання та
+                                    аналогічні патології у найближчих родичів. Обов’язково варто згадати про можливі
+                                    реакції у відповідь на введення ліків.
+                                </p>
+                                <span>
+                                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_158_4230)">
+                                            <path d="M22 22L8 8" stroke="white" stroke-width="2"
+                                                stroke-linecap="round" />
+                                            <path
+                                                d="M10.667 23.7495C10.667 23.7495 21.3975 24.654 23.0259 23.0256C24.6545 21.3972 23.7497 10.6667 23.7497 10.6667"
+                                                stroke="white" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_158_4230">
+                                                <rect width="32" height="32" fill="white"
+                                                    transform="matrix(1 0 0 -1 0 32)" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+
+                                </span>
+                            </div>
+                            <div class="process__card">
+                                <h4 class="process__card-title">
+                                    Загальний огляд
+                                </h4>
+                                <p class="process__card-text">
+                                    Залежно від скарг пацієнта, лікар проведе огляд, щоб на підставі зібраних даних
+                                    можна було припустити діагноз та визначити необхідні для його підтвердження
+                                    дослідження.
+                                </p>
+                                <span>
+                                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_158_4230)">
+                                            <path d="M22 22L8 8" stroke="white" stroke-width="2"
+                                                stroke-linecap="round" />
+                                            <path
+                                                d="M10.667 23.7495C10.667 23.7495 21.3975 24.654 23.0259 23.0256C24.6545 21.3972 23.7497 10.6667 23.7497 10.6667"
+                                                stroke="white" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_158_4230">
+                                                <rect width="32" height="32" fill="white"
+                                                    transform="matrix(1 0 0 -1 0 32)" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+
+                                </span>
+                            </div>
+                            <div class="process__card">
+                                <h4 class="process__card-title">
+                                    Проведення обстеження
+                                </h4>
+                                <p class="process__card-text">
+                                    Призначаються спеціальні алергопроби, імунологічні дослідження. Вони відображають
+                                    стан та реактивність імунної системи, дозволяють виявити, який саме алерген викликав
+                                    реакцію.
+                                </p>
+                                <span>
+                                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_158_4230)">
+                                            <path d="M22 22L8 8" stroke="white" stroke-width="2"
+                                                stroke-linecap="round" />
+                                            <path
+                                                d="M10.667 23.7495C10.667 23.7495 21.3975 24.654 23.0259 23.0256C24.6545 21.3972 23.7497 10.6667 23.7497 10.6667"
+                                                stroke="white" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_158_4230">
+                                                <rect width="32" height="32" fill="white"
+                                                    transform="matrix(1 0 0 -1 0 32)" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+
+                                </span>
+                            </div>
+                            <div class="process__card">
+                                <h4 class="process__card-title">
+                                    Призначення лікування
+                                </h4>
+                                <p class="process__card-text">
+                                    Отримавши точний діагноз і перелік алергенів, лікар може підібрати індивідуальну
+                                    медикаментозну терапію, яка допоможе позбавитися патологічних симптомів.
+                                </p>
+                                <span>
+                                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_158_4230)">
+                                            <path d="M22 22L8 8" stroke="white" stroke-width="2"
+                                                stroke-linecap="round" />
+                                            <path
+                                                d="M10.667 23.7495C10.667 23.7495 21.3975 24.654 23.0259 23.0256C24.6545 21.3972 23.7497 10.6667 23.7497 10.6667"
+                                                stroke="white" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_158_4230">
+                                                <rect width="32" height="32" fill="white"
+                                                    transform="matrix(1 0 0 -1 0 32)" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="process__symptoms">
+                        <h3 class="process__title">
+                            Симптоми, при яких варто звернутися до алерголога
+                        </h3>
+                        <p class="process__symptoms-text">
+                            Алергічні реакції найчастіше проявляються шкірними проявами або катаром верхніх дихальних
+                            шляхів, проте можуть торкатися й інших систем організму — травної, нервової, дихальної.
+                        </p>
+                        <ul class="process__symptoms-list">
+                            <li class="process__symptoms-item">
+                                Відчуття вираженого свербіння в носі, його сухості, ринорея, багаторазове чхання;
+                            </li>
+                            <li class="process__symptoms-item">
+                                Почервоніння очей, сльозотеча, сильний свербіж;
+                            </li>
+                            <li class="process__symptoms-item">
+                                Почервоніння очей, сльозотеча, сильний свербіж;
+                            </li>
+                            <li class="process__symptoms-item">
+                                Відчуття утрудненого дихання, задишка, постійний кашель;
+                            </li>
+                            <li class="process__symptoms-item">
+                                Поява сверблячого висипу на шкірі, її набряклість;
+                            </li>
+                            <li class="process__symptoms-item">
+                                Біль у суглобах, ознаки їх запалення, почуття постійної втоми;
+                            </li>
+                            <li class="process__symptoms-item">
+                                Порушення випорожнень — діарея або закреп.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="process__cons">
+                        <h3 class="process__title">Як підготуватись до консультації?</h3>
+                        <div class="process__cons-cards">
+                            <div class="process__cons-card">
+                                <div class="process__cons-col">
+                                    <div class="process__cons-box box--video js-video-modal"
+                                        data-video="./assets/video/stress.mp4">
+                                        <img src="./assets/img/hero-service.jpg" alt="Poster">
+                                        <div class="box--video__control">
+                                            <div class="box--video__rec">
+                                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M26.1868 17.128C25.7155 18.9187 23.4883 20.184 19.0336 22.7148C14.7273 25.1612 12.5743 26.3845 10.8391 25.8928C10.1217 25.6895 9.46814 25.3035 8.941 24.7716C7.66602 23.4852 7.66602 20.9901 7.66602 16C7.66602 11.0099 7.66602 8.5148 8.941 7.22843C9.46814 6.6966 10.1217 6.31051 10.8391 6.10723C12.5743 5.61553 14.7273 6.83876 19.0336 9.28524C23.4883 11.816 25.7155 13.0813 26.1868 14.872C26.3813 15.6112 26.3813 16.3888 26.1868 17.128Z"
+                                                        fill="white" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="process__cons-col">
+                                    <p class="process__cons-text">
+                                        Алергічні реакції найчастіше проявляються шкірними проявами або катаром верхніх
+                                        дихальних шляхів, проте можуть торкатися й інших систем організму — травної,
+                                        нервової, дихальної.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="process__cons-card">
+                                <div class="process__cons-col">
+                                    <div class="process__cons-box">
+                                        <img src="./assets/img/space_2.jpg" alt="Thumbnail">
+                                    </div>
+                                </div>
+                                <div class="process__cons-col">
+                                    <p class="process__cons-text">
+                                        Алергічні реакції найчастіше проявляються шкірними проявами або катаром верхніх
+                                        дихальних шляхів, проте можуть торкатися й інших систем організму — травної,
+                                        нервової, дихальної.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="feedback-form">
+                    <div class="feedback-form__head">
+                        <h3 class="feedback-form__title">
+                            Записатись на прийом
+                        </h3>
+                        <div class="feedback-form__hero">
+                            <img src="./assets/img/person_3.svg" alt="Human">
+                        </div>
+                    </div>
+                    <form class="feedback-form__content">
+                        <div class="feedback-form__fields">
+                            <div class="feedback-form__group field-phone">
+                                <input type="tel" name="mainAppPhone" id="mainAppPhone"
+                                    class="feedback-form__field field-phone--item" placeholder="+38 (XXX) XXX XX XX">
+                            </div>
+                            <div class="feedback-form__group">
+                                <label class="feedback-form__subtitle" for="mainAppDate">Бажана дата прийому</label>
+                                <div class="feedback-form__inner js-date-picker field-date">
+                                    <input type="date" name="mainAppDate" id="mainAppDate"
+                                        class="feedback-form__field field-date--item">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feedback-form__check">
+                            <input class="feedback-form__cheked" type="checkbox" name="mainAppCheck"
+                                id="mainAppCheck">
+                            <label class="feedback-form__label" for="mainAppCheck">
+                                <p>
+                                    Погоджуюсь з умовами <a href="#!">Політики приватності</a> та <a
+                                        href="#!">Публічного договору</a>
+                                </p>
+                            </label>
+                        </div>
+                        <button type="submit" class="feedback-form__submit">
+                            Запис на прийом
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section class="doctors">
+            <div class="container">
+                <div class="doctors__head">
+                    <h2 class="doctors__title content-title"><span>Smart</span> лікарі</h2>
+                    <div class="doctors__controls">
+                        <a href="#!" class="link-more">
+                            <span>всі лікарі</span>
+                            <span>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_443_15486)">
+                                        <path d="M13.333 7.99988H2.66636" stroke="white" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path
+                                            d="M9.99969 11.3334C9.99969 11.3334 13.333 8.87842 13.333 8.00002C13.333 7.12162 9.99967 4.66669 9.99967 4.66669"
+                                            stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round"></path>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_443_15486">
+                                            <rect width="16" height="16" fill="white"></rect>
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_443_15486)">
+                                        <path d="M13.333 7.99988H2.66636" stroke="white" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path
+                                            d="M9.99969 11.3334C9.99969 11.3334 13.333 8.87842 13.333 8.00002C13.333 7.12162 9.99967 4.66669 9.99967 4.66669"
+                                            stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round"></path>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_443_15486">
+                                            <rect width="16" height="16" fill="white"></rect>
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </span>
+                        </a>
+                        <div class="slider-navigation js-doctors-nav">
+                            <button type="button" class="slider-navigation__btn js-doctors-prev">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.63593 12.0001H20.4852" stroke="#3E3E40" stroke-width="2"
+                                        stroke-linecap="round" />
+                                    <path
+                                        d="M10.7188 5.06183C10.7188 5.06183 4.54837 10.2728 4.54837 12C4.5483 13.7273 10.7189 18.9382 10.7189 18.9382"
+                                        stroke="#3E3E40" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                            <button type="button" class="slider-navigation__btn js-doctors-next">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M18.3641 12.0001H3.51483" stroke="#3E3E40" stroke-width="2"
+                                        stroke-linecap="round" />
+                                    <path
+                                        d="M13.2812 5.06183C13.2812 5.06183 19.4516 10.2728 19.4516 12C19.4517 13.7273 13.2811 18.9382 13.2811 18.9382"
+                                        stroke="#3E3E40" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="doctors__slider swiper js-doctors-slider">
+                    <div class="doctors__slider-wrapper swiper-wrapper">
+                        <div class="doctors__slider-slide swiper-slide">
+                            <a href="#!" class="doctor-box">
+                                <p class="doctor-box__surname">Владимирець</p>
+                                <p class="doctor-box__name">Олена Сергіївна</p>
+                                <p class="doctor-box__skills">
+                                    Лікар-уролог першої категорії, лікар ультразвукової діагностики
+                                </p>
+                                <div class="doctor-box__foot">
+                                    <div class="doctor-box__info">
+                                        <div class="doctor-box__photo">
+                                            <img src="./assets/img/doctor_1.jpg" alt="Photo">
+                                        </div>
+                                        <div class="doctor-box__review">
+                                            <img width="16" height="16" src="./assets/img/icons/ico-comment.svg" alt="">
+                                            <p>
+                                                <span>11</span> Відгуків
+                                            </p>
+                                        </div>
+                                        <div class="doctor-box__cta">
+                                            <img src="./assets/img/icons/icoArrow_bl_t.svg" alt="Go">
+                                            <img src="./assets/img/icons/icoArrow_wht_t.svg" alt="Go">
+                                        </div>
+                                    </div>
+                                    <p class="doctor-box__exp">
+                                        13 років досвіду
+                                    </p>
+                                    <p class="doctor-box__location">
+                                        <img src="./assets/img/icons/ico-pin-d.svg" alt="">
+                                        пр-т П. Григоренка, 22/20
+                                    </p>
+                                    <div class="doctor-box__sign">
+                                        записатись
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="doctors__slider-slide swiper-slide">
+                            <a href="#!" class="doctor-box">
+                                <p class="doctor-box__surname">Владимирець</p>
+                                <p class="doctor-box__name">Олена Сергіївна</p>
+                                <p class="doctor-box__skills">
+                                    Лікар-уролог першої категорії, лікар ультразвукової діагностики
+                                </p>
+                                <div class="doctor-box__foot">
+                                    <div class="doctor-box__info">
+                                        <div class="doctor-box__photo">
+                                            <img src="./assets/img/doctor_2.jpg" alt="Photo">
+                                        </div>
+                                        <div class="doctor-box__review">
+                                            <img width="16" height="16" src="./assets/img/icons/ico-comment.svg" alt="">
+                                            <p>
+                                                <span>11</span> Відгуків
+                                            </p>
+                                        </div>
+                                        <div class="doctor-box__cta">
+                                            <img src="./assets/img/icons/icoArrow_bl_t.svg" alt="Go">
+                                            <img src="./assets/img/icons/icoArrow_wht_t.svg" alt="Go">
+                                        </div>
+                                    </div>
+                                    <p class="doctor-box__exp">
+                                        13 років досвіду
+                                    </p>
+                                    <p class="doctor-box__location">
+                                        <img src="./assets/img/icons/ico-pin-d.svg" alt="">
+                                        пр-т П. Григоренка, 22/20
+                                    </p>
+                                    <div class="doctor-box__sign">
+                                        записатись
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="doctors__slider-slide swiper-slide">
+                            <a href="#!" class="doctor-box">
+                                <p class="doctor-box__surname">Владимирець</p>
+                                <p class="doctor-box__name">Олена Сергіївна</p>
+                                <p class="doctor-box__skills">
+                                    Лікар-уролог першої категорії, лікар ультразвукової діагностики
+                                </p>
+                                <div class="doctor-box__foot">
+                                    <div class="doctor-box__info">
+                                        <div class="doctor-box__photo">
+                                            <img src="./assets/img/doctor_3.jpg" alt="Photo">
+                                        </div>
+                                        <div class="doctor-box__review">
+                                            <img width="16" height="16" src="./assets/img/icons/ico-comment.svg" alt="">
+                                            <p>
+                                                <span>11</span> Відгуків
+                                            </p>
+                                        </div>
+                                        <div class="doctor-box__cta">
+                                            <img src="./assets/img/icons/icoArrow_bl_t.svg" alt="Go">
+                                            <img src="./assets/img/icons/icoArrow_wht_t.svg" alt="Go">
+                                        </div>
+                                    </div>
+                                    <p class="doctor-box__exp">
+                                        13 років досвіду
+                                    </p>
+                                    <p class="doctor-box__location">
+                                        <img src="./assets/img/icons/ico-pin-d.svg" alt="">
+                                        пр-т П. Григоренка, 22/20
+                                    </p>
+                                    <div class="doctor-box__sign">
+                                        записатись
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="doctors__slider-slide swiper-slide">
+                            <a href="#!" class="doctor-box">
+                                <p class="doctor-box__surname">Владимирець</p>
+                                <p class="doctor-box__name">Олена Сергіївна</p>
+                                <p class="doctor-box__skills">
+                                    Лікар-уролог першої категорії, лікар ультразвукової діагностики
+                                </p>
+                                <div class="doctor-box__foot">
+                                    <div class="doctor-box__info">
+                                        <div class="doctor-box__photo">
+                                            <img src="./assets/img/doctor_4.jpg" alt="Photo">
+                                        </div>
+                                        <div class="doctor-box__review">
+                                            <img width="16" height="16" src="./assets/img/icons/ico-comment.svg" alt="">
+                                            <p>
+                                                <span>11</span> Відгуків
+                                            </p>
+                                        </div>
+                                        <div class="doctor-box__cta">
+                                            <img src="./assets/img/icons/icoArrow_bl_t.svg" alt="Go">
+                                            <img src="./assets/img/icons/icoArrow_wht_t.svg" alt="Go">
+                                        </div>
+                                    </div>
+                                    <p class="doctor-box__exp">
+                                        13 років досвіду
+                                    </p>
+                                    <p class="doctor-box__location">
+                                        <img src="./assets/img/icons/ico-pin-d.svg" alt="">
+                                        пр-т П. Григоренка, 22/20
+                                    </p>
+                                    <div class="doctor-box__sign">
+                                        записатись
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="doctors__slider-slide swiper-slide">
+                            <a href="#!" class="doctor-box">
+                                <p class="doctor-box__surname">Владимирець</p>
+                                <p class="doctor-box__name">Олена Сергіївна</p>
+                                <p class="doctor-box__skills">
+                                    Лікар-уролог першої категорії, лікар ультразвукової діагностики
+                                </p>
+                                <div class="doctor-box__foot">
+                                    <div class="doctor-box__info">
+                                        <div class="doctor-box__photo">
+                                            <img src="./assets/img/doctor_4.jpg" alt="Photo">
+                                        </div>
+                                        <div class="doctor-box__review">
+                                            <img width="16" height="16" src="./assets/img/icons/ico-comment.svg" alt="">
+                                            <p>
+                                                <span>11</span> Відгуків
+                                            </p>
+                                        </div>
+                                        <div class="doctor-box__cta">
+                                            <img src="./assets/img/icons/icoArrow_bl_t.svg" alt="Go">
+                                            <img src="./assets/img/icons/icoArrow_wht_t.svg" alt="Go">
+                                        </div>
+                                    </div>
+                                    <p class="doctor-box__exp">
+                                        13 років досвіду
+                                    </p>
+                                    <p class="doctor-box__location">
+                                        <img src="./assets/img/icons/ico-pin-d.svg" alt="">
+                                        пр-т П. Григоренка, 22/20
+                                    </p>
+                                    <div class="doctor-box__sign">
+                                        записатись
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="doctors__slider-slide swiper-slide">
+                            <a href="#!" class="doctor-box">
+                                <p class="doctor-box__surname">Владимирець</p>
+                                <p class="doctor-box__name">Олена Сергіївна</p>
+                                <p class="doctor-box__skills">
+                                    Лікар-уролог першої категорії, лікар ультразвукової діагностики
+                                </p>
+                                <div class="doctor-box__foot">
+                                    <div class="doctor-box__info">
+                                        <div class="doctor-box__photo">
+                                            <img src="./assets/img/doctor_2.jpg" alt="Photo">
+                                        </div>
+                                        <div class="doctor-box__review">
+                                            <img width="16" height="16" src="./assets/img/icons/ico-comment.svg" alt="">
+                                            <p>
+                                                <span>11</span> Відгуків
+                                            </p>
+                                        </div>
+                                        <div class="doctor-box__cta">
+                                            <img src="./assets/img/icons/icoArrow_bl_t.svg" alt="Go">
+                                            <img src="./assets/img/icons/icoArrow_wht_t.svg" alt="Go">
+                                        </div>
+                                    </div>
+                                    <p class="doctor-box__exp">
+                                        13 років досвіду
+                                    </p>
+                                    <p class="doctor-box__location">
+                                        <img src="./assets/img/icons/ico-pin-d.svg" alt="">
+                                        пр-т П. Григоренка, 22/20
+                                    </p>
+                                    <div class="doctor-box__sign">
+                                        записатись
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="prices">
+            <div class="container">
+                <h3 class="prices__title">Вартість послуг</h3>
+                <ul class="prices__list">
+                    <li class="prices__item js-prices-dd">
+                        <div class="prices__head">
+                            <h4 class="prices__name">Консультації</h4>
+                            <div class="prices__total">
+                                <span>Від 400 грн</span>
+                                <span>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 18.502V5.00195" stroke="#3E3E40" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path
+                                            d="M18 13.002C18 13.002 13.5811 19.0019 12 19.002C10.4188 19.002 6 13.002 6 13.002"
+                                            stroke="#3E3E40" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round"></path>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="prices__content">
+                            <div class="prices__all">
+                                <div class="prices__point">
+                                    <div class="prices__about">
+                                        <h4 class="prices__subtitle">Консультація алерголога</h4>
+                                    </div>
+                                    <div class="prices__info">
+                                        <div class="prices__collect">
+                                            <span class="prices__old">1 880 грн</span>
+                                            <span class="prices__actual">1 050 грн</span>
+                                        </div>
+                                        <button class="prices__sign js-appointment">
+                                            записатись
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="prices__point">
+                                    <div class="prices__about">
+                                        <h4 class="prices__subtitle">Консультація алерголога онлайн</h4>
+                                    </div>
+                                    <div class="prices__info">
+                                        <span class="prices__actual">Очікується</span>
+                                        <button class="prices__sign prices__sign--disabled js-appointment">
+                                            записатись
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="prices__point">
+                                    <div class="prices__about">
+                                        <h4 class="prices__subtitle">Повторна консультація алерголога</h4>
+                                    </div>
+                                    <div class="prices__info">
+                                        <span class="prices__actual">850 грн</span>
+                                        <button class="prices__sign js-appointment">
+                                            записатись
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="prices__point">
+                                    <div class="prices__about">
+                                        <h4 class="prices__subtitle">
+                                            Повторна онлайн-консультація алерголога
+                                        </h4>
+                                    </div>
+                                    <div class="prices__info">
+                                        <span class="prices__actual">850 грн</span>
+                                        <button class="prices__sign js-appointment">
+                                            записатись
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="prices__point">
+                                    <div class="prices__about">
+                                        <h4 class="prices__subtitle">
+                                            Консультація алерголога під час курсу лікування алергенами
+                                        </h4>
+                                        <p class="prices__description">
+                                            Консультація під час АСІТ препаратом іспанського виробництва
+                                        </p>
+                                    </div>
+                                    <div class="prices__info">
+                                        <span class="prices__actual">450 грн</span>
+                                        <button class="prices__sign js-appointment">
+                                            записатись
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="prices__point">
+                                    <div class="prices__about">
+                                        <h4 class="prices__subtitle">
+                                            Онлайн-консультація алерголога під час курсу лікування алергенами
+                                        </h4>
+                                        <p class="prices__description">
+                                            Консультація під час АСІТ препаратом іспанського виробництва
+                                        </p>
+                                    </div>
+                                    <div class="prices__info">
+                                        <span class="prices__actual">400 грн</span>
+                                        <button class="prices__sign js-appointment">
+                                            записатись
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="prices__item js-prices-dd">
+                        <div class="prices__head">
+                            <h4 class="prices__name">Діагностика</h4>
+                            <div class="prices__total">
+                                <span>Від 400 грн</span>
+                                <span>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 18.502V5.00195" stroke="#3E3E40" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path
+                                            d="M18 13.002C18 13.002 13.5811 19.0019 12 19.002C10.4188 19.002 6 13.002 6 13.002"
+                                            stroke="#3E3E40" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round"></path>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="prices__content">
+                            <div class="prices__all">
+                                <div class="prices__point">
+                                    <div class="prices__about">
+                                        <h4 class="prices__subtitle">Консультація алерголога</h4>
+                                    </div>
+                                    <div class="prices__info">
+                                        <div class="prices__collect">
+                                            <span class="prices__old">1 880 грн</span>
+                                            <span class="prices__actual">1 050 грн</span>
+                                        </div>
+                                        <button class="prices__sign js-appointment">
+                                            записатись
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="prices__point">
+                                    <div class="prices__about">
+                                        <h4 class="prices__subtitle">Консультація алерголога онлайн</h4>
+                                    </div>
+                                    <div class="prices__info">
+                                        <span class="prices__actual">Очікується</span>
+                                        <button class="prices__sign prices__sign--disabled js-appointment">
+                                            записатись
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="prices__point">
+                                    <div class="prices__about">
+                                        <h4 class="prices__subtitle">Повторна консультація алерголога</h4>
+                                    </div>
+                                    <div class="prices__info">
+                                        <span class="prices__actual">850 грн</span>
+                                        <button class="prices__sign js-appointment">
+                                            записатись
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="prices__point">
+                                    <div class="prices__about">
+                                        <h4 class="prices__subtitle">
+                                            Повторна онлайн-консультація алерголога
+                                        </h4>
+                                    </div>
+                                    <div class="prices__info">
+                                        <span class="prices__actual">850 грн</span>
+                                        <button class="prices__sign js-appointment">
+                                            записатись
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="prices__point">
+                                    <div class="prices__about">
+                                        <h4 class="prices__subtitle">
+                                            Консультація алерголога під час курсу лікування алергенами
+                                        </h4>
+                                        <p class="prices__description">
+                                            Консультація під час АСІТ препаратом іспанського виробництва
+                                        </p>
+                                    </div>
+                                    <div class="prices__info">
+                                        <span class="prices__actual">450 грн</span>
+                                        <button class="prices__sign js-appointment">
+                                            записатись
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="prices__point">
+                                    <div class="prices__about">
+                                        <h4 class="prices__subtitle">
+                                            Онлайн-консультація алерголога під час курсу лікування алергенами
+                                        </h4>
+                                        <p class="prices__description">
+                                            Консультація під час АСІТ препаратом іспанського виробництва
+                                        </p>
+                                    </div>
+                                    <div class="prices__info">
+                                        <span class="prices__actual">400 грн</span>
+                                        <button class="prices__sign js-appointment">
+                                            записатись
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="prices__item js-prices-dd">
+                        <div class="prices__head">
+                            <h4 class="prices__name">Аналізи</h4>
+                            <div class="prices__total">
+                                <span>Від 400 грн</span>
+                                <span>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 18.502V5.00195" stroke="#3E3E40" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path
+                                            d="M18 13.002C18 13.002 13.5811 19.0019 12 19.002C10.4188 19.002 6 13.002 6 13.002"
+                                            stroke="#3E3E40" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round"></path>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="prices__content">
+                            <div class="prices__all">
+                                <div class="prices__point">
+                                    <div class="prices__about">
+                                        <h4 class="prices__subtitle">Консультація алерголога</h4>
+                                    </div>
+                                    <div class="prices__info">
+                                        <div class="prices__collect">
+                                            <span class="prices__old">1 880 грн</span>
+                                            <span class="prices__actual">1 050 грн</span>
+                                        </div>
+                                        <button class="prices__sign js-appointment">
+                                            записатись
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="prices__point">
+                                    <div class="prices__about">
+                                        <h4 class="prices__subtitle">Консультація алерголога онлайн</h4>
+                                    </div>
+                                    <div class="prices__info">
+                                        <span class="prices__actual">Очікується</span>
+                                        <button class="prices__sign prices__sign--disabled js-appointment">
+                                            записатись
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="prices__point">
+                                    <div class="prices__about">
+                                        <h4 class="prices__subtitle">Повторна консультація алерголога</h4>
+                                    </div>
+                                    <div class="prices__info">
+                                        <span class="prices__actual">850 грн</span>
+                                        <button class="prices__sign js-appointment">
+                                            записатись
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="prices__point">
+                                    <div class="prices__about">
+                                        <h4 class="prices__subtitle">
+                                            Повторна онлайн-консультація алерголога
+                                        </h4>
+                                    </div>
+                                    <div class="prices__info">
+                                        <span class="prices__actual">850 грн</span>
+                                        <button class="prices__sign js-appointment">
+                                            записатись
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="prices__point">
+                                    <div class="prices__about">
+                                        <h4 class="prices__subtitle">
+                                            Консультація алерголога під час курсу лікування алергенами
+                                        </h4>
+                                        <p class="prices__description">
+                                            Консультація під час АСІТ препаратом іспанського виробництва
+                                        </p>
+                                    </div>
+                                    <div class="prices__info">
+                                        <span class="prices__actual">450 грн</span>
+                                        <button class="prices__sign js-appointment">
+                                            записатись
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="prices__point">
+                                    <div class="prices__about">
+                                        <h4 class="prices__subtitle">
+                                            Онлайн-консультація алерголога під час курсу лікування алергенами
+                                        </h4>
+                                        <p class="prices__description">
+                                            Консультація під час АСІТ препаратом іспанського виробництва
+                                        </p>
+                                    </div>
+                                    <div class="prices__info">
+                                        <span class="prices__actual">400 грн</span>
+                                        <button class="prices__sign js-appointment">
+                                            записатись
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="prices__item js-prices-dd">
+                        <div class="prices__head">
+                            <h4 class="prices__name">Послуги</h4>
+                            <div class="prices__total">
+                                <span>Від 400 грн</span>
+                                <span>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 18.502V5.00195" stroke="#3E3E40" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path
+                                            d="M18 13.002C18 13.002 13.5811 19.0019 12 19.002C10.4188 19.002 6 13.002 6 13.002"
+                                            stroke="#3E3E40" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round"></path>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="prices__content">
+                            <div class="prices__all">
+                                <div class="prices__point">
+                                    <div class="prices__about">
+                                        <h4 class="prices__subtitle">Консультація алерголога</h4>
+                                    </div>
+                                    <div class="prices__info">
+                                        <div class="prices__collect">
+                                            <span class="prices__old">1 880 грн</span>
+                                            <span class="prices__actual">1 050 грн</span>
+                                        </div>
+                                        <button class="prices__sign js-appointment">
+                                            записатись
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="prices__point">
+                                    <div class="prices__about">
+                                        <h4 class="prices__subtitle">Консультація алерголога онлайн</h4>
+                                    </div>
+                                    <div class="prices__info">
+                                        <span class="prices__actual">Очікується</span>
+                                        <button class="prices__sign prices__sign--disabled js-appointment">
+                                            записатись
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="prices__point">
+                                    <div class="prices__about">
+                                        <h4 class="prices__subtitle">Повторна консультація алерголога</h4>
+                                    </div>
+                                    <div class="prices__info">
+                                        <span class="prices__actual">850 грн</span>
+                                        <button class="prices__sign js-appointment">
+                                            записатись
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="prices__point">
+                                    <div class="prices__about">
+                                        <h4 class="prices__subtitle">
+                                            Повторна онлайн-консультація алерголога
+                                        </h4>
+                                    </div>
+                                    <div class="prices__info">
+                                        <span class="prices__actual">850 грн</span>
+                                        <button class="prices__sign js-appointment">
+                                            записатись
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="prices__point">
+                                    <div class="prices__about">
+                                        <h4 class="prices__subtitle">
+                                            Консультація алерголога під час курсу лікування алергенами
+                                        </h4>
+                                        <p class="prices__description">
+                                            Консультація під час АСІТ препаратом іспанського виробництва
+                                        </p>
+                                    </div>
+                                    <div class="prices__info">
+                                        <span class="prices__actual">450 грн</span>
+                                        <button class="prices__sign js-appointment">
+                                            записатись
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="prices__point">
+                                    <div class="prices__about">
+                                        <h4 class="prices__subtitle">
+                                            Онлайн-консультація алерголога під час курсу лікування алергенами
+                                        </h4>
+                                        <p class="prices__description">
+                                            Консультація під час АСІТ препаратом іспанського виробництва
+                                        </p>
+                                    </div>
+                                    <div class="prices__info">
+                                        <span class="prices__actual">400 грн</span>
+                                        <button class="prices__sign js-appointment">
+                                            записатись
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="skills">
+            <div class="container">
+                <div class="skills__content">
+                    <div class="skills__cards">
+                        <div class="benefit-card">
+                            <div class="benefit-card__ico">
+                                <img width="48" height="48" src="./assets/img/icons/fallback/ico_1.png" alt="Icon">
+                            </div>
+                            <div class="benefit-card__content">
+                                <p class="benefit-card__title">Формула здоров’я</p>
+                                <p class="benefit-card__text">
+                                    Ми продумали всі можливі деталі для задоволення потреб пацієнта. Формула вашого
+                                    здоров’я
+                                    — це бездоганний сервіс + якісна медицина + комплексне вирішення питань.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="benefit-card">
+                            <div class="benefit-card__ico">
+                                <img width="48" height="48" src="./assets/img/icons/fallback/ico_2.png" alt="Icon">
+                            </div>
+                            <div class="benefit-card__content">
+                                <p class="benefit-card__title">Експертна команда</p>
+                                <p class="benefit-card__text">
+                                    Об’єднуємо молодих прогресивних фахівців та світил української медицини. У нас ви
+                                    отримаєте повне розуміння стану здоров’я та детальний план для подальших дій.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="benefit-card">
+                            <div class="benefit-card__ico">
+                                <img width="48" height="48" src="./assets/img/icons/fallback/ico_3.png" alt="Icon">
+                            </div>
+                            <div class="benefit-card__content">
+                                <p class="benefit-card__title">Чесні взаємини</p>
+                                <p class="benefit-card__text">
+                                    Будуємо прозорі відносини з пацієнтами — відкриті до будь-якого зворотного зв’язку.
+                                    Наш
+                                    рекомендаційний індекс — 98%. Ви можете залишити відгук де завгодно, і ваша думка
+                                    буде
+                                    почутою.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skills__hero">
+                        <h2 class="skills__title content-title">
+                            Сильні сторни <span>Smart klinika</span>
+                        </h2>
+                        <img src="./assets/img/person_lg.svg" alt="Person">
+                    </div>
+                    <div class="skills__cards">
+                        <div class="benefit-card">
+                            <div class="benefit-card__ico">
+                                <img width="48" height="48" src="./assets/img/icons/fallback/ico_4.png" alt="Icon">
+                            </div>
+                            <div class="benefit-card__content">
+                                <p class="benefit-card__title">Комплексний супровід</p>
+                                <p class="benefit-card__text">
+                                    Проводимо онлайн-консультації. Забезпечуємо все ідеально продумано для пацієнта, без
+                                    зайвих призначень та процедур. Із яким би питанням ви не звернулись — ми зможемо
+                                    його
+                                    вирішити.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="benefit-card">
+                            <div class="benefit-card__ico">
+                                <img width="48" height="48" src="./assets/img/icons/fallback/ico_5.png" alt="Icon">
+                            </div>
+                            <div class="benefit-card__content">
+                                <p class="benefit-card__title">Сучасні технології</p>
+                                <p class="benefit-card__text">
+                                    Розвиваємо майбутнє української медицини тут і зараз: розвиваємо «розумну» медицину,
+                                    в
+                                    центрі якої знаходиться людина. Масштабуємо кращі практики, використовуємо ШІ
+                                </p>
+                            </div>
+                        </div>
+                        <div class="benefit-card">
+                            <div class="benefit-card__ico">
+                                <img width="48" height="48" src="./assets/img/icons/fallback/ico_6.png" alt="Icon">
+                            </div>
+                            <div class="benefit-card__content">
+                                <p class="benefit-card__title">Новітнє обладнання</p>
+                                <p class="benefit-card__text">
+                                    Розвиваємо майбутнє української медицини тут і зараз: розвиваємо «розумну» медицину,
+                                    в
+                                    центрі якої знаходиться людина. Масштабуємо кращі практики, використовуємо ШІ
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="appointment">
+            <div class="container">
+                <div class="appointment__content">
+                    <div class="appointment__thumb">
+                        <img loading="lazy" width="728" height="500" src="./assets/img/app-img.jpg" alt="Thumbnail">
+                    </div>
+                    <div class="appointment__make">
+                        <h3 class="appointment__title">Записатись на прийом</h3>
+                        <form class="appointment__form">
+                            <div class="appointment__form-fields">
+                                <div class="appointment__form-group field-phone">
+                                    <input type="tel" name="mainAppPhone" id="mainAppPhone"
+                                        class="appointment__form-field field-phone--item"
+                                        placeholder="+38 (XXX) XXX XX XX">
+                                </div>
+                                <div class="appointment__form-group">
+                                    <label class="appointment__form-title" for="mainAppDate">Бажана дата прийому</label>
+                                    <div class="appointment__form-inner js-date-picker field-date">
+                                        <input type="date" name="mainAppDate" id="mainAppDate"
+                                            class="appointment__form-field field-date--item">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="appointment__form-check">
+                                <input class="appointment__form-cheked" type="checkbox" name="mainAppCheck"
+                                    id="mainAppCheck">
+                                <label class="appointment__form-label" for="mainAppCheck">
+                                    <p>
+                                        Погоджуюсь з умовами <a href="#!">Політики приватності</a> та <a
+                                            href="#!">Публічного договору</a>
+                                    </p>
+                                </label>
+                            </div>
+                            <button type="submit" class="appointment__form-submit">
+                                Запис на прийом
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="interest">
+            <div class="container">
+                <h2 class="interest__title content-title">Вас може зацікавити</h2>
+                <div class="interest__items swiper js-interest-slider">
+                    <div class="interest__items-wrapper swiper-wrapper">
+                        <div class="interest__items-slide swiper-slide">
+                            <a href="#!" class="interest-box">
+                                <div class="interest-box__img">
+                                    <img loading="lazy" src="./assets/img/int_1.jpg" alt="Thumbnail">
+                                </div>
+                                <p class="interest-box__title">title</p>
+                                <div class="interest-box__more">
+                                    <span>детальніше</span>
+                                    <span>
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_443_15486)">
+                                                <path d="M13.333 7.99988H2.66636" stroke="white" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path
+                                                    d="M9.99969 11.3334C9.99969 11.3334 13.333 8.87842 13.333 8.00002C13.333 7.12162 9.99967 4.66669 9.99967 4.66669"
+                                                    stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_443_15486">
+                                                    <rect width="16" height="16" fill="white" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="interest__items-slide swiper-slide">
+                            <a href="#!" class="interest-box">
+                                <div class="interest-box__img">
+                                    <img loading="lazy" src="./assets/img/int_2.jpg" alt="Thumbnail">
+                                </div>
+                                <p class="interest-box__title">Жіночий чекап «Оптимальний»</p>
+                                <div class="interest-box__more">
+                                    <span>детальніше</span>
+                                    <span>
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_443_15486)">
+                                                <path d="M13.333 7.99988H2.66636" stroke="white" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path
+                                                    d="M9.99969 11.3334C9.99969 11.3334 13.333 8.87842 13.333 8.00002C13.333 7.12162 9.99967 4.66669 9.99967 4.66669"
+                                                    stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_443_15486">
+                                                    <rect width="16" height="16" fill="white" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="interest__items-slide swiper-slide">
+                            <a href="#!" class="interest-box">
+                                <div class="interest-box__img">
+                                    <img loading="lazy" src="./assets/img/int_3.jpg" alt="Thumbnail">
+                                </div>
+                                <p class="interest-box__title">Жіночий чекап «Оптимальний»</p>
+                                <div class="interest-box__more">
+                                    <span>детальніше</span>
+                                    <span>
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_443_15486)">
+                                                <path d="M13.333 7.99988H2.66636" stroke="white" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path
+                                                    d="M9.99969 11.3334C9.99969 11.3334 13.333 8.87842 13.333 8.00002C13.333 7.12162 9.99967 4.66669 9.99967 4.66669"
+                                                    stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_443_15486">
+                                                    <rect width="16" height="16" fill="white" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="interest__items-slide swiper-slide">
+                            <a href="#!" class="interest-box">
+                                <div class="interest-box__img">
+                                    <img loading="lazy" src="./assets/img/int_4.jpg" alt="Thumbnail">
+                                </div>
+                                <p class="interest-box__title">Жіночий чекап «Оптимальний»</p>
+                                <div class="interest-box__more">
+                                    <span>детальніше</span>
+                                    <span>
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_443_15486)">
+                                                <path d="M13.333 7.99988H2.66636" stroke="white" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path
+                                                    d="M9.99969 11.3334C9.99969 11.3334 13.333 8.87842 13.333 8.00002C13.333 7.12162 9.99967 4.66669 9.99967 4.66669"
+                                                    stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_443_15486">
+                                                    <rect width="16" height="16" fill="white" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="interest__items-slide swiper-slide">
+                            <a href="#!" class="interest-box">
+                                <div class="interest-box__img">
+                                    <img loading="lazy" src="./assets/img/int_4.jpg" alt="Thumbnail">
+                                </div>
+                                <p class="interest-box__title">Жіночий чекап «Оптимальний»</p>
+                                <div class="interest-box__more">
+                                    <span>детальніше</span>
+                                    <span>
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_443_15486)">
+                                                <path d="M13.333 7.99988H2.66636" stroke="white" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path
+                                                    d="M9.99969 11.3334C9.99969 11.3334 13.333 8.87842 13.333 8.00002C13.333 7.12162 9.99967 4.66669 9.99967 4.66669"
+                                                    stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_443_15486">
+                                                    <rect width="16" height="16" fill="white" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="slider-controls">
+                        <div class="slider-navigation js-interest-nav">
+                            <button type="button" class="slider-navigation__btn js-interest-prev swiper-button-disabled"
+                                disabled="" tabindex="-1" aria-label="Previous slide"
+                                aria-controls="swiper-wrapper-77b0e6bb489fae83" aria-disabled="true">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.63593 12.0001H20.4852" stroke="#3E3E40" stroke-width="2"
+                                        stroke-linecap="round"></path>
+                                    <path
+                                        d="M10.7188 5.06183C10.7188 5.06183 4.54837 10.2728 4.54837 12C4.5483 13.7273 10.7189 18.9382 10.7189 18.9382"
+                                        stroke="#3E3E40" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                </svg>
+                            </button>
+                            <button type="button" class="slider-navigation__btn js-interest-next" tabindex="0"
+                                aria-label="Next slide" aria-controls="swiper-wrapper-77b0e6bb489fae83"
+                                aria-disabled="false">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M18.3641 12.0001H3.51483" stroke="#3E3E40" stroke-width="2"
+                                        stroke-linecap="round"></path>
+                                    <path
+                                        d="M13.2812 5.06183C13.2812 5.06183 19.4516 10.2728 19.4516 12C19.4517 13.7273 13.2811 18.9382 13.2811 18.9382"
+                                        stroke="#3E3E40" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="slider-progress js-interest-progress"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="reviews">
+            <div class="container">
+                <h2 class="reviews__title content-title">Відгуки про клініку та лікарів</h2>
+                <div class="reviews__info">
+                    <div class="reviews__info-panel">
+                        <div class="reviews__info-known">
+                            <p class="reviews__info-title">Дізнайтеся, що про нас кажуть</p>
+                            <div class="reviews__info-stats">
+                                <p class="reviews__info-rating">4.7</p>
+                                <div class="reviews__info-stars">
+                                    <img width="24" height="24" src="./assets/img/icons/ico-star.svg" alt="Star">
+                                    <img width="24" height="24" src="./assets/img/icons/ico-star.svg" alt="Star">
+                                    <img width="24" height="24" src="./assets/img/icons/ico-star.svg" alt="Star">
+                                    <img width="24" height="24" src="./assets/img/icons/ico-star.svg" alt="Star">
+                                    <img width="24" height="24" src="./assets/img/icons/ico-star.svg" alt="Star">
+                                </div>
+                                <p class="reviews__info-total"><span>22</span> відгуки</p>
+                            </div>
+                        </div>
+                        <a href="#!" class="reviews__trigger cta cta--transparent">залишити відгук</a>
+                    </div>
+                    <a href="#!" class="link-more">
+                        <span>всі відгуки</span>
+                        <span>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_443_15486)">
+                                    <path d="M13.333 7.99988H2.66636" stroke="white" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path
+                                        d="M9.99969 11.3334C9.99969 11.3334 13.333 8.87842 13.333 8.00002C13.333 7.12162 9.99967 4.66669 9.99967 4.66669"
+                                        stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_443_15486">
+                                        <rect width="16" height="16" fill="white"></rect>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_443_15486)">
+                                    <path d="M13.333 7.99988H2.66636" stroke="white" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path
+                                        d="M9.99969 11.3334C9.99969 11.3334 13.333 8.87842 13.333 8.00002C13.333 7.12162 9.99967 4.66669 9.99967 4.66669"
+                                        stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_443_15486">
+                                        <rect width="16" height="16" fill="white"></rect>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+                <div class="reviews__items swiper js-reviews-slider">
+                    <div class="reviews__items-wrapper swiper-wrapper">
+                        <div class="reviews__items-slide swiper-slide">
+                            <div class="review-box">
+                                <div class="review-box__content">
+                                    <div class="review-box__head">
+                                        <div class="review-box__info">
+                                            <p class="review-box__name">Вікторія</p>
+                                            <span class="review-box__date">14 Травня 2025</span>
+                                        </div>
+                                        <div class="review-box__rating">
+                                            <img src="./assets/img/icons/ico-star.svg" alt="Star">
+                                            <span>4.9</span>
+                                        </div>
+                                    </div>
+                                    <p class="review-box__text">
+                                        Гарна сучасна клініка, привітний персонал. Було дуже комфортно. Дякую
+                                        лікарю-гінекологу Владимирець Олена Сергіївна. Детально пояснила кожен етап і
+                                        дала
+                                        відповіді на запитання.
+                                    </p>
+                                    <button type="button" class="review-box__more">
+                                        <span>Читати більше</span>
+                                        <span>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_528_8117)">
+                                                    <path d="M8 13.3335L8 2.66684" stroke="white" stroke-width="1.5"
+                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                    <path
+                                                        d="M4.66634 10.0002C4.66634 10.0002 7.12127 13.3335 7.99967 13.3335C8.87807 13.3335 11.333 10.0002 11.333 10.0002"
+                                                        stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_528_8117">
+                                                        <rect width="16" height="16" fill="white"
+                                                            transform="translate(16) rotate(90)" />
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </span>
+                                    </button>
+                                </div>
+                                <div class="review-box__footer">
+                                    <p class="review-box__subtitle">Відгук про фахівця:</p>
+                                    <div class="review-box__target">
+                                        <div class="review-box__human">
+                                            <img loading="lazy" width="52" height="52" src="./assets/img/doctor_1.jpg"
+                                                alt="Photo">
+                                            <p>Владимирець Олена Сергіївна</p>
+                                        </div>
+                                        <div class="review-box__source">
+                                            <img loading="lazy" width="28" height="28"
+                                                src="./assets/img/icons/rev-google.png" alt="Google">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reviews__items-slide swiper-slide">
+                            <div class="review-box">
+                                <div class="review-box__content">
+                                    <div class="review-box__head">
+                                        <div class="review-box__info">
+                                            <p class="review-box__name">Вікторія</p>
+                                            <span class="review-box__date">14 Травня 2025</span>
+                                        </div>
+                                        <div class="review-box__rating">
+                                            <img src="./assets/img/icons/ico-star.svg" alt="Star">
+                                            <span>4.9</span>
+                                        </div>
+                                    </div>
+                                    <p class="review-box__text">
+                                        Гарна сучасна клініка, привітний персонал. Було дуже комфортно. Дякую
+                                        лікарю-гінекологу Владимирець Олена Сергіївна. Детально пояснила кожен етап і
+                                        дала
+                                        відповіді на запитання.
+                                    </p>
+                                    <button type="button" class="review-box__more">
+                                        <span>Читати більше</span>
+                                        <span>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_528_8117)">
+                                                    <path d="M8 13.3335L8 2.66684" stroke="white" stroke-width="1.5"
+                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                    <path
+                                                        d="M4.66634 10.0002C4.66634 10.0002 7.12127 13.3335 7.99967 13.3335C8.87807 13.3335 11.333 10.0002 11.333 10.0002"
+                                                        stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_528_8117">
+                                                        <rect width="16" height="16" fill="white"
+                                                            transform="translate(16) rotate(90)" />
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </span>
+                                    </button>
+                                </div>
+                                <div class="review-box__footer">
+                                    <p class="review-box__subtitle">Відгук про фахівця:</p>
+                                    <div class="review-box__target">
+                                        <div class="review-box__human">
+                                            <img loading="lazy" width="52" height="52" src="./assets/img/doctor_2.jpg"
+                                                alt="Photo">
+                                            <p>Владимирець Олена Сергіївна</p>
+                                        </div>
+                                        <div class="review-box__source">
+                                            <img loading="lazy" width="28" height="28"
+                                                src="./assets/img/icons/rev-inst.png" alt="Google">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reviews__items-slide swiper-slide">
+                            <div class="review-box">
+                                <div class="review-box__content">
+                                    <div class="review-box__head">
+                                        <div class="review-box__info">
+                                            <p class="review-box__name">Вікторія</p>
+                                            <span class="review-box__date">14 Травня 2025</span>
+                                        </div>
+                                        <div class="review-box__rating">
+                                            <img src="./assets/img/icons/ico-star.svg" alt="Star">
+                                            <span>4.9</span>
+                                        </div>
+                                    </div>
+                                    <p class="review-box__text">
+                                        Гарна сучасна клініка, привітний персонал. Було дуже комфортно. Дякую
+                                        лікарю-гінекологу Владимирець Олена Сергіївна. Детально пояснила кожен етап і
+                                        дала
+                                        відповіді на запитання.
+                                    </p>
+                                    <button type="button" class="review-box__more">
+                                        <span>Читати більше</span>
+                                        <span>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_528_8117)">
+                                                    <path d="M8 13.3335L8 2.66684" stroke="white" stroke-width="1.5"
+                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                    <path
+                                                        d="M4.66634 10.0002C4.66634 10.0002 7.12127 13.3335 7.99967 13.3335C8.87807 13.3335 11.333 10.0002 11.333 10.0002"
+                                                        stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_528_8117">
+                                                        <rect width="16" height="16" fill="white"
+                                                            transform="translate(16) rotate(90)" />
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </span>
+                                    </button>
+                                </div>
+                                <div class="review-box__footer">
+                                    <p class="review-box__subtitle">Відгук про фахівця:</p>
+                                    <div class="review-box__target">
+                                        <div class="review-box__human">
+                                            <img loading="lazy" width="52" height="52" src="./assets/img/doctor_1.jpg"
+                                                alt="Photo">
+                                            <p>Владимирець Олена Сергіївна</p>
+                                        </div>
+                                        <div class="review-box__source">
+                                            <img loading="lazy" width="28" height="28"
+                                                src="./assets/img/icons/rev-google.png" alt="Google">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reviews__items-slide swiper-slide">
+                            <div class="review-box">
+                                <div class="review-box__content">
+                                    <div class="review-box__head">
+                                        <div class="review-box__info">
+                                            <p class="review-box__name">Вікторія</p>
+                                            <span class="review-box__date">14 Травня 2025</span>
+                                        </div>
+                                        <div class="review-box__rating">
+                                            <img src="./assets/img/icons/ico-star.svg" alt="Star">
+                                            <span>4.9</span>
+                                        </div>
+                                    </div>
+                                    <p class="review-box__text">
+                                        Гарна сучасна клініка, привітний персонал. Було дуже комфортно. Дякую
+                                        лікарю-гінекологу Владимирець Олена Сергіївна. Детально пояснила кожен етап і
+                                        дала
+                                        відповіді на запитання.
+                                    </p>
+                                    <button type="button" class="review-box__more">
+                                        <span>Читати більше</span>
+                                        <span>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_528_8117)">
+                                                    <path d="M8 13.3335L8 2.66684" stroke="white" stroke-width="1.5"
+                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                    <path
+                                                        d="M4.66634 10.0002C4.66634 10.0002 7.12127 13.3335 7.99967 13.3335C8.87807 13.3335 11.333 10.0002 11.333 10.0002"
+                                                        stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_528_8117">
+                                                        <rect width="16" height="16" fill="white"
+                                                            transform="translate(16) rotate(90)" />
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </span>
+                                    </button>
+                                </div>
+                                <div class="review-box__footer">
+                                    <p class="review-box__subtitle">Відгук про фахівця:</p>
+                                    <div class="review-box__target">
+                                        <div class="review-box__human">
+                                            <img loading="lazy" width="52" height="52" src="./assets/img/doctor_2.jpg"
+                                                alt="Photo">
+                                            <p>Владимирець Олена Сергіївна</p>
+                                        </div>
+                                        <div class="review-box__source">
+                                            <img loading="lazy" width="28" height="28"
+                                                src="./assets/img/icons/rev-inst.png" alt="Google">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reviews__items-slide swiper-slide">
+                            <div class="review-box">
+                                <div class="review-box__content">
+                                    <div class="review-box__head">
+                                        <div class="review-box__info">
+                                            <p class="review-box__name">Вікторія</p>
+                                            <span class="review-box__date">14 Травня 2025</span>
+                                        </div>
+                                        <div class="review-box__rating">
+                                            <img src="./assets/img/icons/ico-star.svg" alt="Star">
+                                            <span>4.9</span>
+                                        </div>
+                                    </div>
+                                    <p class="review-box__text">
+                                        Гарна сучасна клініка, привітний персонал. Було дуже комфортно. Дякую
+                                        лікарю-гінекологу Владимирець Олена Сергіївна. Детально пояснила кожен етап і
+                                        дала
+                                        відповіді на запитання.
+                                    </p>
+                                    <button type="button" class="review-box__more">
+                                        <span>Читати більше</span>
+                                        <span>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_528_8117)">
+                                                    <path d="M8 13.3335L8 2.66684" stroke="white" stroke-width="1.5"
+                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                    <path
+                                                        d="M4.66634 10.0002C4.66634 10.0002 7.12127 13.3335 7.99967 13.3335C8.87807 13.3335 11.333 10.0002 11.333 10.0002"
+                                                        stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_528_8117">
+                                                        <rect width="16" height="16" fill="white"
+                                                            transform="translate(16) rotate(90)" />
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </span>
+                                    </button>
+                                </div>
+                                <div class="review-box__footer">
+                                    <p class="review-box__subtitle">Відгук про фахівця:</p>
+                                    <div class="review-box__target">
+                                        <div class="review-box__human">
+                                            <img loading="lazy" width="52" height="52" src="./assets/img/doctor_2.jpg"
+                                                alt="Photo">
+                                            <p>Владимирець Олена Сергіївна</p>
+                                        </div>
+                                        <div class="review-box__source">
+                                            <img loading="lazy" width="28" height="28"
+                                                src="./assets/img/icons/rev-inst.png" alt="Google">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-controls">
+                        <div class="slider-navigation js-reviews-nav">
+                            <button type="button" class="slider-navigation__btn js-reviews-prev swiper-button-disabled"
+                                disabled="" tabindex="-1" aria-label="Previous slide"
+                                aria-controls="swiper-wrapper-77b0e6bb489fae83" aria-disabled="true">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.63593 12.0001H20.4852" stroke="#3E3E40" stroke-width="2"
+                                        stroke-linecap="round"></path>
+                                    <path
+                                        d="M10.7188 5.06183C10.7188 5.06183 4.54837 10.2728 4.54837 12C4.5483 13.7273 10.7189 18.9382 10.7189 18.9382"
+                                        stroke="#3E3E40" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                </svg>
+                            </button>
+                            <button type="button" class="slider-navigation__btn js-reviews-next" tabindex="0"
+                                aria-label="Next slide" aria-controls="swiper-wrapper-77b0e6bb489fae83"
+                                aria-disabled="false">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M18.3641 12.0001H3.51483" stroke="#3E3E40" stroke-width="2"
+                                        stroke-linecap="round"></path>
+                                    <path
+                                        d="M13.2812 5.06183C13.2812 5.06183 19.4516 10.2728 19.4516 12C19.4517 13.7273 13.2811 18.9382 13.2811 18.9382"
+                                        stroke="#3E3E40" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="slider-progress js-reviews-progress"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reviews__logo">
+                <img src="./assets/img/logo-block.svg" alt="Logotype">
+                <img src="./assets/img/logo-block.svg" alt="Logotype">
+                <img src="./assets/img/logo-block.svg" alt="Logotype">
+            </div>
+        </section>
+        <section class="space">
+            <div class="container">
+                <div class="space__head">
+                    <h2 class="space__title content-title">
+                        Простір
+                        <span>Smart klinika</span>
+                    </h2>
+                </div>
+                <div class="space__items swiper js-space-slider">
+                    <div class="space__items-wrapper swiper-wrapper">
+                        <div class="space__items-slide swiper-slide">
+                            <div class="space-box">
+                                <img loading="lazy" src="./assets/img/space_1.jpg" alt="Thumbnail">
+                            </div>
+                        </div>
+                        <div class="space__items-slide swiper-slide">
+                            <div class="space-box">
+                                <img loading="lazy" src="./assets/img/space_2.jpg" alt="Thumbnail">
+                            </div>
+                        </div>
+                        <div class="space__items-slide swiper-slide">
+                            <div class="space-box">
+                                <img loading="lazy" src="./assets/img/space_3.jpg" alt="Thumbnail">
+                            </div>
+                        </div>
+                        <div class="space__items-slide swiper-slide">
+                            <div class="space-box">
+                                <img loading="lazy" src="./assets/img/space_4.jpg" alt="Thumbnail">
+                            </div>
+                        </div>
+                        <div class="space__items-slide swiper-slide">
+                            <div class="space-box">
+                                <img loading="lazy" src="./assets/img/space_1.jpg" alt="Thumbnail">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-controls">
+                        <div class="slider-navigation js-space-nav">
+                            <button type="button" class="slider-navigation__btn js-space-prev swiper-button-disabled"
+                                disabled="" tabindex="-1" aria-label="Previous slide"
+                                aria-controls="swiper-wrapper-77b0e6bb489fae83" aria-disabled="true">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.63593 12.0001H20.4852" stroke="#3E3E40" stroke-width="2"
+                                        stroke-linecap="round"></path>
+                                    <path
+                                        d="M10.7188 5.06183C10.7188 5.06183 4.54837 10.2728 4.54837 12C4.5483 13.7273 10.7189 18.9382 10.7189 18.9382"
+                                        stroke="#3E3E40" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                </svg>
+                            </button>
+                            <button type="button" class="slider-navigation__btn js-space-next" tabindex="0"
+                                aria-label="Next slide" aria-controls="swiper-wrapper-77b0e6bb489fae83"
+                                aria-disabled="false">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M18.3641 12.0001H3.51483" stroke="#3E3E40" stroke-width="2"
+                                        stroke-linecap="round"></path>
+                                    <path
+                                        d="M13.2812 5.06183C13.2812 5.06183 19.4516 10.2728 19.4516 12C19.4517 13.7273 13.2811 18.9382 13.2811 18.9382"
+                                        stroke="#3E3E40" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="slider-progress js-space-progress"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="faq">
+            <div class="container">
+                <div class="faq__content">
+                    <h2 class="faq__title content-title">
+                        <span>Нас часто <br> запитують</span>, тому ми відповідаємо.
+                    </h2>
+                    <ul class="faq__list">
+                        <li class="faq__list-item js-dd-item">
+                            <div class="faq__list-wrapper">
+                                <h3 class="faq__list-title">
+                                    Як відрізнити алергію від ГРВІ?
+                                </h3>
+                                <span>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 18.502V5.00195" stroke="#3E3E40" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M18 13.002C18 13.002 13.5811 19.0019 12 19.002C10.4188 19.002 6 13.002 6 13.002"
+                                            stroke="#3E3E40" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="faq__list-inner">
+                                <p class="faq__list-text">
+                                    Гарна сучасна клініка, привітний персонал. Було дуже комфортно. Дякую
+                                    лікарю-гінекологу Владимирець Олена Сергіївна. Детально пояснила кожен етап і дала
+                                    відповіді на запитання.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="faq__list-item js-dd-item">
+                            <div class="faq__list-wrapper">
+                                <h3 class="faq__list-title">
+                                    Як можна діагностувати алергію?
+                                </h3>
+                                <span>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 18.502V5.00195" stroke="#3E3E40" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M18 13.002C18 13.002 13.5811 19.0019 12 19.002C10.4188 19.002 6 13.002 6 13.002"
+                                            stroke="#3E3E40" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="faq__list-inner">
+                                <p class="faq__list-text">
+                                    Гарна сучасна клініка, привітний персонал. Було дуже комфортно. Дякую
+                                    лікарю-гінекологу Владимирець Олена Сергіївна. Детально пояснила кожен етап і дала
+                                    відповіді на запитання.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="faq__list-item js-dd-item">
+                            <div class="faq__list-wrapper">
+                                <h3 class="faq__list-title">
+                                    Чи можна вилікувати алергію назавжди?
+                                </h3>
+                                <span>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 18.502V5.00195" stroke="#3E3E40" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M18 13.002C18 13.002 13.5811 19.0019 12 19.002C10.4188 19.002 6 13.002 6 13.002"
+                                            stroke="#3E3E40" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="faq__list-inner">
+                                <p class="faq__list-text">
+                                    Гарна сучасна клініка, привітний персонал. Було дуже комфортно. Дякую
+                                    лікарю-гінекологу Владимирець Олена Сергіївна. Детально пояснила кожен етап і дала
+                                    відповіді на запитання.
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="about">
+            <div class="container">
+                <div class="about__content">
+                    <div class="about__titles">
+                        <h2 class="about__title content-title">
+                            <span>Smart</span> klinika
+                        </h2>
+                        <p class="about__subtitle">
+                            — сучасний медичний центр у Києві
+                        </p>
+                    </div>
+                    <div class="about__text js-text-more">
+                        <div>
+                            <p class="about__paragraph">
+                                Smart klinika — це нова мережа приватних медичних центрів у Києві. Комплексне вирішення
+                                питань для всієї сім’ї, доказовий підхід, розумна медицина та експертні фахівці — це все
+                                ви
+                                зустрінете за адресою просп. Петра Григоренка, 22/20.
+                            </p>
+                        </div>
+                        <div>
+                            <p class="about__paragraph">
+                                Цього року ми почали свою діяльність у Дарницькому районі на Позняках, але в 2025 маємо
+                                амбітні плани розширити діяльність і на правий берег Києва.
+                            </p>
+                        </div>
+                        <div>
+                            <p class="about__paragraph">
+                                Цього року ми почали свою діяльність у Дарницькому районі на Позняках, але в 2025 маємо
+                                амбітні плани розширити діяльність і на правий берег Києва.
+                            </p>
+                        </div>
+                        <button type="button" class="about__more js-about-more">
+                            <span>Читати більше</span>
+                            <span>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_528_8117)">
+                                        <path d="M8 13.3335L8 2.66684" stroke="white" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path
+                                            d="M4.66634 10.0002C4.66634 10.0002 7.12127 13.3335 7.99967 13.3335C8.87807 13.3335 11.333 10.0002 11.333 10.0002"
+                                            stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round"></path>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_528_8117">
+                                            <rect width="16" height="16" fill="white"
+                                                transform="translate(16) rotate(90)"></rect>
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__top">
+            <div class="footer__row">
+                <div class="container">
+                    <div class="footer__inner">
+                        <div class="footer__connect">
+                            <div class="footer__logo">
+                                <img loading="lazy" src="./assets/img/icons/logoLg_wht.svg" alt="Logotype">
+                            </div>
+                            <form class="footer__form">
+                                <div class="footer__form-group">
+                                    <label for="footerEmail" class="footer__title">
+                                        Дізнавайтесь першими про
+                                        вигідні пропозиції, статті, новини
+                                    </label>
+                                    <div class="footer__form-field">
+                                        <input type="email" name="footerEmail" id="footerEmail" placeholder="Ваш email">
+                                        <div class="footer__form-submit">
+                                            <button type="submit" class="footer__form-rec">
+                                                <svg width="16" height="14" viewBox="0 0 16 14" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M13.0001 7.00028L1.33333 7.00028M8.83366 12.8336C8.83366 12.8336 14.667 8.53744 14.667 7.00028C14.667 5.46311 8.83366 1.16699 8.83366 1.16699"
+                                                        stroke="white" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="footer__soc">
+                            <p class="footer__title">
+                                Доєднуйтесь до нас у соціальних мережах
+                            </p>
+                            <ul class="footer__links">
+                                <li class="footer__links-item">
+                                    <a href="#!">
+                                        <img src="./assets/img/icons/ico-facebook.svg" alt="Facebook">
+                                    </a>
+                                </li>
+                                <li class="footer__links-item">
+                                    <a href="#!">
+                                        <img src="./assets/img/icons/ico-inst.svg" alt="Instagram">
+                                    </a>
+                                </li>
+                                <li class="footer__links-item">
+                                    <a href="#!">
+                                        <img src="./assets/img/icons/ico-tube.svg" alt="YouTube">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__row">
+                <div class="container">
+                    <div class="footer__inner">
+                        <div class="footer__info">
+                            <div class="footer__info-item">
+                                <p class="footer__subtitle">Де ми знаходимось?</p>
+                                <p class="footer__text">м. Київ, просп. Григоренка, 22/20</p>
+                            </div>
+                            <div class="footer__info-item">
+                                <p class="footer__subtitle">Пн-Нд: 07:30 - 21:00</p>
+                                <a href="tel:+380976000303" class="footer__text">(097) 600-03-03</a>
+                            </div>
+                        </div>
+                        <div class="footer__btns">
+                            <a href="#!" class="footer__review">залишити відгук</a>
+                            <button type="button" class="footer__cons js-appointment">
+                                записатись на прийом
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__row">
+                <div class="container">
+                    <nav class="footer__nav">
+                        <ul>
+                            <li><a href="#!">Дорослим</a></li>
+                            <li><a href="#!">Дітям</a></li>
+                            <li><a href="#!">Лікарі</a></li>
+                            <li><a href="#!">Акції</a></li>
+                            <li><a href="#!">Ціни</a></li>
+                            <li><a href="#!">Відгуки</a></li>
+                            <li><a href="#!">Про клініку</a></li>
+                            <li><a href="#!">контакти</a></li>
+                            <li><a href="#!">соц. програми</a></li>
+                            <li><a href="#!">Блог</a></li>
+                            <li><a href="#!">вакансії</a></li>
+                            <li><a href="#!">Оплата</a></li>
+                            <li><a href="#!">документи</a></li>
+                        </ul>
+                    </nav>
+                    <p class="footer__reminder">
+                        САМОЛІКУВАННЯ МОЖЕ БУТИ ШКІДЛИВИМ ДЛЯ ВАШОГО ЗДОРОВ’Я
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bot">
+            <div class="container">
+                <p class="footer__copy">© Smart klinika 2025</p>
+                <p class="footer__license">Ліцензія наказ МОЗ України №728 від 29.06.2017</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

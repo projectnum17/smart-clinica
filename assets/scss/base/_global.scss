@@ -70,6 +70,17 @@ section:last-child {
     margin-bottom: 80px;
 }
 
+.swiper {
+    &:has(.is-centered) {
+        overflow: visible;
+    }
+    &-wrapper {
+        &.is-centered {
+            justify-content: center;
+        }
+    }
+}
+
 // .js-animation {
 //     opacity: 0;
 //     transform: translateY(15px);

@@ -1,0 +1,126 @@
+@use '../base/media' as *;
+@use '../base/mixins' as *;
+
+.interest-box {
+    height: 100%;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 24px;
+    border: 2px solid #d4dbde;
+    background: #ffffff33;
+    @include transitions(0.3s, ease-in);
+    @include hover {
+        background: var(--white);
+
+        .interest-box__img {
+            img {
+                transform: scale(1.15);
+            }
+        }
+
+        .interest-box__title {
+            color: var(--ball-blue);
+
+            &::after {
+                opacity: 1;
+            }
+        }
+
+        .interest-box__more {
+            span:last-child {
+                &::after {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &__img {
+        height: 200px;
+        border-radius: 20px;
+        margin-bottom: 24px;
+        overflow: hidden;
+
+        img {
+            height: 100%;
+            object-fit: cover;
+            @include transitions(0.3s, ease-in);
+        }
+    }
+
+    &__title {
+        font: 500 24px / 100% var(--ff-base);
+        letter-spacing: -1px;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        margin-bottom: 20px;
+        overflow: hidden;
+        position: relative;
+        color: var(--dark-grey);
+        @include transitions(0.3s, ease-in);
+
+        &::after {
+            position: absolute;
+            content: '';
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 1px;
+            opacity: 0;
+            background-color: var(--ball-blue);
+            @include transitions(0.3s, ease-in);
+        }
+    }
+
+    &__more {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-top: auto;
+
+        span {
+            &:first-child {
+                font: 500 16px / 100% var(--ff-nort);
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                color: #3e3e40;
+            }
+
+            &:last-child {
+                display: inline-flex;
+                flex-shrink: 0;
+                width: 24px;
+                height: 24px;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                border-radius: 50%;
+                color: var(--white);
+                background: var(--ball-blue);
+
+                svg {
+                    width: 16px;
+                    height: 16px;
+                    display: inline-flex;
+                    flex-shrink: 0;
+                    z-index: 2;
+                }
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 26px;
+                    height: 26px;
+                    border-radius: 50%;
+                    opacity: 0;
+                    background: var(--ball-blue);
+                    @include transitions(0.3s, ease-in);
+                }
+            }
+        }
+    }
+}

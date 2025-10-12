@@ -6,12 +6,6 @@
     &__slider {
         overflow: visible;
 
-        &-wrapper {
-            &.is-centered {
-                justify-content: center;
-            }
-        }
-
         &-slide {
             height: auto;
         }
