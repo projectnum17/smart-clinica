@@ -62,11 +62,11 @@ section,
     scroll-margin-top: var(--scrl-mt);
 }
 
-section:not(:last-child) {
+section {
     margin-bottom: var(--section-mb);
 }
 
-section:last-child {
+section.about {
     margin-bottom: 80px;
 }
 

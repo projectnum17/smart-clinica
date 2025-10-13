@@ -21,6 +21,7 @@ const helpers = () => {
             group.forEach((box) => wrapper.appendChild(box));
         }
     };
+    
     const showMoreServices = () => {
         const servicesList = document.querySelector('.js-smart-services');
         const handleServicesMore = document.querySelector('.js-smart-more');

@@ -1,0 +1,314 @@
+@use '../../base/media' as *;
+@use '../../base/mixins' as *;
+
+.main--doctors {
+    .content {
+        padding-top: 40px;
+
+        .container {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        &__filters {
+            position: sticky;
+            top: 150px;
+            max-width: 328px;
+            width: 100%;
+        }
+
+        &__title {
+            margin-bottom: 56px;
+        }
+
+        &__tabs {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+            margin-bottom: 32px;
+        }
+
+        &__tab {
+            cursor: pointer;
+
+            &.is-active {
+                .content__category {
+                    opacity: 1;
+                }
+
+                svg {
+                    color: #0096bc;
+                }
+            }
+        }
+
+        &__category {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            opacity: 0.6;
+            @include transitions(0.2s, ease-in);
+
+            span {
+                &:first-child {
+                    font: 400 32px / 100% var(--ff-base);
+                    letter-spacing: -1px;
+                }
+
+                &:last-child {
+                    display: inline-flex;
+                    width: 24px;
+                    height: 24px;
+
+                    svg {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+
+        &__selects {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        &__select {
+            width: 100%;
+            position: relative;
+
+            .select-hidden {
+                position: absolute;
+                opacity: 0;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                pointer-events: none;
+            }
+
+            .select-wrap {
+                cursor: pointer;
+                display: inline-block;
+                position: relative;
+                font-size: 18px;
+                width: 100%;
+            }
+
+            .select-styled {
+                font: 400 18px / 160% var(--ff-nort);
+                position: relative;
+                min-height: 61px;
+                border-radius: 12px;
+                padding: 15px 27px;
+                border: 1px solid #d4dbde;
+                background: linear-gradient(
+                    90deg,
+                    #ffffff 0%,
+                    rgba(255, 255, 255, 0.3) 100%
+                );
+
+                @include transitions(0.3s, ease-out);
+
+                &.placeholder {
+                    color: #3e3e40;
+                }
+
+                &::after {
+                    content: '';
+                    width: 24px;
+                    height: 24px;
+                    display: inline-flex;
+                    flex-shrink: 0;
+                    position: absolute;
+                    right: 18px;
+                    top: 50%;
+                    transform: translateY(-50%) rotate(0deg);
+                    background: url('../img/icons/icoDrop_blue.svg') no-repeat
+                        center center;
+                    @include transitions(0.3s, ease-out);
+                }
+
+                &:hover {
+                    cursor: pointer;
+                }
+
+                &:focus,
+                &.active {
+                    border: 1px solid #d4dbde;
+
+                    &::after {
+                        transform: translateY(-50%) rotate(180deg);
+                    }
+                }
+            }
+
+            .select-options {
+                position: absolute;
+                right: 0;
+                left: 0;
+                bottom: 0px;
+                transform: translateY(100%);
+                z-index: 2;
+                border-radius: 12px;
+                max-height: 170px;
+                overflow: scroll;
+                background: var(--white);
+                border: 1px solid #d4dbde;
+                @include transitions(0.3s, ease-out);
+
+                li {
+                    font: 400 18px / 160% var(--ff-nort);
+                    padding: 12px 0;
+                    text-indent: 15px;
+                    @include transitions(0.3s, ease-out);
+
+                    &:first-child {
+                        display: none;
+                    }
+
+                    &:hover {
+                        background: #dfe1e3;
+                    }
+
+                    &.is-selected {
+                        background: var(--ball-blue);
+                        color: var(--white);
+                    }
+
+                    &[rel='hide'] {
+                        display: none;
+                    }
+                }
+
+                &.hidden {
+                    opacity: 0;
+                    visibility: hidden;
+                }
+
+                &.show {
+                    opacity: 1;
+                    bottom: -2px;
+                    visibility: visible;
+                }
+            }
+        }
+
+        &__body {
+            width: 100%;
+            max-width: 1086px;
+        }
+
+        &__search {
+            position: relative;
+            margin-bottom: 60px;
+
+            img {
+                position: absolute;
+                top: 50%;
+                left: 27px;
+                width: 20px;
+                height: 20px;
+                transform: translateY(-50%);
+            }
+
+            input {
+                font: 400 18px / 100% var(--ff-nort);
+                width: 100%;
+                outline: none;
+                min-height: 61px;
+                padding: 15px 20px 15px 55px;
+                border-radius: 10px;
+                border: 1px solid #d4dbde;
+                background: linear-gradient(
+                    90deg,
+                    #ffffff 0%,
+                    rgba(255, 255, 255, 0.3) 100%
+                );
+
+                &::placeholder {
+                    color: rgba(62, 62, 64, 0.6);
+                }
+
+                &[type='search']::-webkit-search-cancel-button {
+                    -webkit-appearance: none;
+                    appearance: none;
+                }
+
+                &[type='search']::-webkit-search-decoration {
+                    -webkit-appearance: none;
+                    appearance: none;
+                }
+
+                &[type='search'] {
+                    -moz-appearance: textfield;
+                }
+
+                &[type='search'] {
+                    appearance: none;
+                }
+            }
+        }
+
+        &__cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 60px 24px;
+            margin-bottom: 60px;
+        }
+
+        &__pagination {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 40px;
+
+            &-btn {
+                font: 500 16px / 100% var(--ff-nort);
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                display: inline-flex;
+                width: 40px;
+                height: 40px;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                border: 2px solid transparent;
+                @include transitions(.2s, ease-in);
+
+                &.is-active {
+                    border-color: var(--ball-blue);
+                }
+            }
+        }
+
+        &__more {
+            font: 500 16px / 100% var(--ff-nort);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            align-items: center;
+            border-radius: 10px;
+            border: 2px solid var(--ball-blue);
+            gap: 8px;
+            padding: 16px 26px;
+            margin: 28px auto 0;
+            @include transitions(0.2s, ease-in);
+            @include hover {
+                background: var(--ball-blue);
+                color: var(--white);
+                svg {
+                    color: var(--white);
+                }
+            }
+
+            svg {
+                color: var(--ball-blue);
+                @include transitions(0.2s, ease-in);
+            }
+        }
+    }
+}
