@@ -138,7 +138,7 @@
 
                 &:focus,
                 &.active {
-                    border: 1px solid #d4dbde;
+                    border: 1px solid var(--ball-blue);
 
                     &::after {
                         transform: translateY(-50%) rotate(180deg);
@@ -150,14 +150,14 @@
                 position: absolute;
                 right: 0;
                 left: 0;
-                bottom: 0px;
+                bottom: -3px;
                 transform: translateY(100%);
                 z-index: 2;
                 border-radius: 12px;
                 max-height: 170px;
                 overflow: scroll;
                 background: var(--white);
-                border: 1px solid #d4dbde;
+                border: 1px solid var(--ball-blue);
                 @include transitions(0.3s, ease-out);
 
                 li {
@@ -229,6 +229,11 @@
                     rgba(255, 255, 255, 0.3) 100%
                 );
 
+                @include transitions(0.3s, ease-out);
+                &:focus {
+                    border: 1px solid var(--ball-blue);
+                }
+
                 &::placeholder {
                     color: rgba(62, 62, 64, 0.6);
                 }
@@ -278,7 +283,7 @@
                 justify-content: center;
                 border-radius: 50%;
                 border: 2px solid transparent;
-                @include transitions(.2s, ease-in);
+                @include transitions(0.2s, ease-in);
 
                 &.is-active {
                     border-color: var(--ball-blue);

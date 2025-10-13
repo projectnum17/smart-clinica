@@ -7,6 +7,19 @@
     overflow: hidden;
     background: linear-gradient(180deg, #ffffff 0%, #c1f0fc 100%);
 
+    &--compact {
+        .reviews__head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 50px;
+        }
+
+        .reviews__title {
+            margin-bottom: 0;
+        }
+    }
+
     &__title {
         margin-bottom: 50px;
     }
@@ -171,6 +184,8 @@
             img {
                 width: 52px;
                 height: 52px;
+                display: flex;
+                flex-shrink: 0;
                 border-radius: 50%;
                 object-fit: cover;
             }
@@ -194,6 +209,7 @@
             height: 52px;
             border-radius: 50%;
             display: inline-flex;
+            flex-shrink: 0;
             align-items: center;
             justify-content: center;
             background: #f0f4f9;

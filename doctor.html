@@ -1,0 +1,1182 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/img/favicon/favicon.svg" type="image/svg+xml" />
+    <meta name="description" content="Smart Clinic | Home">
+    <title>Smart Clinic | Doctor</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./assets/css/style.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script defer type="module" src="./assets/js/main.js"></script>
+</head>
+
+<body>
+    <div class="video-modal js-video-modal" id="videoModal">
+        <div class="video-modal__inner">
+            <div class="video-modal__wrapper js-video-modal__wrapper">
+                <button class="video-modal__close js-video-modal__close">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 5L5.00068 14.9993M14.9993 15L5 5.00071" stroke="#26aacc" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <button class="video-modal__play js-video-modal__play">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M26.1868 17.128C25.7155 18.9187 23.4883 20.184 19.0336 22.7148C14.7273 25.1612 12.5743 26.3845 10.8391 25.8928C10.1217 25.6895 9.46814 25.3035 8.941 24.7716C7.66602 23.4852 7.66602 20.9901 7.66602 16C7.66602 11.0099 7.66602 8.5148 8.941 7.22843C9.46814 6.6966 10.1217 6.31051 10.8391 6.10723C12.5743 5.61553 14.7273 6.83876 19.0336 9.28524C23.4883 11.816 25.7155 13.0813 26.1868 14.872C26.3813 15.6112 26.3813 16.3888 26.1868 17.128Z"
+                            fill="white"></path>
+                    </svg>
+                </button>
+                <div class="video-modal__video">
+                    <video controls playsinline id="videoPlayer"></video>
+                </div>
+            </div>
+        </div>
+    </div>
+    <header class="header">
+        <div class="header__top">
+            <div class="container">
+                <div class="header__search">
+                    <img width="20" height="20" src="./assets/img/icons/ico-search.svg" alt="Icon">
+                    <input class="header__search-field" type="search" name="headerSearch" id="headerSearch"
+                        placeholder="Введіть запит для пошуку">
+                </div>
+                <div class="header__info">
+                    <div class="header__location">
+                        <img width="20" height="20" src="./assets/img/icons/ico-pin.svg" alt="Icon">
+                        <span>пр-т Петра Григоренка, 22/20</span>
+                    </div>
+                    <div class="header__time">
+                        <img width="20" height="20" src="./assets/img/icons/ico-clock.svg" alt="Icon">
+                        <span>Пн-Нд: 07:30 - 21:00</span>
+                    </div>
+                </div>
+                <button type="button" class="header__marquee">
+                    <span>Важливе оголошення&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    <span>Важливе оголошення&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    <span>Важливе оголошення&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    <span>Важливе оголошення&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                </button>
+                <div class="header__panel">
+                    <a href="tel:+380976000303" class="header__phone">
+                        <img width="20" height="20" src="./assets/img/icons/ico-phone.svg" alt="Icon">
+                        <span>(097) 600-03-03</span>
+                    </a>
+                    <ul class="header__lang">
+                        <li class="header__lang-current">
+                            <span class="header__lang-label">UA</span>
+                        </li>
+                        <div class="header__lang-inner">
+                            <ul class="header__lang-list">
+                                <li class="header__lang-item header__lang-item--active">
+                                    <span class="header__lang-link">
+                                        UA
+                                    </span>
+                                </li>
+                                <li class="header__lang-item">
+                                    <a class="header__lang-link" href="#!">
+                                        EN
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="header__bot">
+            <div class="container">
+                <a href="#!" class="header__logo">
+                    <img src="./assets/img/icons/logoSm_blue.svg" alt="Logotype">
+                </a>
+                <nav class="header__nav">
+                    <ul class="header__menu">
+                        <li class="header__menu-item">
+                            <a href="#!" class="header__menu-link">Дорослим</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="#!" class="header__menu-link">Дітям</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="#!" class="header__menu-link">Лікарі</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="#!" class="header__menu-link">Акції</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="#!" class="header__menu-link">Ціни</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="#!" class="header__menu-link">Відгуки</a>
+                        </li>
+                        <li class="header__menu-item dd-menu js-dd-menu">
+                            <a href="#!" class="header__menu-link">Про клініку</a>
+                            <div class="dd-menu__container">
+                                <ul>
+                                    <li>
+                                        <a href="#!">Про Smart klinika</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!">Вакансії</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!">Інтернатура</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!">Контакти</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!">Оплата</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!">Блог</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!">Документи</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!">Соц. програми</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header__control">
+                    <a href="#!" class="header__cabinet">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12.75 6.375C12.75 4.30393 11.071 2.625 9 2.625C6.92893 2.625 5.25 4.30393 5.25 6.375C5.25 8.44605 6.92893 10.125 9 10.125C11.071 10.125 12.75 8.44605 12.75 6.375Z"
+                                stroke="#26AACC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M14.25 15.375C14.25 12.4755 11.8995 10.125 9 10.125C6.10051 10.125 3.75 12.4755 3.75 15.375"
+                                stroke="#26AACC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <span>Мій кабінет</span>
+                    </a>
+                    <button type="button" class="header__cons js-appointment cta cta--light">Записатись</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main main--doctor">
+        <section class="info">
+            <div class="container">
+                <div class="info__sticky">
+                    <div class="info__thumbnail">
+                        <img src="./assets/img/doctor_1.jpg" alt="Thumbnail">
+                        <button type="button" class="info__cta js-appointment">
+                            запис на прийом
+                        </button>
+                    </div>
+                </div>
+                <div class="info__about">
+                    <div class="info__controls">
+                        <a href="#!" class="info__controls-more link-more link-more--revert">
+                            <span>всі лікарі</span>
+                            <span>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_443_15486)">
+                                        <path d="M13.333 7.99988H2.66636" stroke="white" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path
+                                            d="M9.99969 11.3334C9.99969 11.3334 13.333 8.87842 13.333 8.00002C13.333 7.12162 9.99967 4.66669 9.99967 4.66669"
+                                            stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round"></path>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_443_15486">
+                                            <rect width="16" height="16" fill="white"></rect>
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_443_15486)">
+                                        <path d="M13.333 7.99988H2.66636" stroke="white" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path
+                                            d="M9.99969 11.3334C9.99969 11.3334 13.333 8.87842 13.333 8.00002C13.333 7.12162 9.99967 4.66669 9.99967 4.66669"
+                                            stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round"></path>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_443_15486">
+                                            <rect width="16" height="16" fill="white"></rect>
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </span>
+                        </a>
+                        <a href="#!" class="info__controls-rev">
+                            <img width="24" height="24" src="./assets/img/icons/ico-review-bl.svg" alt="Icon">
+                            <span>12 відгуків</span>
+                        </a>
+                    </div>
+                    <div class="info__dossier">
+                        <h1>Бʼєга Ольга Олегівна</h1>
+                        <div class="info__labels">
+                            <span>Завідувач урологічного відділення</span>
+                            <span>Кандидат медичних наук, Доцент</span>
+                        </div>
+                        <ul class="info__list">
+                            <li class="info__list-item">
+                                <p class="info__list-title">
+                                    Спеціалізація:
+                                </p>
+                                <div class="info__list-descr">
+                                    <p>
+                                        Лікар-уролог першої категорії, лікар ультразвукової діагностики
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="info__list-item">
+                                <p class="info__list-title">
+                                    Досвід роботи:
+                                </p>
+                                <div class="info__list-descr">
+                                    <p>
+                                        Рік початку практики: <span>2019</span>
+                                    </p>
+                                </div>
+                                <div class="info__list-descr">
+                                    <p>
+                                        Працює в Smart klinika: з <span>2020</span>
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="info__list-item">
+                                <p class="info__list-title">
+                                    Філія:
+                                </p>
+                                <div class="info__list-descr">
+                                    <p>
+                                        просп. Петра Григоренка 22/20
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="info__list-item">
+                                <p class="info__list-title">
+                                    Іноземні мови:
+                                </p>
+                                <div class="info__list-descr">
+                                    <p>
+                                        Українська, Англійська
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="info__list-item">
+                                <p class="info__list-title">
+                                    Консультації:
+                                </p>
+                                <div class="info__list-descr">
+                                    <p>
+                                        <span>Очно:</span> пр-т П. Григоренка, 22/20
+                                    </p>
+                                    <p>
+                                        <span>Онлайн</span>
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="info__additional">
+                            <li class="info__additional-item js-dd-item">
+                                <div class="info__additional-wrapper">
+                                    <h3 class="info__additional-title">
+                                        Додаткова Активність
+                                    </h3>
+                                    <span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12 18.502V5.00195" stroke="#3E3E40" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <path
+                                                d="M18 13.002C18 13.002 13.5811 19.0019 12 19.002C10.4188 19.002 6 13.002 6 13.002"
+                                                stroke="#3E3E40" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div class="info__additional-inner">
+                                    <ul class="info__additional-points">
+                                        <li class="info__additional-point">
+                                            <span>
+                                                Лікування акне, розацеа та акнеформні дерматози
+                                            </span>
+                                        </li>
+                                        <li class="info__additional-point">
+                                            <span>
+                                                Програми омолодження різних типів шкіри
+                                            </span>
+                                        </li>
+                                        <li class="info__additional-point">
+                                            <span>
+                                                <a href="#!">Ін‘єкційна косметологія</a> (біоревіталізація, філери,
+                                                ліполітики, контурна пластика)
+                                            </span>
+                                        </li>
+                                        <li class="info__additional-point">
+                                            <span>
+                                                CO2 шліфування
+                                            </span>
+                                        </li>
+                                        <li class="info__additional-point">
+                                            <span>
+                                                Видалення пігментації
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="info__additional-item js-dd-item">
+                                <div class="info__additional-wrapper">
+                                    <h3 class="info__additional-title">
+                                        Освіта
+                                    </h3>
+                                    <span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12 18.502V5.00195" stroke="#3E3E40" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <path
+                                                d="M18 13.002C18 13.002 13.5811 19.0019 12 19.002C10.4188 19.002 6 13.002 6 13.002"
+                                                stroke="#3E3E40" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div class="info__additional-inner">
+                                    <ul class="info__additional-points">
+                                        <li class="info__additional-point">
+                                            <span>
+                                                Лікування акне, розацеа та акнеформні дерматози
+                                            </span>
+                                        </li>
+                                        <li class="info__additional-point">
+                                            <span>
+                                                Програми омолодження різних типів шкіри
+                                            </span>
+                                        </li>
+                                        <li class="info__additional-point">
+                                            <span>
+                                                <a href="#!">Ін‘єкційна косметологія</a> (біоревіталізація, філери,
+                                                ліполітики, контурна пластика)
+                                            </span>
+                                        </li>
+                                        <li class="info__additional-point">
+                                            <span>
+                                                CO2 шліфування
+                                            </span>
+                                        </li>
+                                        <li class="info__additional-point">
+                                            <span>
+                                                Видалення пігментації
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="info__additional-item js-dd-item">
+                                <div class="info__additional-wrapper">
+                                    <h3 class="info__additional-title">
+                                        Тренінги та курси
+                                    </h3>
+                                    <span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12 18.502V5.00195" stroke="#3E3E40" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <path
+                                                d="M18 13.002C18 13.002 13.5811 19.0019 12 19.002C10.4188 19.002 6 13.002 6 13.002"
+                                                stroke="#3E3E40" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div class="info__additional-inner">
+                                    <ul class="info__additional-points">
+                                        <li class="info__additional-point">
+                                            <span>
+                                                Лікування акне, розацеа та акнеформні дерматози
+                                            </span>
+                                        </li>
+                                        <li class="info__additional-point">
+                                            <span>
+                                                Програми омолодження різних типів шкіри
+                                            </span>
+                                        </li>
+                                        <li class="info__additional-point">
+                                            <span>
+                                                <a href="#!">Ін‘єкційна косметологія</a> (біоревіталізація, філери,
+                                                ліполітики, контурна пластика)
+                                            </span>
+                                        </li>
+                                        <li class="info__additional-point">
+                                            <span>
+                                                CO2 шліфування
+                                            </span>
+                                        </li>
+                                        <li class="info__additional-point">
+                                            <span>
+                                                Видалення пігментації
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="info__additional-item js-dd-item">
+                                <div class="info__additional-wrapper">
+                                    <h3 class="info__additional-title">
+                                        Публікації лікаря
+                                    </h3>
+                                    <span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12 18.502V5.00195" stroke="#3E3E40" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <path
+                                                d="M18 13.002C18 13.002 13.5811 19.0019 12 19.002C10.4188 19.002 6 13.002 6 13.002"
+                                                stroke="#3E3E40" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div class="info__additional-inner">
+                                    <ul class="info__additional-points">
+                                        <li class="info__additional-point">
+                                            <span>
+                                                Лікування акне, розацеа та акнеформні дерматози
+                                            </span>
+                                        </li>
+                                        <li class="info__additional-point">
+                                            <span>
+                                                Програми омолодження різних типів шкіри
+                                            </span>
+                                        </li>
+                                        <li class="info__additional-point">
+                                            <span>
+                                                <a href="#!">Ін‘єкційна косметологія</a> (біоревіталізація, філери,
+                                                ліполітики, контурна пластика)
+                                            </span>
+                                        </li>
+                                        <li class="info__additional-point">
+                                            <span>
+                                                CO2 шліфування
+                                            </span>
+                                        </li>
+                                        <li class="info__additional-point">
+                                            <span>
+                                                Видалення пігментації
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="cert">
+            <div class="container">
+                <div class="cert__head">
+                    <h2 class="cert__title content-title">Сертифікати лікаря</h2>
+                    <div class="slider-navigation js-cert-nav">
+                        <button type="button" class="slider-navigation__btn js-cert-prev">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.63593 12.0001H20.4852" stroke="#3E3E40" stroke-width="2"
+                                    stroke-linecap="round" />
+                                <path
+                                    d="M10.7188 5.06183C10.7188 5.06183 4.54837 10.2728 4.54837 12C4.5483 13.7273 10.7189 18.9382 10.7189 18.9382"
+                                    stroke="#3E3E40" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <button type="button" class="slider-navigation__btn js-cert-next">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M18.3641 12.0001H3.51483" stroke="#3E3E40" stroke-width="2"
+                                    stroke-linecap="round" />
+                                <path
+                                    d="M13.2812 5.06183C13.2812 5.06183 19.4516 10.2728 19.4516 12C19.4517 13.7273 13.2811 18.9382 13.2811 18.9382"
+                                    stroke="#3E3E40" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="cert__items swiper js-cert-slider">
+                    <div class="cert__items-wrapper swiper-wrapper">
+                        <div class="cert__items-slide swiper-slide">
+                            <div class="cert-box">
+                                <div class="cert-box__zoom">
+                                    <img class="cert-box__img" loading="lazy" src="./assets/img/cert_1.png" alt="Certificate">
+                                    <div class="cert-box__action">
+                                        <img src="./assets/img/icons/ico-zoom.svg" alt="Zoom">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cert__items-slide swiper-slide">
+                            <div class="cert-box">
+                                <div class="cert-box__zoom">
+                                    <img class="cert-box__img" loading="lazy" src="./assets/img/cert_1.png" alt="Certificate">
+                                    <div class="cert-box__action">
+                                        <img src="./assets/img/icons/ico-zoom.svg" alt="Zoom">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cert__items-slide swiper-slide">
+                            <div class="cert-box">
+                                <div class="cert-box__zoom">
+                                    <img class="cert-box__img" loading="lazy" src="./assets/img/cert_2.png" alt="Certificate">
+                                    <div class="cert-box__action">
+                                        <img src="./assets/img/icons/ico-zoom.svg" alt="Zoom">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cert__items-slide swiper-slide">
+                            <div class="cert-box">
+                                <div class="cert-box__zoom">
+                                    <img class="cert-box__img" loading="lazy" src="./assets/img/cert_1.png" alt="Certificate">
+                                    <div class="cert-box__action">
+                                        <img src="./assets/img/icons/ico-zoom.svg" alt="Zoom">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cert__items-slide swiper-slide">
+                            <div class="cert-box">
+                                <div class="cert-box__zoom">
+                                    <img class="cert-box__img" loading="lazy" src="./assets/img/cert_2.png" alt="Certificate">
+                                    <div class="cert-box__action">
+                                        <img src="./assets/img/icons/ico-zoom.svg" alt="Zoom">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cert__items-slide swiper-slide">
+                            <div class="cert-box">
+                                <div class="cert-box__zoom">
+                                    <img class="cert-box__img" loading="lazy" src="./assets/img/cert_1.png" alt="Certificate">
+                                    <div class="cert-box__action">
+                                        <img src="./assets/img/icons/ico-zoom.svg" alt="Zoom">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="reviews reviews--compact">
+            <div class="container">
+                <div class="reviews__head">
+                    <h2 class="reviews__title content-title">Відгуки пацієнтів</h2>
+                    <div class="reviews__info-panel">
+                        <div class="reviews__info-known">
+                            <div class="reviews__info-stats">
+                                <p class="reviews__info-rating">4.7</p>
+                                <div class="reviews__info-stars">
+                                    <img width="24" height="24" src="./assets/img/icons/ico-star.svg" alt="Star">
+                                    <img width="24" height="24" src="./assets/img/icons/ico-star.svg" alt="Star">
+                                    <img width="24" height="24" src="./assets/img/icons/ico-star.svg" alt="Star">
+                                    <img width="24" height="24" src="./assets/img/icons/ico-star.svg" alt="Star">
+                                    <img width="24" height="24" src="./assets/img/icons/ico-star.svg" alt="Star">
+                                </div>
+                                <p class="reviews__info-total"><span>22</span> відгуки</p>
+                            </div>
+                        </div>
+                        <a href="#!" class="reviews__trigger cta cta--transparent">залишити відгук</a>
+                    </div>
+                </div>
+                <div class="reviews__items swiper js-reviews-slider">
+                    <div class="reviews__items-wrapper swiper-wrapper">
+                        <div class="reviews__items-slide swiper-slide">
+                            <div class="review-box">
+                                <div class="review-box__content">
+                                    <div class="review-box__head">
+                                        <div class="review-box__info">
+                                            <p class="review-box__name">Вікторія</p>
+                                            <span class="review-box__date">14 Травня 2025</span>
+                                        </div>
+                                        <div class="review-box__rating">
+                                            <img src="./assets/img/icons/ico-star.svg" alt="Star">
+                                            <span>4.9</span>
+                                        </div>
+                                    </div>
+                                    <p class="review-box__text">
+                                        Гарна сучасна клініка, привітний персонал. Було дуже комфортно. Дякую
+                                        лікарю-гінекологу Владимирець Олена Сергіївна. Детально пояснила кожен етап і
+                                        дала
+                                        відповіді на запитання.
+                                    </p>
+                                    <button type="button" class="review-box__more">
+                                        <span>Читати більше</span>
+                                        <span>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_528_8117)">
+                                                    <path d="M8 13.3335L8 2.66684" stroke="white" stroke-width="1.5"
+                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                    <path
+                                                        d="M4.66634 10.0002C4.66634 10.0002 7.12127 13.3335 7.99967 13.3335C8.87807 13.3335 11.333 10.0002 11.333 10.0002"
+                                                        stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_528_8117">
+                                                        <rect width="16" height="16" fill="white"
+                                                            transform="translate(16) rotate(90)" />
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </span>
+                                    </button>
+                                </div>
+                                <div class="review-box__footer">
+                                    <p class="review-box__subtitle">Відгук про фахівця:</p>
+                                    <div class="review-box__target">
+                                        <div class="review-box__human">
+                                            <img loading="lazy" width="52" height="52" src="./assets/img/doctor_1.jpg"
+                                                alt="Photo">
+                                            <p>Владимирець Олена Сергіївна</p>
+                                        </div>
+                                        <div class="review-box__source">
+                                            <img loading="lazy" width="28" height="28"
+                                                src="./assets/img/icons/rev-google.png" alt="Google">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reviews__items-slide swiper-slide">
+                            <div class="review-box">
+                                <div class="review-box__content">
+                                    <div class="review-box__head">
+                                        <div class="review-box__info">
+                                            <p class="review-box__name">Вікторія</p>
+                                            <span class="review-box__date">14 Травня 2025</span>
+                                        </div>
+                                        <div class="review-box__rating">
+                                            <img src="./assets/img/icons/ico-star.svg" alt="Star">
+                                            <span>4.9</span>
+                                        </div>
+                                    </div>
+                                    <p class="review-box__text">
+                                        Гарна сучасна клініка, привітний персонал. Було дуже комфортно. Дякую
+                                        лікарю-гінекологу Владимирець Олена Сергіївна. Детально пояснила кожен етап і
+                                        дала
+                                        відповіді на запитання.
+                                    </p>
+                                    <button type="button" class="review-box__more">
+                                        <span>Читати більше</span>
+                                        <span>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_528_8117)">
+                                                    <path d="M8 13.3335L8 2.66684" stroke="white" stroke-width="1.5"
+                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                    <path
+                                                        d="M4.66634 10.0002C4.66634 10.0002 7.12127 13.3335 7.99967 13.3335C8.87807 13.3335 11.333 10.0002 11.333 10.0002"
+                                                        stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_528_8117">
+                                                        <rect width="16" height="16" fill="white"
+                                                            transform="translate(16) rotate(90)" />
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </span>
+                                    </button>
+                                </div>
+                                <div class="review-box__footer">
+                                    <p class="review-box__subtitle">Відгук про фахівця:</p>
+                                    <div class="review-box__target">
+                                        <div class="review-box__human">
+                                            <img loading="lazy" width="52" height="52" src="./assets/img/doctor_2.jpg"
+                                                alt="Photo">
+                                            <p>Владимирець Олена Сергіївна</p>
+                                        </div>
+                                        <div class="review-box__source">
+                                            <img loading="lazy" width="28" height="28"
+                                                src="./assets/img/icons/rev-inst.png" alt="Google">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reviews__items-slide swiper-slide">
+                            <div class="review-box">
+                                <div class="review-box__content">
+                                    <div class="review-box__head">
+                                        <div class="review-box__info">
+                                            <p class="review-box__name">Вікторія</p>
+                                            <span class="review-box__date">14 Травня 2025</span>
+                                        </div>
+                                        <div class="review-box__rating">
+                                            <img src="./assets/img/icons/ico-star.svg" alt="Star">
+                                            <span>4.9</span>
+                                        </div>
+                                    </div>
+                                    <p class="review-box__text">
+                                        Гарна сучасна клініка, привітний персонал. Було дуже комфортно. Дякую
+                                        лікарю-гінекологу Владимирець Олена Сергіївна. Детально пояснила кожен етап і
+                                        дала
+                                        відповіді на запитання.
+                                    </p>
+                                    <button type="button" class="review-box__more">
+                                        <span>Читати більше</span>
+                                        <span>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_528_8117)">
+                                                    <path d="M8 13.3335L8 2.66684" stroke="white" stroke-width="1.5"
+                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                    <path
+                                                        d="M4.66634 10.0002C4.66634 10.0002 7.12127 13.3335 7.99967 13.3335C8.87807 13.3335 11.333 10.0002 11.333 10.0002"
+                                                        stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_528_8117">
+                                                        <rect width="16" height="16" fill="white"
+                                                            transform="translate(16) rotate(90)" />
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </span>
+                                    </button>
+                                </div>
+                                <div class="review-box__footer">
+                                    <p class="review-box__subtitle">Відгук про фахівця:</p>
+                                    <div class="review-box__target">
+                                        <div class="review-box__human">
+                                            <img loading="lazy" width="52" height="52" src="./assets/img/doctor_1.jpg"
+                                                alt="Photo">
+                                            <p>Владимирець Олена Сергіївна</p>
+                                        </div>
+                                        <div class="review-box__source">
+                                            <img loading="lazy" width="28" height="28"
+                                                src="./assets/img/icons/rev-google.png" alt="Google">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reviews__items-slide swiper-slide">
+                            <div class="review-box">
+                                <div class="review-box__content">
+                                    <div class="review-box__head">
+                                        <div class="review-box__info">
+                                            <p class="review-box__name">Вікторія</p>
+                                            <span class="review-box__date">14 Травня 2025</span>
+                                        </div>
+                                        <div class="review-box__rating">
+                                            <img src="./assets/img/icons/ico-star.svg" alt="Star">
+                                            <span>4.9</span>
+                                        </div>
+                                    </div>
+                                    <p class="review-box__text">
+                                        Гарна сучасна клініка, привітний персонал. Було дуже комфортно. Дякую
+                                        лікарю-гінекологу Владимирець Олена Сергіївна. Детально пояснила кожен етап і
+                                        дала
+                                        відповіді на запитання.
+                                    </p>
+                                    <button type="button" class="review-box__more">
+                                        <span>Читати більше</span>
+                                        <span>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_528_8117)">
+                                                    <path d="M8 13.3335L8 2.66684" stroke="white" stroke-width="1.5"
+                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                    <path
+                                                        d="M4.66634 10.0002C4.66634 10.0002 7.12127 13.3335 7.99967 13.3335C8.87807 13.3335 11.333 10.0002 11.333 10.0002"
+                                                        stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_528_8117">
+                                                        <rect width="16" height="16" fill="white"
+                                                            transform="translate(16) rotate(90)" />
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </span>
+                                    </button>
+                                </div>
+                                <div class="review-box__footer">
+                                    <p class="review-box__subtitle">Відгук про фахівця:</p>
+                                    <div class="review-box__target">
+                                        <div class="review-box__human">
+                                            <img loading="lazy" width="52" height="52" src="./assets/img/doctor_2.jpg"
+                                                alt="Photo">
+                                            <p>Владимирець Олена Сергіївна</p>
+                                        </div>
+                                        <div class="review-box__source">
+                                            <img loading="lazy" width="28" height="28"
+                                                src="./assets/img/icons/rev-inst.png" alt="Google">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reviews__items-slide swiper-slide">
+                            <div class="review-box">
+                                <div class="review-box__content">
+                                    <div class="review-box__head">
+                                        <div class="review-box__info">
+                                            <p class="review-box__name">Вікторія</p>
+                                            <span class="review-box__date">14 Травня 2025</span>
+                                        </div>
+                                        <div class="review-box__rating">
+                                            <img src="./assets/img/icons/ico-star.svg" alt="Star">
+                                            <span>4.9</span>
+                                        </div>
+                                    </div>
+                                    <p class="review-box__text">
+                                        Гарна сучасна клініка, привітний персонал. Було дуже комфортно. Дякую
+                                        лікарю-гінекологу Владимирець Олена Сергіївна. Детально пояснила кожен етап і
+                                        дала
+                                        відповіді на запитання.
+                                    </p>
+                                    <button type="button" class="review-box__more">
+                                        <span>Читати більше</span>
+                                        <span>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_528_8117)">
+                                                    <path d="M8 13.3335L8 2.66684" stroke="white" stroke-width="1.5"
+                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                    <path
+                                                        d="M4.66634 10.0002C4.66634 10.0002 7.12127 13.3335 7.99967 13.3335C8.87807 13.3335 11.333 10.0002 11.333 10.0002"
+                                                        stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_528_8117">
+                                                        <rect width="16" height="16" fill="white"
+                                                            transform="translate(16) rotate(90)" />
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </span>
+                                    </button>
+                                </div>
+                                <div class="review-box__footer">
+                                    <p class="review-box__subtitle">Відгук про фахівця:</p>
+                                    <div class="review-box__target">
+                                        <div class="review-box__human">
+                                            <img loading="lazy" width="52" height="52" src="./assets/img/doctor_2.jpg"
+                                                alt="Photo">
+                                            <p>Владимирець Олена Сергіївна</p>
+                                        </div>
+                                        <div class="review-box__source">
+                                            <img loading="lazy" width="28" height="28"
+                                                src="./assets/img/icons/rev-inst.png" alt="Google">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-controls">
+                        <div class="slider-navigation js-reviews-nav">
+                            <button type="button" class="slider-navigation__btn js-reviews-prev swiper-button-disabled"
+                                disabled="" tabindex="-1" aria-label="Previous slide"
+                                aria-controls="swiper-wrapper-77b0e6bb489fae83" aria-disabled="true">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.63593 12.0001H20.4852" stroke="#3E3E40" stroke-width="2"
+                                        stroke-linecap="round"></path>
+                                    <path
+                                        d="M10.7188 5.06183C10.7188 5.06183 4.54837 10.2728 4.54837 12C4.5483 13.7273 10.7189 18.9382 10.7189 18.9382"
+                                        stroke="#3E3E40" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                </svg>
+                            </button>
+                            <button type="button" class="slider-navigation__btn js-reviews-next" tabindex="0"
+                                aria-label="Next slide" aria-controls="swiper-wrapper-77b0e6bb489fae83"
+                                aria-disabled="false">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M18.3641 12.0001H3.51483" stroke="#3E3E40" stroke-width="2"
+                                        stroke-linecap="round"></path>
+                                    <path
+                                        d="M13.2812 5.06183C13.2812 5.06183 19.4516 10.2728 19.4516 12C19.4517 13.7273 13.2811 18.9382 13.2811 18.9382"
+                                        stroke="#3E3E40" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="slider-progress js-reviews-progress"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reviews__logo">
+                <img src="./assets/img/logo-block.svg" alt="Logotype">
+                <img src="./assets/img/logo-block.svg" alt="Logotype">
+                <img src="./assets/img/logo-block.svg" alt="Logotype">
+            </div>
+        </section>
+        <section class="space">
+            <div class="container">
+                <div class="space__head">
+                    <h2 class="space__title content-title">
+                        Фото та відео
+                    </h2>
+                </div>
+                <div class="space__items swiper js-space-slider">
+                    <div class="space__items-wrapper swiper-wrapper">
+                        <div class="space__items-slide swiper-slide">
+                            <div class="space-box">
+                                <img loading="lazy" src="./assets/img/space_1.jpg" alt="Thumbnail">
+                            </div>
+                        </div>
+                        <div class="space__items-slide swiper-slide">
+                            <div class="space-box video-box js-video-modal" data-video="./assets/video/stress.mp4">
+                                <img loading="lazy" src="./assets/img/space_2.jpg" alt="Thumbnail">
+                                <div class="video-box__control">
+                                    <div class="video-box__rec">
+                                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M26.1868 17.128C25.7155 18.9187 23.4883 20.184 19.0336 22.7148C14.7273 25.1612 12.5743 26.3845 10.8391 25.8928C10.1217 25.6895 9.46814 25.3035 8.941 24.7716C7.66602 23.4852 7.66602 20.9901 7.66602 16C7.66602 11.0099 7.66602 8.5148 8.941 7.22843C9.46814 6.6966 10.1217 6.31051 10.8391 6.10723C12.5743 5.61553 14.7273 6.83876 19.0336 9.28524C23.4883 11.816 25.7155 13.0813 26.1868 14.872C26.3813 15.6112 26.3813 16.3888 26.1868 17.128Z"
+                                                fill="white" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="space__items-slide swiper-slide">
+                            <div class="space-box">
+                                <img loading="lazy" src="./assets/img/space_3.jpg" alt="Thumbnail">
+                            </div>
+                        </div>
+                        <div class="space__items-slide swiper-slide">
+                            <div class="space-box">
+                                <img loading="lazy" src="./assets/img/space_4.jpg" alt="Thumbnail">
+                            </div>
+                        </div>
+                        <div class="space__items-slide swiper-slide">
+                            <div class="space-box">
+                                <img loading="lazy" src="./assets/img/space_1.jpg" alt="Thumbnail">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-controls">
+                        <div class="slider-navigation js-space-nav">
+                            <button type="button" class="slider-navigation__btn js-space-prev swiper-button-disabled"
+                                disabled="" tabindex="-1" aria-label="Previous slide"
+                                aria-controls="swiper-wrapper-77b0e6bb489fae83" aria-disabled="true">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.63593 12.0001H20.4852" stroke="#3E3E40" stroke-width="2"
+                                        stroke-linecap="round"></path>
+                                    <path
+                                        d="M10.7188 5.06183C10.7188 5.06183 4.54837 10.2728 4.54837 12C4.5483 13.7273 10.7189 18.9382 10.7189 18.9382"
+                                        stroke="#3E3E40" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                </svg>
+                            </button>
+                            <button type="button" class="slider-navigation__btn js-space-next" tabindex="0"
+                                aria-label="Next slide" aria-controls="swiper-wrapper-77b0e6bb489fae83"
+                                aria-disabled="false">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M18.3641 12.0001H3.51483" stroke="#3E3E40" stroke-width="2"
+                                        stroke-linecap="round"></path>
+                                    <path
+                                        d="M13.2812 5.06183C13.2812 5.06183 19.4516 10.2728 19.4516 12C19.4517 13.7273 13.2811 18.9382 13.2811 18.9382"
+                                        stroke="#3E3E40" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="slider-progress js-space-progress"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="action">
+            <div class="container">
+                <div class="action__content">
+                    <div class="action__info">
+                        <div class="action__details">
+                            <p class="action__heading">
+                                Бʼєга Ольга Олегівна
+                            </p>
+                            <div class="action__phone">
+                                <div class="action__ico">
+                                    <img src="./assets/img/icons/fallback/ico-phone.svg" alt="Icon">
+                                </div>
+                                <p class="action__subtitle">Запис за телефоном:</p>
+                                <a href="tel:+380976000303" class="action__link">
+                                    (097) 600-03-03
+                                </a>
+                            </div>
+                        </div>
+                        <div class="action__thumb">
+                            <img loading="lazy" width="728" height="500" src="./assets/img/doctor_1.jpg"
+                                alt="Thumbnail">
+                        </div>
+                    </div>
+                    <div class="action__make">
+                        <h3 class="action__title">Записатись на прийом</h3>
+                        <form class="action__form">
+                            <div class="action__form-fields">
+                                <div class="action__form-group field-phone">
+                                    <input type="tel" name="mainAppPhone" id="mainAppPhone"
+                                        class="action__form-field field-phone--item" placeholder="+38 (XXX) XXX XX XX">
+                                </div>
+                                <div class="action__form-group">
+                                    <label class="action__form-title" for="mainAppDate">Бажана дата прийому</label>
+                                    <div class="action__form-inner js-date-picker field-date">
+                                        <input type="date" name="mainAppDate" id="mainAppDate"
+                                            class="action__form-field field-date--item">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="action__form-check">
+                                <input class="action__form-cheked" type="checkbox" name="mainAppCheck"
+                                    id="mainAppCheck">
+                                <label class="action__form-label" for="mainAppCheck">
+                                    <p>
+                                        Погоджуюсь з умовами <a href="#!">Політики приватності</a> та <a
+                                            href="#!">Публічного договору</a>
+                                    </p>
+                                </label>
+                            </div>
+                            <button type="submit" class="action__form-submit">
+                                Запис на прийом
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__top">
+            <div class="footer__row">
+                <div class="container">
+                    <div class="footer__inner">
+                        <div class="footer__connect">
+                            <div class="footer__logo">
+                                <img loading="lazy" src="./assets/img/icons/logoLg_wht.svg" alt="Logotype">
+                            </div>
+                            <form class="footer__form">
+                                <div class="footer__form-group">
+                                    <label for="footerEmail" class="footer__title">
+                                        Дізнавайтесь першими про
+                                        вигідні пропозиції, статті, новини
+                                    </label>
+                                    <div class="footer__form-field">
+                                        <input type="email" name="footerEmail" id="footerEmail" placeholder="Ваш email">
+                                        <div class="footer__form-submit">
+                                            <button type="submit" class="footer__form-rec">
+                                                <svg width="16" height="14" viewBox="0 0 16 14" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M13.0001 7.00028L1.33333 7.00028M8.83366 12.8336C8.83366 12.8336 14.667 8.53744 14.667 7.00028C14.667 5.46311 8.83366 1.16699 8.83366 1.16699"
+                                                        stroke="white" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="footer__soc">
+                            <p class="footer__title">
+                                Доєднуйтесь до нас у соціальних мережах
+                            </p>
+                            <ul class="footer__links">
+                                <li class="footer__links-item">
+                                    <a href="#!">
+                                        <img src="./assets/img/icons/ico-facebook.svg" alt="Facebook">
+                                    </a>
+                                </li>
+                                <li class="footer__links-item">
+                                    <a href="#!">
+                                        <img src="./assets/img/icons/ico-inst.svg" alt="Instagram">
+                                    </a>
+                                </li>
+                                <li class="footer__links-item">
+                                    <a href="#!">
+                                        <img src="./assets/img/icons/ico-tube.svg" alt="YouTube">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__row">
+                <div class="container">
+                    <div class="footer__inner">
+                        <div class="footer__info">
+                            <div class="footer__info-item">
+                                <p class="footer__subtitle">Де ми знаходимось?</p>
+                                <p class="footer__text">м. Київ, просп. Григоренка, 22/20</p>
+                            </div>
+                            <div class="footer__info-item">
+                                <p class="footer__subtitle">Пн-Нд: 07:30 - 21:00</p>
+                                <a href="tel:+380976000303" class="footer__text">(097) 600-03-03</a>
+                            </div>
+                        </div>
+                        <div class="footer__btns">
+                            <a href="#!" class="footer__review">залишити відгук</a>
+                            <button type="button" class="footer__cons js-appointment">
+                                записатись на прийом
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__row">
+                <div class="container">
+                    <nav class="footer__nav">
+                        <ul>
+                            <li><a href="#!">Дорослим</a></li>
+                            <li><a href="#!">Дітям</a></li>
+                            <li><a href="#!">Лікарі</a></li>
+                            <li><a href="#!">Акції</a></li>
+                            <li><a href="#!">Ціни</a></li>
+                            <li><a href="#!">Відгуки</a></li>
+                            <li><a href="#!">Про клініку</a></li>
+                            <li><a href="#!">контакти</a></li>
+                            <li><a href="#!">соц. програми</a></li>
+                            <li><a href="#!">Блог</a></li>
+                            <li><a href="#!">вакансії</a></li>
+                            <li><a href="#!">Оплата</a></li>
+                            <li><a href="#!">документи</a></li>
+                        </ul>
+                    </nav>
+                    <p class="footer__reminder">
+                        САМОЛІКУВАННЯ МОЖЕ БУТИ ШКІДЛИВИМ ДЛЯ ВАШОГО ЗДОРОВ’Я
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bot">
+            <div class="container">
+                <p class="footer__copy">© Smart klinika 2025</p>
+                <p class="footer__license">Ліцензія наказ МОЗ України №728 від 29.06.2017</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -21,7 +21,7 @@ const helpers = () => {
             group.forEach((box) => wrapper.appendChild(box));
         }
     };
-    
+
     const showMoreServices = () => {
         const servicesList = document.querySelector('.js-smart-services');
         const handleServicesMore = document.querySelector('.js-smart-more');
@@ -60,6 +60,8 @@ const helpers = () => {
     const datePickHandler = () => {
         const dateInput = document.querySelector('#mainAppDate');
         const dateWrapper = document.querySelector('.js-date-picker');
+
+        if (!dateInput || !dateWrapper) return
 
         dateInput.addEventListener('keydown', (e) => e.preventDefault());
         dateInput.addEventListener('keypress', (e) => e.preventDefault());

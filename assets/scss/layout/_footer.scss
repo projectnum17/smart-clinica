@@ -72,9 +72,13 @@
                 width: 100%;
                 padding: 17px 58px 17px 20px;
                 outline: none;
-                border: none;
+                border: 1px solid transparent;
                 border-radius: 8px;
                 background: #f0f4f9;
+                @include transitions(0.3s, ease-out);
+                &:focus {
+                    border: 1px solid var(--ball-blue);
+                }
             }
         }
 

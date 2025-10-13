@@ -159,12 +159,38 @@ const sliders = () => {
         });
     };
 
+    const certSlider = () => {
+        const sliderEl = document.querySelector('.js-cert-slider');
+        const navPanel = document.querySelector('.js-cert-nav');
+        if (!sliderEl || !navPanel) return;
+
+        const slideCount = sliderEl.querySelectorAll('.swiper-slide');
+        const sliderWrapper = sliderEl.querySelector('.swiper-wrapper');
+
+        if (slideCount.length < 3) {
+            navPanel.style.display = 'none';
+            sliderWrapper.classList.add('is-centered');
+        }
+
+        new Swiper(sliderEl, {
+            spaceBetween: 20,
+            slidesPerView: 'auto',
+            grabCursor: true,
+            speed: 900,
+            navigation: {
+                prevEl: '.js-cert-prev',
+                nextEl: '.js-cert-next',
+            },
+        });
+    };
+
     heroNewsSlider();
     doctorsSlider();
     reviewsSlider();
     spaceSlider();
     partnersSlider();
     interestSlider();
+    certSlider();
 };
 
 export default sliders;

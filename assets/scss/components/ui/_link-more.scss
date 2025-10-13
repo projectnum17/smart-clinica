@@ -40,7 +40,7 @@
             overflow: hidden;
             background: var(--ball-blue);
             color: var(--white);
-            @include transitions(.3s, ease-in);
+            @include transitions(0.3s, ease-in);
 
             svg {
                 display: inline-flex;
@@ -51,12 +51,28 @@
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-                @include transitions(.3s, ease-in);
+                @include transitions(0.3s, ease-in);
 
                 &:last-child {
                     left: -30%;
                 }
             }
+        }
+    }
+
+    &--revert {
+        flex-direction: row-reverse;
+
+        @include hover {
+            span {
+                &:last-child {
+                    transform: rotate(180deg) scale(1.05);
+                }
+            }
+        }
+
+        span:last-child {
+            transform: rotate(180deg);
         }
     }
 }
