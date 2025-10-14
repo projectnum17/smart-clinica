@@ -1,0 +1,17 @@
+@use '../../base/media' as *;
+@use '../../base/mixins' as *;
+
+.main--promotion {
+    .prices {
+        .container {
+            display: flex;
+            align-items: flex-start;
+            gap: 30px;
+        }
+
+        .prices-kit {
+            max-width: 855px;
+            width: 100%;
+        }
+    }
+}
