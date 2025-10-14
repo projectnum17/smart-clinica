@@ -22,27 +22,37 @@ const helpers = () => {
         }
     };
 
-    const showMoreServices = () => {
-        const servicesList = document.querySelector('.js-smart-services');
-        const handleServicesMore = document.querySelector('.js-smart-more');
+    const showMoreHandler = (
+        parentSelector,
+        childSelector,
+        trigger,
+        visibleCount,
+        totalThreshold
+    ) => {
+        const servicesList = document.querySelector(parentSelector);
+        const handleServicesMore = document.querySelector(trigger);
 
         if (!servicesList || !handleServicesMore) return;
 
-        const serviceBox = servicesList.querySelectorAll(
-            '.services-table__rect'
-        );
+        const serviceBoxes = servicesList.querySelectorAll(childSelector);
 
-        serviceBox.forEach((box, i) => {
-            if (i > 23) {
+        if (serviceBoxes.length <= visibleCount) {
+            handleServicesMore.style.display = 'none';
+            return;
+        }
+
+        serviceBoxes.forEach((box, i) => {
+            if (i > totalThreshold) {
                 box.style.display = 'none';
-                servicesList.classList.add('is-overlay');
             }
+        });
 
-            handleServicesMore.addEventListener('click', () => {
-                box.style.display = '';
-                servicesList.classList.remove('is-overlay');
-                handleServicesMore.style.display = 'none';
-            });
+        servicesList.classList.add('is-overlay');
+
+        handleServicesMore.addEventListener('click', () => {
+            serviceBoxes.forEach((box) => (box.style.display = ''));
+            servicesList.classList.remove('is-overlay');
+            handleServicesMore.style.display = 'none';
         });
     };
 
@@ -61,7 +71,7 @@ const helpers = () => {
         const dateInput = document.querySelector('#mainAppDate');
         const dateWrapper = document.querySelector('.js-date-picker');
 
-        if (!dateInput || !dateWrapper) return
+        if (!dateInput || !dateWrapper) return;
 
         dateInput.addEventListener('keydown', (e) => e.preventDefault());
         dateInput.addEventListener('keypress', (e) => e.preventDefault());
@@ -117,10 +127,31 @@ const helpers = () => {
     };
 
     formData();
-    showMoreServices();
+    showMoreHandler();
     drawBorderForTable();
     datePickHandler();
     aboutMoreText();
+    showMoreHandler(
+        '.js-doctors-list',
+        '.doctor-box',
+        '.js-doctors-more',
+        12,
+        11
+    );
+    showMoreHandler(
+        '.js-smart-services',
+        '.services-table__rect',
+        '.js-smart-more',
+        24,
+        23
+    );
+    showMoreHandler(
+        '.js-offers-list',
+        '.interest-box',
+        '.js-offers-more',
+        12,
+        11
+    );
 };
 
 export default helpers;

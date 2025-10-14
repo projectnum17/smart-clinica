@@ -1,0 +1,39 @@
+@use '../base/media' as *;
+@use '../base/mixins' as *;
+
+.road-map {
+    display: flex;
+    align-items: center;
+    gap: 44px;
+
+    &__item {
+        font: 400 32px / 100% var(--ff-base);
+        letter-spacing: -1px;
+        opacity: 0.6;
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+
+        &::after {
+            content: '';
+            display: inline-flex;
+            flex-shrink: 0;
+            width: 24px;
+            height: 24px;
+            background: url('../img/icons/icoArrow-r-g.svg') no-repeat center
+                center / cover;
+        }
+
+        &.is-active {
+            opacity: 1;
+            &::after {
+                background: url('../img/icons/icoArrow-r-b.svg') no-repeat
+                    center center / cover;
+            }
+        }
+
+        a {
+            font: inherit;
+        }
+    }
+}

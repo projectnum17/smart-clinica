@@ -1,0 +1,23 @@
+@use '../../base/media' as *;
+@use '../../base/mixins' as *;
+
+.main--promotion {
+    .offers {
+        padding-top: 32px;
+
+        &__title {
+            margin-bottom: 40px;
+        }
+
+        &__cards {
+            padding-top: 40px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .btn-more {
+            margin: 60px auto 0;
+        }
+    }
+}

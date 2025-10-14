@@ -100,31 +100,6 @@
     }
 }
 
-.service-more {
-    font: 500 16px / 100% var(--ff-nort);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    align-items: center;
-    border-radius: 10px;
-    border: 2px solid var(--ball-blue);
-    gap: 8px;
-    padding: 16px 26px;
-    margin: 28px auto 0;
-    @include transitions(0.2s, ease-in);
-    @include hover {
-        background: var(--ball-blue);
-        color: var(--white);
-        svg {
-            color: var(--white);
-        }
-    }
-
-    svg {
-        color: var(--ball-blue);
-        @include transitions(0.2s, ease-in);
-    }
-}
-
 .boxes-inner {
     display: flex;
     border-bottom: 1px solid transparent;
