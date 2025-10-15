@@ -8,6 +8,8 @@ import ddBlocks from './modules/_ddBlocks.js';
 import videoModal from './modules/_videoModal.js';
 import infoModals from './modules/_infoModals.js';
 import reviewPage from './modules/_reviewPage.js';
+import videoAsync from './modules/_videoAsync.js';
+import tineLine from './modules/_timeLine.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     headerFlow();
@@ -18,4 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
     videoModal();
     infoModals();
     reviewPage();
+    videoAsync();
+    tineLine();
 });

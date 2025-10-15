@@ -1,24 +1,23 @@
 const helpers = () => {
-    const drawBorderForTable = () => {
-        const servicesList = document.querySelector('.js-table-grid');
-        if (!servicesList) return;
+    const groupElements = (options) => {
+        const { containerSelector, itemSelector, wrapperClass, groupSize } =
+            options;
 
-        const servicesBox = servicesList.querySelectorAll(
-            '.services-table__rect'
-        );
+        const container = document.querySelector(containerSelector);
+        if (!container) return;
 
-        const boxesArray = Array.from(servicesBox);
+        const items = container.querySelectorAll(itemSelector);
+        const itemsArray = Array.from(items);
 
-        for (let i = 0; i < boxesArray.length; i += 6) {
+        for (let i = 0; i < itemsArray.length; i += groupSize) {
             const wrapper = document.createElement('div');
-            wrapper.classList.add('boxes-inner');
+            wrapper.classList.add(wrapperClass);
 
-            const group = boxesArray.slice(i, i + 6);
+            const group = itemsArray.slice(i, i + groupSize);
+            const firstItem = group[0];
 
-            const firstBox = group[0];
-            servicesList.insertBefore(wrapper, firstBox);
-
-            group.forEach((box) => wrapper.appendChild(box));
+            container.insertBefore(wrapper, firstItem);
+            group.forEach((item) => wrapper.appendChild(item));
         }
     };
 
@@ -128,7 +127,6 @@ const helpers = () => {
 
     formData();
     showMoreHandler();
-    drawBorderForTable();
     datePickHandler();
     aboutMoreText();
     showMoreHandler(
@@ -154,6 +152,20 @@ const helpers = () => {
     );
 
     showMoreHandler('.js-reviews-cards', '.card', '.js-reviews-more', 6, 5);
+
+    groupElements({
+        containerSelector: '.js-table-grid',
+        itemSelector: '.services-table__rect',
+        wrapperClass: 'boxes-inner',
+        groupSize: 6,
+    });
+
+    groupElements({
+        containerSelector: '.js-team-grid',
+        itemSelector: '.team__card',
+        wrapperClass: 'team-inner',
+        groupSize: 5,
+    });
 };
 
 export default helpers;
