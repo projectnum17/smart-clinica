@@ -1,0 +1,272 @@
+@use '../../base/media' as *;
+@use '../../base/mixins' as *;
+
+.main--reviews {
+    .testimonials {
+        &__cards {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+    }
+
+    .card {
+        display: flex;
+        align-items: stretch;
+        border-radius: 24px;
+        overflow: hidden;
+        border: 1px solid #dde0e3;
+
+        &__source {
+            max-width: 354px;
+            width: 100%;
+            padding: 31px 39px;
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+            border-right: 1px solid #dde0e3;
+            background: linear-gradient(
+                90deg,
+                #d6f3ff 0%,
+                #eefaff 47.12%,
+                #ffffff 100%
+            );
+
+            &-ratings {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            &-head {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+            }
+
+            &-item {
+                width: 44px;
+                height: 44px;
+                display: inline-flex;
+                flex-shrink: 0;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                background: #f0f4f9;
+
+                img {
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+
+            &-title {
+                font: 400 16px / 100% var(--ff-nort);
+                opacity: 0.6;
+                margin-bottom: 4px;
+            }
+
+            &-name {
+                font: 400 16px / 100% var(--ff-nort);
+                text-decoration: underline;
+
+                &.wht-decor {
+                    text-decoration: none;
+                }
+            }
+
+            &-subtitle {
+                font: 500 16px / 100% var(--ff-nort);
+                margin-bottom: 8px;
+            }
+
+            &-stars {
+                display: flex;
+                align-items: center;
+                gap: 4px;
+
+                img {
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+        }
+
+        &__content {
+            padding: 31px 59px;
+            width: 100%;
+            background: #fff;
+
+            &-head {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 20px;
+            }
+
+            &-name {
+                font: 500 28px / 100% var(--ff-nort);
+                letter-spacing: -1px;
+            }
+
+            &-date {
+                font: 400 16px / 100% var(--ff-nort);
+                display: inline-flex;
+                align-items: center;
+                gap: 32px;
+
+                &::after {
+                    content: '';
+                    display: inline-flex;
+                    flex-shrink: 0;
+                    width: 44px;
+                    height: 44px;
+                    background: url('../img/icons/ico-quote.svg') no-repeat
+                        center center;
+                }
+            }
+
+            &-reviewer {
+                position: relative;
+                overflow: hidden;
+                @include transitions(0.5s, ease-in);
+            }
+
+            &-text {
+                font: 400 16px / 140% var(--ff-nort);
+                overflow: hidden;
+                position: relative;
+                @include transitions(0.5s, ease-in);
+
+                &.is-open {
+                    max-height: 300px;
+                    overflow: scroll;
+                    &::after {
+                        opacity: 0;
+                        visibility: hidden;
+                        pointer-events: none;
+                    }
+                }
+
+                &.is-highest {
+                    max-height: 66px;
+                    &::after {
+                        opacity: 1;
+                        visibility: visible;
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: linear-gradient(
+                            180deg,
+                            rgba(255, 255, 255, 0) 0%,
+                            #ffffff 100%
+                        );
+                        @include transitions(0.3s, ease-in);
+                    }
+                }
+            }
+
+            &-grid {
+                display: grid;
+                grid-template-rows: 1fr;
+                @include transitions(0.3s, ease-in);
+                &.is-hide {
+                    grid-template-rows: 0fr;
+                }
+            }
+
+            &-more {
+                font: 400 14px / 100% var(--ff-nort);
+                display: inline-flex;
+                align-items: center;
+                gap: 10px;
+                margin-top: 12px;
+                overflow: hidden;
+                @include transitions(0.3s, ease-in);
+
+                span {
+                    &:first-child {
+                        color: #787e80;
+                    }
+
+                    &:last-child {
+                        display: inline-flex;
+                        width: 24px;
+                        height: 24px;
+                        flex-shrink: 0;
+                        border-radius: 50%;
+                        align-items: center;
+                        justify-content: center;
+                        background: var(--ball-blue);
+                        color: #fff;
+                    }
+                }
+            }
+
+            &-client {
+                margin-bottom: 12px;
+            }
+
+            &-defendant {
+                padding: 20px 32px;
+                border-radius: 8px;
+                background: #f0f4f9;
+
+                .card__content-text {
+                    &.is-highest {
+                        &::after {
+                            display: none;
+                        }
+                    }
+
+                    &.is-open {
+                        max-height: 300px;
+                        overflow: scroll;
+                    }
+                }
+            }
+
+            &-answer {
+                overflow: hidden;
+                @include transitions(0.5s, ease-in);
+                &.is-highest {
+                    max-height: 66px;
+                }
+
+                &.is-open {
+                    max-height: 300px;
+                    overflow: scroll;
+                    .card__content-text {
+                        &::after {
+                            opacity: 0;
+                            visibility: hidden;
+                            pointer-events: none;
+                        }
+                    }
+                }
+            }
+
+            &-subtitle {
+                font: 500 16px / 100% var(--ff-nort);
+                margin-bottom: 12px;
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                color: var(--sea-blue);
+
+                &::before {
+                    content: '';
+                    display: inline-flex;
+                    flex-shrink: 0;
+                    width: 28px;
+                    height: 28px;
+                    background: url('../img/icons/ico-logo.svg') no-repeat
+                        center center / cover;
+                }
+            }
+        }
+    }
+}

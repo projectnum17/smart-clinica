@@ -1,0 +1,1299 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/img/favicon/favicon.svg" type="image/svg+xml" />
+    <meta name="description" content="Smart Clinic | Home">
+    <title>Smart Clinic | Reviews</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./assets/css/style.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script defer type="module" src="./assets/js/main.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__top">
+            <div class="container">
+                <div class="header__search">
+                    <img width="20" height="20" src="./assets/img/icons/ico-search.svg" alt="Icon">
+                    <input class="header__search-field" type="search" name="headerSearch" id="headerSearch"
+                        placeholder="Введіть запит для пошуку">
+                </div>
+                <div class="header__info">
+                    <div class="header__location">
+                        <img width="20" height="20" src="./assets/img/icons/ico-pin.svg" alt="Icon">
+                        <span>пр-т Петра Григоренка, 22/20</span>
+                    </div>
+                    <div class="header__time">
+                        <img width="20" height="20" src="./assets/img/icons/ico-clock.svg" alt="Icon">
+                        <span>Пн-Нд: 07:30 - 21:00</span>
+                    </div>
+                </div>
+                <button type="button" class="header__marquee">
+                    <span>Важливе оголошення&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    <span>Важливе оголошення&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    <span>Важливе оголошення&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    <span>Важливе оголошення&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                </button>
+                <div class="header__panel">
+                    <a href="tel:+380976000303" class="header__phone">
+                        <img width="20" height="20" src="./assets/img/icons/ico-phone.svg" alt="Icon">
+                        <span>(097) 600-03-03</span>
+                    </a>
+                    <ul class="header__lang">
+                        <li class="header__lang-current">
+                            <span class="header__lang-label">UA</span>
+                        </li>
+                        <div class="header__lang-inner">
+                            <ul class="header__lang-list">
+                                <li class="header__lang-item header__lang-item--active">
+                                    <span class="header__lang-link">
+                                        UA
+                                    </span>
+                                </li>
+                                <li class="header__lang-item">
+                                    <a class="header__lang-link" href="#!">
+                                        EN
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="header__bot">
+            <div class="container">
+                <a href="#!" class="header__logo">
+                    <img src="./assets/img/icons/logoSm_blue.svg" alt="Logotype">
+                </a>
+                <nav class="header__nav">
+                    <ul class="header__menu">
+                        <li class="header__menu-item">
+                            <a href="#!" class="header__menu-link">Дорослим</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="#!" class="header__menu-link">Дітям</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="#!" class="header__menu-link">Лікарі</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="#!" class="header__menu-link">Акції</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="#!" class="header__menu-link">Ціни</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="#!" class="header__menu-link">Відгуки</a>
+                        </li>
+                        <li class="header__menu-item dd-menu js-dd-menu">
+                            <a href="#!" class="header__menu-link">Про клініку</a>
+                            <div class="dd-menu__container">
+                                <ul>
+                                    <li>
+                                        <a href="#!">Про Smart klinika</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!">Вакансії</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!">Інтернатура</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!">Контакти</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!">Оплата</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!">Блог</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!">Документи</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!">Соц. програми</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header__control">
+                    <a href="#!" class="header__cabinet">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12.75 6.375C12.75 4.30393 11.071 2.625 9 2.625C6.92893 2.625 5.25 4.30393 5.25 6.375C5.25 8.44605 6.92893 10.125 9 10.125C11.071 10.125 12.75 8.44605 12.75 6.375Z"
+                                stroke="#26AACC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M14.25 15.375C14.25 12.4755 11.8995 10.125 9 10.125C6.10051 10.125 3.75 12.4755 3.75 15.375"
+                                stroke="#26AACC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <span>Мій кабінет</span>
+                    </a>
+                    <button type="button" class="header__cons js-appointment cta cta--light">Записатись</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main main--reviews">
+        <section class="hero">
+            <div class="container">
+                <div class="hero__details">
+                    <ul class="breadcrumbs">
+                        <li>
+                            <a href="#!">Головна</a>
+                        </li>
+                        <li>
+                            <a href="#!">Відгуки</a>
+                        </li>
+                    </ul>
+                    <h1 class="hero__title content-title">
+                        <span>1710</span> Відгуків наших пацієнтів
+                    </h1>
+                    <p class="hero__text">
+                        Ми цінуємо довіру пацієнтів, а ваш зворотний зв'язок допомагає нам ставати краще. Ви — наша
+                        головна мета й натхнення для подальшого розвитку.
+                    </p>
+                    <div class="hero__btns">
+                        <button type="button" class="hero__btn btn-impressions js-impressions">
+                            залишити відгук
+                        </button>
+                        <button type="button" class="hero__btn btn-report js-report">
+                            скарга керівництву
+                        </button>
+                    </div>
+                </div>
+                <div class="hero__staff">
+                    <div class="hero__rectangle">
+                        <div class="hero__rectangle-item rec-top">
+                            <div class="worker-photo">
+                                <img width="81" height="81" src="./assets/img/doctor_1.jpg" alt="Doctor">
+                            </div>
+                            <div class="worker-photo">
+                                <img width="81" height="81" src="./assets/img/doctor_2.jpg" alt="Doctor">
+                            </div>
+                            <div class="hero__rectangle-item rec-bott">
+                                <div class="worker-photo">
+                                    <img width="81" height="81" src="./assets/img/doctor_1.jpg" alt="Doctor">
+                                </div>
+                                <div class="worker-photo">
+                                    <img width="81" height="81" src="./assets/img/doctor_3.jpg" alt="Doctor">
+                                </div>
+                                <div class="hero__rectangle-item rec-center">
+                                    <div class="worker-photo">
+                                        <img width="81" height="81" src="./assets/img/doctor_4.jpg" alt="Doctor">
+                                    </div>
+                                    <div class="worker-photo">
+                                        <img width="81" height="81" src="./assets/img/doctor_2.jpg" alt="Doctor">
+                                    </div>
+                                    <div class="hero__rectangle-logo">
+                                        <img src="./assets/img/icons/ico-logo.svg" alt="Logo">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="testimonials">
+            <div class="container">
+                <div class="testimonials__cards js-reviews-cards">
+                    <div class="card">
+                        <div class="card__source">
+                            <div class="card__source-head">
+                                <div class="card__source-item">
+                                    <img src="./assets/img/icons/rev-google.png" alt="Google">
+                                </div>
+                                <div class="card__source-description">
+                                    <p class="card__source-title">Джерело:</p>
+                                    <p class="card__source-name wht-decor">Google Maps</p>
+                                </div>
+                            </div>
+                            <div class="card__source-worker">
+                                <p class="card__source-title">Фахівець:</p>
+                                <p class="card__source-name">Владимирець Олена Сергіївна</p>
+                            </div>
+                            <div class="card__source-skills">
+                                <p class="card__source-title">Напрям:</p>
+                                <p class="card__source-name">Алергологія</p>
+                            </div>
+                            <div class="card__source-ratings">
+                                <div class="card__source-rating">
+                                    <p class="card__source-subtitle">Фахівець:</p>
+                                    <div class="card__source-stars">
+                                        <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                        <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                        <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                        <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                        <img width="24" height="24" src="./assets/img/icons/star-empty.svg" alt="Start">
+                                    </div>
+                                </div>
+                                <div class="card__source-rating">
+                                    <p class="card__source-subtitle">Клініка:</p>
+                                    <div class="card__source-stars">
+                                        <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                        <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                        <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                        <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                        <img width="24" height="24" src="./assets/img/icons/star-empty.svg" alt="Start">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card__content js-review-element">
+                            <div class="card__content-head">
+                                <p class="card__content-name">Вікторія</p>
+                                <span class="card__content-date">14 Травня 2025</span>
+                            </div>
+                            <div class="card__content-client">
+                                <p class="card__content-text js-author">
+                                    Сама клініка дійсно хороша, приємна атмосфера, рецепція також приємна. Лікарка
+                                    Євтушенко
+                                    — найкраща терапевтка, яка в мене була (також спеціалізація з гастроентерології
+                                    та
+                                    ендокринології, завдяки чому професійна в багатьох питаннях, і це видно). Хороша
+                                    комунікація, детальні пояснення, детальний огляд, заглиблення в проблему
+                                    пацієнта.
+                                    Обговорили ряд проблем,
+                                    ендокринології, завдяки чому професійна в багатьох питаннях, і це видно). Хороша
+                                    комунікація, детальні пояснення, детальний огляд, заглиблення в проблему
+                                    пацієнта.
+                                    Обговорили ряд проблем,
+                                </p>
+                                <div class="card__content-grid js-author-more">
+                                    <button type="button" class="card__content-more">
+                                        <span>Читати більше</span>
+                                        <span>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_528_8117)">
+                                                    <path d="M8 13.3335L8 2.66684" stroke="white" stroke-width="1.5"
+                                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    <path
+                                                        d="M4.66634 10.0002C4.66634 10.0002 7.12127 13.3335 7.99967 13.3335C8.87807 13.3335 11.333 10.0002 11.333 10.0002"
+                                                        stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round"></path>
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_528_8117">
+                                                        <rect width="16" height="16" fill="white"
+                                                            transform="translate(16) rotate(90)"></rect>
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="card__content-defendant">
+                                <p class="card__content-subtitle">
+                                    Відповідь адміністрації
+                                </p>
+                                <p class="card__content-text js-answer">
+                                    Дякуємо за ваш теплий відгук про роботу клініки та лікаря-терапевта Тетяну
+                                    Євтушенко. Ми щиро раді, що ви високо оцінили професіоналізм і уважність лікаря.
+                                    Бажаємо міцного здоров’я 💙 Дякуємо за ваш теплий відгук про роботу клініки та
+                                    лікаря-терапевта Тетяну Євтушенко. Ми щиро раді, що ви високо оцінили
+                                    професіоналізм
+                                    і уважність лікаря
+                                    Дякуємо за ваш теплий відгук про роботу клініки та лікаря-терапевта Тетяну
+                                    Євтушенко. Ми щиро раді, що ви високо оцінили професіоналізм і уважність лікаря.
+                                    Бажаємо міцного здоров’я 💙 Дякуємо за ваш теплий відгук про роботу клініки та
+                                    лікаря-терапевта Тетяну Євтушенко. Ми щиро раді, що ви високо оцінили
+                                    професіоналізм
+                                    і уважність лікаря
+                                </p>
+                                <div class="card__content-grid js-answer-more">
+                                    <button type="button" class="card__content-more">
+                                        <span>Читати більше</span>
+                                        <span>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_528_8117)">
+                                                    <path d="M8 13.3335L8 2.66684" stroke="white" stroke-width="1.5"
+                                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    <path
+                                                        d="M4.66634 10.0002C4.66634 10.0002 7.12127 13.3335 7.99967 13.3335C8.87807 13.3335 11.333 10.0002 11.333 10.0002"
+                                                        stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round"></path>
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_528_8117">
+                                                        <rect width="16" height="16" fill="white"
+                                                            transform="translate(16) rotate(90)"></rect>
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card__source">
+                            <div class="card__source-head">
+                                <div class="card__source-item">
+                                    <img src="./assets/img/icons/rev-google.png" alt="Google">
+                                </div>
+                                <div class="card__source-description">
+                                    <p class="card__source-title">Джерело:</p>
+                                    <p class="card__source-name wht-decor">Google Maps</p>
+                                </div>
+                            </div>
+                            <div class="card__source-worker">
+                                <p class="card__source-title">Фахівець:</p>
+                                <p class="card__source-name">Владимирець Олена Сергіївна</p>
+                            </div>
+                            <div class="card__source-skills">
+                                <p class="card__source-title">Напрям:</p>
+                                <p class="card__source-name">Алергологія</p>
+                            </div>
+                            <div class="card__source-ratings">
+                                <div class="card__source-rating">
+                                    <p class="card__source-subtitle">Фахівець:</p>
+                                    <div class="card__source-stars">
+                                        <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                        <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                        <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                        <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                        <img width="24" height="24" src="./assets/img/icons/star-empty.svg" alt="Start">
+                                    </div>
+                                </div>
+                                <div class="card__source-rating">
+                                    <p class="card__source-subtitle">Клініка:</p>
+                                    <div class="card__source-stars">
+                                        <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                        <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                        <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                        <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                        <img width="24" height="24" src="./assets/img/icons/star-empty.svg" alt="Start">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card__content js-review-element">
+                            <div class="card__content-head">
+                                <p class="card__content-name">Вікторія</p>
+                                <span class="card__content-date">14 Травня 2025</span>
+                            </div>
+                            <div class="card__content-client">
+                                <p class="card__content-text js-author">
+                                    Сама клініка дійсно хороша, приємна атмосфера, рецепція також приємна. Лікарка
+                                    Євтушенко
+                                    — найкраща терапевтка, яка в мене була (також спеціалізація з гастроентерології
+                                    та
+                                    ендокринології, завдяки чому професійна в багатьох питаннях, і це видно). Хороша
+                                    комунікація, детальні пояснення, детальний огляд, заглиблення в проблему
+                                    пацієнта.
+                                    Обговорили ряд проблем,
+                                    ендокринології, завдяки чому професійна в багатьох питаннях, і це видно). Хороша
+                                    комунікація, детальні пояснення, детальний огляд, заглиблення в проблему
+                                    пацієнта.
+                                    Обговорили ряд проблем,
+                                </p>
+                                <div class="card__content-grid js-author-more">
+                                    <button type="button" class="card__content-more">
+                                        <span>Читати більше</span>
+                                        <span>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_528_8117)">
+                                                    <path d="M8 13.3335L8 2.66684" stroke="white" stroke-width="1.5"
+                                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    <path
+                                                        d="M4.66634 10.0002C4.66634 10.0002 7.12127 13.3335 7.99967 13.3335C8.87807 13.3335 11.333 10.0002 11.333 10.0002"
+                                                        stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round"></path>
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_528_8117">
+                                                        <rect width="16" height="16" fill="white"
+                                                            transform="translate(16) rotate(90)"></rect>
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="card__content-defendant">
+                                <p class="card__content-subtitle">
+                                    Відповідь адміністрації
+                                </p>
+                                <p class="card__content-text js-answer">
+                                    Дякуємо за ваш теплий відгук про роботу клініки та лікаря-терапевта Тетяну
+                                    Євтушенко. Ми щиро раді, що ви високо оцінили професіоналізм і уважність лікаря.
+                                    Бажаємо міцного здоров’я 💙 Дякуємо за ваш теплий відгук про роботу клініки та
+                                    лікаря-терапевта Тетяну Євтушенко. Ми щиро раді, що ви високо оцінили
+                                    професіоналізм
+                                    і уважність лікаря
+                                    Дякуємо за ваш теплий відгук про роботу клініки та лікаря-терапевта Тетяну
+                                    Євтушенко. Ми щиро раді, що ви високо оцінили професіоналізм і уважність лікаря.
+                                    Бажаємо міцного здоров’я 💙 Дякуємо за ваш теплий відгук про роботу клініки та
+                                    лікаря-терапевта Тетяну Євтушенко. Ми щиро раді, що ви високо оцінили
+                                    професіоналізм
+                                    і уважність лікаря
+                                </p>
+                                <div class="card__content-grid js-answer-more">
+                                    <button type="button" class="card__content-more">
+                                        <span>Читати більше</span>
+                                        <span>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_528_8117)">
+                                                    <path d="M8 13.3335L8 2.66684" stroke="white" stroke-width="1.5"
+                                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    <path
+                                                        d="M4.66634 10.0002C4.66634 10.0002 7.12127 13.3335 7.99967 13.3335C8.87807 13.3335 11.333 10.0002 11.333 10.0002"
+                                                        stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round"></path>
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_528_8117">
+                                                        <rect width="16" height="16" fill="white"
+                                                            transform="translate(16) rotate(90)"></rect>
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card__source">
+                            <div class="card__source-head">
+                                <div class="card__source-item">
+                                    <img src="./assets/img/icons/rev-google.png" alt="Google">
+                                </div>
+                                <div class="card__source-description">
+                                    <p class="card__source-title">Джерело:</p>
+                                    <p class="card__source-name wht-decor">Google Maps</p>
+                                </div>
+                            </div>
+                            <div class="card__source-worker">
+                                <p class="card__source-title">Фахівець:</p>
+                                <p class="card__source-name">Владимирець Олена Сергіївна</p>
+                            </div>
+                            <div class="card__source-skills">
+                                <p class="card__source-title">Напрям:</p>
+                                <p class="card__source-name">Алергологія</p>
+                            </div>
+                            <div class="card__source-ratings">
+                                <div class="card__source-rating">
+                                    <p class="card__source-subtitle">Фахівець:</p>
+                                    <div class="card__source-stars">
+                                        <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                        <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                        <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                        <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                        <img width="24" height="24" src="./assets/img/icons/star-empty.svg" alt="Start">
+                                    </div>
+                                </div>
+                                <div class="card__source-rating">
+                                    <p class="card__source-subtitle">Клініка:</p>
+                                    <div class="card__source-stars">
+                                        <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                        <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                        <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                        <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                        <img width="24" height="24" src="./assets/img/icons/star-empty.svg" alt="Start">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card__content js-review-element">
+                            <div class="card__content-head">
+                                <p class="card__content-name">Вікторія</p>
+                                <span class="card__content-date">14 Травня 2025</span>
+                            </div>
+                            <div class="card__content-client">
+                                <p class="card__content-text js-author">
+                                    Сама клініка дійсно хороша, приємна атмосфера, рецепція також приємна. Лікарка
+                                    Євтушенко
+                                    — найкраща терапевтка, яка в мене була (також спеціалізація з гастроентерології
+                                    та
+                                    ендокринології, завдяки чому професійна в багатьох питаннях, і це видно). Хороша
+                                    комунікація, детальні пояснення, детальний огляд, заглиблення в проблему
+                                    пацієнта.
+                                    Обговорили ряд проблем,
+                                    ендокринології, завдяки чому професійна в багатьох питаннях, і це видно). Хороша
+                                    комунікація, детальні пояснення, детальний огляд, заглиблення в проблему
+                                    пацієнта.
+                                    Обговорили ряд проблем,
+                                </p>
+                                <div class="card__content-grid js-author-more">
+                                    <button type="button" class="card__content-more">
+                                        <span>Читати більше</span>
+                                        <span>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_528_8117)">
+                                                    <path d="M8 13.3335L8 2.66684" stroke="white" stroke-width="1.5"
+                                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    <path
+                                                        d="M4.66634 10.0002C4.66634 10.0002 7.12127 13.3335 7.99967 13.3335C8.87807 13.3335 11.333 10.0002 11.333 10.0002"
+                                                        stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round"></path>
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_528_8117">
+                                                        <rect width="16" height="16" fill="white"
+                                                            transform="translate(16) rotate(90)"></rect>
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="card__content-defendant">
+                                <p class="card__content-subtitle">
+                                    Відповідь адміністрації
+                                </p>
+                                <p class="card__content-text js-answer">
+                                    Дякуємо за ваш теплий відгук про роботу клініки та лікаря-терапевта Тетяну
+                                    Євтушенко. Ми щиро раді, що ви високо оцінили професіоналізм і уважність лікаря.
+                                    Бажаємо міцного здоров’я 💙 Дякуємо за ваш теплий відгук про роботу клініки та
+                                    лікаря-терапевта Тетяну Євтушенко. Ми щиро раді, що ви високо оцінили
+                                    професіоналізм
+                                    і уважність лікаря
+                                    Дякуємо за ваш теплий відгук про роботу клініки та лікаря-терапевта Тетяну
+                                    Євтушенко. Ми щиро раді, що ви високо оцінили професіоналізм і уважність лікаря.
+                                    Бажаємо міцного здоров’я 💙 Дякуємо за ваш теплий відгук про роботу клініки та
+                                    лікаря-терапевта Тетяну Євтушенко. Ми щиро раді, що ви високо оцінили
+                                    професіоналізм
+                                    і уважність лікаря
+                                </p>
+                                <div class="card__content-grid js-answer-more">
+                                    <button type="button" class="card__content-more">
+                                        <span>Читати більше</span>
+                                        <span>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_528_8117)">
+                                                    <path d="M8 13.3335L8 2.66684" stroke="white" stroke-width="1.5"
+                                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    <path
+                                                        d="M4.66634 10.0002C4.66634 10.0002 7.12127 13.3335 7.99967 13.3335C8.87807 13.3335 11.333 10.0002 11.333 10.0002"
+                                                        stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round"></path>
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_528_8117">
+                                                        <rect width="16" height="16" fill="white"
+                                                            transform="translate(16) rotate(90)"></rect>
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card__source">
+                            <div class="card__source-head">
+                                <div class="card__source-item">
+                                    <img src="./assets/img/icons/rev-google.png" alt="Google">
+                                </div>
+                                <div class="card__source-description">
+                                    <p class="card__source-title">Джерело:</p>
+                                    <p class="card__source-name wht-decor">Google Maps</p>
+                                </div>
+                            </div>
+                            <div class="card__source-worker">
+                                <p class="card__source-title">Фахівець:</p>
+                                <p class="card__source-name">Владимирець Олена Сергіївна</p>
+                            </div>
+                            <div class="card__source-skills">
+                                <p class="card__source-title">Напрям:</p>
+                                <p class="card__source-name">Алергологія</p>
+                            </div>
+                            <div class="card__source-ratings">
+                                <div class="card__source-rating">
+                                    <p class="card__source-subtitle">Фахівець:</p>
+                                    <div class="card__source-stars">
+                                        <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                        <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                        <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                        <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                        <img width="24" height="24" src="./assets/img/icons/star-empty.svg" alt="Start">
+                                    </div>
+                                </div>
+                                <div class="card__source-rating">
+                                    <p class="card__source-subtitle">Клініка:</p>
+                                    <div class="card__source-stars">
+                                        <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                        <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                        <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                        <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                        <img width="24" height="24" src="./assets/img/icons/star-empty.svg" alt="Start">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card__content js-review-element">
+                            <div class="card__content-head">
+                                <p class="card__content-name">Вікторія</p>
+                                <span class="card__content-date">14 Травня 2025</span>
+                            </div>
+                            <div class="card__content-client">
+                                <p class="card__content-text js-author">
+                                    Сама клініка дійсно хороша, приємна атмосфера, рецепція також приємна. Лікарка
+                                    Євтушенко
+                                    — найкраща терапевтка, яка в мене була (також спеціалізація з гастроентерології
+                                    та
+                                    ендокринології, завдяки чому професійна в багатьох питаннях, і це видно). Хороша
+                                    комунікація, детальні пояснення, детальний огляд, заглиблення в проблему
+                                    пацієнта.
+                                    Обговорили ряд проблем,
+                                    ендокринології, завдяки чому професійна в багатьох питаннях, і це видно). Хороша
+                                    комунікація, детальні пояснення, детальний огляд, заглиблення в проблему
+                                    пацієнта.
+                                    Обговорили ряд проблем,
+                                </p>
+                                <div class="card__content-grid js-author-more">
+                                    <button type="button" class="card__content-more">
+                                        <span>Читати більше</span>
+                                        <span>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_528_8117)">
+                                                    <path d="M8 13.3335L8 2.66684" stroke="white" stroke-width="1.5"
+                                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    <path
+                                                        d="M4.66634 10.0002C4.66634 10.0002 7.12127 13.3335 7.99967 13.3335C8.87807 13.3335 11.333 10.0002 11.333 10.0002"
+                                                        stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round"></path>
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_528_8117">
+                                                        <rect width="16" height="16" fill="white"
+                                                            transform="translate(16) rotate(90)"></rect>
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="card__content-defendant">
+                                <p class="card__content-subtitle">
+                                    Відповідь адміністрації
+                                </p>
+                                <p class="card__content-text js-answer">
+                                    Дякуємо за ваш теплий відгук про роботу клініки та лікаря-терапевта Тетяну
+                                    Євтушенко. Ми щиро раді, що ви високо оцінили професіоналізм і уважність лікаря.
+                                    Бажаємо міцного здоров’я 💙 Дякуємо за ваш теплий відгук про роботу клініки та
+                                    лікаря-терапевта Тетяну Євтушенко. Ми щиро раді, що ви високо оцінили
+                                    професіоналізм
+                                    і уважність лікаря
+                                    Дякуємо за ваш теплий відгук про роботу клініки та лікаря-терапевта Тетяну
+                                    Євтушенко. Ми щиро раді, що ви високо оцінили професіоналізм і уважність лікаря.
+                                    Бажаємо міцного здоров’я 💙 Дякуємо за ваш теплий відгук про роботу клініки та
+                                    лікаря-терапевта Тетяну Євтушенко. Ми щиро раді, що ви високо оцінили
+                                    професіоналізм
+                                    і уважність лікаря
+                                </p>
+                                <div class="card__content-grid js-answer-more">
+                                    <button type="button" class="card__content-more">
+                                        <span>Читати більше</span>
+                                        <span>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_528_8117)">
+                                                    <path d="M8 13.3335L8 2.66684" stroke="white" stroke-width="1.5"
+                                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    <path
+                                                        d="M4.66634 10.0002C4.66634 10.0002 7.12127 13.3335 7.99967 13.3335C8.87807 13.3335 11.333 10.0002 11.333 10.0002"
+                                                        stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round"></path>
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_528_8117">
+                                                        <rect width="16" height="16" fill="white"
+                                                            transform="translate(16) rotate(90)"></rect>
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card__source">
+                            <div class="card__source-head">
+                                <div class="card__source-item">
+                                    <img src="./assets/img/icons/rev-google.png" alt="Google">
+                                </div>
+                                <div class="card__source-description">
+                                    <p class="card__source-title">Джерело:</p>
+                                    <p class="card__source-name wht-decor">Google Maps</p>
+                                </div>
+                            </div>
+                            <div class="card__source-worker">
+                                <p class="card__source-title">Фахівець:</p>
+                                <p class="card__source-name">Владимирець Олена Сергіївна</p>
+                            </div>
+                            <div class="card__source-skills">
+                                <p class="card__source-title">Напрям:</p>
+                                <p class="card__source-name">Алергологія</p>
+                            </div>
+                            <div class="card__source-ratings">
+                                <div class="card__source-rating">
+                                    <p class="card__source-subtitle">Фахівець:</p>
+                                    <div class="card__source-stars">
+                                        <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                        <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                        <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                        <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                        <img width="24" height="24" src="./assets/img/icons/star-empty.svg" alt="Start">
+                                    </div>
+                                </div>
+                                <div class="card__source-rating">
+                                    <p class="card__source-subtitle">Клініка:</p>
+                                    <div class="card__source-stars">
+                                        <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                        <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                        <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                        <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                        <img width="24" height="24" src="./assets/img/icons/star-empty.svg" alt="Start">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card__content js-review-element">
+                            <div class="card__content-head">
+                                <p class="card__content-name">Вікторія</p>
+                                <span class="card__content-date">14 Травня 2025</span>
+                            </div>
+                            <div class="card__content-client">
+                                <p class="card__content-text js-author">
+                                    Сама клініка дійсно хороша, приємна атмосфера, рецепція також приємна. Лікарка
+                                    Євтушенко
+                                    — найкраща терапевтка, яка в мене була (також спеціалізація з гастроентерології
+                                    та
+                                    ендокринології, завдяки чому професійна в багатьох питаннях, і це видно). Хороша
+                                    комунікація, детальні пояснення, детальний огляд, заглиблення в проблему
+                                    пацієнта.
+                                    Обговорили ряд проблем,
+                                    ендокринології, завдяки чому професійна в багатьох питаннях, і це видно). Хороша
+                                    комунікація, детальні пояснення, детальний огляд, заглиблення в проблему
+                                    пацієнта.
+                                    Обговорили ряд проблем,
+                                </p>
+                                <div class="card__content-grid js-author-more">
+                                    <button type="button" class="card__content-more">
+                                        <span>Читати більше</span>
+                                        <span>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_528_8117)">
+                                                    <path d="M8 13.3335L8 2.66684" stroke="white" stroke-width="1.5"
+                                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    <path
+                                                        d="M4.66634 10.0002C4.66634 10.0002 7.12127 13.3335 7.99967 13.3335C8.87807 13.3335 11.333 10.0002 11.333 10.0002"
+                                                        stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round"></path>
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_528_8117">
+                                                        <rect width="16" height="16" fill="white"
+                                                            transform="translate(16) rotate(90)"></rect>
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="card__content-defendant">
+                                <p class="card__content-subtitle">
+                                    Відповідь адміністрації
+                                </p>
+                                <p class="card__content-text js-answer">
+                                    Дякуємо за ваш теплий відгук про роботу клініки та лікаря-терапевта Тетяну
+                                    Євтушенко. Ми щиро раді, що ви високо оцінили професіоналізм і уважність лікаря.
+                                    Бажаємо міцного здоров’я 💙 Дякуємо за ваш теплий відгук про роботу клініки та
+                                    лікаря-терапевта Тетяну Євтушенко. Ми щиро раді, що ви високо оцінили
+                                    професіоналізм
+                                    і уважність лікаря
+                                    Дякуємо за ваш теплий відгук про роботу клініки та лікаря-терапевта Тетяну
+                                    Євтушенко. Ми щиро раді, що ви високо оцінили професіоналізм і уважність лікаря.
+                                    Бажаємо міцного здоров’я 💙 Дякуємо за ваш теплий відгук про роботу клініки та
+                                    лікаря-терапевта Тетяну Євтушенко. Ми щиро раді, що ви високо оцінили
+                                    професіоналізм
+                                    і уважність лікаря
+                                </p>
+                                <div class="card__content-grid js-answer-more">
+                                    <button type="button" class="card__content-more">
+                                        <span>Читати більше</span>
+                                        <span>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_528_8117)">
+                                                    <path d="M8 13.3335L8 2.66684" stroke="white" stroke-width="1.5"
+                                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    <path
+                                                        d="M4.66634 10.0002C4.66634 10.0002 7.12127 13.3335 7.99967 13.3335C8.87807 13.3335 11.333 10.0002 11.333 10.0002"
+                                                        stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round"></path>
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_528_8117">
+                                                        <rect width="16" height="16" fill="white"
+                                                            transform="translate(16) rotate(90)"></rect>
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card__source">
+                            <div class="card__source-head">
+                                <div class="card__source-item">
+                                    <img src="./assets/img/icons/rev-google.png" alt="Google">
+                                </div>
+                                <div class="card__source-description">
+                                    <p class="card__source-title">Джерело:</p>
+                                    <p class="card__source-name wht-decor">Google Maps</p>
+                                </div>
+                            </div>
+                            <div class="card__source-worker">
+                                <p class="card__source-title">Фахівець:</p>
+                                <p class="card__source-name">Владимирець Олена Сергіївна</p>
+                            </div>
+                            <div class="card__source-skills">
+                                <p class="card__source-title">Напрям:</p>
+                                <p class="card__source-name">Алергологія</p>
+                            </div>
+                            <div class="card__source-ratings">
+                                <div class="card__source-rating">
+                                    <p class="card__source-subtitle">Фахівець:</p>
+                                    <div class="card__source-stars">
+                                        <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                        <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                        <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                        <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                        <img width="24" height="24" src="./assets/img/icons/star-empty.svg" alt="Start">
+                                    </div>
+                                </div>
+                                <div class="card__source-rating">
+                                    <p class="card__source-subtitle">Клініка:</p>
+                                    <div class="card__source-stars">
+                                        <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                        <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                        <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                        <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                        <img width="24" height="24" src="./assets/img/icons/star-empty.svg" alt="Start">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card__content js-review-element">
+                            <div class="card__content-head">
+                                <p class="card__content-name">Вікторія</p>
+                                <span class="card__content-date">14 Травня 2025</span>
+                            </div>
+                            <div class="card__content-client">
+                                <p class="card__content-text js-author">
+                                    Сама клініка дійсно хороша, приємна атмосфера, рецепція також приємна. Лікарка
+                                    Євтушенко
+                                    — найкраща терапевтка, яка в мене була (також спеціалізація з гастроентерології
+                                    та
+                                    ендокринології, завдяки чому професійна в багатьох питаннях, і це видно). Хороша
+                                    комунікація, детальні пояснення, детальний огляд, заглиблення в проблему
+                                    пацієнта.
+                                    Обговорили ряд проблем,
+                                    ендокринології, завдяки чому професійна в багатьох питаннях, і це видно). Хороша
+                                    комунікація, детальні пояснення, детальний огляд, заглиблення в проблему
+                                    пацієнта.
+                                    Обговорили ряд проблем,
+                                </p>
+                                <div class="card__content-grid js-author-more">
+                                    <button type="button" class="card__content-more">
+                                        <span>Читати більше</span>
+                                        <span>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_528_8117)">
+                                                    <path d="M8 13.3335L8 2.66684" stroke="white" stroke-width="1.5"
+                                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    <path
+                                                        d="M4.66634 10.0002C4.66634 10.0002 7.12127 13.3335 7.99967 13.3335C8.87807 13.3335 11.333 10.0002 11.333 10.0002"
+                                                        stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round"></path>
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_528_8117">
+                                                        <rect width="16" height="16" fill="white"
+                                                            transform="translate(16) rotate(90)"></rect>
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="card__content-defendant">
+                                <p class="card__content-subtitle">
+                                    Відповідь адміністрації
+                                </p>
+                                <p class="card__content-text js-answer">
+                                    Дякуємо за ваш теплий відгук про роботу клініки та лікаря-терапевта Тетяну
+                                    Євтушенко. Ми щиро раді, що ви високо оцінили професіоналізм і уважність лікаря.
+                                    Бажаємо міцного здоров’я 💙 Дякуємо за ваш теплий відгук про роботу клініки та
+                                    лікаря-терапевта Тетяну Євтушенко. Ми щиро раді, що ви високо оцінили
+                                    професіоналізм
+                                    і уважність лікаря
+                                    Дякуємо за ваш теплий відгук про роботу клініки та лікаря-терапевта Тетяну
+                                    Євтушенко. Ми щиро раді, що ви високо оцінили професіоналізм і уважність лікаря.
+                                    Бажаємо міцного здоров’я 💙 Дякуємо за ваш теплий відгук про роботу клініки та
+                                    лікаря-терапевта Тетяну Євтушенко. Ми щиро раді, що ви високо оцінили
+                                    професіоналізм
+                                    і уважність лікаря
+                                </p>
+                                <div class="card__content-grid js-answer-more">
+                                    <button type="button" class="card__content-more">
+                                        <span>Читати більше</span>
+                                        <span>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_528_8117)">
+                                                    <path d="M8 13.3335L8 2.66684" stroke="white" stroke-width="1.5"
+                                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    <path
+                                                        d="M4.66634 10.0002C4.66634 10.0002 7.12127 13.3335 7.99967 13.3335C8.87807 13.3335 11.333 10.0002 11.333 10.0002"
+                                                        stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round"></path>
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_528_8117">
+                                                        <rect width="16" height="16" fill="white"
+                                                            transform="translate(16) rotate(90)"></rect>
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card__source">
+                            <div class="card__source-head">
+                                <div class="card__source-item">
+                                    <img src="./assets/img/icons/rev-google.png" alt="Google">
+                                </div>
+                                <div class="card__source-description">
+                                    <p class="card__source-title">Джерело:</p>
+                                    <p class="card__source-name wht-decor">Google Maps</p>
+                                </div>
+                            </div>
+                            <div class="card__source-worker">
+                                <p class="card__source-title">Фахівець:</p>
+                                <p class="card__source-name">Владимирець Олена Сергіївна</p>
+                            </div>
+                            <div class="card__source-skills">
+                                <p class="card__source-title">Напрям:</p>
+                                <p class="card__source-name">Алергологія</p>
+                            </div>
+                            <div class="card__source-ratings">
+                                <div class="card__source-rating">
+                                    <p class="card__source-subtitle">Фахівець:</p>
+                                    <div class="card__source-stars">
+                                        <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                        <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                        <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                        <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                        <img width="24" height="24" src="./assets/img/icons/star-empty.svg" alt="Start">
+                                    </div>
+                                </div>
+                                <div class="card__source-rating">
+                                    <p class="card__source-subtitle">Клініка:</p>
+                                    <div class="card__source-stars">
+                                        <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                        <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                        <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                        <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                        <img width="24" height="24" src="./assets/img/icons/star-empty.svg" alt="Start">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card__content js-review-element">
+                            <div class="card__content-head">
+                                <p class="card__content-name">Вікторія</p>
+                                <span class="card__content-date">14 Травня 2025</span>
+                            </div>
+                            <div class="card__content-client">
+                                <p class="card__content-text js-author">
+                                    Сама клініка дійсно хороша, приємна атмосфера, рецепція також приємна. Лікарка
+                                    Євтушенко
+                                    — найкраща терапевтка, яка в мене була (також спеціалізація з гастроентерології
+                                    та
+                                    ендокринології, завдяки чому професійна в багатьох питаннях, і це видно). Хороша
+                                    комунікація, детальні пояснення, детальний огляд, заглиблення в проблему
+                                    пацієнта.
+                                    Обговорили ряд проблем,
+                                    ендокринології, завдяки чому професійна в багатьох питаннях, і це видно). Хороша
+                                    комунікація, детальні пояснення, детальний огляд, заглиблення в проблему
+                                    пацієнта.
+                                    Обговорили ряд проблем,
+                                </p>
+                                <div class="card__content-grid js-author-more">
+                                    <button type="button" class="card__content-more">
+                                        <span>Читати більше</span>
+                                        <span>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_528_8117)">
+                                                    <path d="M8 13.3335L8 2.66684" stroke="white" stroke-width="1.5"
+                                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    <path
+                                                        d="M4.66634 10.0002C4.66634 10.0002 7.12127 13.3335 7.99967 13.3335C8.87807 13.3335 11.333 10.0002 11.333 10.0002"
+                                                        stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round"></path>
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_528_8117">
+                                                        <rect width="16" height="16" fill="white"
+                                                            transform="translate(16) rotate(90)"></rect>
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="card__content-defendant">
+                                <p class="card__content-subtitle">
+                                    Відповідь адміністрації
+                                </p>
+                                <p class="card__content-text js-answer">
+                                    Дякуємо за ваш теплий відгук про роботу клініки та лікаря-терапевта Тетяну
+                                    Євтушенко. Ми щиро раді, що ви високо оцінили професіоналізм і уважність лікаря.
+                                    Бажаємо міцного здоров’я 💙 Дякуємо за ваш теплий відгук про роботу клініки та
+                                    лікаря-терапевта Тетяну Євтушенко. Ми щиро раді, що ви високо оцінили
+                                    професіоналізм
+                                    і уважність лікаря
+                                    Дякуємо за ваш теплий відгук про роботу клініки та лікаря-терапевта Тетяну
+                                    Євтушенко. Ми щиро раді, що ви високо оцінили професіоналізм і уважність лікаря.
+                                    Бажаємо міцного здоров’я 💙 Дякуємо за ваш теплий відгук про роботу клініки та
+                                    лікаря-терапевта Тетяну Євтушенко. Ми щиро раді, що ви високо оцінили
+                                    професіоналізм
+                                    і уважність лікаря
+                                </p>
+                                <div class="card__content-grid js-answer-more">
+                                    <button type="button" class="card__content-more">
+                                        <span>Читати більше</span>
+                                        <span>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_528_8117)">
+                                                    <path d="M8 13.3335L8 2.66684" stroke="white" stroke-width="1.5"
+                                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    <path
+                                                        d="M4.66634 10.0002C4.66634 10.0002 7.12127 13.3335 7.99967 13.3335C8.87807 13.3335 11.333 10.0002 11.333 10.0002"
+                                                        stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round"></path>
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_528_8117">
+                                                        <rect width="16" height="16" fill="white"
+                                                            transform="translate(16) rotate(90)"></rect>
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="btn-more js-reviews-more">
+                    <span>показати ще</span>
+                    <span>
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.2913 2.25L13.0435 2.9818C13.3795 3.30874 13.5475 3.47221 13.4883 3.61111C13.4292 3.75 13.1916 3.75 12.7164 3.75H6.89567C3.91572 3.75 1.5 6.10051 1.5 9C1.5 10.1154 1.85751 11.1496 2.46713 12" stroke="#26AACC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M5.70867 15.75L4.95656 15.0182C4.62056 14.6912 4.45255 14.5278 4.51168 14.3889C4.57081 14.25 4.8084 14.25 5.28359 14.25H11.1044C14.0843 14.25 16.5 11.8995 16.5 9C16.5 7.8846 16.1425 6.85037 15.5329 6" stroke="#26AACC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </span>
+                </button>
+            </div>
+        </section>
+        <section class="appointment">
+            <div class="container">
+                <div class="appointment__content">
+                    <div class="appointment__thumb">
+                        <img loading="lazy" width="728" height="500" src="./assets/img/app-img.jpg" alt="Thumbnail">
+                    </div>
+                    <div class="appointment__make">
+                        <h3 class="appointment__title">Записатись на прийом</h3>
+                        <form class="appointment__form">
+                            <div class="appointment__form-fields">
+                                <div class="appointment__form-group field-phone">
+                                    <input type="tel" name="mainAppPhone" id="mainAppPhone"
+                                        class="appointment__form-field field-phone--item"
+                                        placeholder="+38 (XXX) XXX XX XX">
+                                </div>
+                                <div class="appointment__form-group">
+                                    <label class="appointment__form-title" for="mainAppDate">Бажана дата прийому</label>
+                                    <div class="appointment__form-inner js-date-picker field-date">
+                                        <input type="date" name="mainAppDate" id="mainAppDate"
+                                            class="appointment__form-field field-date--item">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="appointment__form-check">
+                                <input class="appointment__form-cheked" type="checkbox" name="mainAppCheck"
+                                    id="mainAppCheck">
+                                <label class="appointment__form-label" for="mainAppCheck">
+                                    <p>
+                                        Погоджуюсь з умовами <a href="#!">Політики приватності</a> та <a
+                                            href="#!">Публічного договору</a>
+                                    </p>
+                                </label>
+                            </div>
+                            <button type="submit" class="appointment__form-submit">
+                                Запис на прийом
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__top">
+            <div class="footer__row">
+                <div class="container">
+                    <div class="footer__inner">
+                        <div class="footer__connect">
+                            <div class="footer__logo">
+                                <img loading="lazy" src="./assets/img/icons/logoLg_wht.svg" alt="Logotype">
+                            </div>
+                            <form class="footer__form">
+                                <div class="footer__form-group">
+                                    <label for="footerEmail" class="footer__title">
+                                        Дізнавайтесь першими про
+                                        вигідні пропозиції, статті, новини
+                                    </label>
+                                    <div class="footer__form-field">
+                                        <input type="email" name="footerEmail" id="footerEmail" placeholder="Ваш email">
+                                        <div class="footer__form-submit">
+                                            <button type="submit" class="footer__form-rec">
+                                                <svg width="16" height="14" viewBox="0 0 16 14" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M13.0001 7.00028L1.33333 7.00028M8.83366 12.8336C8.83366 12.8336 14.667 8.53744 14.667 7.00028C14.667 5.46311 8.83366 1.16699 8.83366 1.16699"
+                                                        stroke="white" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="footer__soc">
+                            <p class="footer__title">
+                                Доєднуйтесь до нас у соціальних мережах
+                            </p>
+                            <ul class="footer__links">
+                                <li class="footer__links-item">
+                                    <a href="#!">
+                                        <img src="./assets/img/icons/ico-facebook.svg" alt="Facebook">
+                                    </a>
+                                </li>
+                                <li class="footer__links-item">
+                                    <a href="#!">
+                                        <img src="./assets/img/icons/ico-inst.svg" alt="Instagram">
+                                    </a>
+                                </li>
+                                <li class="footer__links-item">
+                                    <a href="#!">
+                                        <img src="./assets/img/icons/ico-tube.svg" alt="YouTube">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__row">
+                <div class="container">
+                    <div class="footer__inner">
+                        <div class="footer__info">
+                            <div class="footer__info-item">
+                                <p class="footer__subtitle">Де ми знаходимось?</p>
+                                <p class="footer__text">м. Київ, просп. Григоренка, 22/20</p>
+                            </div>
+                            <div class="footer__info-item">
+                                <p class="footer__subtitle">Пн-Нд: 07:30 - 21:00</p>
+                                <a href="tel:+380976000303" class="footer__text">(097) 600-03-03</a>
+                            </div>
+                        </div>
+                        <div class="footer__btns">
+                            <a href="#!" class="footer__review">залишити відгук</a>
+                            <button type="button" class="footer__cons js-appointment">
+                                записатись на прийом
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__row">
+                <div class="container">
+                    <nav class="footer__nav">
+                        <ul>
+                            <li><a href="#!">Дорослим</a></li>
+                            <li><a href="#!">Дітям</a></li>
+                            <li><a href="#!">Лікарі</a></li>
+                            <li><a href="#!">Акції</a></li>
+                            <li><a href="#!">Ціни</a></li>
+                            <li><a href="#!">Відгуки</a></li>
+                            <li><a href="#!">Про клініку</a></li>
+                            <li><a href="#!">контакти</a></li>
+                            <li><a href="#!">соц. програми</a></li>
+                            <li><a href="#!">Блог</a></li>
+                            <li><a href="#!">вакансії</a></li>
+                            <li><a href="#!">Оплата</a></li>
+                            <li><a href="#!">документи</a></li>
+                        </ul>
+                    </nav>
+                    <p class="footer__reminder">
+                        САМОЛІКУВАННЯ МОЖЕ БУТИ ШКІДЛИВИМ ДЛЯ ВАШОГО ЗДОРОВ’Я
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bot">
+            <div class="container">
+                <p class="footer__copy">© Smart klinika 2025</p>
+                <p class="footer__license">Ліцензія наказ МОЗ України №728 від 29.06.2017</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

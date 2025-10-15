@@ -152,6 +152,8 @@ const helpers = () => {
         12,
         11
     );
+
+    showMoreHandler('.js-reviews-cards', '.card', '.js-reviews-more', 6, 5);
 };
 
 export default helpers;
