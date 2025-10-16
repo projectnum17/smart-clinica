@@ -152,6 +152,7 @@ const helpers = () => {
     );
 
     showMoreHandler('.js-reviews-cards', '.card', '.js-reviews-more', 6, 5);
+    showMoreHandler('.js-docs-list', '.info__item', '.js-docs-more', 8, 7);
 
     groupElements({
         containerSelector: '.js-table-grid',
