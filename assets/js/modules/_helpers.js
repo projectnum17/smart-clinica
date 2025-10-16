@@ -125,6 +125,45 @@ const helpers = () => {
         });
     };
 
+    const copyHandler = () => {
+        const copyItems = document.querySelectorAll('.js-copy');
+        if (!copyItems.length) return;
+
+        copyItems.forEach((item) => {
+            item.addEventListener('click', () => {
+                if (item.classList.contains('is-copying')) return;
+                item.classList.add('is-copying');
+
+                const target = item.querySelector('.js-copy__target');
+                if (!target) return;
+
+                const textToCopy = target.innerText.replace(/\s+/g, ' ').trim();
+
+                const loader = document.createElement('span');
+                loader.className = 'copy-loader';
+                item.appendChild(loader);
+
+                navigator.clipboard
+                    .writeText(textToCopy)
+                    .then(() => {
+                        item.classList.add('is-copy');
+                        setTimeout(
+                            () => item.classList.remove('is-copy'),
+                            1500
+                        );
+                    })
+                    .catch((error) => {
+                        alert(`Sorry, ${error}`);
+                    })
+                    .finally(() => {
+                        loader.remove();
+                        item.classList.remove('is-copying');
+                    });
+            });
+        });
+    };
+
+
     formData();
     showMoreHandler();
     datePickHandler();
@@ -167,6 +206,8 @@ const helpers = () => {
         wrapperClass: 'team-inner',
         groupSize: 5,
     });
+
+    copyHandler();
 };
 
 export default helpers;

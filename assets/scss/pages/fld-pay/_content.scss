@@ -1,0 +1,184 @@
+@use '../../base/media' as *;
+@use '../../base/mixins' as *;
+
+.main--pay {
+    .info {
+        padding-top: 40px;
+
+        &__title {
+            margin-bottom: 24px;
+            text-align: center;
+        }
+
+        &__subtitle {
+            font: 400 18px / 140% var(--ff-nort);
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        &__boxes {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        &__box {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 20px;
+            border-radius: 16px;
+            padding: 39px;
+            border: 1px solid #d4dbde;
+            background: linear-gradient(
+                90deg,
+                #d6f3ff 0%,
+                #eefaff 47.12%,
+                #ffffff 100%
+            );
+
+            &-col {
+                width: 100%;
+
+                &:first-child {
+                    max-width: 565px;
+                    counter-reset: process-counter;
+
+                    .info__box-text {
+                        margin-bottom: 20px;
+                    }
+                }
+                &:last-child {
+                    max-width: 690px;
+                    counter-reset: process-counter;
+                }
+            }
+
+            &-attention {
+                border-radius: 12px;
+                padding: 12px 22px 12px 16px;
+                display: flex;
+                align-items: flex-start;
+                gap: 20px;
+                background: #26aacc1a;
+
+                img {
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+
+            &-list {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+
+                a {
+                    text-decoration: underline;
+                    color: var(--sea-blue);
+                }
+            }
+
+            &-item {
+                font: 400 16px / 140% var(--ff-nort);
+                display: inline-flex;
+                align-items: center;
+                gap: 12px;
+                position: relative;
+
+                &::before {
+                    content: '';
+                    width: 36px;
+                    height: 36px;
+                    display: inline-flex;
+                    flex-shrink: 0;
+                    background: url('../img/icons/ico-logo.svg') no-repeat
+                        center center;
+                }
+            }
+
+            &-title {
+                font: 400 32px / 100% var(--ff-base);
+                letter-spacing: -1px;
+                margin-bottom: 20px;
+            }
+
+            &-text {
+                max-width: 565px;
+                font: 400 16px / 140% var(--ff-nort);
+            }
+
+            &-qr {
+                margin-bottom: 20px;
+                display: inline-flex;
+                padding: 8px;
+                border-radius: 12px;
+                background: #26aacc1a;
+            }
+
+            &-scan {
+                border-radius: 8px;
+                padding: 4px;
+                background: #fff;
+            }
+
+            .list--ol {
+                .info__box-item {
+                    counter-increment: process-counter;
+                    &::before {
+                        font: 500 16px / 100% var(--ff-nort);
+                        content: counter(process-counter, decimal-leading-zero)
+                            ')';
+                        background: none;
+                        width: auto;
+                        height: auto;
+                        color: var(--sea-blue);
+                    }
+                }
+            }
+
+            .list--copy {
+                .info__box-item {
+                    &.js-copy {
+                        cursor: pointer;
+                        &::after {
+                            content: '';
+                            width: 24px;
+                            height: 24px;
+                            display: inline-flex;
+                            flex-shrink: 0;
+                            background: url('../img/icons/ico-copy.svg')
+                                no-repeat center center;
+                        }
+
+                        &.is-copy {
+                            &::after {
+                                background: url('../img/icons/ico-check.svg')
+                                    no-repeat center center;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .copy-loader {
+                position: absolute;
+                right: 8px;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 14px;
+                height: 14px;
+                border: 2px solid var(--sea-blue);
+                border-top-color: transparent;
+                border-radius: 50%;
+                animation: spin 0.6s linear infinite;
+            }
+
+            @keyframes spin {
+                to {
+                    transform: translateY(-50%) rotate(360deg);
+                }
+            }
+        }
+    }
+}

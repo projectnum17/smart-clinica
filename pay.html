@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/img/favicon/favicon.svg" type="image/svg+xml" />
+    <meta name="description" content="Smart Clinic | Home">
+    <title>Smart Clinic | Doctors</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./assets/css/style.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script defer type="module" src="./assets/js/main.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__top">
+            <div class="container">
+                <div class="header__search">
+                    <img width="20" height="20" src="./assets/img/icons/ico-search.svg" alt="Icon">
+                    <input class="header__search-field" type="search" name="headerSearch" id="headerSearch"
+                        placeholder="Введіть запит для пошуку">
+                </div>
+                <div class="header__info">
+                    <div class="header__location">
+                        <img width="20" height="20" src="./assets/img/icons/ico-pin.svg" alt="Icon">
+                        <span>пр-т Петра Григоренка, 22/20</span>
+                    </div>
+                    <div class="header__time">
+                        <img width="20" height="20" src="./assets/img/icons/ico-clock.svg" alt="Icon">
+                        <span>Пн-Нд: 07:30 - 21:00</span>
+                    </div>
+                </div>
+                <button type="button" class="header__marquee">
+                    <span>Важливе оголошення&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    <span>Важливе оголошення&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    <span>Важливе оголошення&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    <span>Важливе оголошення&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                </button>
+                <div class="header__panel">
+                    <a href="tel:+380976000303" class="header__phone">
+                        <img width="20" height="20" src="./assets/img/icons/ico-phone.svg" alt="Icon">
+                        <span>(097) 600-03-03</span>
+                    </a>
+                    <ul class="header__lang">
+                        <li class="header__lang-current">
+                            <span class="header__lang-label">UA</span>
+                        </li>
+                        <div class="header__lang-inner">
+                            <ul class="header__lang-list">
+                                <li class="header__lang-item header__lang-item--active">
+                                    <span class="header__lang-link">
+                                        UA
+                                    </span>
+                                </li>
+                                <li class="header__lang-item">
+                                    <a class="header__lang-link" href="#!">
+                                        EN
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="header__bot">
+            <div class="container">
+                <a href="#!" class="header__logo">
+                    <img src="./assets/img/icons/logoSm_blue.svg" alt="Logotype">
+                </a>
+                <nav class="header__nav">
+                    <ul class="header__menu">
+                        <li class="header__menu-item">
+                            <a href="#!" class="header__menu-link">Дорослим</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="#!" class="header__menu-link">Дітям</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="#!" class="header__menu-link">Лікарі</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="#!" class="header__menu-link">Акції</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="#!" class="header__menu-link">Ціни</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="#!" class="header__menu-link">Відгуки</a>
+                        </li>
+                        <li class="header__menu-item dd-menu js-dd-menu">
+                            <a href="#!" class="header__menu-link">Про клініку</a>
+                            <div class="dd-menu__container">
+                                <ul>
+                                    <li>
+                                        <a href="#!">Про Smart klinika</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!">Вакансії</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!">Інтернатура</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!">Контакти</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!">Оплата</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!">Блог</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!">Документи</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!">Соц. програми</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header__control">
+                    <a href="#!" class="header__cabinet">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12.75 6.375C12.75 4.30393 11.071 2.625 9 2.625C6.92893 2.625 5.25 4.30393 5.25 6.375C5.25 8.44605 6.92893 10.125 9 10.125C11.071 10.125 12.75 8.44605 12.75 6.375Z"
+                                stroke="#26AACC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M14.25 15.375C14.25 12.4755 11.8995 10.125 9 10.125C6.10051 10.125 3.75 12.4755 3.75 15.375"
+                                stroke="#26AACC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <span>Мій кабінет</span>
+                    </a>
+                    <button type="button" class="header__cons js-appointment cta cta--light">Записатись</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main main--pay">
+        <div class="container">
+            <ul class="breadcrumbs breadcrumbs--centered">
+                <li>
+                    <a href="#!">Головна</a>
+                </li>
+                <li>
+                    <a href="#!">Оплата послуг Smart klinika</a>
+                </li>
+            </ul>
+        </div>
+        <section class="info">
+            <div class="container">
+                <h1 class="info__title content-title">
+                    Оплата послуг <span>Smart klinika</span>
+                </h1>
+                <h2 class="info__subtitle">
+                    Оплатити послуги можна будь-яким зручним для вас способом:
+                </h2>
+                <div class="info__boxes">
+                    <div class="info__box">
+                        <div class="info__box-col">
+                            <h3 class="info__box-title">У клініці</h3>
+                            <div class="info__box-attention">
+                                <img width="40" height="40" src="./assets/img/icons/ico-attention.svg" alt="Attention">
+                                <p class="info__box-text">
+                                    У разі вимкнення електроенергії робота терміналів може бути тимчасово обмежена.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="info__box-col">
+                            <ul class="info__box-list list--ul">
+                                <li class="info__box-item">
+                                    <span>
+                                        готівкою,
+                                    </span>
+                                </li>
+                                <li class="info__box-item">
+                                    <span>
+                                        банківською карткою,
+                                    </span>
+                                </li>
+                                <li class="info__box-item">
+                                    <span>
+                                        шляхом списання коштів із особистого депозитного рахунка в клініці,
+                                    </span>
+                                </li>
+                                <li class="info__box-item">
+                                    <span>
+                                        за допомогою програми «Оплата частинами».
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="info__box">
+                        <div class="info__box-col">
+                            <h3 class="info__box-title">Через Приват24</h3>
+                            <div class="info__box-qr">
+                                <div class="info__box-scan">
+                                    <img width="108" height="108" src="./assets/img/qr-code.svg" alt="QR">
+                                </div>
+                            </div>
+                            <ul class="info__box-list list--ol">
+                                <li class="info__box-item">
+                                    <span>
+                                        Відвідайте сайт <a href="#!">www.privat24.ua.</a>
+                                    </span>
+                                </li>
+                                <li class="info__box-item">
+                                    <span>Зайдіть у власний кабінет.</span>
+                                </li>
+                                <li class="info__box-item">
+                                    <span>Введіть свій логін та пароль.</span>
+                                </li>
+                                <li class="info__box-item">
+                                    <span>
+                                        Перейдіть у вкладку «Всі послуги», далі «По Україні (платежі за реквізитами)».
+                                    </span>
+                                </li>
+                                <li class="info__box-item">
+                                    <span>
+                                        Введіть номер банківського рахунка клініки:
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="info__box-col">
+                            <ul class="info__box-list list--copy">
+                                <li class="info__box-item js-copy">
+                                    <div class="copy-block">
+                                        ЄДРПОУ <span class="js-copy__target">45203356</span>
+                                    </div>
+                                </li>
+                                <li class="info__box-item js-copy">
+                                    <div class="copy-block">
+                                        одержувач <span class="js-copy__target">ТОВ «Смарт Клініка»</span>
+                                    </div>
+                                </li>
+                                <li class="info__box-item js-copy">
+                                    <div class="copy-block">
+                                        номер рахунка
+                                        <span class="js-copy__target">
+                                            UA 44 3003 3500 0000 0260 0521 67297
+                                        </span>
+                                    </div>
+                                </li>
+                                <li class="info__box-item js-copy">
+                                    <div class="copy-block">
+                                        Призначення платежу:
+                                        <span class="js-copy__target">
+                                            За послуги від <br>
+                                            (прізвище та ім’я клієнта, що буде отримувати послуги)
+                                        </span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="info__box">
+                        <div class="info__box-col">
+                            <h3 class="info__box-title">
+                                У терміналі самообслуговування «ПриватБанк»
+                            </h3>
+                            <p class="info__box-text">
+                                або будь-якого іншого банку аналогічно
+                            </p>
+                            <ul class="info__box-list list--ol">
+                                <li class="info__box-item">
+                                    <span>
+                                        Якщо маєте картку «ПриватБанк» – вставте її у термінал.
+                                    </span>
+                                </li>
+                                <li class="info__box-item">
+                                    <span>
+                                        Якщо картки «ПриватБанк» немає – натисніть «У мене немає картки». Введіть номер
+                                        мобільного телефону, на який прийде SMS із кодом підтвердження.
+                                    </span>
+                                </li>
+                                <li class="info__box-item">
+                                    <span>
+                                        Натисніть вкладку «Оплата інших послуг», далі «Пошук підприємства за
+                                        реквізитами».
+                                    </span>
+                                </li>
+                                <li class="info__box-item">
+                                    <span>
+                                        Введіть номер банківського рахунка клініки:
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="info__box-col">
+                            <ul class="info__box-list list--copy">
+                                <li class="info__box-item">
+                                    <div class="copy-block">
+                                        ЄДРПОУ <span>45203356</span>
+                                    </div>
+                                </li>
+                                <li class="info__box-item">
+                                    <div class="copy-block">
+                                        одержувач <span>ТОВ «Смарт Клініка»</span>
+                                    </div>
+                                </li>
+                                <li class="info__box-item">
+                                    <div class="copy-block">
+                                        номер рахунка
+                                        <span>
+                                            UA 44 3003 3500 0000 0260 0521 67297
+                                        </span>
+                                    </div>
+                                </li>
+                                <li class="info__box-item">
+                                    <div class="copy-block">
+                                        Призначення платежу:
+                                        <span>
+                                            За послуги від <br>
+                                            (прізвище та ім’я клієнта, що буде отримувати послуги)
+                                        </span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="info__box">
+                        <div class="info__box-col">
+                            <h3 class="info__box-title">
+                                За допомогою програми «Оплата частинами»
+                            </h3>
+                            <p class="info__box-text">
+                                за умови, що у вас є кредитна картка ПриватБанк або Райффайзен Банк Аваль та активний
+                                ліміт програм «Оплата Частинами» (подати заявку на установку або збільшення ліміту можна
+                                в особистому кабінеті мобільного додатку Приват24 або Raiffeisen Online)
+                            </p>
+                        </div>
+                        <div class="info__box-col">
+                            <ul class="info__box-list list--ol">
+                                <li class="info__box-item">
+                                    <span>
+                                        Зверніться до адміністратора рецепції, аби оплатити прослуги через POS-термінал.
+                                    </span>
+                                </li>
+                                <li class="info__box-item">
+                                    <span>
+                                        Якщо картки «ПриватБанк» немає – натисніть «У мене немає картки». Введіть номер
+                                        мобільного телефону, на який прийде SMS із кодом підтвердження.
+                                    </span>
+                                </li>
+                                <li class="info__box-item">
+                                    <span>
+                                        Оберіть кількість платежів програми (2 або 3).
+                                    </span>
+                                </li>
+                                <li class="info__box-item">
+                                    <span>
+                                        Розрахуйтеся за перший платіж наявними коштами на кредитній картці  (мінімальна
+                                        сума коштів  на картці дорівнює розміру суми першого платежу за програмою). При
+                                        цьому банк може стягувати додаткову комісію.
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="info__box">
+                        <div class="info__box-col">
+                            <h3 class="info__box-title">
+                                Виставленням рахунку <br> на юридичну особу
+                            </h3>
+                        </div>
+                        <div class="info__box-col">
+                            <p class="info__box-text">
+                                Надайте адміністратору рецепції або контакт-центру інформацію про юридичну особу, яка
+                                буде здійснювати оплату, і бухгалтерія підготує потрібні документи.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="info__box">
+                        <div class="info__box-col">
+                            <h3 class="info__box-title">Через страхові компанії</h3>
+                            <div class="info__box-attention">
+                                <img width="40" height="40" src="./assets/img/icons/ico-attention.svg" alt="Attention">
+                                <p class="info__box-text">
+                                    Ми хочемо, щоб турбота про здоров’я була максимально зручною та вигідною. Саме тому
+                                    наша клініка підключена до програми Національного кешбеку та інших банківських
+                                    програм лояльності.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="info__box-col">
+                            <p class="info__box-text">
+                                Ми співпрацюємо з багатьма страховими компаніями. Щоб отримати детальну інформацію,
+                                зверніться у вашу страхову компанію або до адміністраторів клініки.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="partners">
+            <div class="container">
+                <div class="partners__head">
+                    <h2 class="partners__title content-title">Наші партнери</h2>
+                    <div class="slider-navigation js-partners-nav">
+                        <button type="button" class="slider-navigation__btn js-partners-prev">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.63593 12.0001H20.4852" stroke="#3E3E40" stroke-width="2"
+                                    stroke-linecap="round"></path>
+                                <path
+                                    d="M10.7188 5.06183C10.7188 5.06183 4.54837 10.2728 4.54837 12C4.5483 13.7273 10.7189 18.9382 10.7189 18.9382"
+                                    stroke="#3E3E40" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                </path>
+                            </svg>
+                        </button>
+                        <button type="button" class="slider-navigation__btn js-partners-next">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M18.3641 12.0001H3.51483" stroke="#3E3E40" stroke-width="2"
+                                    stroke-linecap="round"></path>
+                                <path
+                                    d="M13.2812 5.06183C13.2812 5.06183 19.4516 10.2728 19.4516 12C19.4517 13.7273 13.2811 18.9382 13.2811 18.9382"
+                                    stroke="#3E3E40" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="partners__items swiper js-partners-slider">
+                    <div class="partners__items-wrapper swiper-wrapper">
+                        <div class="partners__items-slide swiper-slide">
+                            <div class="partners-box">
+                                <img src="./assets/img/partner_1.png" alt="Partner">
+                            </div>
+                        </div>
+                        <div class="partners__items-slide swiper-slide">
+                            <div class="partners-box">
+                                <img src="./assets/img/partner_2.png" alt="Partner">
+                            </div>
+                        </div>
+                        <div class="partners__items-slide swiper-slide">
+                            <div class="partners-box">
+                                <img src="./assets/img/partner_3.png" alt="Partner">
+                            </div>
+                        </div>
+                        <div class="partners__items-slide swiper-slide">
+                            <div class="partners-box">
+                                <img src="./assets/img/partner_4.png" alt="Partner">
+                            </div>
+                        </div>
+                        <div class="partners__items-slide swiper-slide">
+                            <div class="partners-box">
+                                <img src="./assets/img/partner_5.png" alt="Partner">
+                            </div>
+                        </div>
+                        <div class="partners__items-slide swiper-slide">
+                            <div class="partners-box">
+                                <img src="./assets/img/partner_6.png" alt="Partner">
+                            </div>
+                        </div>
+                        <div class="partners__items-slide swiper-slide">
+                            <div class="partners-box">
+                                <img src="./assets/img/partner_5.png" alt="Partner">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="appointment">
+            <div class="container">
+                <div class="appointment__content">
+                    <div class="appointment__thumb">
+                        <img loading="lazy" width="728" height="500" src="./assets/img/app-img.jpg" alt="Thumbnail">
+                    </div>
+                    <div class="appointment__make">
+                        <h3 class="appointment__title">Записатись на прийом</h3>
+                        <form class="appointment__form">
+                            <div class="appointment__form-fields">
+                                <div class="appointment__form-group field-phone">
+                                    <input type="tel" name="mainAppPhone" id="mainAppPhone"
+                                        class="appointment__form-field field-phone--item"
+                                        placeholder="+38 (XXX) XXX XX XX">
+                                </div>
+                                <div class="appointment__form-group">
+                                    <label class="appointment__form-title" for="mainAppDate">Бажана дата прийому</label>
+                                    <div class="appointment__form-inner js-date-picker field-date">
+                                        <input type="date" name="mainAppDate" id="mainAppDate"
+                                            class="appointment__form-field field-date--item">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="appointment__form-check">
+                                <input class="appointment__form-cheked" type="checkbox" name="mainAppCheck"
+                                    id="mainAppCheck">
+                                <label class="appointment__form-label" for="mainAppCheck">
+                                    <p>
+                                        Погоджуюсь з умовами <a href="#!">Політики приватності</a> та <a
+                                            href="#!">Публічного договору</a>
+                                    </p>
+                                </label>
+                            </div>
+                            <button type="submit" class="appointment__form-submit">
+                                Запис на прийом
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contact">
+            <div class="container">
+                <h2 class="contact__title content-title">
+                    Наші контакти
+                </h2>
+                <div class="contact__content">
+                    <div class="contact__preview">
+                        <div class="contact__thumb">
+                            <img loading="lazy" width="660" height="468" src="./assets/img/contact-img.jpg"
+                                alt="Thumbnail">
+                        </div>
+                    </div>
+                    <div class="contact__details">
+                        <div class="contact__header">
+                            <div class="contact__logo">
+                                <img loading="lazy" src="./assets/img/icons/logoSm_blue.svg" alt="Logotype">
+                            </div>
+                            <div class="contact__location">
+                                <p>
+                                    <img src="./assets/img/icons/ico-pin-b.svg" alt="Pin">
+                                    пр-т Петра Григоренка, 22/20
+                                </p>
+                                <a href="#!" class="link-more">
+                                    <span>прокласти маршрут</span>
+                                    <span>
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_443_15486)">
+                                                <path d="M13.333 7.99988H2.66636" stroke="white" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                                                <path
+                                                    d="M9.99969 11.3334C9.99969 11.3334 13.333 8.87842 13.333 8.00002C13.333 7.12162 9.99967 4.66669 9.99967 4.66669"
+                                                    stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round"></path>
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_443_15486">
+                                                    <rect width="16" height="16" fill="white"></rect>
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_443_15486)">
+                                                <path d="M13.333 7.99988H2.66636" stroke="white" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                                                <path
+                                                    d="M9.99969 11.3334C9.99969 11.3334 13.333 8.87842 13.333 8.00002C13.333 7.12162 9.99967 4.66669 9.99967 4.66669"
+                                                    stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round"></path>
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_443_15486">
+                                                    <rect width="16" height="16" fill="white"></rect>
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="contact__info">
+                            <div class="contact__state">
+                                <img width="20" height="20" src="./assets/img/icons/ico-metro.svg" alt="Metro">
+                                <p>найближча ст. м. “Позняки”</p>
+                            </div>
+                            <div class="contact__stats">
+                                <a href="#!" class="contact__stats-item">
+                                    <img width="20" height="20" src="./assets/img/icons/ico-doctor.svg" alt="">
+                                    <p>Лікарів 22</p>
+                                </a>
+                                <a href="#!" class="contact__stats-item">
+                                    <img width="20" height="20" src="./assets/img/icons/ico-review-g.svg" alt="">
+                                    <p>Відгуків 88</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="contact__footer">
+                            <div class="contact__footer-col">
+                                <ul class="contact__list">
+                                    <li class="contact__list-item">
+                                        <img width="24" height="24" src="./assets/img/icons/ico-clock-b.svg"
+                                            alt="Clock">
+                                        <span>
+                                            Пн-Нд: 07:30 - 21:00
+                                        </span>
+                                    </li>
+                                    <li class="contact__list-item">
+                                        <a href="tel:+380976000303" class="contact__list-link">
+                                            <img width="24" height="24" src="./assets/img/icons/ico-phone-b.svg"
+                                                alt="Clock">
+                                            <span>(097) 600-03-03</span>
+                                        </a>
+                                    </li>
+                                    <li class="contact__list-item">
+                                        <a href="mailto:info@smartklinika.ua" class="contact__list-link">
+                                            <img width="24" height="24" src="./assets/img/icons/ico-mail-b.svg"
+                                                alt="Clock">
+                                            <span>info@smartklinika.ua</span>
+                                        </a>
+                                    </li>
+                                    <li class="contact__list-item">
+                                        <a href="#!" class="contact__list-link">
+                                            <img width="24" height="24" src="./assets/img/icons/ico-3d-n.svg"
+                                                alt="Clock">
+                                            <span>3D тур</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <button class="contact__cons js-appointment cta cta--light cta--lg">
+                                    Запис на прийом
+                                </button>
+                            </div>
+                            <div class="contact__footer-col">
+                                <img src="./assets/img/person_2.svg" alt="Person">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__top">
+            <div class="footer__row">
+                <div class="container">
+                    <div class="footer__inner">
+                        <div class="footer__connect">
+                            <div class="footer__logo">
+                                <img loading="lazy" src="./assets/img/icons/logoLg_wht.svg" alt="Logotype">
+                            </div>
+                            <form class="footer__form">
+                                <div class="footer__form-group">
+                                    <label for="footerEmail" class="footer__title">
+                                        Дізнавайтесь першими про
+                                        вигідні пропозиції, статті, новини
+                                    </label>
+                                    <div class="footer__form-field">
+                                        <input type="email" name="footerEmail" id="footerEmail" placeholder="Ваш email">
+                                        <div class="footer__form-submit">
+                                            <button type="submit" class="footer__form-rec">
+                                                <svg width="16" height="14" viewBox="0 0 16 14" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M13.0001 7.00028L1.33333 7.00028M8.83366 12.8336C8.83366 12.8336 14.667 8.53744 14.667 7.00028C14.667 5.46311 8.83366 1.16699 8.83366 1.16699"
+                                                        stroke="white" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="footer__soc">
+                            <p class="footer__title">
+                                Доєднуйтесь до нас у соціальних мережах
+                            </p>
+                            <ul class="footer__links">
+                                <li class="footer__links-item">
+                                    <a href="#!">
+                                        <img src="./assets/img/icons/ico-facebook.svg" alt="Facebook">
+                                    </a>
+                                </li>
+                                <li class="footer__links-item">
+                                    <a href="#!">
+                                        <img src="./assets/img/icons/ico-inst.svg" alt="Instagram">
+                                    </a>
+                                </li>
+                                <li class="footer__links-item">
+                                    <a href="#!">
+                                        <img src="./assets/img/icons/ico-tube.svg" alt="YouTube">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__row">
+                <div class="container">
+                    <div class="footer__inner">
+                        <div class="footer__info">
+                            <div class="footer__info-item">
+                                <p class="footer__subtitle">Де ми знаходимось?</p>
+                                <p class="footer__text">м. Київ, просп. Григоренка, 22/20</p>
+                            </div>
+                            <div class="footer__info-item">
+                                <p class="footer__subtitle">Пн-Нд: 07:30 - 21:00</p>
+                                <a href="tel:+380976000303" class="footer__text">(097) 600-03-03</a>
+                            </div>
+                        </div>
+                        <div class="footer__btns">
+                            <a href="#!" class="footer__review">залишити відгук</a>
+                            <button type="button" class="footer__cons js-appointment">
+                                записатись на прийом
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__row">
+                <div class="container">
+                    <nav class="footer__nav">
+                        <ul>
+                            <li><a href="#!">Дорослим</a></li>
+                            <li><a href="#!">Дітям</a></li>
+                            <li><a href="#!">Лікарі</a></li>
+                            <li><a href="#!">Акції</a></li>
+                            <li><a href="#!">Ціни</a></li>
+                            <li><a href="#!">Відгуки</a></li>
+                            <li><a href="#!">Про клініку</a></li>
+                            <li><a href="#!">контакти</a></li>
+                            <li><a href="#!">соц. програми</a></li>
+                            <li><a href="#!">Блог</a></li>
+                            <li><a href="#!">вакансії</a></li>
+                            <li><a href="#!">Оплата</a></li>
+                            <li><a href="#!">документи</a></li>
+                        </ul>
+                    </nav>
+                    <p class="footer__reminder">
+                        САМОЛІКУВАННЯ МОЖЕ БУТИ ШКІДЛИВИМ ДЛЯ ВАШОГО ЗДОРОВ’Я
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bot">
+            <div class="container">
+                <p class="footer__copy">© Smart klinika 2025</p>
+                <p class="footer__license">Ліцензія наказ МОЗ України №728 від 29.06.2017</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
