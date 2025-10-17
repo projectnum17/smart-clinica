@@ -76,6 +76,35 @@ const sliders = () => {
         });
     };
 
+    const feedbacksSlider = () => {
+        const sliderEl = document.querySelector('.js-feedback-slider');
+        const navPanel = document.querySelector('.js-feedback-nav');
+        if (!sliderEl || !navPanel) return;
+
+        const slideCount = sliderEl.querySelectorAll('.swiper-slide');
+        const sliderWrapper = sliderEl.querySelector('.swiper-wrapper');
+
+        if (slideCount.length < 4) {
+            navPanel.style.display = 'none';
+            sliderWrapper.classList.add('is-centered');
+        }
+
+        new Swiper(sliderEl, {
+            spaceBetween: 20,
+            slidesPerView: 3,
+            grabCursor: true,
+            speed: 900,
+            navigation: {
+                prevEl: '.js-feedback-prev',
+                nextEl: '.js-feedback-next',
+            },
+            pagination: {
+                el: '.js-feedback-progress',
+                type: 'progressbar',
+            },
+        });
+    };
+
     const spaceSlider = () => {
         const sliderEl = document.querySelector('.js-space-slider');
         const navPanel = document.querySelector('.js-space-nav');
@@ -191,6 +220,7 @@ const sliders = () => {
     partnersSlider();
     interestSlider();
     certSlider();
+    feedbacksSlider();
 };
 
 export default sliders;

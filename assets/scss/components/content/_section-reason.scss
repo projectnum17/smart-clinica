@@ -1,18 +1,18 @@
 @use '../../base/media' as *;
 @use '../../base/mixins' as *;
 
-.skills {
-    border-bottom: 1px solid rgba(120, 126, 128, 0.4);
-
+.reason {
     &__content {
         display: grid;
         grid-template-columns: 456px 1fr 456px;
         gap: 20px;
+        border-bottom: 1px solid rgba(120, 126, 128, 0.4);
     }
 
     &__title {
         text-align: center;
-        transform: translateY(-50px);
+        max-width: 979px;
+        margin: 0 auto 28px;
     }
 
     &__hero {
@@ -23,7 +23,7 @@
         align-items: center;
 
         img {
-            max-width: 500px;
+            max-width: 452px;
             width: 100%;
         }
     }

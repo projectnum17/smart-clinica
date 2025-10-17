@@ -147,6 +147,11 @@
             border-radius: 12px;
             max-height: 170px;
             overflow: scroll;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            &::-webkit-scrollbar {
+                display: none;
+            }
             background: var(--white);
             border: 1px solid var(--ball-blue);
             @include transitions(0.3s, ease-out);

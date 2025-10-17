@@ -163,6 +163,24 @@ const helpers = () => {
         });
     };
 
+    const feedbackModalsHandler = () => {
+        const feedbackBoxes = document.querySelectorAll('.js-feedback-box');
+        if (!feedbackBoxes.length) return;
+
+        feedbackBoxes.forEach((box) => {
+            const boxText = box.querySelector('.js-feedback-text');
+            const showMore = box.querySelector('.js-feedback-more');
+
+            if (!boxText || !showMore) return;
+
+            showMore.style.display = 'none';
+
+            if (boxText.innerText.trim().length > 100) {
+                boxText.classList.add('is-highest');
+                showMore.style.display = '';
+            }
+        });
+    };
 
     formData();
     showMoreHandler();
@@ -208,6 +226,7 @@ const helpers = () => {
     });
 
     copyHandler();
+    feedbackModalsHandler();
 };
 
 export default helpers;
