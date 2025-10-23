@@ -1,15 +1,15 @@
 'use strict';
 
-import headerFlow from './modules/_header.js';
-import helpers from './modules/_helpers.js';
-import sliders from './modules/_sliders.js';
-import selectsInit from './modules/_selects.js';
-import ddBlocks from './modules/_ddBlocks.js';
-import videoModal from './modules/_videoModal.js';
-import infoModals from './modules/_infoModals.js';
-import reviewPage from './modules/_reviewPage.js';
-import videoAsync from './modules/_videoAsync.js';
-import tineLine from './modules/_timeLine.js';
+import headerFlow from './modules/header.js';
+import helpers from './modules/helpers.js';
+import sliders from './modules/sliders.js';
+import selectsInit from './modules/selects.js';
+import ddBlocks from './modules/ddBlocks.js';
+import videoModal from './modules/videoModal.js';
+import infoModals from './modules/infoModals.js';
+import reviewPage from './modules/reviewPage.js';
+import videoAsync from './modules/videoAsync.js';
+import tineLine from './modules/timeLine.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     headerFlow();

@@ -15,6 +15,28 @@
 </head>
 
 <body>
+    <div class="video-modal js-video-modal" id="videoModal">
+        <div class="video-modal__inner">
+            <div class="video-modal__wrapper js-video-modal__wrapper">
+                <button class="video-modal__close js-video-modal__close">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 5L5.00068 14.9993M14.9993 15L5 5.00071" stroke="#26aacc" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <button class="video-modal__play js-video-modal__play">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M26.1868 17.128C25.7155 18.9187 23.4883 20.184 19.0336 22.7148C14.7273 25.1612 12.5743 26.3845 10.8391 25.8928C10.1217 25.6895 9.46814 25.3035 8.941 24.7716C7.66602 23.4852 7.66602 20.9901 7.66602 16C7.66602 11.0099 7.66602 8.5148 8.941 7.22843C9.46814 6.6966 10.1217 6.31051 10.8391 6.10723C12.5743 5.61553 14.7273 6.83876 19.0336 9.28524C23.4883 11.816 25.7155 13.0813 26.1868 14.872C26.3813 15.6112 26.3813 16.3888 26.1868 17.128Z"
+                            fill="white"></path>
+                    </svg>
+                </button>
+                <div class="video-modal__video">
+                    <video controls playsinline id="videoPlayer"></video>
+                </div>
+            </div>
+        </div>
+    </div>
     <header class="header">
         <div class="header__top">
             <div class="container">
@@ -615,7 +637,7 @@
                             <div class="cv__ico">
                                 <img src="./assets/img/icons/fallback/ico-phone.svg" alt="Icon">
                             </div>
-                            <p class="cv__subtitle">Запис за телефоном:</p>
+                            <p class="cv__subtitle">Контект-центр за телефоном</p>
                             <a href="tel:+380976000303" class="cv__link">
                                 (097) 600-03-03
                             </a>
@@ -865,7 +887,7 @@
                             </div>
                         </div>
                         <div class="space__items-slide swiper-slide">
-                            <div class="space-box video-box js-video-modal" data-video="./assets/video/stress.mp4">
+                            <div class="space-box video-box js-video-item" data-video="./assets/video/stress.mp4">
                                 <img loading="lazy" src="./assets/img/space_2.jpg" alt="Thumbnail">
                                 <div class="video-box__control">
                                     <div class="video-box__rec">

@@ -1,19 +1,5 @@
-// const videoModal = () => {
-//     const videoBoxes = document.querySelectorAll('.js-video-modal');
-//     const videoModal = document.querySelector('.js-video-modal');
-
-//     if (!videoBoxes || !videoModal) return;
-
-//     const closeBtn = modal.querySelector('.js-video-modal__close');
-//     const playBtn = modal.querySelector('.js-video-modal__play');
-//     const videoPlayer = modal.querySelector('#videoPlayer');
-//     const wrapper = modal.querySelector('.js-video-modal__wrapper');
-
-//     if (!closeBtn || !playBtn || !videoPlayer || !wrapper) return;
-// };
-
 const videoModal = () => {
-    const videoBoxes = document.querySelectorAll('.js-video-modal');
+    const videoBoxes = document.querySelectorAll('.js-video-item');
     const modal = document.querySelector('.js-video-modal');
     if (!modal || !videoBoxes.length) return;
 
