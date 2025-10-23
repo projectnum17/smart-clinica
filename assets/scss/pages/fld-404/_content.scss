@@ -1,0 +1,55 @@
+@use '../../base/media' as *;
+@use '../../base/mixins' as *;
+
+.main--error {
+    .info {
+        overflow: hidden;
+        max-width: 2400px;
+        margin: 0 auto var(--section-mb);
+        padding-top: 80px;
+        &__thumb {
+            max-width: 985px;
+            margin: 0 auto 70px;
+        }
+
+        &__content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 73px;
+
+            img {
+                display: inline-flex;
+                flex-shrink: 0;
+                width: 492px;
+            }
+        }
+
+        &__title {
+            font: 400 48px / 100% var(--ff-base);
+            letter-spacing: -2px;
+            text-align: center;
+
+            span {
+                color: var(--sea-blue);
+            }
+        }
+
+        &__wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            align-items: center;
+        }
+
+        &__link {
+            padding: 18px 24px;
+            font: 400 16px / 100% var(--ff-nort);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border-radius: 10px;
+            color: var(--white);
+            background: var(--ball-blue);
+        }
+    }
+}
