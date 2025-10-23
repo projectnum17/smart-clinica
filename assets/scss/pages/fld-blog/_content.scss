@@ -1,0 +1,46 @@
+@use '../../base/media' as *;
+@use '../../base/mixins' as *;
+
+.main--blog {
+    .info {
+        padding-top: 32px;
+
+        &__title {
+            margin-bottom: 40px;
+        }
+
+        &__cards {
+            padding-top: 40px;
+            display: grid;
+            gap: 32px 20px;
+            grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+        }
+
+        &__pagination {
+            padding-top: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 40px;
+
+            &-btn {
+                font: 500 16px / 100% var(--ff-nort);
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                display: inline-flex;
+                width: 40px;
+                height: 40px;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                border: 2px solid transparent;
+                @include transitions(0.2s, ease-in);
+
+                &.is-active {
+                    border-color: var(--ball-blue);
+                }
+            }
+        }
+    }
+}
