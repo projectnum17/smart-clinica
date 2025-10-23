@@ -9,4 +9,11 @@
     display: flex;
     align-items: center;
     gap: 40px;
+
+    &.controls--vertical {
+        .slider-navigation {
+            width: 100%;
+            gap: 30px;
+        }
+    }
 }

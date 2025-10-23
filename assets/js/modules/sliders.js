@@ -213,6 +213,35 @@ const sliders = () => {
         });
     };
 
+    const internSLider = () => {
+        const sliderEl = document.querySelector('.js-intern-slider');
+        const navPanel = document.querySelector('.js-intern-nav');
+        if (!sliderEl || !navPanel) return;
+
+        const slideCount = sliderEl.querySelectorAll('.swiper-slide');
+        const sliderWrapper = sliderEl.querySelector('.swiper-wrapper');
+
+        if (slideCount.length < 7) {
+            navPanel.style.display = 'none';
+            sliderWrapper.classList.add('is-centered');
+        }
+
+        new Swiper(sliderEl, {
+            spaceBetween: 20,
+            slidesPerView: 6,
+            grabCursor: true,
+            speed: 900,
+            navigation: {
+                prevEl: '.js-intern-prev',
+                nextEl: '.js-intern-next',
+            },
+            pagination: {
+                el: '.js-intern-progress',
+                type: 'progressbar',
+            },
+        });
+    };
+
     heroNewsSlider();
     doctorsSlider();
     reviewsSlider();
@@ -221,6 +250,7 @@ const sliders = () => {
     interestSlider();
     certSlider();
     feedbacksSlider();
+    internSLider();
 };
 
 export default sliders;
