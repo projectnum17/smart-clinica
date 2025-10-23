@@ -41,6 +41,7 @@
 
             &:focus {
                 border: 1px solid var(--ball-blue);
+                background: #fff;
             }
 
             &::placeholder {
@@ -130,6 +131,7 @@
             &:focus,
             &.active {
                 border: 1px solid var(--ball-blue);
+                background: #fff;
 
                 &::after {
                     transform: translateY(-50%) rotate(180deg);
@@ -138,13 +140,17 @@
         }
 
         .select-options {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            padding: 20px 24px;
             position: absolute;
             right: 0;
             left: 0;
             bottom: -3px;
             transform: translateY(100%);
             z-index: 2;
-            border-radius: 12px;
+            border-radius: 16px;
             max-height: 170px;
             overflow: scroll;
             scrollbar-width: none;
@@ -153,13 +159,12 @@
                 display: none;
             }
             background: var(--white);
-            border: 1px solid var(--ball-blue);
+            border: 1px solid #d4dbde;
+            box-shadow: 0px 4px 12px 0px #00000014;
             @include transitions(0.3s, ease-out);
 
             li {
                 font: 400 18px / 160% var(--ff-nort);
-                padding: 12px 0;
-                text-indent: 15px;
                 @include transitions(0.3s, ease-out);
 
                 &:first-child {
@@ -167,12 +172,11 @@
                 }
 
                 &:hover {
-                    background: #dfe1e3;
+                    color: #0084ad;
                 }
 
                 &.is-selected {
-                    background: var(--ball-blue);
-                    color: var(--white);
+                    color: #0084ad;
                 }
 
                 &[rel='hide'] {

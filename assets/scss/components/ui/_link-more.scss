@@ -8,8 +8,12 @@
     max-width: max-content;
 
     @include hover {
+        span:first-child {
+            color: #0084ad;
+        }
         span:last-child {
             transform: scale(1.05);
+            background: #0084ad;
 
             svg {
                 &:last-child {

@@ -15,10 +15,16 @@
         justify-content: center;
         border-radius: 50%;
         border: 2px solid var(--ball-blue);
-        @include transitions(.2s, ease-in);
+        @include transitions(0.2s, ease-in);
+        @include hover {
+            border-color: #0084ad;
+            background: #0084ad;
+            color: var(--white);
+        }
 
         &.swiper-button-disabled {
-            opacity: .6;
+            opacity: 0.6;
+            pointer-events: none;
         }
 
         svg {
