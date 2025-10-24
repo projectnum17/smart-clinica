@@ -35,7 +35,34 @@
         }
     }
 
+    &--article {
+        .interest-box__img {
+            height: 260px;
+        }
+    }
+
+    &__tags {
+        position: absolute;
+        left: 12px;
+        bottom: 12px;
+        right: 12px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        position: absolute;
+
+        span {
+            display: inline-flex;
+            padding: 6px 16px;
+            border-radius: 4px;
+            font: 500 14px / 100% var(--ff-nort);
+            color: var(--white);
+            background: var(--ball-blue);
+        }
+    }
+
     &__img {
+        position: relative;
         height: 200px;
         border-radius: 20px;
         margin-bottom: 24px;

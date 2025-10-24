@@ -30,6 +30,7 @@
         &:first-child {
             font: 500 16px / 100% var(--ff-nort);
             text-transform: uppercase;
+            @include transitions(0.3s, ease-in);
         }
 
         &:last-child {
