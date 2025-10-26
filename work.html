@@ -7,6 +7,8 @@
     <link rel="icon" href="./assets/img/favicon/favicon.svg" type="image/svg+xml" />
     <meta name="description" content="Smart Clinic | Home">
     <title>Smart Clinic | Work</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+    <script defer src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./assets/css/style.min.css">
     <script defer src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
@@ -15,6 +17,184 @@
 </head>
 
 <body>
+    <div class="feedbacks-modal js-feedbacks-wrapper">
+        <div class="feedbacks-modal__inner">
+            <div class="feedbacks-modal__box feedbacks--success js-feedbacks-success">
+                <button class="feedbacks-modal__close js-success-close">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 6L6.00081 17.9992M17.9992 18L6 6.00085" stroke="#3E3E40" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <div class="feedbacks-modal__content">
+                    <div class="feedbacks-modal__thumb">
+                        <img src="./assets/img/person_4.svg" alt="Person">
+                    </div>
+                    <div class="feedbacks-modal__done">
+                        <h2 class="feedbacks-modal__title">
+                            Дякуємо, що допомагаєте нам стати краще
+                        </h2>
+                        <a href="index.html" class="feedbacks-modal__link">
+                            повернутися на головну
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="feedbacks-modal__box feedbacks--form js-feedbacks-form">
+                <button class="feedbacks-modal__close js-form-close">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 6L6.00081 17.9992M17.9992 18L6 6.00085" stroke="#3E3E40" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <div class="feedbacks-modal__content">
+                    <h2 class="feedbacks-modal__title">Залишити відгук</h2>
+                    <p class="feedbacks-modal__subtitle">
+                        Номер телефону не буде відображено на сайті
+                    </p>
+                    <form class="feedbacks-modal__form">
+                        <div class="feedbacks-modal__gaps">
+                            <div class="feedbacks-modal__fields">
+                                <div class="feedbacks-modal__field field--required">
+                                    <input class="feedbacks-modal__data" placeholder="Ваше Імʼя" type="text" name="feedBackName" id="feedBackName">
+                                </div>
+                                <div class="feedbacks-modal__field field--required">
+                                    <input class="feedbacks-modal__data" type="tel" name="feedBackPhone" id="feedBackPhone"
+                                        placeholder="+38 (XXX) XXX XX XX">
+                                </div>
+                            </div>
+                            <div class="feedbacks-modal__field">
+                                <select class="feedbacks-modal__dd js-select" id="feedBackSpecialist"
+                                    name="feedBackSpecialist">
+                                    <option value="" disabled selected>
+                                        Оберіть фахівця
+                                    </option>
+                                    <option value="1">Фахівець 1</option>
+                                    <option value="2">Фахівець 2</option>
+                                    <option value="3">Фахівець 3</option>
+                                </select>
+                            </div>
+                            <div class="feedbacks-modal__field">
+                                <textarea class="feedbacks-modal__data" name="feedBackText" id="feedBackText"
+                                    placeholder="Текст вашого відгуку"></textarea>
+                            </div>
+                        </div>
+                        <div class="feedbacks-modal__ratings">
+                            <div class="feedbacks-modal__rating">
+                                <p>Фахівець:</p>
+                                <div class="feedbacks-modal__stars">
+                                    <img src="./assets/img/icons/star.svg" alt="Star">
+                                    <img src="./assets/img/icons/star.svg" alt="Star">
+                                    <img src="./assets/img/icons/star.svg" alt="Star">
+                                    <img src="./assets/img/icons/star.svg" alt="Star">
+                                    <img src="./assets/img/icons/star-empty.svg" alt="Star">
+                                </div>
+                            </div>
+                            <div class="feedbacks-modal__rating">
+                                <p>Клініка:</p>
+                                <div class="feedbacks-modal__stars">
+                                    <img src="./assets/img/icons/star.svg" alt="Star">
+                                    <img src="./assets/img/icons/star.svg" alt="Star">
+                                    <img src="./assets/img/icons/star.svg" alt="Star">
+                                    <img src="./assets/img/icons/star.svg" alt="Star">
+                                    <img src="./assets/img/icons/star.svg" alt="Star">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feedbacks-modal__radios">
+                            <div class="feedbacks-modal__radio">
+                                <input type="radio" name="feedbackRadio" id="feedbackGratitude">
+                                <label for="feedbackGratitude">Подяка</label>
+                            </div>
+                            <div class="feedbacks-modal__radio">
+                                <input type="radio" name="feedbackRadio" id="feedbackReport">
+                                <label for="feedbackReport">Скарга</label>
+                            </div>
+                        </div>
+                        <button class="feedbacks-modal__submit" type="submit">
+                            надіслати відгук
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="app-modal js-app-wrapper">
+        <div class="app-modal__inner">
+            <div class="app-modal__box app--success js-app-success">
+                <button class="app-modal__close js-success-close">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 6L6.00081 17.9992M17.9992 18L6 6.00085" stroke="#3E3E40" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <div class="app-modal__content">
+                    <div class="app-modal__thumb">
+                        <img src="./assets/img/person_2.svg" alt="Person">
+                    </div>
+                    <div class="app-modal__done">
+                        <h2 class="app-modal__title">Дякуємо за вашу довіру!</h2>
+                        <p class="app-modal__time">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M10.0013 18.3333C14.6037 18.3333 18.3346 14.6023 18.3346 9.99996C18.3346 5.39759 14.6037 1.66663 10.0013 1.66663C5.39893 1.66663 1.66797 5.39759 1.66797 9.99996C1.66797 14.6023 5.39893 18.3333 10.0013 18.3333Z"
+                                    stroke="#005C90" stroke-width="1.5" />
+                                <path d="M7.91797 7.91663L10.8346 10.833M13.3346 6.66663L9.16797 10.8333"
+                                    stroke="#005C90" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            Графік роботи клініки: Пн-Нд: 07:30 - 21:00
+                        </p>
+                        <a href="index.html" class="app-modal__link">повернутися на головну</a>
+                    </div>
+                </div>
+            </div>
+            <div class="app-modal__box app--form js-app-form">
+                <button class="app-modal__close js-form-close">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 6L6.00081 17.9992M17.9992 18L6 6.00085" stroke="#3E3E40" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <div class="app-modal__content">
+                    <h2 class="app-modal__title">Записатись на прийом</h2>
+                    <div class="appointment">
+                        <form class="appointment__form">
+                            <div class="appointment__form-fields">
+                                <div class="appointment__form-group field-phone">
+                                    <input type="tel" name="modalAppPhone" id="modalAppPhone"
+                                        class="appointment__form-field field-phone--item"
+                                        placeholder="+38 (XXX) XXX XX XX">
+                                </div>
+                                <div class="appointment__form-group">
+                                    <label class="appointment__form-title" for="modalAppDate">Бажана дата
+                                        прийому</label>
+                                    <div class="appointment__form-inner js-date-picker field-date">
+                                        <input type="date" name="modalAppDate" id="modalAppDate"
+                                            class="appointment__form-field field-date--item">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="appointment__form-check">
+                                <input class="appointment__form-cheked" type="checkbox" name="modalAppCheck"
+                                    id="modalAppCheck">
+                                <label class="appointment__form-label" for="modalAppCheck">
+                                    <p>
+                                        Погоджуюсь з умовами <a href="#!">Політики приватності</a> та <a
+                                            href="#!">Публічного договору</a>
+                                    </p>
+                                </label>
+                            </div>
+                            <button type="submit" class="appointment__form-submit">
+                                Запис на прийом
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="video-modal js-video-modal" id="videoModal">
         <div class="video-modal__inner">
             <div class="video-modal__wrapper js-video-modal__wrapper">
@@ -559,7 +739,8 @@
                     <div class="reason__cards">
                         <div class="benefit-card">
                             <div class="benefit-card__ico">
-                                <img width="48" height="48" src="./assets/img/icons/fallback/ico_1.png" alt="Icon">
+                                <lottie-player class="lottie-anim" src="./assets/animations/heart.json" direction="1"
+                mode="normal" loop autoplay></lottie-player>
                             </div>
                             <div class="benefit-card__content">
                                 <p class="benefit-card__title">Прогресивна команда</p>
@@ -571,7 +752,8 @@
                         </div>
                         <div class="benefit-card">
                             <div class="benefit-card__ico">
-                                <img width="48" height="48" src="./assets/img/icons/fallback/ico_2.png" alt="Icon">
+                                <lottie-player class="lottie-anim" src="./assets/animations/users.json" direction="1"
+                mode="normal" loop autoplay></lottie-player>
                             </div>
                             <div class="benefit-card__content">
                                 <p class="benefit-card__title">
@@ -591,7 +773,8 @@
                     <div class="reason__cards">
                         <div class="benefit-card">
                             <div class="benefit-card__ico">
-                                <img width="48" height="48" src="./assets/img/icons/fallback/ico_4.png" alt="Icon">
+                                <lottie-player class="lottie-anim" src="./assets/animations/case.json" direction="1"
+                mode="normal" loop autoplay></lottie-player>
                             </div>
                             <div class="benefit-card__content">
                                 <p class="benefit-card__title">
@@ -605,7 +788,8 @@
                         </div>
                         <div class="benefit-card">
                             <div class="benefit-card__ico">
-                                <img width="48" height="48" src="./assets/img/icons/fallback/ico_5.png" alt="Icon">
+                                <lottie-player class="lottie-anim" src="./assets/animations/brain.json" direction="1"
+                mode="normal" loop autoplay></lottie-player>
                             </div>
                             <div class="benefit-card__content">
                                 <p class="benefit-card__title">Взаємна довіра</p>
@@ -635,7 +819,9 @@
                         </p>
                         <div class="cv__phone">
                             <div class="cv__ico">
-                                <img src="./assets/img/icons/fallback/ico-phone.svg" alt="Icon">
+                                <lottie-player class="lottie-anim lottie-anim--lg"
+                src="./assets/animations/wired-outline-1227-emergency-hover-pinch.json" direction="1" mode="normal" loop
+                autoplay></lottie-player>
                             </div>
                             <p class="cv__subtitle">Контект-центр за телефоном</p>
                             <a href="tel:+380976000303" class="cv__link">
@@ -1140,7 +1326,7 @@
                             </div>
                         </div>
                         <div class="footer__btns">
-                            <a href="#!" class="footer__review">залишити відгук</a>
+                            <a href="#!" class="footer__review js-impressions">залишити відгук</a>
                             <button type="button" class="footer__cons js-appointment">
                                 записатись на прийом
                             </button>

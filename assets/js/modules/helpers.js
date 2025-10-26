@@ -67,22 +67,26 @@ const helpers = () => {
     };
 
     const datePickHandler = () => {
-        const dateInput = document.querySelector('#mainAppDate');
-        const dateWrapper = document.querySelector('.js-date-picker');
+        const dateWrappers = document.querySelectorAll('.js-date-picker');
 
-        if (!dateInput || !dateWrapper) return;
+        if (!dateWrappers.length) return;
 
-        dateInput.addEventListener('keydown', (e) => e.preventDefault());
-        dateInput.addEventListener('keypress', (e) => e.preventDefault());
-        dateInput.addEventListener('paste', (e) => e.preventDefault());
+        dateWrappers.forEach((wrapper) => {
+            const dateInput = wrapper.querySelector('input');
+            if (!dateInput) return;
 
-        dateWrapper.addEventListener('click', () => {
-            if (dateInput.showPicker) {
-                dateInput.showPicker();
-            } else {
-                dateInput.focus();
-                dateInput.click();
-            }
+            ['keydown', 'keypress', 'paste'].forEach((event) => {
+                dateInput.addEventListener(event, (e) => e.preventDefault());
+            });
+
+            wrapper.addEventListener('click', () => {
+                if (typeof dateInput.showPicker === 'function') {
+                    dateInput.showPicker();
+                } else {
+                    dateInput.focus();
+                    dateInput.click();
+                }
+            });
         });
     };
 

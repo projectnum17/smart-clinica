@@ -1,40 +1,137 @@
 const infoModals = () => {
-    // ======= NOTES
-    // js-appointment - для модалки на запись
-    // https://www.figma.com/design/Lpdb2HW3SOPKBi0So6yA2o/Smart-Clinika?node-id=362-40892&t=K8Zc4bzZqYiCqMqD-1
+    const simpleModalsHandler = (modal, trigger, close) => {
+        const modalBox = document.querySelector(modal);
+        const modalTrigger = document.querySelectorAll(trigger);
+        const modalClose = document.querySelector(close);
 
+        if (!modalBox || !modalTrigger.length || !modalClose) return;
 
+        const closeModal = () => {
+            document.body.classList.remove('is-locked');
+            modalBox.classList.remove('is-show');
+        };
 
-    // js-prices - для модалки про цены на услуги
-    // https://www.figma.com/design/Lpdb2HW3SOPKBi0So6yA2o/Smart-Clinika?node-id=178-22513&t=K8Zc4bzZqYiCqMqD-1
+        const openModal = () => {
+            document.body.classList.add('is-locked');
+            modalBox.classList.add('is-show');
+        };
 
+        modalClose.addEventListener('click', closeModal);
+        modalTrigger.forEach((btn) => btn.addEventListener('click', openModal));
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modalBox.classList.contains('is-show')) {
+                closeModal();
+            }
+        });
 
+        modalBox.addEventListener('click', (e) => {
+            if (e.target === modalBox) {
+                closeModal();
+            }
+        });
+    };
 
+    const modalFormHandler = (options) => {
+        const {
+            triggerSelector,
+            wrapperSelector,
+            formSelector,
+            successSelector,
+            innerSelector,
+        } = options;
 
-    // js-review - для модалки про отзыв ???
+        const modalTrigger = document.querySelectorAll(triggerSelector);
+        const modalWrapper = document.querySelector(wrapperSelector);
 
+        if (!modalWrapper || !modalTrigger.length) return;
 
+        const successWindow = modalWrapper.querySelector(successSelector);
+        const formWindow = modalWrapper.querySelector(formSelector);
+        const formData = modalWrapper.querySelector('form');
 
+        if (!successWindow || !formWindow || !formData) return;
 
+        const closeSuccess = successWindow.querySelector('.js-success-close');
+        const closeForm = formWindow.querySelector('.js-form-close');
 
-    // js-impressions - для модалки "оставить отзыв"
-    // https://www.figma.com/design/Lpdb2HW3SOPKBi0So6yA2o/Smart-Clinika?node-id=286-62531&t=K8Zc4bzZqYiCqMqD-1
+        if (!closeSuccess || !closeForm) return;
 
+        successWindow.classList.add('is-hide');
 
+        const closeModal = () => {
+            document.body.classList.remove('is-locked');
+            modalWrapper.classList.remove('is-show');
+        };
 
+        const openModal = () => {
+            document.body.classList.add('is-locked');
+            modalWrapper.classList.add('is-show');
 
-    // js-report - для модалки "оставить жалобу"
-    // https://www.figma.com/design/Lpdb2HW3SOPKBi0So6yA2o/Smart-Clinika?node-id=305-50540&t=K8Zc4bzZqYiCqMqD-1
+            successWindow.classList.add('is-hide');
+            formWindow.classList.remove('is-hide');
+        };
 
+        modalTrigger.forEach((btn) => btn.addEventListener('click', openModal));
 
+        closeForm.addEventListener('click', closeModal);
+        closeSuccess.addEventListener('click', closeModal);
 
-    // js-map-car - для модалки на карту "машина"
-    // https://www.figma.com/design/Lpdb2HW3SOPKBi0So6yA2o/Smart-Clinika?node-id=363-48384&t=K8Zc4bzZqYiCqMqD-1
+        document.addEventListener('keydown', (e) => {
+            if (
+                e.key === 'Escape' &&
+                modalWrapper.classList.contains('is-show')
+            ) {
+                closeModal();
+            }
+        });
 
+        modalWrapper.addEventListener('click', (e) => {
+            const inner = modalWrapper.querySelector(innerSelector);
+            if (e.target === modalWrapper || e.target === inner) {
+                closeModal();
+            }
+        });
 
+        formData.addEventListener('submit', (e) => {
+            e.preventDefault();
+            successWindow.classList.remove('is-hide');
+            formWindow.classList.add('is-hide');
+        });
+    };
 
-    // js-map-bus - для модалки на карту "автобус"
-    // https://www.figma.com/design/Lpdb2HW3SOPKBi0So6yA2o/Smart-Clinika?node-id=363-48384&t=K8Zc4bzZqYiCqMqD-1
+    simpleModalsHandler('.js-map-bus', '.js-bus-trigger', '.js-map-bus__close');
+    simpleModalsHandler('.js-map-car', '.js-car-trigger', '.js-map-car__close');
+    simpleModalsHandler(
+        '.js-prices-modal',
+        '.js-prices-trigger',
+        '.js-prices-close'
+    );
+
+    modalFormHandler({
+        triggerSelector: '.js-appointment',
+        wrapperSelector: '.js-app-wrapper',
+        formSelector: '.js-app-form',
+        successSelector: '.js-app-success',
+        innerSelector: '.app-modal__inner',
+    });
+
+    modalFormHandler({
+        triggerSelector: '.js-impressions',
+        wrapperSelector: '.js-feedbacks-wrapper',
+        formSelector: '.js-feedbacks-form',
+        successSelector: '.js-feedbacks-success',
+        innerSelector: '.feedbacks-modal__inner',
+    });
+
+    modalFormHandler({
+        triggerSelector: '.js-report',
+        wrapperSelector: '.js-report-wrapper',
+        formSelector: '.js-report-form',
+        successSelector: '.js-report-success',
+        innerSelector: '.report-modal__inner',
+    });
+
+    // js-review - для модалки про отзыв
 };
 
 export default infoModals;
