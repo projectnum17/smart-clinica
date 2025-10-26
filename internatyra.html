@@ -56,11 +56,12 @@
                         <div class="feedbacks-modal__gaps">
                             <div class="feedbacks-modal__fields">
                                 <div class="feedbacks-modal__field field--required">
-                                    <input class="feedbacks-modal__data" placeholder="Ваше Імʼя" type="text" name="feedBackName" id="feedBackName">
+                                    <input class="feedbacks-modal__data" placeholder="Ваше Імʼя" type="text"
+                                        name="feedBackName" id="feedBackName">
                                 </div>
                                 <div class="feedbacks-modal__field field--required">
-                                    <input class="feedbacks-modal__data" type="tel" name="feedBackPhone" id="feedBackPhone"
-                                        placeholder="+38 (XXX) XXX XX XX">
+                                    <input class="feedbacks-modal__data" type="tel" name="feedBackPhone"
+                                        id="feedBackPhone" placeholder="+38 (XXX) XXX XX XX">
                                 </div>
                             </div>
                             <div class="feedbacks-modal__field">
@@ -220,11 +221,10 @@
     <header class="header">
         <div class="header__top">
             <div class="container">
-                <div class="header__search">
+                <button class="header__button js-search-btn" type="button">
                     <img width="20" height="20" src="./assets/img/icons/ico-search.svg" alt="Icon">
-                    <input class="header__search-field" type="search" name="headerSearch" id="headerSearch"
-                        placeholder="Введіть запит для пошуку">
-                </div>
+                    <p class="header__button-text">Введіть запит для пошуку</p>
+                </button>
                 <div class="header__info">
                     <div class="header__location">
                         <img width="20" height="20" src="./assets/img/icons/ico-pin.svg" alt="Icon">
@@ -242,10 +242,34 @@
                     <span>Важливе оголошення&nbsp;&nbsp;&nbsp;&nbsp;</span>
                 </button>
                 <div class="header__panel">
-                    <a href="tel:+380976000303" class="header__phone">
-                        <img width="20" height="20" src="./assets/img/icons/ico-phone.svg" alt="Icon">
-                        <span>(097) 600-03-03</span>
-                    </a>
+                    <ul class="header__phones">
+                        <li class="header__phones-visible">
+                            <a href="tel:+380976000303" class="header__phone">
+                                <img width="20" height="20" src="./assets/img/icons/ico-phone.svg" alt="Icon">
+                                <span>(097) 600-03-03</span>
+                            </a>
+                        </li>
+                        <div class="header__phones-wrapper">
+                            <div class="header__phones-inner">
+                                <ul class="header__phones-list">
+                                    <li class="header__phones-item">
+                                        <a href="tel:+380976000303" class="header__phone">
+                                            <img width="20" height="20" src="./assets/img/icons/ico-phone_2.svg"
+                                                alt="Icon">
+                                            <span>(097) 600-03-03</span>
+                                        </a>
+                                    </li>
+                                    <li class="header__phones-item">
+                                        <a href="tel:+380976000303" class="header__phone">
+                                            <img width="20" height="20" src="./assets/img/icons/ico-phone_2.svg"
+                                                alt="Icon">
+                                            <span>(097) 600-03-03</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </ul>
                     <ul class="header__lang">
                         <li class="header__lang-current">
                             <span class="header__lang-label">UA</span>
@@ -270,6 +294,19 @@
         </div>
         <div class="header__bot">
             <div class="container">
+                <div class="header__search js-header-search">
+                    <input class="header__search-field" type="search" name="headerSearch" id="headerSearch"
+                        placeholder="Введіть назву послуги, лікаря, напряму">
+                    <button class="header__search-btn" type="button">
+                        <img src="./assets/img/icons/ico-search-wht.svg" alt="Search">
+                    </button>
+                    <button class="header__search-close js-search-close">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18 6L6.00081 17.9992M17.9992 18L6 6.00085" stroke="#3E3E40" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                </div>
                 <a href="#!" class="header__logo">
                     <img src="./assets/img/icons/logoSm_blue.svg" alt="Logotype">
                 </a>
@@ -566,8 +603,8 @@
                         <div class="cv__phone">
                             <div class="cv__ico">
                                 <lottie-player class="lottie-anim lottie-anim--lg"
-                src="./assets/animations/wired-outline-1227-emergency-hover-pinch.json" direction="1" mode="normal" loop
-                autoplay></lottie-player>
+                                    src="./assets/animations/wired-outline-1227-emergency-hover-pinch.json"
+                                    direction="1" mode="normal" loop autoplay></lottie-player>
                             </div>
                             <p class="cv__subtitle">Контект-центр за телефоном</p>
                             <a href="tel:+380976000303" class="cv__link">

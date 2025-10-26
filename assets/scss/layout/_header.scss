@@ -5,6 +5,7 @@
     position: sticky;
     top: 0;
     z-index: 10;
+
     &__top {
         padding-block: 11px 13px;
         background: var(--sea-blue);
@@ -26,47 +27,68 @@
             align-items: center;
             justify-content: space-between;
             gap: 10px;
+            position: relative;
         }
     }
 
-    &__panel {
-        display: flex;
-        align-items: center;
-        gap: 22px;
-    }
-
-    &__info {
-        display: flex;
-        align-items: center;
-        gap: 24px;
-    }
-
     &__search {
-        position: relative;
-        max-width: 240px;
-        width: 100%;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -10%);
+        opacity: 0;
+        visibility: hidden;
+        width: calc(100% - 40px);
+        height: 100%;
+        z-index: 1;
+        background-color: #fff;
+        @include transitions(0.3s, ease-in);
 
-        img {
+        &.is-shown {
+            transform: translate(-50%, 0%);
+            opacity: 1;
+            visibility: visible;
+        }
+
+        &-btn {
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            left: 0;
-            width: 20px;
-            height: 20px;
+            right: 40px;
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            display: inline-flex;
+            flex-shrink: 0;
+            align-items: center;
+            justify-content: center;
+            background: var(--ball-blue);
+
+            img {
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+        &-close {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0;
         }
 
         &-field {
             font: 400 16px / 100% var(--ff-nort);
             outline: none;
             width: 100%;
+            height: 100%;
             border: none;
             background: transparent;
-            padding: 1px 5px 1px 28px;
-            color: var(--white);
+            color: inherit;
+            padding: 0 50px 0 0;
 
             &::placeholder {
                 color: inherit;
-                opacity: 0.6;
+                color: rgba(0, 0, 0, 0.4);
             }
 
             &[type='search']::-webkit-search-cancel-button {
@@ -86,6 +108,36 @@
             &[type='search'] {
                 appearance: none;
             }
+        }
+    }
+
+    &__panel {
+        display: flex;
+        align-items: center;
+        gap: 22px;
+    }
+
+    &__info {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+    }
+
+    &__button {
+        max-width: 240px;
+        width: 100%;
+        gap: 8px;
+        align-items: center;
+
+        img {
+            width: 20px;
+            height: 20px;
+        }
+
+        &-text {
+            font: 400 16px / 100% var(--ff-nort);
+            opacity: 0.6;
+            color: #fff;
         }
     }
 
@@ -171,6 +223,67 @@
         }
     }
 
+    &__phones {
+        position: relative;
+        @include hover {
+            .header__phones-wrapper {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .header__phones-visible::after {
+                transform: rotate(180deg);
+            }
+        }
+
+        &-visible {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            &::after {
+                content: '';
+                width: 20px;
+                height: 20px;
+                display: inline-flex;
+                flex-shrink: 0;
+                background: url('../img/icons/icoDrop_gr.svg') no-repeat center
+                    center;
+                @include transitions(0.2s, ease-in);
+            }
+        }
+
+        &-wrapper {
+            z-index: 5;
+            transform: translateY(-5px);
+            padding-top: 10px;
+            position: absolute;
+            min-width: 70px;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 3;
+            transition: all 0.2s ease-in;
+        }
+
+        &-inner {
+            padding: 15px 10px;
+            border-radius: 16px;
+            box-shadow: 0px 4px 12px 0px #00000014;
+            background: #fff;
+        }
+
+        &-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+
+            .header__phone {
+                color: #3e3e40;
+            }
+        }
+    }
+
     &__lang {
         font: 500 16px / 100% var(--ff-nort);
         cursor: pointer;
@@ -182,6 +295,10 @@
                 transform: translateY(0);
                 opacity: 1;
                 visibility: visible;
+            }
+
+            .header__lang-current::after {
+                transform: rotate(180deg);
             }
         }
 
@@ -198,6 +315,7 @@
                 flex-shrink: 0;
                 background: url('../img/icons/icoDrop_gr.svg') no-repeat center
                     center;
+                @include transitions(0.2s, ease-in);
             }
         }
 
@@ -217,8 +335,8 @@
             display: flex;
             flex-direction: column;
             gap: 2px;
-            padding: 10px;
-            border-radius: 4px;
+            padding: 4px;
+            border-radius: 12px;
             color: var(--text-color);
             background: var(--white);
             border: 1px solid #d4dbde;
@@ -226,21 +344,14 @@
         }
 
         &-item {
-            padding-block: 4px;
+            padding: 5px 12px;
+            border-radius: 8px;
+            text-align: center;
+            font: 500 16px /100% var(--ff-nort);
 
             &--active {
-                display: flex;
-                align-items: center;
-                gap: 4px;
-
-                &::after {
-                    content: '';
-                    flex-shrink: 0;
-                    width: 20px;
-                    height: 20px;
-                    background: url('../img/icons/ico-check.svg') no-repeat
-                        center center;
-                }
+                color: #0084ad;
+                background: rgba(0, 92, 144, 0.11);
             }
         }
     }
@@ -252,9 +363,6 @@
         img {
             width: 100%;
         }
-    }
-
-    &__nav {
     }
 
     &__menu {
