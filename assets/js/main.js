@@ -12,6 +12,7 @@ import videoAsync from './modules/videoAsync.js';
 import videoPlayer from './modules/videoPlayer.js';
 import tineLine from './modules/timeLine.js';
 import fancyBoxHandler from './modules/fancyBoxHandler.js';
+import reviewBoxHandler from './modules/reviewBoxHandler.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     headerFlow();
@@ -26,4 +27,5 @@ document.addEventListener('DOMContentLoaded', () => {
     videoPlayer();
     tineLine();
     fancyBoxHandler();
+    reviewBoxHandler();
 });

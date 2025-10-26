@@ -130,8 +130,6 @@ const infoModals = () => {
         successSelector: '.js-report-success',
         innerSelector: '.report-modal__inner',
     });
-
-    // js-review - для модалки про отзыв
 };
 
 export default infoModals;

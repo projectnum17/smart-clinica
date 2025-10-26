@@ -17,6 +17,19 @@
 </head>
 
 <body>
+    <div class="review-modal js-review-modal">
+        <div class="review-modal__inner">
+            <div class="review-modal__content">
+                <button class="review-modal__close js-review-close">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 6L6.00081 17.9992M17.9992 18L6 6.00085" stroke="#3E3E40" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <div class="review-modal__body js-review-body"></div>
+            </div>
+        </div>
+    </div>
     <div class="feedbacks-modal js-feedbacks-wrapper">
         <div class="feedbacks-modal__inner">
             <div class="feedbacks-modal__box feedbacks--success js-feedbacks-success">
@@ -785,7 +798,7 @@
                 <div class="reviews__items swiper js-reviews-slider">
                     <div class="reviews__items-wrapper swiper-wrapper">
                         <div class="reviews__items-slide swiper-slide">
-                            <div class="review-box">
+                            <div class="review-box js-review-box">
                                 <div class="review-box__content">
                                     <div class="review-box__head">
                                         <div class="review-box__info">
@@ -797,13 +810,13 @@
                                             <span>4.9</span>
                                         </div>
                                     </div>
-                                    <p class="review-box__text">
+                                    <p class="review-box__text js-review-text">
                                         Гарна сучасна клініка, привітний персонал. Було дуже комфортно. Дякую
                                         лікарю-гінекологу Владимирець Олена Сергіївна. Детально пояснила кожен етап і
                                         дала
                                         відповіді на запитання.
                                     </p>
-                                    <button type="button" class="review-box__more">
+                                    <button type="button" class="review-box__more js-review-popup">
                                         <span>Читати більше</span>
                                         <span>
                                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
@@ -843,7 +856,7 @@
                             </div>
                         </div>
                         <div class="reviews__items-slide swiper-slide">
-                            <div class="review-box">
+                            <div class="review-box js-review-box">
                                 <div class="review-box__content">
                                     <div class="review-box__head">
                                         <div class="review-box__info">
@@ -855,13 +868,10 @@
                                             <span>4.9</span>
                                         </div>
                                     </div>
-                                    <p class="review-box__text">
-                                        Гарна сучасна клініка, привітний персонал. Було дуже комфортно. Дякую
-                                        лікарю-гінекологу Владимирець Олена Сергіївна. Детально пояснила кожен етап і
-                                        дала
-                                        відповіді на запитання.
+                                    <p class="review-box__text js-review-text">
+                                        Гарна сучасна клініка, привітний персонал. Було дуже комфортно.
                                     </p>
-                                    <button type="button" class="review-box__more">
+                                    <button type="button" class="review-box__more js-review-popup">
                                         <span>Читати більше</span>
                                         <span>
                                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
@@ -901,7 +911,7 @@
                             </div>
                         </div>
                         <div class="reviews__items-slide swiper-slide">
-                            <div class="review-box">
+                            <div class="review-box js-review-box">
                                 <div class="review-box__content">
                                     <div class="review-box__head">
                                         <div class="review-box__info">
@@ -913,13 +923,10 @@
                                             <span>4.9</span>
                                         </div>
                                     </div>
-                                    <p class="review-box__text">
-                                        Гарна сучасна клініка, привітний персонал. Було дуже комфортно. Дякую
-                                        лікарю-гінекологу Владимирець Олена Сергіївна. Детально пояснила кожен етап і
-                                        дала
-                                        відповіді на запитання.
+                                    <p class="review-box__text js-review-text">
+                                        Гарна сучасна клініка, привітний персонал. Було дуже комфортно.
                                     </p>
-                                    <button type="button" class="review-box__more">
+                                    <button type="button" class="review-box__more js-review-popup">
                                         <span>Читати більше</span>
                                         <span>
                                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
@@ -959,7 +966,7 @@
                             </div>
                         </div>
                         <div class="reviews__items-slide swiper-slide">
-                            <div class="review-box">
+                            <div class="review-box js-review-box">
                                 <div class="review-box__content">
                                     <div class="review-box__head">
                                         <div class="review-box__info">
@@ -971,13 +978,13 @@
                                             <span>4.9</span>
                                         </div>
                                     </div>
-                                    <p class="review-box__text">
+                                    <p class="review-box__text js-review-text">
                                         Гарна сучасна клініка, привітний персонал. Було дуже комфортно. Дякую
                                         лікарю-гінекологу Владимирець Олена Сергіївна. Детально пояснила кожен етап і
                                         дала
                                         відповіді на запитання.
                                     </p>
-                                    <button type="button" class="review-box__more">
+                                    <button type="button" class="review-box__more js-review-popup">
                                         <span>Читати більше</span>
                                         <span>
                                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
@@ -1017,7 +1024,7 @@
                             </div>
                         </div>
                         <div class="reviews__items-slide swiper-slide">
-                            <div class="review-box">
+                            <div class="review-box js-review-box">
                                 <div class="review-box__content">
                                     <div class="review-box__head">
                                         <div class="review-box__info">
@@ -1029,13 +1036,13 @@
                                             <span>4.9</span>
                                         </div>
                                     </div>
-                                    <p class="review-box__text">
+                                    <p class="review-box__text js-review-text">
                                         Гарна сучасна клініка, привітний персонал. Було дуже комфортно. Дякую
                                         лікарю-гінекологу Владимирець Олена Сергіївна. Детально пояснила кожен етап і
                                         дала
                                         відповіді на запитання.
                                     </p>
-                                    <button type="button" class="review-box__more">
+                                    <button type="button" class="review-box__more js-review-popup">
                                         <span>Читати більше</span>
                                         <span>
                                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"

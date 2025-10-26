@@ -17,6 +17,19 @@
 </head>
 
 <body>
+    <div class="review-modal js-review-modal">
+        <div class="review-modal__inner">
+            <div class="review-modal__content">
+                <button class="review-modal__close js-review-close">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 6L6.00081 17.9992M17.9992 18L6 6.00085" stroke="#3E3E40" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <div class="review-modal__body js-review-body"></div>
+            </div>
+        </div>
+    </div>
     <div class="feedbacks-modal js-feedbacks-wrapper">
         <div class="feedbacks-modal__inner">
             <div class="feedbacks-modal__box feedbacks--success js-feedbacks-success">
@@ -56,11 +69,12 @@
                         <div class="feedbacks-modal__gaps">
                             <div class="feedbacks-modal__fields">
                                 <div class="feedbacks-modal__field field--required">
-                                    <input class="feedbacks-modal__data" placeholder="Ваше Імʼя" type="text" name="feedBackName" id="feedBackName">
+                                    <input class="feedbacks-modal__data" placeholder="Ваше Імʼя" type="text"
+                                        name="feedBackName" id="feedBackName">
                                 </div>
                                 <div class="feedbacks-modal__field field--required">
-                                    <input class="feedbacks-modal__data" type="tel" name="feedBackPhone" id="feedBackPhone"
-                                        placeholder="+38 (XXX) XXX XX XX">
+                                    <input class="feedbacks-modal__data" type="tel" name="feedBackPhone"
+                                        id="feedBackPhone" placeholder="+38 (XXX) XXX XX XX">
                                 </div>
                             </div>
                             <div class="feedbacks-modal__field">
@@ -520,7 +534,7 @@
                         <div class="benefit-card">
                             <div class="benefit-card__ico">
                                 <lottie-player class="lottie-anim" src="./assets/animations/heart.json" direction="1"
-                mode="normal" loop autoplay></lottie-player>
+                                    mode="normal" loop autoplay></lottie-player>
                             </div>
                             <div class="benefit-card__content">
                                 <p class="benefit-card__title">Формула здоров’я</p>
@@ -534,7 +548,7 @@
                         <div class="benefit-card">
                             <div class="benefit-card__ico">
                                 <lottie-player class="lottie-anim" src="./assets/animations/users.json" direction="1"
-                mode="normal" loop autoplay></lottie-player>
+                                    mode="normal" loop autoplay></lottie-player>
                             </div>
                             <div class="benefit-card__content">
                                 <p class="benefit-card__title">Експертна команда</p>
@@ -546,8 +560,8 @@
                         </div>
                         <div class="benefit-card">
                             <div class="benefit-card__ico">
-                                <lottie-player class="lottie-anim" src="./assets/animations/handshake.json" direction="1"
-                mode="normal" loop autoplay></lottie-player>
+                                <lottie-player class="lottie-anim" src="./assets/animations/handshake.json"
+                                    direction="1" mode="normal" loop autoplay></lottie-player>
                             </div>
                             <div class="benefit-card__content">
                                 <p class="benefit-card__title">Чесні взаємини</p>
@@ -565,7 +579,7 @@
                         <div class="benefit-card">
                             <div class="benefit-card__ico">
                                 <lottie-player class="lottie-anim" src="./assets/animations/case.json" direction="1"
-                mode="normal" loop autoplay></lottie-player>
+                                    mode="normal" loop autoplay></lottie-player>
                             </div>
                             <div class="benefit-card__content">
                                 <p class="benefit-card__title">Комплексний супровід</p>
@@ -580,7 +594,7 @@
                         <div class="benefit-card">
                             <div class="benefit-card__ico">
                                 <lottie-player class="lottie-anim" src="./assets/animations/brain.json" direction="1"
-                mode="normal" loop autoplay></lottie-player>
+                                    mode="normal" loop autoplay></lottie-player>
                             </div>
                             <div class="benefit-card__content">
                                 <p class="benefit-card__title">Сучасні технології</p>
@@ -594,7 +608,7 @@
                         <div class="benefit-card">
                             <div class="benefit-card__ico">
                                 <lottie-player class="lottie-anim" src="./assets/animations/beat.json" direction="1"
-                mode="normal" loop autoplay></lottie-player>
+                                    mode="normal" loop autoplay></lottie-player>
                             </div>
                             <div class="benefit-card__content">
                                 <p class="benefit-card__title">Новітнє обладнання</p>
@@ -1409,7 +1423,7 @@
                 <div class="reviews__items swiper js-reviews-slider">
                     <div class="reviews__items-wrapper swiper-wrapper">
                         <div class="reviews__items-slide swiper-slide">
-                            <div class="review-box">
+                            <div class="review-box js-review-box">
                                 <div class="review-box__content">
                                     <div class="review-box__head">
                                         <div class="review-box__info">
@@ -1421,13 +1435,13 @@
                                             <span>4.9</span>
                                         </div>
                                     </div>
-                                    <p class="review-box__text">
+                                    <p class="review-box__text js-review-text">
                                         Гарна сучасна клініка, привітний персонал. Було дуже комфортно. Дякую
                                         лікарю-гінекологу Владимирець Олена Сергіївна. Детально пояснила кожен етап і
                                         дала
                                         відповіді на запитання.
                                     </p>
-                                    <button type="button" class="review-box__more">
+                                    <button type="button" class="review-box__more js-review-popup">
                                         <span>Читати більше</span>
                                         <span>
                                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
@@ -1467,7 +1481,7 @@
                             </div>
                         </div>
                         <div class="reviews__items-slide swiper-slide">
-                            <div class="review-box">
+                            <div class="review-box js-review-box">
                                 <div class="review-box__content">
                                     <div class="review-box__head">
                                         <div class="review-box__info">
@@ -1479,13 +1493,10 @@
                                             <span>4.9</span>
                                         </div>
                                     </div>
-                                    <p class="review-box__text">
-                                        Гарна сучасна клініка, привітний персонал. Було дуже комфортно. Дякую
-                                        лікарю-гінекологу Владимирець Олена Сергіївна. Детально пояснила кожен етап і
-                                        дала
-                                        відповіді на запитання.
+                                    <p class="review-box__text js-review-text">
+                                        Гарна сучасна клініка, привітний персонал. Було дуже комфортно.
                                     </p>
-                                    <button type="button" class="review-box__more">
+                                    <button type="button" class="review-box__more js-review-popup">
                                         <span>Читати більше</span>
                                         <span>
                                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
@@ -1525,7 +1536,7 @@
                             </div>
                         </div>
                         <div class="reviews__items-slide swiper-slide">
-                            <div class="review-box">
+                            <div class="review-box js-review-box">
                                 <div class="review-box__content">
                                     <div class="review-box__head">
                                         <div class="review-box__info">
@@ -1537,13 +1548,10 @@
                                             <span>4.9</span>
                                         </div>
                                     </div>
-                                    <p class="review-box__text">
-                                        Гарна сучасна клініка, привітний персонал. Було дуже комфортно. Дякую
-                                        лікарю-гінекологу Владимирець Олена Сергіївна. Детально пояснила кожен етап і
-                                        дала
-                                        відповіді на запитання.
+                                    <p class="review-box__text js-review-text">
+                                        Гарна сучасна клініка, привітний персонал. Було дуже комфортно.
                                     </p>
-                                    <button type="button" class="review-box__more">
+                                    <button type="button" class="review-box__more js-review-popup">
                                         <span>Читати більше</span>
                                         <span>
                                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
@@ -1583,7 +1591,7 @@
                             </div>
                         </div>
                         <div class="reviews__items-slide swiper-slide">
-                            <div class="review-box">
+                            <div class="review-box js-review-box">
                                 <div class="review-box__content">
                                     <div class="review-box__head">
                                         <div class="review-box__info">
@@ -1595,13 +1603,13 @@
                                             <span>4.9</span>
                                         </div>
                                     </div>
-                                    <p class="review-box__text">
+                                    <p class="review-box__text js-review-text">
                                         Гарна сучасна клініка, привітний персонал. Було дуже комфортно. Дякую
                                         лікарю-гінекологу Владимирець Олена Сергіївна. Детально пояснила кожен етап і
                                         дала
                                         відповіді на запитання.
                                     </p>
-                                    <button type="button" class="review-box__more">
+                                    <button type="button" class="review-box__more js-review-popup">
                                         <span>Читати більше</span>
                                         <span>
                                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
@@ -1641,7 +1649,7 @@
                             </div>
                         </div>
                         <div class="reviews__items-slide swiper-slide">
-                            <div class="review-box">
+                            <div class="review-box js-review-box">
                                 <div class="review-box__content">
                                     <div class="review-box__head">
                                         <div class="review-box__info">
@@ -1653,13 +1661,13 @@
                                             <span>4.9</span>
                                         </div>
                                     </div>
-                                    <p class="review-box__text">
+                                    <p class="review-box__text js-review-text">
                                         Гарна сучасна клініка, привітний персонал. Було дуже комфортно. Дякую
                                         лікарю-гінекологу Владимирець Олена Сергіївна. Детально пояснила кожен етап і
                                         дала
                                         відповіді на запитання.
                                     </p>
-                                    <button type="button" class="review-box__more">
+                                    <button type="button" class="review-box__more js-review-popup">
                                         <span>Читати більше</span>
                                         <span>
                                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
