@@ -394,11 +394,13 @@
         </div>
     </header>
     <main class="main main--services">
-        <div class="video-bg">
-            <video muted autoplay loop playsinline class="js-video-autoplay" poster="./assets/img/poster-waves.png">
-                <source data-src="./assets/video/waves.mp4" type="video/mp4">
-                <p>Your browser does not support the video tag.</p>
-            </video>
+        <div class="video-wrapper">
+            <div class="video-bg">
+                <video muted autoplay loop playsinline class="js-video-autoplay" poster="./assets/img/poster-waves.png">
+                    <source data-src="./assets/video/waves.mp4" type="video/mp4">
+                    <p>Your browser does not support the video tag.</p>
+                </video>
+            </div>
         </div>
         <section class="hero">
             <div class="container--right">
@@ -442,6 +444,15 @@
                 <div class="hero__thumbnail">
                     <img src="./assets/img/hero-service.jpg" alt="Thumbnail">
                 </div>
+            </div>
+            <div class="anchor-panel js-anchor-panel">
+                <ul>
+                    <li><a href="#section_1">Як проходить консультація?</a></li>
+                    <li><a href="#section_2">Коли варто звернутись?</a></li>
+                    <li><a href="#section_3">Вартість послуг</a></li>
+                    <li><a href="#section_4">Лікарі напряму</a></li>
+                    <li><a href="#section_5">Відгуки</a></li>
+                </ul>
             </div>
         </section>
         <section class="process">
@@ -690,7 +701,7 @@
                 </div>
             </div>
         </section>
-        <section class="doctors">
+        <section class="doctors" id="section_1">
             <div class="container">
                 <div class="doctors__head">
                     <h2 class="doctors__title content-title"><span>Smart</span> лікарі</h2>
@@ -980,7 +991,7 @@
                 </div>
             </div>
         </section>
-        <section class="prices">
+        <section class="prices" id="section_2">
             <div class="container">
                 <h3 class="prices__title">Вартість послуг</h3>
                 <ul class="prices-kit prices-kit--lg">
@@ -1403,7 +1414,7 @@
                 </ul>
             </div>
         </section>
-        <section class="skills">
+        <section class="skills" id="section_3">
             <div class="container">
                 <div class="skills__content">
                     <div class="skills__cards">
@@ -1505,7 +1516,7 @@
                 </div>
             </div>
         </section>
-        <section class="appointment">
+        <section class="appointment" id="section_4">
             <div class="container">
                 <div class="appointment__content">
                     <div class="appointment__thumb">
@@ -1546,7 +1557,7 @@
                 </div>
             </div>
         </section>
-        <section class="interest">
+        <section class="interest" id="section_5">
             <div class="container">
                 <h2 class="interest__title content-title">Вас може зацікавити</h2>
                 <div class="interest__items swiper js-interest-slider">
@@ -2356,51 +2367,52 @@
                             <div class="footer__logo">
                                 <img loading="lazy" src="./assets/img/icons/logoLg_wht.svg" alt="Logotype">
                             </div>
-                            <form class="footer__form">
-                                <div class="footer__form-group">
-                                    <label for="footerEmail" class="footer__title">
-                                        Дізнавайтесь першими про
-                                        вигідні пропозиції, статті, новини
-                                    </label>
-                                    <div class="footer__form-field">
-                                        <input type="email" name="footerEmail" id="footerEmail" placeholder="Ваш email">
-                                        <div class="footer__form-submit">
-                                            <button type="submit" class="footer__form-rec">
-                                                <svg width="16" height="14" viewBox="0 0 16 14" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path
-                                                        d="M13.0001 7.00028L1.33333 7.00028M8.83366 12.8336C8.83366 12.8336 14.667 8.53744 14.667 7.00028C14.667 5.46311 8.83366 1.16699 8.83366 1.16699"
-                                                        stroke="white" stroke-width="2" stroke-linecap="round"
-                                                        stroke-linejoin="round" />
-                                                </svg>
-                                            </button>
-                                        </div>
+
+                            <div class="footer__soc">
+                                <p class="footer__title">
+                                    Доєднуйтесь до нас у соціальних мережах
+                                </p>
+                                <ul class="footer__links">
+                                    <li class="footer__links-item">
+                                        <a href="#!">
+                                            <img src="./assets/img/icons/ico-facebook.svg" alt="Facebook">
+                                        </a>
+                                    </li>
+                                    <li class="footer__links-item">
+                                        <a href="#!">
+                                            <img src="./assets/img/icons/ico-inst.svg" alt="Instagram">
+                                        </a>
+                                    </li>
+                                    <li class="footer__links-item">
+                                        <a href="#!">
+                                            <img src="./assets/img/icons/ico-tube.svg" alt="YouTube">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <form class="footer__form">
+                            <div class="footer__form-group">
+                                <label for="footerEmail" class="footer__title">
+                                    Дізнавайтесь першими про
+                                    вигідні пропозиції, статті, новини
+                                </label>
+                                <div class="footer__form-field">
+                                    <input type="email" name="footerEmail" id="footerEmail" placeholder="Ваш email">
+                                    <div class="footer__form-submit">
+                                        <button type="submit" class="footer__form-rec">
+                                            <svg width="16" height="14" viewBox="0 0 16 14" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M13.0001 7.00028L1.33333 7.00028M8.83366 12.8336C8.83366 12.8336 14.667 8.53744 14.667 7.00028C14.667 5.46311 8.83366 1.16699 8.83366 1.16699"
+                                                    stroke="white" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
                                     </div>
                                 </div>
-                            </form>
-                        </div>
-                        <div class="footer__soc">
-                            <p class="footer__title">
-                                Доєднуйтесь до нас у соціальних мережах
-                            </p>
-                            <ul class="footer__links">
-                                <li class="footer__links-item">
-                                    <a href="#!">
-                                        <img src="./assets/img/icons/ico-facebook.svg" alt="Facebook">
-                                    </a>
-                                </li>
-                                <li class="footer__links-item">
-                                    <a href="#!">
-                                        <img src="./assets/img/icons/ico-inst.svg" alt="Instagram">
-                                    </a>
-                                </li>
-                                <li class="footer__links-item">
-                                    <a href="#!">
-                                        <img src="./assets/img/icons/ico-tube.svg" alt="YouTube">
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>

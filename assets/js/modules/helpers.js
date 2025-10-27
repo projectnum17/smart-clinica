@@ -186,6 +186,24 @@ const helpers = () => {
         });
     };
 
+    const anchorPanel = () => {
+        const anchorItems = document.querySelectorAll('.js-anchor-panel a');
+        if (!anchorItems.length) return;
+
+        anchorItems[0].classList.add('is-current')
+
+        anchorItems.forEach(item => {
+            item.addEventListener('click', () => {
+                anchorItems.forEach(el => {
+                    el.classList.remove('is-current')
+                })
+
+                item.classList.add('is-current')
+            })
+        })
+    };
+
+    anchorPanel();
     formData();
     showMoreHandler();
     datePickHandler();
