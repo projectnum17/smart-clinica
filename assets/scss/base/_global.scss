@@ -95,31 +95,15 @@ section.about {
     border-width: 2px;
 }
 
-// .js-animation {
-//     opacity: 0;
-//     transform: translateY(15px);
-//     @include transitions(0.5s, ease-out);
+.js-animation {
+    opacity: 0;
+    transform: translate3d(0, 60px, 0) scale3d(0.96, 0.96, 1);
+    transform-style: preserve-3d;
+    transition: all 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: transform, opacity;
 
-//     &._animated {
-//         opacity: 1;
-//         transform: translateY(0px);
-//     }
-// }
-
-// .js-animation-bg {
-//     transform: scale(1.1);
-//     @include transitions(2s, ease-out);
-
-//     &._animated {
-//         transform: scale(1);
-//     }
-// }
-
-// .js-animation-scale {
-//     transform: scale(1.1);
-//     @include transitions(2s, ease-out);
-
-//     &._animated {
-//         transform: scale(1);
-//     }
-// }
+    &._animated {
+        opacity: 1;
+        transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+    }
+}

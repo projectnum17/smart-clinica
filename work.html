@@ -17,6 +17,19 @@
 </head>
 
 <body>
+    <div class="review-modal js-feedback-modal">
+        <div class="review-modal__inner">
+            <div class="review-modal__content">
+                <button class="review-modal__close js-feedback-close">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 6L6.00081 17.9992M17.9992 18L6 6.00085" stroke="#3E3E40" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <div class="review-modal__body js-feedback-body"></div>
+            </div>
+        </div>
+    </div>
     <div class="feedbacks-modal js-feedbacks-wrapper">
         <div class="feedbacks-modal__inner">
             <div class="feedbacks-modal__box feedbacks--success js-feedbacks-success">
@@ -219,6 +232,626 @@
         </div>
     </div>
     <header class="header">
+        <div class="header__submenu js-adult-map">
+            <div class="header__submenu-wrapper">
+                <div class="container--right">
+                    <div class="header__submenu-navigation">
+                        <div class="header__submenu-tabs js-adult-nav">
+                            <button type="button" class="header__submenu-btn js-adult-controller">
+                                <span>Клініка</span>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20 11.9998H4.00002" stroke="#787E80" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M15 17C15 17 20 13.3176 20 12C20 10.6824 15 7 15 7" stroke="#787E80"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </button>
+                            <button type="button" class="header__submenu-btn js-adult-controller">
+                                <span>
+                                    Діагностика
+                                </span>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20 11.9998H4.00002" stroke="#787E80" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M15 17C15 17 20 13.3176 20 12C20 10.6824 15 7 15 7" stroke="#787E80"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </button>
+                            <button type="button" class="header__submenu-btn js-adult-controller">
+                                <span>
+                                    Хірургія
+                                </span>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20 11.9998H4.00002" stroke="#787E80" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M15 17C15 17 20 13.3176 20 12C20 10.6824 15 7 15 7" stroke="#787E80"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="header__submenu-hero">
+                            <img src="./assets/img/person_2.svg" alt="Person">
+                        </div>
+                    </div>
+                    <div class="header__submenu-panel">
+                        <nav class="header__submenu-nav js-adult-menu">
+                            <ul class="header__submenu-ul">
+                                <li class="header__submenu-point">
+                                    <a class="is-active" href="#!">алергологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">вакцинація</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">ведення вагітності</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">венерологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">гастроентерологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">гематологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">гінекологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">дерматологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">дієтологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">ендокринологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">кардіологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">косметологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">мамологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">масаж</a>
+                                </li>
+                            </ul>
+                            <ul class="header__submenu-ul">
+                                <li class="header__submenu-point">
+                                    <a href="#!">урологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">флебологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">ортопедія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">неврологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">нефрологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">травматологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">отоларингологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">офтальмологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">подологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">проктологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">психіатрія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">ревматологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">терапія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">трихологія</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <nav class="header__submenu-nav js-adult-menu">
+                            <ul class="header__submenu-ul">
+                                <li class="header__submenu-point">
+                                    <a class="is-active" href="#!">діагностика</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">вакцинація</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">ведення вагітності</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">венерологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">гастроентерологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">гематологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">гінекологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">дерматологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">дієтологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">ендокринологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">кардіологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">косметологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">мамологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">масаж</a>
+                                </li>
+                            </ul>
+                            <ul class="header__submenu-ul">
+                                <li class="header__submenu-point">
+                                    <a href="#!">урологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">флебологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">ортопедія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">неврологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">нефрологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">травматологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">отоларингологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">офтальмологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">подологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">проктологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">психіатрія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">ревматологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">терапія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">трихологія</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <nav class="header__submenu-nav js-adult-menu">
+                            <ul class="header__submenu-ul">
+                                <li class="header__submenu-point">
+                                    <a class="is-active" href="#!">хірургія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">вакцинація</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">ведення вагітності</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">венерологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">гастроентерологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">гематологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">гінекологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">дерматологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">дієтологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">ендокринологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">кардіологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">косметологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">мамологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">масаж</a>
+                                </li>
+                            </ul>
+                            <ul class="header__submenu-ul">
+                                <li class="header__submenu-point">
+                                    <a href="#!">урологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">флебологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">ортопедія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">неврологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">нефрологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">травматологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">отоларингологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">офтальмологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">подологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">проктологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">психіатрія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">ревматологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">терапія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">трихологія</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="header__submenu-thumb">
+                            <img width="786" height="728" src="./assets/img/adult-thumb.jpg" alt="Thumbnail">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__submenu js-child-map">
+            <div class="header__submenu-wrapper">
+                <div class="container--right">
+                    <div class="header__submenu-navigation">
+                        <div class="header__submenu-tabs js-child-nav">
+                            <button type="button" class="header__submenu-btn js-child-controller">
+                                <span>Клініка</span>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20 11.9998H4.00002" stroke="#787E80" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M15 17C15 17 20 13.3176 20 12C20 10.6824 15 7 15 7" stroke="#787E80"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </button>
+                            <button type="button" class="header__submenu-btn js-child-controller">
+                                <span>
+                                    Діагностика
+                                </span>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20 11.9998H4.00002" stroke="#787E80" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M15 17C15 17 20 13.3176 20 12C20 10.6824 15 7 15 7" stroke="#787E80"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </button>
+                            <button type="button" class="header__submenu-btn js-child-controller">
+                                <span>
+                                    Хірургія
+                                </span>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20 11.9998H4.00002" stroke="#787E80" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M15 17C15 17 20 13.3176 20 12C20 10.6824 15 7 15 7" stroke="#787E80"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="header__submenu-hero">
+                            <img src="./assets/img/person_2.svg" alt="Person">
+                        </div>
+                    </div>
+                    <div class="header__submenu-panel">
+                        <nav class="header__submenu-nav js-child-menu">
+                            <ul class="header__submenu-ul">
+                                <li class="header__submenu-point">
+                                    <a class="is-active" href="#!">алергологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">вакцинація</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">ведення вагітності</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">венерологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">гастроентерологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">гематологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">гінекологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">дерматологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">дієтологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">ендокринологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">кардіологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">косметологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">мамологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">масаж</a>
+                                </li>
+                            </ul>
+                            <ul class="header__submenu-ul">
+                                <li class="header__submenu-point">
+                                    <a href="#!">подологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">проктологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">психіатрія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">ревматологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">терапія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">трихологія</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <nav class="header__submenu-nav js-child-menu">
+                            <ul class="header__submenu-ul">
+                                <li class="header__submenu-point">
+                                    <a class="is-active" href="#!">діагностика</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">вакцинація</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">ведення вагітності</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">венерологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">гастроентерологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">гематологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">гінекологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">дерматологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">дієтологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">ендокринологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">кардіологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">косметологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">мамологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">масаж</a>
+                                </li>
+                            </ul>
+                            <ul class="header__submenu-ul">
+                                <li class="header__submenu-point">
+                                    <a href="#!">урологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">флебологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">ортопедія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">неврологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">нефрологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">травматологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">отоларингологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">офтальмологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">подологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">проктологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">психіатрія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">ревматологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">терапія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">трихологія</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <nav class="header__submenu-nav js-child-menu">
+                            <ul class="header__submenu-ul">
+                                <li class="header__submenu-point">
+                                    <a class="is-active" href="#!">хірургія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">вакцинація</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">ведення вагітності</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">венерологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">гастроентерологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">гематологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">гінекологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">дерматологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">дієтологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">ендокринологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">кардіологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">косметологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">мамологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">масаж</a>
+                                </li>
+                            </ul>
+                            <ul class="header__submenu-ul">
+                                <li class="header__submenu-point">
+                                    <a href="#!">урологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">флебологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">ортопедія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">неврологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">нефрологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">травматологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">отоларингологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">офтальмологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">подологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">проктологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">психіатрія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">ревматологія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">терапія</a>
+                                </li>
+                                <li class="header__submenu-point">
+                                    <a href="#!">трихологія</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="header__submenu-thumb">
+                            <img width="786" height="728" src="./assets/img/child-thumb.jpg" alt="Thumbnail">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="header__top">
             <div class="container">
                 <button class="header__button js-search-btn" type="button">
@@ -313,10 +946,10 @@
                 <nav class="header__nav">
                     <ul class="header__menu">
                         <li class="header__menu-item">
-                            <a href="#!" class="header__menu-link">Дорослим</a>
+                            <a href="#!" class="dd-menu header__menu-link js-adult-trigger">Дорослим</a>
                         </li>
                         <li class="header__menu-item">
-                            <a href="#!" class="header__menu-link">Дітям</a>
+                            <a href="#!" class="dd-menu header__menu-link js-child-trigger">Дітям</a>
                         </li>
                         <li class="header__menu-item">
                             <a href="#!" class="header__menu-link">Лікарі</a>
@@ -390,7 +1023,7 @@
             </div>
         </div>
         <div class="container">
-            <ul class="breadcrumbs breadcrumbs--centered">
+            <ul class="breadcrumbs breadcrumbs--centered js-animation">
                 <li>
                     <a href="#!">Головна</a>
                 </li>
@@ -402,17 +1035,17 @@
         <section class="vacancies">
             <div class="container">
                 <div class="vacancies__head">
-                    <h1 class="vacancies__title content-title">
+                    <h1 class="vacancies__title content-title js-animation">
                         Вакансії в <span>Smart klinika</span>
                     </h1>
-                    <p class="vacancies__text">
+                    <p class="vacancies__text js-animation">
                         Запрошуємо долучитися до прогресивної команди фахівців нової мережі приватних клінік у Києві.
                         Працівники Smart klinika отримують можливість впровадити креативні сучасні ідеї для створення
                         найкращої приватної медицини в Україні. Перегляньте наші вакансії на сайті Work.ua — сайт пошуку
                         роботи №1 в Україні або нижче на цій сторінці. Надсилайте ваше резюме на імейл
                         <a href="mailto:info@smartklinika.ua">info@smartklinika.ua</a> — ми чекаємо саме на вас.
                     </p>
-                    <ul class="road-map">
+                    <ul class="road-map js-animation">
                         <li class="road-map__item is-active">
                             <a href="#!" class="road-map__link">
                                 Вакансії
@@ -426,7 +1059,7 @@
                     </ul>
                 </div>
                 <div class="vacancies__list">
-                    <div class="vacancy">
+                    <div class="vacancy js-animation">
                         <div class="vacancy__description">
                             <p class="vacancy__title">Адміністратор, оператор контакт-центру</p>
                             <p class="vacancy__location">
@@ -482,7 +1115,7 @@
                             </span>
                         </a>
                     </div>
-                    <div class="vacancy">
+                    <div class="vacancy js-animation">
                         <div class="vacancy__description">
                             <p class="vacancy__title">
                                 Бухгалтер з роздрібних і банківських операцій
@@ -540,7 +1173,7 @@
                             </span>
                         </a>
                     </div>
-                    <div class="vacancy">
+                    <div class="vacancy js-animation">
                         <div class="vacancy__description">
                             <p class="vacancy__title">
                                 Лаборант в клініко-діагностичну лабораторію
@@ -598,7 +1231,7 @@
                             </span>
                         </a>
                     </div>
-                    <div class="vacancy">
+                    <div class="vacancy js-animation">
                         <div class="vacancy__description">
                             <p class="vacancy__title">
                                 Лікар-лаборант, цитоморфолог (КДЛ)
@@ -656,7 +1289,7 @@
                             </span>
                         </a>
                     </div>
-                    <div class="vacancy">
+                    <div class="vacancy js-animation">
                         <div class="vacancy__description">
                             <p class="vacancy__title">
                                 Лікар-невролог
@@ -714,7 +1347,7 @@
                             </span>
                         </a>
                     </div>
-                    <div class="vacancy">
+                    <div class="vacancy js-animation">
                         <div class="vacancy__description">
                             <p class="vacancy__title">
                                 Медична сестра, анестезист
@@ -777,12 +1410,12 @@
         </section>
         <section class="reason">
             <div class="container">
-                <h2 class="reason__title content-title">
+                <h2 class="reason__title content-title js-animation">
                     Чому варто працювати у <span>Smart klinika?</span>
                 </h2>
                 <div class="reason__content">
                     <div class="reason__cards">
-                        <div class="benefit-card">
+                        <div class="benefit-card js-animation">
                             <div class="benefit-card__ico">
                                 <lottie-player class="lottie-anim" src="./assets/animations/heart.json" direction="1"
                                     mode="normal" loop autoplay></lottie-player>
@@ -795,7 +1428,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="benefit-card">
+                        <div class="benefit-card js-animation">
                             <div class="benefit-card__ico">
                                 <lottie-player class="lottie-anim" src="./assets/animations/users.json" direction="1"
                                     mode="normal" loop autoplay></lottie-player>
@@ -812,11 +1445,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="reason__hero">
+                    <div class="reason__hero js-animation">
                         <img src="./assets/img/person-class.svg" alt="Person">
                     </div>
                     <div class="reason__cards">
-                        <div class="benefit-card">
+                        <div class="benefit-card js-animation">
                             <div class="benefit-card__ico">
                                 <lottie-player class="lottie-anim" src="./assets/animations/case.json" direction="1"
                                     mode="normal" loop autoplay></lottie-player>
@@ -831,7 +1464,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="benefit-card">
+                        <div class="benefit-card js-animation">
                             <div class="benefit-card__ico">
                                 <lottie-player class="lottie-anim" src="./assets/animations/brain.json" direction="1"
                                     mode="normal" loop autoplay></lottie-player>
@@ -852,17 +1485,17 @@
             <div class="container">
                 <div class="cv__box">
                     <div class="cv__description">
-                        <p class="cv__title">
+                        <p class="cv__title js-animation">
                             Не вдалося знайти вакансію? Все одно надсилайте нам резюме!
                         </p>
-                        <p class="cv__text">
+                        <p class="cv__text js-animation">
                             Навіть якщо усі вакансії вже заповнені, ми продовжуємо активний пошук талантів. Звертайтеся
                             за адресою
                             <a href="mailto:info@smartklinika.ua">
                                 info@smartklinika.ua
                             </a>
                         </p>
-                        <div class="cv__phone">
+                        <div class="cv__phone js-animation">
                             <div class="cv__ico">
                                 <lottie-player class="lottie-anim lottie-anim--lg"
                                     src="./assets/animations/wired-outline-1227-emergency-hover-pinch.json"
@@ -874,7 +1507,7 @@
                             </a>
                         </div>
                     </div>
-                    <form class="cv__form">
+                    <form class="cv__form js-animation">
                         <div class="cv__form-fields">
                             <div class="cv__form-group field-phone">
                                 <input type="tel" name="cvFieldPhone" id="cvFieldPhone"
@@ -917,10 +1550,10 @@
         </section>
         <section class="feedbacks">
             <div class="container">
-                <h2 class="feedbacks__title content-title">
+                <h2 class="feedbacks__title content-title js-animation">
                     Відгуки про роботу у <span>Smart klinika</span>
                 </h2>
-                <div class="feedbacks__items swiper js-feedback-slider">
+                <div class="feedbacks__items swiper js-feedback-slider js-animation">
                     <div class="feedbacks__items-wrapper swiper-wrapper">
                         <div class="feedbacks__items-slide swiper-slide">
                             <div class="feedback-box js-feedback-box">
@@ -1105,12 +1738,12 @@
         </section>
         <section class="space">
             <div class="container">
-                <div class="space__head">
+                <div class="space__head js-animation">
                     <h2 class="space__title content-title">
                         Фото та відео
                     </h2>
                 </div>
-                <div class="space__items swiper js-space-slider">
+                <div class="space__items swiper js-space-slider js-animation">
                     <div class="space__items-wrapper swiper-wrapper">
                         <div class="space__items-slide swiper-slide">
                             <div class="space-box">
@@ -1180,10 +1813,10 @@
         </section>
         <section class="contact">
             <div class="container">
-                <h2 class="contact__title content-title">
+                <h2 class="contact__title content-title js-animation">
                     Наші контакти
                 </h2>
-                <div class="contact__content">
+                <div class="contact__content js-animation">
                     <div class="contact__preview">
                         <div class="contact__thumb">
                             <img loading="lazy" width="660" height="468" src="./assets/img/contact-img.jpg"

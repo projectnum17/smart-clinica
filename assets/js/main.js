@@ -1,5 +1,6 @@
 'use strict';
 
+import animationHandler from './modules/animationHandler.js';
 import headerFlow from './modules/header.js';
 import helpers from './modules/helpers.js';
 import sliders from './modules/sliders.js';
@@ -13,8 +14,10 @@ import videoPlayer from './modules/videoPlayer.js';
 import tineLine from './modules/timeLine.js';
 import fancyBoxHandler from './modules/fancyBoxHandler.js';
 import reviewBoxHandler from './modules/reviewBoxHandler.js';
+import feedbackBoxHandler from './modules/feedbackBoxHandler.js';
 
 document.addEventListener('DOMContentLoaded', () => {
+    animationHandler();
     headerFlow();
     helpers();
     sliders();
@@ -28,4 +31,5 @@ document.addEventListener('DOMContentLoaded', () => {
     tineLine();
     fancyBoxHandler();
     reviewBoxHandler();
+    feedbackBoxHandler();
 });

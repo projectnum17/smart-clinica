@@ -167,40 +167,21 @@ const helpers = () => {
         });
     };
 
-    const feedbackModalsHandler = () => {
-        const feedbackBoxes = document.querySelectorAll('.js-feedback-box');
-        if (!feedbackBoxes.length) return;
-
-        feedbackBoxes.forEach((box) => {
-            const boxText = box.querySelector('.js-feedback-text');
-            const showMore = box.querySelector('.js-feedback-more');
-
-            if (!boxText || !showMore) return;
-
-            showMore.style.display = 'none';
-
-            if (boxText.innerText.trim().length > 100) {
-                boxText.classList.add('is-highest');
-                showMore.style.display = '';
-            }
-        });
-    };
-
     const anchorPanel = () => {
         const anchorItems = document.querySelectorAll('.js-anchor-panel a');
         if (!anchorItems.length) return;
 
-        anchorItems[0].classList.add('is-current')
+        anchorItems[0].classList.add('is-current');
 
-        anchorItems.forEach(item => {
+        anchorItems.forEach((item) => {
             item.addEventListener('click', () => {
-                anchorItems.forEach(el => {
-                    el.classList.remove('is-current')
-                })
+                anchorItems.forEach((el) => {
+                    el.classList.remove('is-current');
+                });
 
-                item.classList.add('is-current')
-            })
-        })
+                item.classList.add('is-current');
+            });
+        });
     };
 
     anchorPanel();
@@ -248,7 +229,6 @@ const helpers = () => {
     });
 
     copyHandler();
-    feedbackModalsHandler();
 };
 
 export default helpers;
