@@ -139,7 +139,7 @@
                 &:focus,
                 &.active {
                     border: 1px solid var(--ball-blue);
-                    background: #fff;
+                    background: linear-gradient(90deg, #ffffff 0%, #ffffff 100%);
 
                     &::after {
                         transform: translateY(-50%) rotate(180deg);
@@ -240,7 +240,11 @@
                 @include transitions(0.3s, ease-out);
                 &:focus {
                     border: 1px solid var(--ball-blue);
-                    background: #fff;
+                    background: linear-gradient(
+                        90deg,
+                        #ffffff 0%,
+                        #ffffff 100%
+                    );
                 }
 
                 &::placeholder {
