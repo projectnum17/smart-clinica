@@ -190,7 +190,7 @@
             font: 400 16px / 100% var(--ff-nort);
             width: 100%;
             padding: 14px 20px 14px 52px;
-            pointer-events: none;
+            cursor: pointer;
 
             &::-webkit-calendar-picker-indicator {
                 opacity: 0;

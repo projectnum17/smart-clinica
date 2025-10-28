@@ -61,6 +61,8 @@ const infoModals = () => {
         const closeModal = () => {
             document.body.classList.remove('is-locked');
             modalWrapper.classList.remove('is-show');
+            const form = modalWrapper.querySelector('form');
+            form.reset();
         };
 
         const openModal = () => {

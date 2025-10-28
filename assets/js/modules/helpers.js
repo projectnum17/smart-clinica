@@ -66,30 +66,6 @@ const helpers = () => {
         });
     };
 
-    const datePickHandler = () => {
-        const dateWrappers = document.querySelectorAll('.js-date-picker');
-
-        if (!dateWrappers.length) return;
-
-        dateWrappers.forEach((wrapper) => {
-            const dateInput = wrapper.querySelector('input');
-            if (!dateInput) return;
-
-            ['keydown', 'keypress', 'paste'].forEach((event) => {
-                dateInput.addEventListener(event, (e) => e.preventDefault());
-            });
-
-            wrapper.addEventListener('click', () => {
-                if (typeof dateInput.showPicker === 'function') {
-                    dateInput.showPicker();
-                } else {
-                    dateInput.focus();
-                    dateInput.click();
-                }
-            });
-        });
-    };
-
     const aboutMoreText = () => {
         const parent = document.querySelector('.js-text-more');
         if (!parent) return;
@@ -184,10 +160,78 @@ const helpers = () => {
         });
     };
 
+    const datePickerHandler = () => {
+        const datepickerLocales = {
+            uk: {
+                days: [
+                    'Неділя',
+                    'Понеділок',
+                    'Вівторок',
+                    'Середа',
+                    'Четвер',
+                    'П’ятниця',
+                    'Субота',
+                ],
+                daysShort: ['Нд', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
+                daysMin: ['Нд', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
+                months: [
+                    'Січень',
+                    'Лютий',
+                    'Березень',
+                    'Квітень',
+                    'Травень',
+                    'Червень',
+                    'Липень',
+                    'Серпень',
+                    'Вересень',
+                    'Жовтень',
+                    'Листопад',
+                    'Грудень',
+                ],
+                monthsShort: [
+                    'Січ',
+                    'Лют',
+                    'Бер',
+                    'Кві',
+                    'Тра',
+                    'Чер',
+                    'Лип',
+                    'Сер',
+                    'Вер',
+                    'Жов',
+                    'Лис',
+                    'Гру',
+                ],
+                today: 'Сьогодні',
+                clear: 'Очистити',
+                dateFormat: 'dd.MM.yyyy',
+                timeFormat: 'hh:ii aa',
+                firstDay: 1,
+            },
+            en: {},
+        };
+
+        const ids = ['modalAppDate', 'mainAppDate'];
+
+        ids.forEach((id) => {
+            const dateInput = document.querySelector(`#${id}`);
+            if (!dateInput) return;
+
+            const lang = dateInput.dataset.lang || 'en';
+            const locale = datepickerLocales[lang] || {};
+
+            new AirDatepicker(dateInput, {
+                isMobile: true,
+                autoClose: true,
+                locale: locale,
+            });
+        });
+    };
+
+    datePickerHandler();
     anchorPanel();
     formData();
     showMoreHandler();
-    datePickHandler();
     aboutMoreText();
     showMoreHandler(
         '.js-doctors-list',

@@ -95,6 +95,14 @@ section.about {
     border-width: 2px;
 }
 
+.air-datepicker-global-container {
+    z-index: 1005;
+}
+
+.air-datepicker-body--day-name {
+    color: var(--sea-blue);
+}
+
 .js-animation {
     opacity: 0;
     transform: translate3d(0, 60px, 0) scale3d(0.96, 0.96, 1);

@@ -15,6 +15,7 @@ import tineLine from './modules/timeLine.js';
 import fancyBoxHandler from './modules/fancyBoxHandler.js';
 import reviewBoxHandler from './modules/reviewBoxHandler.js';
 import feedbackBoxHandler from './modules/feedbackBoxHandler.js';
+import feedbackRatingHandler from './modules/feedbackRatingHandler.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     animationHandler();
@@ -32,4 +33,5 @@ document.addEventListener('DOMContentLoaded', () => {
     fancyBoxHandler();
     reviewBoxHandler();
     feedbackBoxHandler();
+    feedbackRatingHandler();
 });

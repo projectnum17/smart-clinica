@@ -190,6 +190,19 @@
         align-items: center;
         gap: 12px;
 
+        button {
+            &.is-hover,
+            &.is-colored {
+                svg {
+                    color: #f7c553;
+                }
+            }
+        }
+
+        svg {
+            color: #d3dbde;
+        }
+
         img {
             width: 24px;
             height: 24px;
