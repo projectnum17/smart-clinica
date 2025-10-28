@@ -42,30 +42,29 @@
     word-break: normal;
     overflow-wrap: break-word;
     hyphens: auto;
+    display: flex;
     flex-direction: column;
     height: 100%;
 
-    @include hover {
-        .doctor-box__photo img {
-            transform: scale(1.05);
-        }
+    &__inner {
+        flex-direction: column;
+        @include hover {
+            .doctor-box__photo img {
+                transform: scale(1.05);
+            }
 
-        .doctor-box__sign {
-            color: var(--white);
-            background: var(--ball-blue);
-        }
+            .doctor-box__cta {
+                transform: scale(1.1);
+                background: var(--ball-blue);
 
-        .doctor-box__cta {
-            transform: scale(1.1);
-            background: var(--ball-blue);
+                img {
+                    &:first-child {
+                        transform: translate(100%, -150%);
+                    }
 
-            img {
-                &:first-child {
-                    transform: translate(100%, -150%);
-                }
-
-                &:last-child {
-                    transform: translate(-50%, -50%);
+                    &:last-child {
+                        transform: translate(-50%, -50%);
+                    }
                 }
             }
         }
@@ -200,6 +199,7 @@
     }
 
     &__sign {
+        margin-top: auto;
         font: 500 16px / 100% var(--ff-nort);
         letter-spacing: 1px;
         text-transform: uppercase;
@@ -210,9 +210,17 @@
         padding: 14px;
         border: 2px solid var(--ball-blue);
         @include transitions(0.3s, ease-in);
+        @include hover {
+            color: var(--white);
+            background: var(--ball-blue);
+        }
     }
 
     &__foot {
         margin-top: auto;
+        height: 100%;
+    display: flex
+;
+    flex-direction: column;
     }
 }

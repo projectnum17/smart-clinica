@@ -40,7 +40,7 @@ const ddBlocks = () => {
     initDdItems('.js-dd-item');
 
     initDdItems('.js-prices-dd', {
-        ignoreSelector: '.js-appointment',
+        ignoreSelector: ['.js-appointment', '.js-visit-trigger']
     });
 };
 

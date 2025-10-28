@@ -118,6 +118,22 @@ const infoModals = () => {
     });
 
     modalFormHandler({
+        triggerSelector: '.js-visit-trigger',
+        wrapperSelector: '.js-visit-wrapper',
+        formSelector: '.js-visit-form',
+        successSelector: '.js-visit-success',
+        innerSelector: '.visit-modal__inner',
+    });
+
+    modalFormHandler({
+        triggerSelector: '.js-doctor-modal',
+        wrapperSelector: '.js-doctor-wrapper',
+        formSelector: '.js-doctor-form',
+        successSelector: '.js-doctor-success',
+        innerSelector: '.doctor-modal__inner',
+    });
+
+    modalFormHandler({
         triggerSelector: '.js-impressions',
         wrapperSelector: '.js-feedbacks-wrapper',
         formSelector: '.js-feedbacks-form',

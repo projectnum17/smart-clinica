@@ -1,11 +1,6 @@
 @use '../../base/media' as *;
 @use '../../base/mixins' as *;
 
-.section-video:has(.video-bg) {
-    // position: relative;
-    // overflow: hidden;
-}
-
 .video-wrapper {
     position: absolute;
     width: 100%;

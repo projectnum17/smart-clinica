@@ -3,10 +3,27 @@ const reviewBoxHandler = () => {
     const popup = document.querySelector('.js-review-modal');
     if (!reviewItems.length || !popup) return;
 
-    const popupBody = popup.querySelector('.js-review-body');
     const popupClose = popup.querySelector('.js-review-close');
+    const popupName = popup.querySelector('.review-modal__head .name');
+    const popupDate = popup.querySelector('.review-modal__head .date');
+    const popupRating = popup.querySelector('.review-modal__head .rating');
+    const popupText = popup.querySelector('.review-modal__content .text');
+    const popupAnswer = popup.querySelector('.review-modal__content .answer');
 
-    if (!popupBody || !popupClose) return;
+    const popupSpecialist = popup.querySelector('.target-info .specialist');
+    const popupService = popup.querySelector('.target-info .naiming');
+
+    if (
+        !popupClose ||
+        !popupName ||
+        !popupDate ||
+        !popupRating ||
+        !popupText ||
+        !popupAnswer ||
+        !popupSpecialist ||
+        !popupService
+    )
+        return;
 
     reviewItems.forEach((box) => {
         const reviewTextEl = box.querySelector('.js-review-text');
@@ -14,39 +31,43 @@ const reviewBoxHandler = () => {
         if (!reviewTextEl || !reviewMore) return;
 
         const fullText = reviewTextEl.textContent.trim();
+        const shortText =
+            fullText.length > 200 ? fullText.slice(0, 200) + '...' : fullText;
 
-        if (fullText.length > 200) {
-            const shortText = fullText.slice(0, 200) + '...';
-            reviewTextEl.textContent = shortText;
-            reviewMore.style.display = '';
-        } else {
-            reviewMore.style.display = 'none';
-        }
+        reviewTextEl.textContent = shortText;
+        reviewMore.style.display = fullText.length > 200 ? '' : 'none';
 
         reviewMore.addEventListener('click', () => {
             popup.classList.add('is-shown');
             document.body.classList.add('is-locked');
 
-            const head = box.querySelector('.review-box__head').outerHTML;
-            const text = `<p class="review-box__text">${fullText}</p>`;
-            popupBody.innerHTML = head + text;
+            popupName.textContent = box.dataset.name || '';
+            popupDate.textContent = box.dataset.date || '';
+            popupRating.textContent = box.dataset.rating || '';
+            popupText.textContent = fullText;
+            popupAnswer.textContent = box.dataset.answer || '';
+            popupSpecialist.textContent = box.dataset.spec || '';
+            popupService.textContent = box.dataset.service || '';
         });
     });
 
     const closePopup = () => {
         popup.classList.remove('is-shown');
         document.body.classList.remove('is-locked');
+        setTimeout(() => {
+            popupName.textContent = '';
+            popupDate.textContent = '';
+            popupRating.textContent = '';
+            popupText.textContent = '';
+            popupAnswer.textContent = '';
+            popupSpecialist.textContent = '';
+            popupService.textContent = '';
+        }, 400);
     };
 
     popupClose.addEventListener('click', closePopup);
     popup.addEventListener('click', (e) => {
         if (e.target === popup) closePopup();
-    });
-
-    popup.addEventListener('transitionend', () => {
-        if (!popup.classList.contains('is-shown')) {
-            popupBody.innerHTML = '';
-        }
     });
 
     document.addEventListener('keydown', (e) => {

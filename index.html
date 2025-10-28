@@ -28,7 +28,69 @@
                             stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                 </button>
-                <div class="review-modal__body js-review-body"></div>
+                <div class="review-modal__col">
+                    <div class="review-modal__head">
+                        <div>
+                            <p class="name"></p>
+                            <p class="date"></p>
+                        </div>
+                        <div>
+                            <img src="./assets/img/icons/ico-star.svg" alt="Star">
+                            <span class="rating"></span>
+                        </div>
+                    </div>
+                    <p class="text"></p>
+                    <div class="review-modal__stars">
+                        <div class="element">
+                            <p>Фахівець:</p>
+                            <div>
+                                <img src="./assets/img/icons/ico-star.svg" alt="Star">
+                                <img src="./assets/img/icons/ico-star.svg" alt="Star">
+                                <img src="./assets/img/icons/ico-star.svg" alt="Star">
+                                <img src="./assets/img/icons/ico-star.svg" alt="Star">
+                                <img src="./assets/img/icons/ico-star.svg" alt="Star">
+                            </div>
+                        </div>
+                        <div class="element">
+                            <p>Клініка:</p>
+                            <div>
+                                <img src="./assets/img/icons/ico-star.svg" alt="Star">
+                                <img src="./assets/img/icons/ico-star.svg" alt="Star">
+                                <img src="./assets/img/icons/ico-star.svg" alt="Star">
+                                <img src="./assets/img/icons/ico-star.svg" alt="Star">
+                                <img src="./assets/img/icons/ico-star.svg" alt="Star">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-modal__col">
+                    <div class="target-info">
+                        <div class="source">
+                            <div>
+                                <img src="./assets/img/icons/rev-google.png" alt="Google">
+                            </div>
+                            <div>
+                                <p class="target-info__title">Джерело:</p>
+                                <p>Google Maps</p>
+                            </div>
+                        </div>
+                        <div class="target">
+                            <p class="target-info__title">Відгук про фахівця:</p>
+                            <p class="specialist"></p>
+                        </div>
+                        <div class="service">
+                            <p class="target-info__title">Напрям:</p>
+                            <p class="naiming"></p>
+                        </div>
+                    </div>
+                    <div class="admin-text">
+                        <p class="admin-text__head">
+                            <img src="./assets/img/icons/ico-logo.svg" alt="Logo">
+                            Відповідь адміністрації
+                        </p>
+                        <p class="answer"></p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -255,7 +317,8 @@
                                     <label class="appointment__form-title" for="modalAppDate">Бажана дата
                                         прийому</label>
                                     <div class="appointment__form-inner field-date">
-                                        <input class="appointment__form-field field-date--item" data-lang="uk" name="modalAppDate" id="modalAppDate">
+                                        <input class="appointment__form-field field-date--item" data-lang="uk"
+                                            name="modalAppDate" id="modalAppDate">
                                     </div>
                                 </div>
                             </div>
@@ -263,6 +326,82 @@
                                 <input class="appointment__form-cheked" type="checkbox" name="modalAppCheck"
                                     id="modalAppCheck">
                                 <label class="appointment__form-label" for="modalAppCheck">
+                                    <p>
+                                        Погоджуюсь з умовами <a href="#!">Політики приватності</a> та <a
+                                            href="#!">Публічного договору</a>
+                                    </p>
+                                </label>
+                            </div>
+                            <button type="submit" class="appointment__form-submit">
+                                Запис на прийом
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="doctor-modal js-doctor-wrapper">
+        <div class="doctor-modal__inner">
+            <div class="doctor-modal__box doctor--success js-doctor-success">
+                <button class="doctor-modal__close js-success-close">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 6L6.00081 17.9992M17.9992 18L6 6.00085" stroke="#3E3E40" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <div class="doctor-modal__content">
+                    <div class="doctor-modal__thumb">
+                        <img src="./assets/img/person_4.svg" alt="Person">
+                    </div>
+                    <div class="doctor-modal__done">
+                        <h2 class="doctor-modal__title">Дякуємо за вашу довіру!</h2>
+                        <div class="doctor-modal__text">
+                            <p>
+                                Очікуємо вас в клініці Smart medical <span>14 Грудня 2025р.</span>
+                            </p>
+                            <p>
+                                Графік роботи клініки: <span>Пн-Нд: 07:30 - 21:00</span>
+                            </p>
+                        </div>
+                        <a href="index.html" class="doctor-modal__link">повернутися на головну</a>
+                    </div>
+                </div>
+            </div>
+            <div class="doctor-modal__box doctor--form js-doctor-form">
+                <button class="doctor-modal__close js-form-close">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 6L6.00081 17.9992M17.9992 18L6 6.00085" stroke="#3E3E40" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <div class="doctor-modal__content">
+                    <h2 class="doctor-modal__title">Запис на консультацію</h2>
+                    <div class="doctor-modal__preview">
+                        <img width="56" height="56" src="./assets/img/doctor_1.jpg" alt="Doctor">
+                        <p>Александрова Олена</p>
+                    </div>
+                    <div class="appointment">
+                        <form class="appointment__form">
+                            <div class="appointment__form-fields">
+                                <div class="appointment__form-group field-phone">
+                                    <input type="tel" name="doctorAppPhone" id="doctorAppPhone"
+                                        class="appointment__form-field field-phone--item"
+                                        placeholder="+38 (XXX) XXX XX XX">
+                                </div>
+                                <div class="appointment__form-group">
+                                    <label class="appointment__form-title" for="doctorAppDate">Бажана дата
+                                        прийому</label>
+                                    <div class="appointment__form-inner field-date">
+                                        <input class="appointment__form-field field-date--item" data-lang="uk"
+                                            name="doctorAppDate" id="doctorAppDate">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="appointment__form-check">
+                                <input class="appointment__form-cheked" type="checkbox" name="doctorAppCheck"
+                                    id="doctorAppCheck">
+                                <label class="appointment__form-label" for="doctorAppCheck">
                                     <p>
                                         Погоджуюсь з умовами <a href="#!">Політики приватності</a> та <a
                                             href="#!">Публічного договору</a>
@@ -1875,220 +2014,274 @@
                 <div class="doctors__slider swiper js-doctors-slider js-animation">
                     <div class="doctors__slider-wrapper swiper-wrapper">
                         <div class="doctors__slider-slide swiper-slide">
-                            <a href="#!" class="doctor-box">
-                                <p class="doctor-box__surname">Владимирець</p>
-                                <p class="doctor-box__name">Олена Сергіївна</p>
-                                <p class="doctor-box__skills">
-                                    Лікар-уролог першої категорії, лікар ультразвукової діагностики
-                                </p>
-                                <div class="doctor-box__foot">
-                                    <div class="doctor-box__info">
-                                        <div class="doctor-box__photo">
-                                            <img src="./assets/img/doctor_1.jpg" alt="Photo">
-                                        </div>
-                                        <div class="doctor-box__review">
-                                            <img width="16" height="16" src="./assets/img/icons/ico-comment.svg" alt="">
-                                            <p>
-                                                <span>11</span> Відгуків
-                                            </p>
-                                        </div>
-                                        <div class="doctor-box__cta">
-                                            <img src="./assets/img/icons/icoArrow_bl_t.svg" alt="Go">
-                                            <img src="./assets/img/icons/icoArrow_wht_t.svg" alt="Go">
-                                        </div>
-                                    </div>
-                                    <p class="doctor-box__exp">
-                                        13 років досвіду
+                            <div href="#!" class="doctor-box">
+                                <a href="#!" class="doctor-box__inner">
+                                    <p class="doctor-box__surname">Владимирець</p>
+                                    <p class="doctor-box__name">Олена Сергіївна</p>
+                                    <p class="doctor-box__skills">
+                                        Лікар-уролог першої категорії, лікар ультразвукової діагностики
                                     </p>
-                                    <p class="doctor-box__location">
-                                        <img src="./assets/img/icons/ico-pin-d.svg" alt="">
-                                        пр-т П. Григоренка, 22/20
-                                    </p>
-                                    <div class="doctor-box__sign">
-                                        записатись
+                                    <div class="doctor-box__foot">
+                                        <div class="doctor-box__info">
+                                            <div class="doctor-box__photo">
+                                                <img src="./assets/img/doctor_1.jpg" alt="Photo">
+                                            </div>
+                                            <div class="doctor-box__review">
+                                                <img width="16" height="16" src="./assets/img/icons/ico-comment.svg"
+                                                    alt="">
+                                                <p>
+                                                    <span>11</span> Відгуків
+                                                </p>
+                                            </div>
+                                            <div class="doctor-box__cta">
+                                                <img src="./assets/img/icons/icoArrow_bl_t.svg" alt="Go">
+                                                <img src="./assets/img/icons/icoArrow_wht_t.svg" alt="Go">
+                                            </div>
+                                        </div>
+                                        <p class="doctor-box__exp">
+                                            13 років досвіду
+                                        </p>
+                                        <p class="doctor-box__location">
+                                            <img src="./assets/img/icons/ico-pin-d.svg" alt="">
+                                            пр-т П. Григоренка, 22/20
+                                        </p>
+                                        <p class="doctor-box__location">
+                                            <img src="./assets/img/icons/ico-pin-d.svg" alt="">
+                                            пр-т П. Григоренка, 22/20
+                                        </p>
                                     </div>
-                                </div>
-                            </a>
+                                </a>
+                                <button type="button" class="doctor-box__sign js-doctor-modal">
+                                    записатись
+                                </button>
+                            </div>
                         </div>
                         <div class="doctors__slider-slide swiper-slide">
-                            <a href="#!" class="doctor-box">
-                                <p class="doctor-box__surname">Владимирець</p>
-                                <p class="doctor-box__name">Олена Сергіївна</p>
-                                <p class="doctor-box__skills">
-                                    Лікар-уролог першої категорії, лікар ультразвукової діагностики
-                                </p>
-                                <div class="doctor-box__foot">
-                                    <div class="doctor-box__info">
-                                        <div class="doctor-box__photo">
-                                            <img src="./assets/img/doctor_2.jpg" alt="Photo">
-                                        </div>
-                                        <div class="doctor-box__review">
-                                            <img width="16" height="16" src="./assets/img/icons/ico-comment.svg" alt="">
-                                            <p>
-                                                <span>11</span> Відгуків
+                            <div href="#!" class="doctor-box">
+                                <a href="#!" class="doctor-box__inner">
+                                    <div class="doctor-box__row">
+                                        <p class="doctor-box__surname">Владимирець</p>
+                                        <p class="doctor-box__name">Олена Сергіївна</p>
+                                        <p class="doctor-box__skills">
+                                            Лікар-уролог першої категорії, лікар ультразвукової діагностики
+                                        </p>
+                                    </div>
+                                    <div class="doctor-box__foot">
+                                        <div class="doctor-box__row">
+                                            <div class="doctor-box__info">
+                                                <div class="doctor-box__photo">
+                                                    <img src="./assets/img/doctor_2.jpg" alt="Photo">
+                                                </div>
+                                                <div class="doctor-box__review">
+                                                    <img width="16" height="16" src="./assets/img/icons/ico-comment.svg"
+                                                        alt="">
+                                                    <p>
+                                                        <span>11</span> Відгуків
+                                                    </p>
+                                                </div>
+                                                <div class="doctor-box__cta">
+                                                    <img src="./assets/img/icons/icoArrow_bl_t.svg" alt="Go">
+                                                    <img src="./assets/img/icons/icoArrow_wht_t.svg" alt="Go">
+                                                </div>
+                                            </div>
+                                            <p class="doctor-box__exp">
+                                                13 років досвіду
+                                            </p>
+                                            <p class="doctor-box__location">
+                                                <img src="./assets/img/icons/ico-pin-d.svg" alt="">
+                                                пр-т П. Григоренка, 22/20
+                                            </p>
+                                            <p class="doctor-box__location">
+                                                <img src="./assets/img/icons/ico-pin-d.svg" alt="">
+                                                пр-т П. Григоренка, 22/20
                                             </p>
                                         </div>
-                                        <div class="doctor-box__cta">
-                                            <img src="./assets/img/icons/icoArrow_bl_t.svg" alt="Go">
-                                            <img src="./assets/img/icons/icoArrow_wht_t.svg" alt="Go">
-                                        </div>
                                     </div>
-                                    <p class="doctor-box__exp">
-                                        13 років досвіду
-                                    </p>
-                                    <p class="doctor-box__location">
-                                        <img src="./assets/img/icons/ico-pin-d.svg" alt="">
-                                        пр-т П. Григоренка, 22/20
-                                    </p>
-                                    <div class="doctor-box__sign">
-                                        записатись
-                                    </div>
-                                </div>
-                            </a>
+                                </a>
+                                <button type="button" class="doctor-box__sign js-doctor-modal">
+                                    записатись
+                                </button>
+                            </div>
                         </div>
                         <div class="doctors__slider-slide swiper-slide">
-                            <a href="#!" class="doctor-box">
-                                <p class="doctor-box__surname">Владимирець</p>
-                                <p class="doctor-box__name">Олена Сергіївна</p>
-                                <p class="doctor-box__skills">
-                                    Лікар-уролог першої категорії, лікар ультразвукової діагностики
-                                </p>
-                                <div class="doctor-box__foot">
-                                    <div class="doctor-box__info">
-                                        <div class="doctor-box__photo">
-                                            <img src="./assets/img/doctor_3.jpg" alt="Photo">
-                                        </div>
-                                        <div class="doctor-box__review">
-                                            <img width="16" height="16" src="./assets/img/icons/ico-comment.svg" alt="">
-                                            <p>
-                                                <span>11</span> Відгуків
+                            <div href="#!" class="doctor-box">
+                                <a href="#!" class="doctor-box__inner">
+                                    <div class="doctor-box__row">
+                                        <p class="doctor-box__surname">Владимирець</p>
+                                        <p class="doctor-box__name">Олена Сергіївна</p>
+                                        <p class="doctor-box__skills">
+                                            Лікар-уролог першої категорії, лікар ультразвукової діагностики
+                                        </p>
+                                    </div>
+                                    <div class="doctor-box__foot">
+                                        <div class="doctor-box__row">
+                                            <div class="doctor-box__info">
+                                                <div class="doctor-box__photo">
+                                                    <img src="./assets/img/doctor_2.jpg" alt="Photo">
+                                                </div>
+                                                <div class="doctor-box__review">
+                                                    <img width="16" height="16" src="./assets/img/icons/ico-comment.svg"
+                                                        alt="">
+                                                    <p>
+                                                        <span>11</span> Відгуків
+                                                    </p>
+                                                </div>
+                                                <div class="doctor-box__cta">
+                                                    <img src="./assets/img/icons/icoArrow_bl_t.svg" alt="Go">
+                                                    <img src="./assets/img/icons/icoArrow_wht_t.svg" alt="Go">
+                                                </div>
+                                            </div>
+                                            <p class="doctor-box__exp">
+                                                13 років досвіду
+                                            </p>
+                                            <p class="doctor-box__location">
+                                                <img src="./assets/img/icons/ico-pin-d.svg" alt="">
+                                                пр-т П. Григоренка, 22/20
+                                            </p>
+                                            <p class="doctor-box__location">
+                                                <img src="./assets/img/icons/ico-pin-d.svg" alt="">
+                                                пр-т П. Григоренка, 22/20
                                             </p>
                                         </div>
-                                        <div class="doctor-box__cta">
-                                            <img src="./assets/img/icons/icoArrow_bl_t.svg" alt="Go">
-                                            <img src="./assets/img/icons/icoArrow_wht_t.svg" alt="Go">
-                                        </div>
                                     </div>
-                                    <p class="doctor-box__exp">
-                                        13 років досвіду
-                                    </p>
-                                    <p class="doctor-box__location">
-                                        <img src="./assets/img/icons/ico-pin-d.svg" alt="">
-                                        пр-т П. Григоренка, 22/20
-                                    </p>
-                                    <div class="doctor-box__sign">
-                                        записатись
-                                    </div>
-                                </div>
-                            </a>
+                                </a>
+                                <button type="button" class="doctor-box__sign js-doctor-modal">
+                                    записатись
+                                </button>
+                            </div>
                         </div>
                         <div class="doctors__slider-slide swiper-slide">
-                            <a href="#!" class="doctor-box">
-                                <p class="doctor-box__surname">Владимирець</p>
-                                <p class="doctor-box__name">Олена Сергіївна</p>
-                                <p class="doctor-box__skills">
-                                    Лікар-уролог першої категорії, лікар ультразвукової діагностики
-                                </p>
-                                <div class="doctor-box__foot">
-                                    <div class="doctor-box__info">
-                                        <div class="doctor-box__photo">
-                                            <img src="./assets/img/doctor_4.jpg" alt="Photo">
-                                        </div>
-                                        <div class="doctor-box__review">
-                                            <img width="16" height="16" src="./assets/img/icons/ico-comment.svg" alt="">
-                                            <p>
-                                                <span>11</span> Відгуків
-                                            </p>
-                                        </div>
-                                        <div class="doctor-box__cta">
-                                            <img src="./assets/img/icons/icoArrow_bl_t.svg" alt="Go">
-                                            <img src="./assets/img/icons/icoArrow_wht_t.svg" alt="Go">
-                                        </div>
-                                    </div>
-                                    <p class="doctor-box__exp">
-                                        13 років досвіду
+                            <div href="#!" class="doctor-box">
+                                <a href="#!" class="doctor-box__inner">
+                                    <p class="doctor-box__surname">Владимирець</p>
+                                    <p class="doctor-box__name">Олена Сергіївна</p>
+                                    <p class="doctor-box__skills">
+                                        Лікар-уролог першої категорії, лікар ультразвукової діагностики
                                     </p>
-                                    <p class="doctor-box__location">
-                                        <img src="./assets/img/icons/ico-pin-d.svg" alt="">
-                                        пр-т П. Григоренка, 22/20
-                                    </p>
-                                    <div class="doctor-box__sign">
-                                        записатись
+                                    <div class="doctor-box__foot">
+                                        <div class="doctor-box__info">
+                                            <div class="doctor-box__photo">
+                                                <img src="./assets/img/doctor_4.jpg" alt="Photo">
+                                            </div>
+                                            <div class="doctor-box__review">
+                                                <img width="16" height="16" src="./assets/img/icons/ico-comment.svg"
+                                                    alt="">
+                                                <p>
+                                                    <span>11</span> Відгуків
+                                                </p>
+                                            </div>
+                                            <div class="doctor-box__cta">
+                                                <img src="./assets/img/icons/icoArrow_bl_t.svg" alt="Go">
+                                                <img src="./assets/img/icons/icoArrow_wht_t.svg" alt="Go">
+                                            </div>
+                                        </div>
+                                        <p class="doctor-box__exp">
+                                            13 років досвіду
+                                        </p>
+                                        <p class="doctor-box__location">
+                                            <img src="./assets/img/icons/ico-pin-d.svg" alt="">
+                                            пр-т П. Григоренка, 22/20
+                                        </p>
                                     </div>
-                                </div>
-                            </a>
+                                </a>
+                                <button type="button" class="doctor-box__sign js-doctor-modal">
+                                    записатись
+                                </button>
+                            </div>
                         </div>
                         <div class="doctors__slider-slide swiper-slide">
-                            <a href="#!" class="doctor-box">
-                                <p class="doctor-box__surname">Владимирець</p>
-                                <p class="doctor-box__name">Олена Сергіївна</p>
-                                <p class="doctor-box__skills">
-                                    Лікар-уролог першої категорії, лікар ультразвукової діагностики
-                                </p>
-                                <div class="doctor-box__foot">
-                                    <div class="doctor-box__info">
-                                        <div class="doctor-box__photo">
-                                            <img src="./assets/img/doctor_4.jpg" alt="Photo">
-                                        </div>
-                                        <div class="doctor-box__review">
-                                            <img width="16" height="16" src="./assets/img/icons/ico-comment.svg" alt="">
-                                            <p>
-                                                <span>11</span> Відгуків
+                            <div href="#!" class="doctor-box">
+                                <a href="#!" class="doctor-box__inner">
+                                    <div class="doctor-box__row">
+                                        <p class="doctor-box__surname">Владимирець</p>
+                                        <p class="doctor-box__name">Олена Сергіївна</p>
+                                        <p class="doctor-box__skills">
+                                            Лікар-уролог першої категорії, лікар ультразвукової діагностики
+                                        </p>
+                                    </div>
+                                    <div class="doctor-box__foot">
+                                        <div class="doctor-box__row">
+                                            <div class="doctor-box__info">
+                                                <div class="doctor-box__photo">
+                                                    <img src="./assets/img/doctor_3.jpg" alt="Photo">
+                                                </div>
+                                                <div class="doctor-box__review">
+                                                    <img width="16" height="16" src="./assets/img/icons/ico-comment.svg"
+                                                        alt="">
+                                                    <p>
+                                                        <span>11</span> Відгуків
+                                                    </p>
+                                                </div>
+                                                <div class="doctor-box__cta">
+                                                    <img src="./assets/img/icons/icoArrow_bl_t.svg" alt="Go">
+                                                    <img src="./assets/img/icons/icoArrow_wht_t.svg" alt="Go">
+                                                </div>
+                                            </div>
+                                            <p class="doctor-box__exp">
+                                                13 років досвіду
+                                            </p>
+                                            <p class="doctor-box__location">
+                                                <img src="./assets/img/icons/ico-pin-d.svg" alt="">
+                                                пр-т П. Григоренка, 22/20
+                                            </p>
+                                            <p class="doctor-box__location">
+                                                <img src="./assets/img/icons/ico-pin-d.svg" alt="">
+                                                пр-т П. Григоренка, 22/20
                                             </p>
                                         </div>
-                                        <div class="doctor-box__cta">
-                                            <img src="./assets/img/icons/icoArrow_bl_t.svg" alt="Go">
-                                            <img src="./assets/img/icons/icoArrow_wht_t.svg" alt="Go">
-                                        </div>
                                     </div>
-                                    <p class="doctor-box__exp">
-                                        13 років досвіду
-                                    </p>
-                                    <p class="doctor-box__location">
-                                        <img src="./assets/img/icons/ico-pin-d.svg" alt="">
-                                        пр-т П. Григоренка, 22/20
-                                    </p>
-                                    <div class="doctor-box__sign">
-                                        записатись
-                                    </div>
-                                </div>
-                            </a>
+                                </a>
+                                <button type="button" class="doctor-box__sign js-doctor-modal">
+                                    записатись
+                                </button>
+                            </div>
                         </div>
                         <div class="doctors__slider-slide swiper-slide">
-                            <a href="#!" class="doctor-box">
-                                <p class="doctor-box__surname">Владимирець</p>
-                                <p class="doctor-box__name">Олена Сергіївна</p>
-                                <p class="doctor-box__skills">
-                                    Лікар-уролог першої категорії, лікар ультразвукової діагностики
-                                </p>
-                                <div class="doctor-box__foot">
-                                    <div class="doctor-box__info">
-                                        <div class="doctor-box__photo">
-                                            <img src="./assets/img/doctor_2.jpg" alt="Photo">
-                                        </div>
-                                        <div class="doctor-box__review">
-                                            <img width="16" height="16" src="./assets/img/icons/ico-comment.svg" alt="">
-                                            <p>
-                                                <span>11</span> Відгуків
+                            <div href="#!" class="doctor-box">
+                                <a href="#!" class="doctor-box__inner">
+                                    <div class="doctor-box__row">
+                                        <p class="doctor-box__surname">Владимирець</p>
+                                        <p class="doctor-box__name">Олена Сергіївна</p>
+                                        <p class="doctor-box__skills">
+                                            Лікар-уролог першої категорії, лікар ультразвукової діагностики
+                                        </p>
+                                    </div>
+                                    <div class="doctor-box__foot">
+                                        <div class="doctor-box__row">
+                                            <div class="doctor-box__info">
+                                                <div class="doctor-box__photo">
+                                                    <img src="./assets/img/doctor_4.jpg" alt="Photo">
+                                                </div>
+                                                <div class="doctor-box__review">
+                                                    <img width="16" height="16" src="./assets/img/icons/ico-comment.svg"
+                                                        alt="">
+                                                    <p>
+                                                        <span>11</span> Відгуків
+                                                    </p>
+                                                </div>
+                                                <div class="doctor-box__cta">
+                                                    <img src="./assets/img/icons/icoArrow_bl_t.svg" alt="Go">
+                                                    <img src="./assets/img/icons/icoArrow_wht_t.svg" alt="Go">
+                                                </div>
+                                            </div>
+                                            <p class="doctor-box__exp">
+                                                13 років досвіду
+                                            </p>
+                                            <p class="doctor-box__location">
+                                                <img src="./assets/img/icons/ico-pin-d.svg" alt="">
+                                                пр-т П. Григоренка, 22/20
+                                            </p>
+                                            <p class="doctor-box__location">
+                                                <img src="./assets/img/icons/ico-pin-d.svg" alt="">
+                                                пр-т П. Григоренка, 22/20
                                             </p>
                                         </div>
-                                        <div class="doctor-box__cta">
-                                            <img src="./assets/img/icons/icoArrow_bl_t.svg" alt="Go">
-                                            <img src="./assets/img/icons/icoArrow_wht_t.svg" alt="Go">
-                                        </div>
                                     </div>
-                                    <p class="doctor-box__exp">
-                                        13 років досвіду
-                                    </p>
-                                    <p class="doctor-box__location">
-                                        <img src="./assets/img/icons/ico-pin-d.svg" alt="">
-                                        пр-т П. Григоренка, 22/20
-                                    </p>
-                                    <div class="doctor-box__sign">
-                                        записатись
-                                    </div>
-                                </div>
-                            </a>
+                                </a>
+                                <button type="button" class="doctor-box__sign js-doctor-modal">
+                                    записатись
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -2156,7 +2349,9 @@
                 <div class="reviews__items swiper js-reviews-slider js-animation">
                     <div class="reviews__items-wrapper swiper-wrapper">
                         <div class="reviews__items-slide swiper-slide">
-                            <div class="review-box js-review-box">
+                            <div class="review-box js-review-box"
+                                data-answer="Дякуємо за ваш теплий відгук про роботу клініки та лікаря-терапевта Тетяну Євтушенко. Ми щиро раді, що ви високо оцінили професіоналізм і уважність лікаря. Бажаємо міцного здоров’я 💙 Дякуємо за ваш теплий відгук про роботу клініки та лікаря-терапевта Тетяну Євтушенко. Ми щиро раді, що ви високо оцінили професіоналізм і уважність лікаря"
+                                data-name="Вікторія" data-date="14 Травня 2025" data-rating="4.9" data-spec="Владимирець Олена Сергіївна" data-service="Алергологія">
                                 <div class="review-box__content">
                                     <div class="review-box__head">
                                         <div class="review-box__info">
@@ -2169,10 +2364,18 @@
                                         </div>
                                     </div>
                                     <p class="review-box__text js-review-text">
-                                        Гарна сучасна клініка, привітний персонал. Було дуже комфортно. Дякую
-                                        лікарю-гінекологу Владимирець Олена Сергіївна. Детально пояснила кожен етап і
-                                        дала
-                                        відповіді на запитання.
+                                        Дуже задоволена візитом до клініки! Це сучасний, доглянутий медичний заклад із
+                                        приємною атмосферою, де з перших хвилин відчуваєш турботу та професіоналізм.
+                                        Персонал зустрів привітно, усе організовано на високому рівні — від запису на
+                                        прийом до самої консультації.
+                                        Окремо хочу подякувати лікарю-гінекологу Владимирець Олені Сергіївні. Вона
+                                        проявила максимум уваги, детально пояснила кожен етап огляду та обстеження,
+                                        відповіла на всі запитання зрозуміло і з повагою. Завдяки її спокійному та
+                                        уважному підходу я почувалася абсолютно комфортно й упевнено протягом усього
+                                        прийому.
+                                        Щиро дякую всій команді клініки за турботу, професійність і людяність.
+                                        Обов’язково звертатимусь ще та рекомендую клініку всім, хто шукає якісне медичне
+                                        обслуговування в комфортних умовах.
                                     </p>
                                     <button type="button" class="review-box__more js-review-popup">
                                         <span>Читати більше</span>
@@ -2337,10 +2540,7 @@
                                         </div>
                                     </div>
                                     <p class="review-box__text js-review-text">
-                                        Гарна сучасна клініка, привітний персонал. Було дуже комфортно. Дякую
-                                        лікарю-гінекологу Владимирець Олена Сергіївна. Детально пояснила кожен етап і
-                                        дала
-                                        відповіді на запитання.
+                                        Гарна сучасна клініка, привітний персонал. Було дуже комфортно.
                                     </p>
                                     <button type="button" class="review-box__more js-review-popup">
                                         <span>Читати більше</span>
@@ -2395,10 +2595,7 @@
                                         </div>
                                     </div>
                                     <p class="review-box__text js-review-text">
-                                        Гарна сучасна клініка, привітний персонал. Було дуже комфортно. Дякую
-                                        лікарю-гінекологу Владимирець Олена Сергіївна. Детально пояснила кожен етап і
-                                        дала
-                                        відповіді на запитання.
+                                        Гарна сучасна клініка, привітний персонал. Було дуже комфортно.
                                     </p>
                                     <button type="button" class="review-box__more js-review-popup">
                                         <span>Читати більше</span>
@@ -2494,7 +2691,8 @@
                                 <div class="appointment__form-group">
                                     <label class="appointment__form-title" for="mainAppDate">Бажана дата прийому</label>
                                     <div class="appointment__form-inner field-date">
-                                        <input class="appointment__form-field field-date--item" data-lang="uk" name="mainAppDate" id="mainAppDate">
+                                        <input class="appointment__form-field field-date--item" data-lang="uk"
+                                            name="mainAppDate" id="mainAppDate">
                                     </div>
                                 </div>
                             </div>

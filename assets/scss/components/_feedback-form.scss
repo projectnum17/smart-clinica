@@ -34,7 +34,6 @@
 
     &__head {
         position: relative;
-        // max-height: 210px;
         display: flex;
         align-items: center;
         gap: 9px;
@@ -51,7 +50,6 @@
         flex-shrink: 0;
         width: 241px;
         height: 250px;
-        // transform: translateY(-14px);
 
         img {
             width: 100%;

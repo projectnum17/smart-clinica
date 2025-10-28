@@ -211,7 +211,7 @@ const helpers = () => {
             en: {},
         };
 
-        const ids = ['modalAppDate', 'mainAppDate'];
+        const ids = ['modalAppDate', 'mainAppDate', 'doctorAppDate', 'modalVisitDate'];
 
         ids.forEach((id) => {
             const dateInput = document.querySelector(`#${id}`);
