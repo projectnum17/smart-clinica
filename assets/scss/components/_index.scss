@@ -1,6 +1,7 @@
 @use 'ui';
 @use 'content';
 @use 'mod';
+@forward 'mobile-menu';
 @forward 'benefit-card';
 @forward 'benefit-container';
 @forward 'services-controls';

@@ -1,6 +1,7 @@
 'use strict';
 
 import animationHandler from './modules/animationHandler.js';
+import mobileMenu from './modules/mobileMenu.js';
 import headerFlow from './modules/header.js';
 import helpers from './modules/helpers.js';
 import sliders from './modules/sliders.js';
@@ -18,6 +19,7 @@ import feedbackBoxHandler from './modules/feedbackBoxHandler.js';
 import feedbackRatingHandler from './modules/feedbackRatingHandler.js';
 
 document.addEventListener('DOMContentLoaded', () => {
+    mobileMenu();
     animationHandler();
     headerFlow();
     helpers();

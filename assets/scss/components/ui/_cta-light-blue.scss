@@ -9,6 +9,11 @@
         border-radius: 10px;
         color: var(--white);
         background: var(--ball-blue);
+        @include media('mobile') {
+            font-size: 13px;
+            padding: 7px 12px;
+            border-radius: 8px;
+        }
     }
 
     &--lg {

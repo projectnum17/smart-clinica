@@ -13,16 +13,19 @@ const headerFlow = () => {
         }
     });
 
-    const headerSearchHandler = document.querySelector('.js-search-btn');
+    const headerSearchHandler = document.querySelectorAll('.js-search-btn');
     const headerSearchBox = document.querySelector('.js-header-search');
     const headerSearchField = document.querySelector('.js-header-search input');
     const headerSearchClose = document.querySelector('.js-search-close');
 
-    if (!headerSearchBox || !headerSearchHandler || !headerSearchClose) return;
+    if (!headerSearchBox || !headerSearchHandler.length || !headerSearchClose)
+        return;
 
-    headerSearchHandler.addEventListener('click', () => {
-        headerSearchBox.classList.add('is-shown');
-        setTimeout(() => headerSearchField.focus(), 300);
+    headerSearchHandler.forEach((btn) => {
+        btn.addEventListener('click', () => {
+            headerSearchBox.classList.add('is-shown');
+            setTimeout(() => headerSearchField.focus(), 300);
+        });
     });
 
     headerSearchClose.addEventListener('click', () => {
