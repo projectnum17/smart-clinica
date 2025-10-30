@@ -5,6 +5,14 @@
     font: 400 68px / 100% var(--ff-base);
     letter-spacing: -1px;
 
+    @include media('tablet') {
+        font-size: 48px;
+    }
+
+    @include media('mobile') {
+        font-size: 32px;
+    }
+
     &--smart {
         letter-spacing: -3px;
     }

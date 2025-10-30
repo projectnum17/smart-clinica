@@ -14,5 +14,9 @@
             background: var(--ball-blue);
             color: var(--white);
         }
+        @include media('mobile') {
+            font-size: 13px;
+            padding: 11px;
+        }
     }
 }

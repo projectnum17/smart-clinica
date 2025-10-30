@@ -7,6 +7,13 @@
         align-items: stretch;
         justify-content: space-between;
         gap: 20px;
+        @include media('mobile') {
+            flex-direction: column;
+
+            & > div:first-child {
+                padding-inline: 0;
+            }
+        }
     }
 
     .hero {
@@ -14,11 +21,22 @@
         margin: 0 auto var(--section-mb);
         &__about {
             padding-block: 80px 22px;
+            @include media('tablet') {
+                padding-block: 30px 22px;
+            }
+            @include media('mobile') {
+                padding-block: 32px 0;
+            }
         }
 
         &__title {
             margin-bottom: 32px;
             max-width: 605px;
+            @include media('mobile') {
+                margin-bottom: 20px;
+                max-width: 100%;
+                padding-inline: 20px;
+            }
         }
 
         &__btns {
@@ -26,6 +44,11 @@
             align-items: center;
             gap: 16px;
             margin-bottom: 48px;
+            @include media('mobile') {
+                padding-inline: 20px;
+                margin-bottom: 32px;
+                flex-direction: row-reverse;
+            }
         }
 
         &__thumbnail {
@@ -37,6 +60,22 @@
             height: calc(100vh - 140px);
             height: calc(100svh - 140px);
 
+            @include media('mobile') {
+                height: 380px;
+            }
+
+            &.mobile--hidden {
+                @include media('mobile') {
+                    display: none;
+                }
+            }
+
+            &.mobile--visible {
+                display: none;
+                @include media('mobile') {
+                    display: block;
+                }
+            }
 
             img {
                 width: 100%;
@@ -72,6 +111,15 @@
             width: 100%;
             left: 50%;
             transform: translateX(-50%);
+            @include media('tablet') {
+                justify-content: flex-end;
+            }
+
+            @include media('mobile') {
+                justify-content: center;
+                bottom: 64px;
+                flex-wrap: nowrap;
+            }
 
             &-item {
                 vertical-align: middle;
@@ -82,17 +130,48 @@
                 border: 1px solid #ffffff99;
                 backdrop-filter: blur(16px);
                 color: var(--white);
+                @include media('tablet') {
+                    padding: 10px 30px;
+                }
+                @include media('mobile') {
+                    font-size: 14px;
+                    text-align: center;
+                    padding: 9px 15px;
+                }
             }
 
             @for $i from 2 through 10 {
                 .hero__list-item:nth-child(#{$i}) {
                     transform: translateX(-#{($i - 1) * 20}px);
+                    @include media('mobile') {
+                        transform: translateX(-#{($i - 1) * 10}px);
+                    }
                 }
             }
         }
 
         &__gall {
             max-width: 429px;
+            @include media('mobile') {
+                padding-top: 32px;
+                margin: 0 auto;
+                padding-inline: 20px;
+            }
+        }
+
+        &__cons {
+            width: 50%;
+            flex: 1;
+            justify-content: center;
+            @include media('mobile') {
+                padding: 13px;
+            }
+        }
+
+        &__price {
+            width: 50%;
+            flex: 1;
+            justify-content: center;
         }
 
         &__controls {
@@ -117,7 +196,7 @@
                     height: 6px;
                     opacity: 1 !important;
                     background: #3e3e40;
-                    @include transitions(.3s, ease-in);
+                    @include transitions(0.3s, ease-in);
 
                     &-active {
                         width: 48px;

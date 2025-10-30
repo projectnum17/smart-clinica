@@ -5,6 +5,9 @@
     display: inline-flex;
     align-items: center;
     gap: 20px;
+    @include media('mobile') {
+        gap: 12px;
+    }
 
     &__btn {
         width: 52px;
@@ -21,6 +24,10 @@
             background: #0084ad;
             color: var(--white);
         }
+        @include media('mobile') {
+            width: 36px;
+            height: 36px;
+        }
 
         &.swiper-button-disabled {
             opacity: 0.6;
@@ -32,6 +39,10 @@
             flex-shrink: 0;
             width: 24px;
             height: 24px;
+            @include media('mobile') {
+                width: 18px;
+                height: 18px;
+            }
         }
     }
 }

@@ -5,6 +5,9 @@
     .services {
         &__title {
             margin-bottom: 40px;
+            @include media('mobile') {
+                margin-bottom: 16px;
+            }
         }
     }
 }

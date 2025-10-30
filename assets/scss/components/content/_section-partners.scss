@@ -2,12 +2,30 @@
 @use '../../base/mixins' as *;
 
 .partners {
+    @include media('mobile') {
+        overflow: hidden;
+    }
     &__head {
         display: flex;
         align-items: center;
         justify-content: space-between;
         gap: 20px;
         margin-bottom: 40px;
+        @include media('mobile') {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__items {
+        @include media('mobile') {
+            overflow: visible;
+        }
+
+        &-slide {
+            @include media('mobile') {
+                width: auto;
+            }
+        }
     }
 
     .partners-box {

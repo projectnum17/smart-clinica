@@ -5,6 +5,9 @@
     &__content {
         display: flex;
         align-items: stretch;
+        @include media('mobile') {
+            flex-direction: column;
+        }
     }
 
     &__thumb {
@@ -13,6 +16,11 @@
         overflow: hidden;
         max-width: 728px;
         width: 100%;
+        @include media('mobile') {
+            max-width: 100%;
+            border-radius: 20px 20px 0 0;
+            height: 240px;
+        }
 
         img {
             width: 100%;
@@ -29,12 +37,24 @@
         padding: 20px 60px;
         border-radius: 0 32px 32px 0;
         background-color: #fff;
+        @include media('tablet') {
+            padding: 20px 40px;
+        }
+
+        @include media('mobile') {
+            padding: 24px 20px;
+            border-radius: 0 0 20px 20px;
+        }
     }
 
     &__title {
         font: 400 48px / 100% var(--ff-base);
         letter-spacing: -2px;
         margin-bottom: 32px;
+        @include media('mobile') {
+            margin-bottom: 12px;
+            font-size: 24px;
+        }
     }
 
     &__form {

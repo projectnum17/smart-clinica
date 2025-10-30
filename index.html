@@ -124,7 +124,8 @@
                                                 <div class="dd-menu-wrap">
                                                     <div class="container">
                                                         <div class="dd-menu-inner">
-                                                            <button type="button" class="dd-menu-back">Діагностика</button>
+                                                            <button type="button"
+                                                                class="dd-menu-back">Діагностика</button>
                                                             <ul class="router-links">
                                                                 <li>
                                                                     <a href="#!">алергологія</a>
@@ -201,7 +202,8 @@
                                                 <div class="dd-menu-wrap">
                                                     <div class="container">
                                                         <div class="dd-menu-inner">
-                                                            <button type="button" class="dd-menu-back">Діагностика</button>
+                                                            <button type="button"
+                                                                class="dd-menu-back">Діагностика</button>
                                                             <ul class="router-links">
                                                                 <li>
                                                                     <a href="#!">алергологія</a>
@@ -1493,7 +1495,6 @@
             </div>
         </div>
     </header>
-    <!-- 
     <main class="main main--home">
         <div class="video-wrapper">
             <div class="video-bg">
@@ -1512,6 +1513,14 @@
                             Запис на прийом
                         </button>
                         <a href="#!" class="hero__price cta cta--transparent">дізнатись ціни</a>
+                    </div>
+                    <div class="hero__thumbnail mobile--visible js-animation">
+                        <img src="./assets/img/hero-home.jpg" alt="Thumbnail">
+                        <ul class="hero__list">
+                            <li class="hero__list-item">Бездоганний сервіс</li>
+                            <li class="hero__list-item">Якісна медицина</li>
+                            <li class="hero__list-item">Коплексні рішення</li>
+                        </ul>
                     </div>
                     <div class="hero__gall">
                         <div class="hero__carousel swiper js-news-slider">
@@ -1635,7 +1644,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="hero__thumbnail js-animation">
+                <div class="hero__thumbnail mobile--hidden js-animation">
                     <img src="./assets/img/hero-home.jpg" alt="Thumbnail">
                     <ul class="hero__list">
                         <li class="hero__list-item">Бездоганний сервіс</li>
@@ -1699,12 +1708,18 @@
                 <div class="benefits-container">
                     <div class="benefits-container__cards">
                         <div class="benefit-card js-animation">
-                            <div class="benefit-card__ico">
+                            <div class="benefit-card__ico mobile--hidden">
                                 <lottie-player class="lottie-anim" src="./assets/animations/heart.json" direction="1"
                                     mode="normal" loop autoplay></lottie-player>
                             </div>
                             <div class="benefit-card__content">
-                                <p class="benefit-card__title">Формула здоров’я</p>
+                                <div class="benefit-card__inner">
+                                    <div class="benefit-card__ico mobile--visible">
+                                        <lottie-player class="lottie-anim" src="./assets/animations/heart.json"
+                                            direction="1" mode="normal" loop autoplay></lottie-player>
+                                    </div>
+                                    <p class="benefit-card__title">Формула здоров’я</p>
+                                </div>
                                 <p class="benefit-card__text">
                                     Ми продумали всі можливі деталі для задоволення потреб пацієнта. Формула вашого
                                     здоров’я
@@ -1713,12 +1728,18 @@
                             </div>
                         </div>
                         <div class="benefit-card js-animation">
-                            <div class="benefit-card__ico">
+                            <div class="benefit-card__ico mobile--hidden">
                                 <lottie-player class="lottie-anim" src="./assets/animations/users.json" direction="1"
                                     mode="normal" loop autoplay></lottie-player>
                             </div>
                             <div class="benefit-card__content">
-                                <p class="benefit-card__title">Експертна команда</p>
+                                <div class="benefit-card__inner">
+                                    <div class="benefit-card__ico mobile--visible">
+                                        <lottie-player class="lottie-anim" src="./assets/animations/users.json"
+                                            direction="1" mode="normal" loop autoplay></lottie-player>
+                                    </div>
+                                    <p class="benefit-card__title">Експертна команда</p>
+                                </div>
                                 <p class="benefit-card__text">
                                     Об’єднуємо молодих прогресивних фахівців та світил української медицини. У нас ви
                                     отримаєте повне розуміння стану здоров’я та детальний план для подальших дій.
@@ -1726,12 +1747,18 @@
                             </div>
                         </div>
                         <div class="benefit-card js-animation">
-                            <div class="benefit-card__ico">
+                            <div class="benefit-card__ico mobile--hidden">
                                 <lottie-player class="lottie-anim" src="./assets/animations/handshake.json"
                                     direction="1" mode="normal" loop autoplay></lottie-player>
                             </div>
                             <div class="benefit-card__content">
-                                <p class="benefit-card__title">Чесні взаємини</p>
+                                <div class="benefit-card__inner">
+                                    <div class="benefit-card__ico mobile--visible">
+                                        <lottie-player class="lottie-anim" src="./assets/animations/handshake.json"
+                                            direction="1" mode="normal" loop autoplay></lottie-player>
+                                    </div>
+                                    <p class="benefit-card__title">Чесні взаємини</p>
+                                </div>
                                 <p class="benefit-card__text">
                                     Будуємо прозорі відносини з пацієнтами — відкриті до будь-якого зворотного зв’язку.
                                     Наш
@@ -1744,12 +1771,18 @@
                     </div>
                     <div class="benefits-container__cards">
                         <div class="benefit-card js-animation">
-                            <div class="benefit-card__ico">
+                            <div class="benefit-card__ico mobile--hidden">
                                 <lottie-player class="lottie-anim" src="./assets/animations/case.json" direction="1"
                                     mode="normal" loop autoplay></lottie-player>
                             </div>
                             <div class="benefit-card__content">
-                                <p class="benefit-card__title">Комплексний супровід</p>
+                                <div class="benefit-card__inner">
+                                    <div class="benefit-card__ico mobile--visible">
+                                        <lottie-player class="lottie-anim" src="./assets/animations/case.json"
+                                            direction="1" mode="normal" loop autoplay></lottie-player>
+                                    </div>
+                                    <p class="benefit-card__title">Комплексний супровід</p>
+                                </div>
                                 <p class="benefit-card__text">
                                     Проводимо онлайн-консультації. Забезпечуємо все ідеально продумано для пацієнта, без
                                     зайвих призначень та процедур. Із яким би питанням ви не звернулись — ми зможемо
@@ -1759,12 +1792,18 @@
                             </div>
                         </div>
                         <div class="benefit-card js-animation">
-                            <div class="benefit-card__ico">
+                            <div class="benefit-card__ico mobile--hidden">
                                 <lottie-player class="lottie-anim" src="./assets/animations/brain.json" direction="1"
                                     mode="normal" loop autoplay></lottie-player>
                             </div>
                             <div class="benefit-card__content">
-                                <p class="benefit-card__title">Сучасні технології</p>
+                                <div class="benefit-card__inner">
+                                    <div class="benefit-card__ico mobile--visible">
+                                        <lottie-player class="lottie-anim" src="./assets/animations/brain.json"
+                                            direction="1" mode="normal" loop autoplay></lottie-player>
+                                    </div>
+                                    <p class="benefit-card__title">Сучасні технології</p>
+                                </div>
                                 <p class="benefit-card__text">
                                     Розвиваємо майбутнє української медицини тут і зараз: розвиваємо «розумну» медицину,
                                     в
@@ -1773,12 +1812,18 @@
                             </div>
                         </div>
                         <div class="benefit-card js-animation">
-                            <div class="benefit-card__ico">
+                            <div class="benefit-card__ico mobile--hidden">
                                 <lottie-player class="lottie-anim" src="./assets/animations/beat.json" direction="1"
                                     mode="normal" loop autoplay></lottie-player>
                             </div>
                             <div class="benefit-card__content">
-                                <p class="benefit-card__title">Новітнє обладнання</p>
+                                <div class="benefit-card__inner">
+                                    <div class="benefit-card__ico mobile--visible">
+                                        <lottie-player class="lottie-anim" src="./assets/animations/beat.json"
+                                            direction="1" mode="normal" loop autoplay></lottie-player>
+                                    </div>
+                                    <p class="benefit-card__title">Новітнє обладнання</p>
+                                </div>
                                 <p class="benefit-card__text">
                                     Розвиваємо майбутнє української медицини тут і зараз: розвиваємо «розумну» медицину,
                                     в
@@ -2241,9 +2286,48 @@
         <section class="doctors">
             <div class="container">
                 <div class="doctors__head js-animation">
-                    <h2 class="doctors__title content-title"><span>Smart</span> лікарі</h2>
+                    <div class="doctors__info">
+                        <h2 class="doctors__title content-title"><span>Smart</span> лікарі</h2>
+                        <a href="#!" class="link-more mobile--visible">
+                            <span>всі лікарі</span>
+                            <span>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_443_15486)">
+                                        <path d="M13.333 7.99988H2.66636" stroke="white" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path
+                                            d="M9.99969 11.3334C9.99969 11.3334 13.333 8.87842 13.333 8.00002C13.333 7.12162 9.99967 4.66669 9.99967 4.66669"
+                                            stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round"></path>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_443_15486">
+                                            <rect width="16" height="16" fill="white"></rect>
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_443_15486)">
+                                        <path d="M13.333 7.99988H2.66636" stroke="white" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path
+                                            d="M9.99969 11.3334C9.99969 11.3334 13.333 8.87842 13.333 8.00002C13.333 7.12162 9.99967 4.66669 9.99967 4.66669"
+                                            stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round"></path>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_443_15486">
+                                            <rect width="16" height="16" fill="white"></rect>
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
                     <div class="doctors__controls">
-                        <a href="#!" class="link-more">
+                        <a href="#!" class="link-more mobile--hidden">
                             <span>всі лікарі</span>
                             <span>
                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
@@ -2601,9 +2685,50 @@
                                 <p class="reviews__info-total"><span>22</span> відгуки</p>
                             </div>
                         </div>
-                        <a href="#!" class="reviews__trigger cta cta--transparent js-impressions">залишити відгук</a>
+                        <div class="reviews__info-wrapp">
+                            <a href="#!" class="reviews__trigger cta cta--transparent js-impressions">
+                                залишити відгук
+                            </a>
+                            <a href="#!" class="link-more mobile--visible">
+                                <span>всі відгуки</span>
+                                <span>
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_443_15486)">
+                                            <path d="M13.333 7.99988H2.66636" stroke="white" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path
+                                                d="M9.99969 11.3334C9.99969 11.3334 13.333 8.87842 13.333 8.00002C13.333 7.12162 9.99967 4.66669 9.99967 4.66669"
+                                                stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round"></path>
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_443_15486">
+                                                <rect width="16" height="16" fill="white"></rect>
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_443_15486)">
+                                            <path d="M13.333 7.99988H2.66636" stroke="white" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path
+                                                d="M9.99969 11.3334C9.99969 11.3334 13.333 8.87842 13.333 8.00002C13.333 7.12162 9.99967 4.66669 9.99967 4.66669"
+                                                stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round"></path>
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_443_15486">
+                                                <rect width="16" height="16" fill="white"></rect>
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
                     </div>
-                    <a href="#!" class="link-more">
+                    <a href="#!" class="link-more mobile--hidden">
                         <span>всі відгуки</span>
                         <span>
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
@@ -2646,7 +2771,8 @@
                         <div class="reviews__items-slide swiper-slide">
                             <div class="review-box js-review-box"
                                 data-answer="Дякуємо за ваш теплий відгук про роботу клініки та лікаря-терапевта Тетяну Євтушенко. Ми щиро раді, що ви високо оцінили професіоналізм і уважність лікаря. Бажаємо міцного здоров’я 💙 Дякуємо за ваш теплий відгук про роботу клініки та лікаря-терапевта Тетяну Євтушенко. Ми щиро раді, що ви високо оцінили професіоналізм і уважність лікаря"
-                                data-name="Вікторія" data-date="14 Травня 2025" data-rating="4.9" data-spec="Владимирець Олена Сергіївна" data-service="Алергологія">
+                                data-name="Вікторія" data-date="14 Травня 2025" data-rating="4.9"
+                                data-spec="Владимирець Олена Сергіївна" data-service="Алергологія">
                                 <div class="review-box__content">
                                     <div class="review-box__head">
                                         <div class="review-box__info">
@@ -3369,7 +3495,6 @@
             </div>
         </section>
     </main>
-     -->
     <footer class="footer">
         <div class="footer__top">
             <div class="footer__row">

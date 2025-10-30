@@ -44,6 +44,23 @@ const sliders = () => {
                 prevEl: '.js-doctors-prev',
                 nextEl: '.js-doctors-next',
             },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1.1,
+                    spaceBetween: 12,
+                },
+                768: {
+                    slidesPerView: 2.5,
+                },
+                992: {
+                    spaceBetween: 15,
+                    slidesPerView: 2.5,
+                },
+                1200: {
+                    spaceBetween: 15,
+                    slidesPerView: 4,
+                },
+            },
         });
     };
 
@@ -72,6 +89,23 @@ const sliders = () => {
             pagination: {
                 el: '.js-reviews-progress',
                 type: 'progressbar',
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1.1,
+                    spaceBetween: 12,
+                },
+                768: {
+                    slidesPerView: 2,
+                },
+                992: {
+                    spaceBetween: 15,
+                    slidesPerView: 3,
+                },
+                1200: {
+                    spaceBetween: 20,
+                    slidesPerView: 4,
+                },
             },
         });
     };
@@ -131,6 +165,14 @@ const sliders = () => {
                 el: '.js-space-progress',
                 type: 'progressbar',
             },
+            breakpoints: {
+                0: {
+                    spaceBetween: 12,
+                },
+                768: {
+                    spaceBetween: 20,
+                },
+            },
         });
     };
 
@@ -155,6 +197,14 @@ const sliders = () => {
             navigation: {
                 prevEl: '.js-partners-prev',
                 nextEl: '.js-partners-next',
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 'auto',
+                },
+                768: {
+                    slidesPerView: 6,
+                },
             },
         });
     };

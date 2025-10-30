@@ -12,6 +12,14 @@
         border: 1px solid #dfe0e1;
         box-shadow: 0px 4px 28px 0px #00000005;
         background: var(--white);
+        @include media('tablet') {
+            padding: 40px;
+            flex-direction: column;
+        }
+        @include media('mobile') {
+            padding: 24px 20px;
+            border-radius: 20px;
+        }
     }
 
     &__titles {
@@ -19,15 +27,27 @@
         display: flex;
         flex-direction: column;
         gap: 16px;
+        @include media('tablet') {
+            max-width: 100%;
+        }
+        @include media('mobile') {
+            gap: 12px;
+        }
     }
 
     &__subtitle {
         font: 400 32px / 100% var(--ff-base);
         letter-spacing: -1px;
+        @include media('mobile') {
+            font-size: 20px;
+        }
     }
 
     &__text {
         max-width: 670px;
+        @include media('mobile') {
+            max-width: 100%;
+        }
 
         div {
             display: grid;
@@ -53,6 +73,9 @@
     &__paragraph {
         font: 400 16px / 140% var(--ff-nort);
         overflow: hidden;
+        @include media('mobile') {
+            font-size: 14px;
+        }
     }
 
     &__more {

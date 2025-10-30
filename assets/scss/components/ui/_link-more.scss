@@ -7,6 +7,23 @@
     gap: 10px;
     max-width: max-content;
 
+    &.mobile--hidden {
+        @include media('mobile') {
+            display: none;
+        }
+    }
+
+    &.mobile--visible {
+        display: none;
+        @include media('mobile') {
+            display: inline-flex;
+        }
+    }
+
+    @include media('mobile') {
+        gap: 6px;
+    }
+
     @include hover {
         span:first-child {
             color: #0084ad;
@@ -31,6 +48,10 @@
             font: 500 16px / 100% var(--ff-nort);
             text-transform: uppercase;
             @include transitions(0.3s, ease-in);
+
+            @include media('mobile') {
+                font-size: 14px;
+            }
         }
 
         &:last-child {
@@ -47,6 +68,11 @@
             color: var(--white);
             @include transitions(0.3s, ease-in);
 
+            @include media('mobile') {
+                width: 20px;
+                height: 20px;
+            }
+
             svg {
                 display: inline-flex;
                 flex-shrink: 0;
@@ -60,6 +86,11 @@
 
                 &:last-child {
                     left: -30%;
+                }
+
+                @include media('mobile') {
+                    width: 12px;
+                    height: 12px;
                 }
             }
         }

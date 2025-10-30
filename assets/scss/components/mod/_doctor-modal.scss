@@ -30,6 +30,10 @@
         align-items: center;
         gap: 12px;
         margin-bottom: 24px;
+        @include media('mobile') {
+            gap: 8px;
+            margin-bottom: 12px;
+        }
 
         img {
             width: 56px;
@@ -38,12 +42,20 @@
             flex-shrink: 0;
             object-fit: cover;
             border-radius: 6px;
+
+            @include media('mobile') {
+                width: 36px;
+                height: 36px;
+            }
         }
 
         p {
             font: 500 24px / 100% var(--ff-base);
             letter-spacing: -1px;
             margin: 0;
+            @include media('mobile') {
+                font-size: 18px;
+            }
         }
     }
 
@@ -66,6 +78,9 @@
         p {
             font: 400 16px / 140% var(--ff-nort);
             margin: 0;
+            @include media('mobile') {
+                font-size: 13px;
+            }
 
             span {
                 color: var(--ball-blue);
@@ -86,6 +101,12 @@
         border-radius: 32px;
         background: #fff;
         box-shadow: 0px 4px 28px 0px #00000005;
+        @include media('mobile') {
+            max-height: 100%;
+            max-width: 100%;
+            padding: 20px 16px;
+            border-radius: 10px;
+        }
     }
 
     &__close {
@@ -101,16 +122,30 @@
         border-radius: 50%;
         background: rgba(38, 170, 204, 0.1);
 
+        @include media('mobile') {
+            top: 8px;
+            right: 8px;
+            width: 28px;
+            height: 28px;
+        }
+
         svg {
             width: 24px;
             height: 24px;
             color: #3e3e40;
+            @include media('mobile') {
+                width: 18px;
+                height: 18px;
+            }
         }
     }
 
     &__title {
         font: 400 48px / 100% var(--ff-base);
         letter-spacing: -2px;
+        @include media('mobile') {
+            font-size: 24px;
+        }
     }
 
     &__time {
@@ -145,6 +180,10 @@
         @include hover {
             background-color: #0084ad;
         }
+        @include media('mobile') {
+            padding: 13px;
+            font-size: 13px;
+        }
     }
 
     &__thumb {
@@ -152,9 +191,15 @@
         width: 100%;
         padding: 40px 60px 0 60px;
         border-bottom: 1px solid #d4dbde;
+        @include media('mobile') {
+            padding: 20px 16px 0 16px;
+        }
         img {
             max-width: 222px;
             margin: 0 auto;
+            @include media('mobile') {
+                max-width: 150px;
+            }
         }
     }
 
@@ -165,6 +210,10 @@
         gap: 20px;
         align-items: center;
         text-align: center;
+        @include media('mobile') {
+            padding: 0 16px 20px 16px;
+            gap: 12px;
+        }
     }
 
     .doctor--form {
@@ -177,6 +226,10 @@
         }
         .doctor-modal__title {
             margin-bottom: 32px;
+
+            @include media('mobile') {
+                margin-bottom: 12px;
+            }
         }
     }
 
@@ -195,6 +248,9 @@
             align-items: center;
             flex-direction: column;
             gap: 20px;
+            @include media('mobile') {
+                gap: 0;
+            }
         }
     }
 }
