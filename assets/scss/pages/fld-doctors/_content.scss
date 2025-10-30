@@ -4,12 +4,22 @@
 .main--doctors {
     .content {
         padding-top: 40px;
+        @include media('mobile') {
+            padding-top: 24px;
+        }
 
         .container {
             display: flex;
             align-items: flex-start;
             justify-content: space-between;
             gap: 20px;
+            @include media('desktop') {
+                flex-direction: column;
+                gap: 12px;
+            }
+            @include media('mobile') {
+                gap: 8px;
+            }
         }
 
         &__filters {
@@ -17,10 +27,22 @@
             top: 150px;
             max-width: 328px;
             width: 100%;
+            @include media('desktop') {
+                max-width: 100%;
+                position: relative;
+                top: 0;
+                z-index: 2;
+            }
         }
 
         &__title {
             margin-bottom: 56px;
+            @include media('desktop') {
+                margin-bottom: 24px;
+            }
+            @include media('mobile') {
+                margin-bottom: 12px;
+            }
         }
 
         &__tabs {
@@ -28,6 +50,20 @@
             flex-direction: column;
             gap: 32px;
             margin-bottom: 32px;
+            @include media('desktop') {
+                flex-direction: row;
+            }
+            @include media('mobile') {
+                margin-bottom: 24px;
+                gap: 20px;
+                overflow-x: auto;
+                scrollbar-width: none;
+                min-height: 30px;
+                -ms-overflow-style: none;
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+            }
         }
 
         &__tab {
@@ -55,6 +91,10 @@
                 &:first-child {
                     font: 400 32px / 100% var(--ff-base);
                     letter-spacing: -1px;
+                    @include media('mobile') {
+                        font-size: 24px;
+                        min-width: max-content;
+                    }
                 }
 
                 &:last-child {
@@ -74,6 +114,12 @@
             display: flex;
             flex-direction: column;
             gap: 24px;
+            @include media('desktop') {
+                gap: 12px;
+            }
+            @include media('mobile') {
+                gap: 8px;
+            }
         }
 
         &__select {
@@ -112,9 +158,19 @@
                 );
 
                 @include transitions(0.3s, ease-out);
+                @include media('mobile') {
+                    font-size: 12px;
+                    padding: 12px 11px;
+                    min-height: 40px;
+                }
 
                 &.placeholder {
                     color: #3e3e40;
+                    @include media('mobile') {
+                        display: flex;
+                        align-items: center;
+                        font-size: 12px;
+                    }
                 }
 
                 &::after {
@@ -130,6 +186,11 @@
                     background: url('../img/icons/icoDrop_blue.svg') no-repeat
                         center center;
                     @include transitions(0.3s, ease-out);
+                    @include media('mobile') {
+                        right: 7px;
+                        width: 20px;
+                        height: 20px;
+                    }
                 }
 
                 &:hover {
@@ -139,7 +200,11 @@
                 &:focus,
                 &.active {
                     border: 1px solid var(--ball-blue);
-                    background: linear-gradient(90deg, #ffffff 0%, #ffffff 100%);
+                    background: linear-gradient(
+                        90deg,
+                        #ffffff 0%,
+                        #ffffff 100%
+                    );
 
                     &::after {
                         transform: translateY(-50%) rotate(180deg);
@@ -170,10 +235,16 @@
                 border: 1px solid #d4dbde;
                 box-shadow: 0px 4px 12px 0px #00000014;
                 @include transitions(0.3s, ease-out);
+                @include media('mobile') {
+                    padding: 12px 16px;
+                }
 
                 li {
                     font: 400 18px / 160% var(--ff-nort);
                     @include transitions(0.3s, ease-out);
+                    @include media('mobile') {
+                        font-size: 14px;
+                    }
 
                     &:first-child {
                         display: none;
@@ -208,11 +279,17 @@
         &__body {
             width: 100%;
             max-width: 1086px;
+            @include media('desktop') {
+                max-width: 100%;
+            }
         }
 
         &__search {
             position: relative;
             margin-bottom: 60px;
+            @include media('mobile') {
+                margin-bottom: 24px;
+            }
 
             img {
                 position: absolute;
@@ -221,6 +298,9 @@
                 width: 20px;
                 height: 20px;
                 transform: translateY(-50%);
+                @include media('mobile') {
+                    left: 12px;
+                }
             }
 
             input {
@@ -238,6 +318,12 @@
                 );
 
                 @include transitions(0.3s, ease-out);
+                @include media('mobile') {
+                    font-size: 14px;
+                    padding: 12px 12px 12px 39px;
+                    min-height: auto;
+                }
+
                 &:focus {
                     border: 1px solid var(--ball-blue);
                     background: linear-gradient(
@@ -276,6 +362,11 @@
             grid-template-columns: repeat(3, 1fr);
             gap: 60px 24px;
             margin-bottom: 60px;
+            @include media('desktop') {
+                margin-bottom: 24px;
+                gap: 12px;
+                grid-template-columns: repeat(1, 1fr);
+            }
         }
 
         &__pagination {
@@ -284,6 +375,9 @@
             justify-content: center;
             gap: 8px;
             margin-bottom: 40px;
+            @include media('mobile') {
+                margin-bottom: 24px;
+            }
 
             &-btn {
                 font: 500 16px / 100% var(--ff-nort);
@@ -297,6 +391,11 @@
                 border-radius: 50%;
                 border: 2px solid transparent;
                 @include transitions(0.2s, ease-in);
+                @include media('mobile') {
+                    font-size: 14px;
+                    width: 32px;
+                    height: 32px;
+                }
 
                 &.is-active {
                     border-color: var(--ball-blue);

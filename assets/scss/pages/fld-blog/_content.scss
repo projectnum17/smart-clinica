@@ -54,7 +54,8 @@
                 @include transitions(0.2s, ease-in);
                 @include media('mobile') {
                     font-size: 14px;
-                    width: 32+h32   ;
+                    width: 32px;
+                    height: 32px;
                 }
 
                 &.is-active {

@@ -23,6 +23,9 @@
     li {
         font: 400 16px / 100% var(--ff-nort);
         min-width: max-content;
+        @include media('mobile') {
+            font-size: 14px;
+        }
 
         a {
             font: inherit;
