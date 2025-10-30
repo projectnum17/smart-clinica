@@ -4,10 +4,16 @@
 .main--contacts {
     .info {
         padding-top: 40px;
+        @include media('mobile') {
+            padding-top: 24px;
+        }
 
         &__title {
             text-align: center;
             margin-bottom: 40px;
+            @include media('mobile') {
+                margin-bottom: 24px;
+            }
         }
 
         &__box {
@@ -20,16 +26,33 @@
             background: #fff;
             border: 1px solid #dfe0e1;
             box-shadow: 0px 4px 28px 0px #00000005;
+            @include media('desktop') {
+                flex-direction: column;
+            }
+            @include media('mobile') {
+                border-radius: 16px;
+                padding: 20px;
+            }
         }
 
         &__col {
             &:first-child {
                 max-width: 660px;
+                @include media('desktop') {
+                    max-width: 100%;
+                }
             }
 
             &:last-child {
                 padding-top: 25px;
                 max-width: 654px;
+                @include media('desktop') {
+                    max-width: 100%;
+                    width: 100%;
+                }
+                @include media('mobile') {
+                    padding-top: 0;
+                }
             }
         }
 
@@ -39,14 +62,23 @@
             border-radius: 32px;
             background: var(--white);
             border: 8px solid #f0f4f9;
+            @include media('mobile') {
+                padding: 0;
+                border-radius: 12px;
+                margin-bottom: 12px;
+            }
         }
 
         &__thumb {
             border-radius: 20px;
             overflow: hidden;
             height: 468px;
-
             width: 100%;
+
+            @include media('mobile') {
+                height: 256px;
+                border-radius: 4px;
+            }
 
             img {
                 width: 100%;
@@ -57,12 +89,19 @@
 
         &__reminder {
             font: 400 14px / 140% var(--ff-nort);
+            @include media('mobile') {
+                font-size: 12px;
+            }
         }
 
         &__subtitle {
             font: 400 32px /100% var(--ff-base);
             letter-spacing: -1px;
             margin-bottom: 24px;
+            @include media('mobile') {
+                font-size: 24px;
+                margin-bottom: 18px;
+            }
         }
 
         &__list {
@@ -70,12 +109,25 @@
             grid-template-columns: repeat(2, 1fr);
             gap: 24px;
             margin-bottom: 24px;
+            @include media('mobile') {
+                grid-template-columns: repeat(1, 1fr);
+                gap: 12px;
+                margin-bottom: 12px;
+            }
 
             &-item {
                 font: 500 20px / 100% var(--ff-nort);
                 display: flex;
                 align-items: center;
                 gap: 16px;
+                @include media('mobile') {
+                    font-size: 14px;
+
+                    img {
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
             }
 
             &-link {
@@ -87,6 +139,10 @@
 
         &__cons {
             margin-bottom: 24px;
+            @include media('mobile') {
+                width: 100%;
+                justify-content: center;
+            }
         }
 
         &__route {
@@ -95,16 +151,29 @@
             border-radius: 20px;
             background: #f0f4f9;
 
+            @include media('mobile') {
+                padding: 20px;
+                border-radius: 12px;
+                margin-bottom: 24px;
+            }
+
             &-title {
                 font: 500 24px / 100% var(--ff-base);
                 letter-spacing: -1px;
                 margin-bottom: 20px;
+                @include media('mobile') {
+                    font-size: 18px;
+                    margin-bottom: 16px;
+                }
             }
 
             &-list {
                 display: flex;
                 flex-direction: column;
                 gap: 16px;
+                @include media('mobile') {
+                    gap: 12px;
+                }
             }
 
             &-link,
@@ -117,20 +186,31 @@
                 img {
                     width: 24px;
                     height: 24px;
+                    @include media('mobile') {
+                        width: 20px;
+                        height: 20px;
+                    }
                 }
             }
 
             &-btn {
                 span {
                     text-decoration: underline;
+                    text-align: left;
                 }
             }
 
             &-item {
                 font: 400 16px / 100% var(--ff-nort);
+                @include media('mobile') {
+                    font-size: 14px;
+                }
 
                 &:first-child {
                     font: 500 20px / 100% var(--ff-nort);
+                    @include media('mobile') {
+                        font-size: 18px;
+                    }
                 }
             }
         }
@@ -140,15 +220,27 @@
             align-items: center;
             gap: 24px;
 
+            @include media('mobile') {
+                justify-content: space-between;
+                flex-direction: column;
+                gap: 12px;
+            }
+
             &-title {
                 font: 500 24px / 100% var(--ff-base);
                 letter-spacing: -1px;
+                @include media('mobile') {
+                    font-size: 18px;
+                }
             }
 
             &-list {
                 display: flex;
                 align-items: center;
                 gap: 16px;
+                @include media('mobile') {
+                    gap: 8px;
+                }
             }
 
             &-item {
@@ -160,12 +252,20 @@
                 justify-content: center;
                 border-radius: 8px;
                 border: 1px solid var(--ball-blue);
+                @include media('mobile') {
+                    width: 34px;
+                    height: 34px;
+                }
             }
 
             &-link {
                 width: 28px;
                 height: 28px;
                 flex-shrink: 0;
+                @include media('mobile') {
+                    width: 20px;
+                    height: 20px;
+                }
                 img {
                     width: 100%;
                     height: 100%;
@@ -182,12 +282,20 @@
             background: #fff;
             border: 1px solid #dfe0e1;
             box-shadow: 0px 4px 28px 0px #00000005;
+            @include media('mobile') {
+                border-radius: 16px;
+                padding: 16px;
+            }
         }
 
         &__flow {
             border-radius: 20px;
             overflow: hidden;
             height: 524px;
+            @include media('mobile') {
+                height: 250px;
+                border-radius: 10px;
+            }
 
             img {
                 height: 100%;
@@ -209,6 +317,10 @@
         &__ico {
             width: 48px;
             height: 48px;
+            @include media('mobile') {
+                width: 30px;
+                height: 30px;
+            }
         }
 
         &__title {
