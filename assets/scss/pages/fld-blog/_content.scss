@@ -4,9 +4,15 @@
 .main--blog {
     .info {
         padding-top: 32px;
+        @include media('mobile') {
+            padding-top: 24px;
+        }
 
         &__title {
             margin-bottom: 40px;
+            @include media('mobile') {
+                margin-bottom: 24px;
+            }
         }
 
         &__cards {
@@ -14,6 +20,12 @@
             display: grid;
             gap: 32px 20px;
             grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+            @include media('mobile') {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+                padding-top: 24px;
+            }
         }
 
         &__pagination {
@@ -23,6 +35,10 @@
             justify-content: center;
             gap: 8px;
             margin-bottom: 40px;
+            @include media('mobile') {
+                margin-bottom: 24px;
+                padding-top: 40px;
+            }
 
             &-btn {
                 font: 500 16px / 100% var(--ff-nort);
@@ -36,6 +52,10 @@
                 border-radius: 50%;
                 border: 2px solid transparent;
                 @include transitions(0.2s, ease-in);
+                @include media('mobile') {
+                    font-size: 14px;
+                    width: 32+h32   ;
+                }
 
                 &.is-active {
                     border-color: var(--ball-blue);
