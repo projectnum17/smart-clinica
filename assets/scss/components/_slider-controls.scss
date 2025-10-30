@@ -18,6 +18,9 @@
         .slider-navigation {
             width: 100%;
             gap: 30px;
+            @include media('mobile') {
+                gap: 20px;
+            }
         }
     }
 }

@@ -289,6 +289,15 @@ const sliders = () => {
                 el: '.js-intern-progress',
                 type: 'progressbar',
             },
+            breakpoints: {
+                0: {
+                    slidesPerView: 3,
+                    spaceBetween: 12,
+                },
+                768: {
+                    slidesPerView: 6,
+                },
+            },
         });
     };
 

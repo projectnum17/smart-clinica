@@ -7,6 +7,17 @@
         grid-template-columns: 456px 1fr 456px;
         gap: 20px;
         border-bottom: 1px solid rgba(120, 126, 128, 0.4);
+        @include media('desktop') {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @include media('tablet') {
+            display: flex;
+            flex-direction: column;
+            border: none;
+        }
+        @include media('mobile') {
+            gap: 4px;
+        }
     }
 
     &__title {
@@ -21,6 +32,9 @@
         justify-content: flex-end;
         gap: 20px;
         align-items: center;
+        @include media('desktop') {
+            display: none;
+        }
 
         img {
             max-width: 452px;
@@ -33,5 +47,19 @@
         flex-direction: column;
         gap: 20px;
         padding-bottom: 75px;
+
+        @include media('tablet') {
+            padding-bottom: 0;
+        }
+
+        @include media('mobile') {
+            gap: 4px;
+        }
+
+        .benefit-card {
+            @include media('desktop') {
+                max-width: 100%;
+            }
+        }
     }
 }
