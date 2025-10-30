@@ -4,15 +4,31 @@
 .main--docs {
     .info {
         padding-top: 40px;
+
+        @include media('mobile') {
+            padding-top: 24px;
+        }
+
         &__title {
             text-align: center;
             margin-bottom: 40px;
+            @include media('mobile') {
+                margin-bottom: 24px;
+            }
         }
 
         &__items {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 60px 20px;
+            @include media('tablet') {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 40px 20px;
+            }
+            @include media('mobile') {
+                grid-template-columns: repeat(1, 1fr);
+                gap: 20px;
+            }
         }
 
         &__item {
@@ -20,6 +36,11 @@
             flex-direction: column;
             gap: 16px;
             position: relative;
+
+            @include media('mobile') {
+                overflow: hidden;
+                gap: 10px;
+            }
 
             &::after {
                 content: '';
@@ -30,8 +51,14 @@
                 width: 40px;
                 height: 40px;
                 background: url('../img/icons/ico-shape.svg') no-repeat center
-                    center;
+                    center / cover;
                 @include transitions(0.3s, ease-in);
+                @include media('mobile') {
+                    width: 30px;
+                    height: 30px;
+                    right: -2px;
+                    top: -2px;
+                }
             }
 
             @include hover {
@@ -54,18 +81,31 @@
 
             &-tag {
                 font: 500 18px / 100% var(--ff-nort);
+                @include media('mobile') {
+                    font-size: 16px;
+                }
             }
 
             &-box {
                 border-radius: 20px;
                 padding: 20px;
                 background-color: #fff;
+                @include media('mobile') {
+                    border-radius: 10px;
+                    padding: 12px;
+                }
             }
 
             &-relative {
                 border-radius: 12px;
                 position: relative;
                 overflow: hidden;
+
+                img {
+                    @include media('tablet') {
+                        margin: 0 auto;
+                    }
+                }
 
                 &::after {
                     content: '';
@@ -107,6 +147,9 @@
 
         .btn-more {
             margin: 60px auto 0;
+            @include media('mobile') {
+                margin: 40px auto 0;
+            }
         }
     }
 }
