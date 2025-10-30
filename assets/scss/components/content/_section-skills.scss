@@ -3,16 +3,35 @@
 
 .skills {
     border-bottom: 1px solid rgba(120, 126, 128, 0.4);
+    @include media('mobile') {
+        border: none;
+    }
 
     &__content {
         display: grid;
         grid-template-columns: 456px 1fr 456px;
         gap: 20px;
+        @include media('desktop') {
+            display: flex;
+            justify-content: space-between;
+        }
+        @include media('mobile') {
+            flex-direction: column;
+            gap: 4px;
+        }
     }
 
     &__title {
         text-align: center;
         transform: translateY(-50px);
+        @include media('desktop') {
+            transform: translate(0);
+            margin-bottom: 36px;
+        }
+        @include media('mobile') {
+            transform: translate(0);
+            margin-bottom: 24px;
+        }
     }
 
     &__hero {
@@ -21,6 +40,9 @@
         justify-content: flex-end;
         gap: 20px;
         align-items: center;
+        @include media('desktop') {
+            display: none;
+        }
 
         img {
             max-width: 500px;
@@ -33,5 +55,17 @@
         flex-direction: column;
         gap: 20px;
         padding-bottom: 75px;
+
+        @include media('mobile') {
+            padding-bottom: 0;
+            gap: 4px;
+        }
+
+        .benefit-card {
+            @include media('desktop') {
+                width: 100%;
+                max-width: 100%;
+            }
+        }
     }
 }

@@ -5,6 +5,12 @@
     .logotype {
         &__title {
             text-align: center;
+            @include media('tablet') {
+                margin-bottom: 36px;
+            }
+            @include media('mobile') {
+                margin-bottom: 24px;
+            }
         }
 
         &__cards {
@@ -12,10 +18,21 @@
             align-items: center;
             gap: 20px;
             justify-content: space-between;
+            @include media('tablet') {
+                flex-direction: column;
+                gap: 12px;
+            }
         }
 
         &__video {
             max-width: 720px;
+            @include media('tablet') {
+                max-width: 460px;
+            }
+
+            @include media('mobile') {
+                max-width: 160px;
+            }
 
             video {
                 width: 100%;
@@ -28,16 +45,30 @@
             flex-direction: column;
             gap: 24px;
             max-width: 355px;
+            @include media('tablet') {
+                max-width: 100%;
+                flex-shrink: initial;
+                text-align: center;
+            }
+            @include media('mobile') {
+                gap: 12px;
+            }
         }
 
         &__subtitle {
             font: 500 24px / 100% var(--ff-base);
             letter-spacing: -1px;
             color: var(--sea-blue);
+            @include media('mobile') {
+                font-size: 18px;
+            }
         }
 
         &__text {
             font: 400 16px / 140% var(--ff-nort);
+            @include media('mobile') {
+                font-size: 13px;
+            }
         }
     }
 }

@@ -124,7 +124,8 @@
                                                 <div class="dd-menu-wrap">
                                                     <div class="container">
                                                         <div class="dd-menu-inner">
-                                                            <button type="button" class="dd-menu-back">Діагностика</button>
+                                                            <button type="button"
+                                                                class="dd-menu-back">Діагностика</button>
                                                             <ul class="router-links">
                                                                 <li>
                                                                     <a href="#!">алергологія</a>
@@ -201,7 +202,8 @@
                                                 <div class="dd-menu-wrap">
                                                     <div class="container">
                                                         <div class="dd-menu-inner">
-                                                            <button type="button" class="dd-menu-back">Діагностика</button>
+                                                            <button type="button"
+                                                                class="dd-menu-back">Діагностика</button>
                                                             <ul class="router-links">
                                                                 <li>
                                                                     <a href="#!">алергологія</a>
@@ -637,7 +639,8 @@
                                     <label class="appointment__form-title" for="modalAppDate">Бажана дата
                                         прийому</label>
                                     <div class="appointment__form-inner field-date">
-                                        <input class="appointment__form-field field-date--item" data-lang="uk" name="modalAppDate" id="modalAppDate">
+                                        <input class="appointment__form-field field-date--item" data-lang="uk"
+                                            name="modalAppDate" id="modalAppDate">
                                     </div>
                                 </div>
                             </div>
@@ -1880,15 +1883,24 @@
         </section>
         <section class="skills">
             <div class="container">
+                <h2 class="skills__title content-title desktop--visible">
+                    Сильні сторони <span>Smart klinika</span>
+                </h2>
                 <div class="skills__content">
                     <div class="skills__cards">
                         <div class="benefit-card js-animation">
-                            <div class="benefit-card__ico">
+                            <div class="benefit-card__ico mobile--hidden">
                                 <lottie-player class="lottie-anim" src="./assets/animations/heart.json" direction="1"
                                     mode="normal" loop autoplay></lottie-player>
                             </div>
                             <div class="benefit-card__content">
-                                <p class="benefit-card__title">Формула здоров’я</p>
+                                <div class="benefit-card__inner">
+                                    <div class="benefit-card__ico mobile--visible">
+                                        <lottie-player class="lottie-anim" src="./assets/animations/heart.json"
+                                            direction="1" mode="normal" loop autoplay></lottie-player>
+                                    </div>
+                                    <p class="benefit-card__title">Формула здоров’я</p>
+                                </div>
                                 <p class="benefit-card__text">
                                     Ми продумали всі можливі деталі для задоволення потреб пацієнта. Формула вашого
                                     здоров’я
@@ -1897,12 +1909,18 @@
                             </div>
                         </div>
                         <div class="benefit-card js-animation">
-                            <div class="benefit-card__ico">
+                            <div class="benefit-card__ico mobile--hidden">
                                 <lottie-player class="lottie-anim" src="./assets/animations/users.json" direction="1"
                                     mode="normal" loop autoplay></lottie-player>
                             </div>
                             <div class="benefit-card__content">
-                                <p class="benefit-card__title">Експертна команда</p>
+                                <div class="benefit-card__inner">
+                                    <div class="benefit-card__ico mobile--visible">
+                                        <lottie-player class="lottie-anim" src="./assets/animations/users.json"
+                                            direction="1" mode="normal" loop autoplay></lottie-player>
+                                    </div>
+                                    <p class="benefit-card__title">Експертна команда</p>
+                                </div>
                                 <p class="benefit-card__text">
                                     Об’єднуємо молодих прогресивних фахівців та світил української медицини. У нас ви
                                     отримаєте повне розуміння стану здоров’я та детальний план для подальших дій.
@@ -1910,12 +1928,18 @@
                             </div>
                         </div>
                         <div class="benefit-card js-animation">
-                            <div class="benefit-card__ico">
+                            <div class="benefit-card__ico mobile--hidden">
                                 <lottie-player class="lottie-anim" src="./assets/animations/handshake.json"
                                     direction="1" mode="normal" loop autoplay></lottie-player>
                             </div>
                             <div class="benefit-card__content">
-                                <p class="benefit-card__title">Чесні взаємини</p>
+                                <div class="benefit-card__inner">
+                                    <div class="benefit-card__ico mobile--visible">
+                                        <lottie-player class="lottie-anim" src="./assets/animations/handshake.json"
+                                            direction="1" mode="normal" loop autoplay></lottie-player>
+                                    </div>
+                                    <p class="benefit-card__title">Чесні взаємини</p>
+                                </div>
                                 <p class="benefit-card__text">
                                     Будуємо прозорі відносини з пацієнтами — відкриті до будь-якого зворотного зв’язку.
                                     Наш
@@ -1927,19 +1951,25 @@
                         </div>
                     </div>
                     <div class="skills__hero js-animation">
-                        <h2 class="skills__title content-title">
-                            Сильні сторни <span>Smart klinika</span>
+                        <h2 class="skills__title content-title desktop--hidden">
+                            Сильні сторони <span>Smart klinika</span>
                         </h2>
                         <img src="./assets/img/person_lg.svg" alt="Person">
                     </div>
                     <div class="skills__cards">
                         <div class="benefit-card js-animation">
-                            <div class="benefit-card__ico">
+                            <div class="benefit-card__ico mobile--hidden">
                                 <lottie-player class="lottie-anim" src="./assets/animations/case.json" direction="1"
                                     mode="normal" loop autoplay></lottie-player>
                             </div>
                             <div class="benefit-card__content">
-                                <p class="benefit-card__title">Комплексний супровід</p>
+                                <div class="benefit-card__inner">
+                                    <div class="benefit-card__ico mobile--visible">
+                                        <lottie-player class="lottie-anim" src="./assets/animations/case.json"
+                                            direction="1" mode="normal" loop autoplay></lottie-player>
+                                    </div>
+                                    <p class="benefit-card__title">Комплексний супровід</p>
+                                </div>
                                 <p class="benefit-card__text">
                                     Проводимо онлайн-консультації. Забезпечуємо все ідеально продумано для пацієнта, без
                                     зайвих призначень та процедур. Із яким би питанням ви не звернулись — ми зможемо
@@ -1949,12 +1979,18 @@
                             </div>
                         </div>
                         <div class="benefit-card js-animation">
-                            <div class="benefit-card__ico">
+                            <div class="benefit-card__ico mobile--hidden">
                                 <lottie-player class="lottie-anim" src="./assets/animations/brain.json" direction="1"
                                     mode="normal" loop autoplay></lottie-player>
                             </div>
                             <div class="benefit-card__content">
-                                <p class="benefit-card__title">Сучасні технології</p>
+                                <div class="benefit-card__inner">
+                                    <div class="benefit-card__ico mobile--visible">
+                                        <lottie-player class="lottie-anim" src="./assets/animations/brain.json"
+                                            direction="1" mode="normal" loop autoplay></lottie-player>
+                                    </div>
+                                    <p class="benefit-card__title">Сучасні технології</p>
+                                </div>
                                 <p class="benefit-card__text">
                                     Розвиваємо майбутнє української медицини тут і зараз: розвиваємо «розумну» медицину,
                                     в
@@ -1963,12 +1999,18 @@
                             </div>
                         </div>
                         <div class="benefit-card js-animation">
-                            <div class="benefit-card__ico">
+                            <div class="benefit-card__ico mobile--hidden">
                                 <lottie-player class="lottie-anim" src="./assets/animations/beat.json" direction="1"
                                     mode="normal" loop autoplay></lottie-player>
                             </div>
                             <div class="benefit-card__content">
-                                <p class="benefit-card__title">Новітнє обладнання</p>
+                                <div class="benefit-card__inner">
+                                    <div class="benefit-card__ico mobile--visible">
+                                        <lottie-player class="lottie-anim" src="./assets/animations/beat.json"
+                                            direction="1" mode="normal" loop autoplay></lottie-player>
+                                    </div>
+                                    <p class="benefit-card__title">Новітнє обладнання</p>
+                                </div>
                                 <p class="benefit-card__text">
                                     Розвиваємо майбутнє української медицини тут і зараз: розвиваємо «розумну» медицину,
                                     в
@@ -2141,7 +2183,7 @@
                             </div>
                         </div>
                         <div class="doctors__slider-slide swiper-slide">
-                             <div href="#!" class="doctor-box">
+                            <div href="#!" class="doctor-box">
                                 <a href="#!" class="doctor-box__inner">
                                     <div class="doctor-box__row">
                                         <p class="doctor-box__surname">Владимирець</p>
@@ -2227,7 +2269,7 @@
                             </div>
                         </div>
                         <div class="doctors__slider-slide swiper-slide">
-                             <div href="#!" class="doctor-box">
+                            <div href="#!" class="doctor-box">
                                 <a href="#!" class="doctor-box__inner">
                                     <div class="doctor-box__row">
                                         <p class="doctor-box__surname">Владимирець</p>
@@ -2274,7 +2316,7 @@
                             </div>
                         </div>
                         <div class="doctors__slider-slide swiper-slide">
-                             <div href="#!" class="doctor-box">
+                            <div href="#!" class="doctor-box">
                                 <a href="#!" class="doctor-box__inner">
                                     <div class="doctor-box__row">
                                         <p class="doctor-box__surname">Владимирець</p>
@@ -2463,7 +2505,8 @@
                         <div class="reviews__items-slide swiper-slide">
                             <div class="review-box js-review-box"
                                 data-answer="Дякуємо за ваш теплий відгук про роботу клініки та лікаря-терапевта Тетяну Євтушенко. Ми щиро раді, що ви високо оцінили професіоналізм і уважність лікаря. Бажаємо міцного здоров’я 💙 Дякуємо за ваш теплий відгук про роботу клініки та лікаря-терапевта Тетяну Євтушенко. Ми щиро раді, що ви високо оцінили професіоналізм і уважність лікаря"
-                                data-name="Вікторія" data-date="14 Травня 2025" data-rating="4.9" data-spec="Владимирець Олена Сергіївна" data-service="Алергологія">
+                                data-name="Вікторія" data-date="14 Травня 2025" data-rating="4.9"
+                                data-spec="Владимирець Олена Сергіївна" data-service="Алергологія">
                                 <div class="review-box__content">
                                     <div class="review-box__head">
                                         <div class="review-box__info">

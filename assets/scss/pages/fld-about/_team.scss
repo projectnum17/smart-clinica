@@ -3,6 +3,11 @@
 
 .main--about {
     .team {
+        .container {
+            @include media('mobile') {
+                padding-inline: 0;
+            }
+        }
         &__head {
             display: flex;
             flex-direction: column;
@@ -11,16 +16,30 @@
             text-align: center;
             max-width: 730px;
             margin: 0 auto 68px;
+            @include media('tablet') {
+                margin: 0 auto 42px;
+            }
+
+            @include media('mobile') {
+                gap: 12px;
+                padding-inline: 20px;
+            }
         }
 
         &__text {
             font: 400 20px / 140% var(--ff-nort);
+            @include media('mobile') {
+                font-size: 16px;
+            }
         }
 
         &__cards {
             gap: 20px;
             display: flex;
             flex-direction: column;
+            @include media('mobile') {
+                flex-direction: column;
+            }
         }
 
         &__card {
@@ -28,6 +47,15 @@
             max-width: 280px;
             border-radius: 12px;
             overflow: hidden;
+
+            @include media('tablet') {
+                width: 100%;
+            }
+
+            @include media('mobile') {
+                flex-shrink: 0;
+                height: 296px;
+            }
 
             img {
                 width: 100%;
@@ -39,10 +67,37 @@
         .team-inner {
             display: flex;
             gap: 20px;
+            @include media('tablet') {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            @include media('mobile') {
+                height: 296px;
+                padding-inline: 20px;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                flex-shrink: 0;
+                justify-content: flex-start;
+                overflow-x: auto;
+                scrollbar-width: none;
+                -ms-overflow-style: none;
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+                scroll-snap-type: x mandatory;
+            }
 
             .team__card {
+                @include media('mobile') {
+                    scroll-snap-align: center;
+                    display: grid;
+                }
                 &:nth-child(2n) {
                     transform: translateY(-48px);
+                    @include media('tablet') {
+                        transform: translateY(0);
+                    }
                 }
             }
         }

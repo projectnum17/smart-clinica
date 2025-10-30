@@ -160,18 +160,20 @@
         }
 
         &__cons {
-            width: 50%;
-            flex: 1;
-            justify-content: center;
             @include media('mobile') {
+                width: 50%;
+                flex: 1;
+                justify-content: center;
                 padding: 13px;
             }
         }
 
         &__price {
-            width: 50%;
-            flex: 1;
-            justify-content: center;
+            @include media('mobile') {
+                width: 50%;
+                flex: 1;
+                justify-content: center;
+            }
         }
 
         &__controls {

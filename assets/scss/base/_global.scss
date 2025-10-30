@@ -84,6 +84,19 @@ section.about {
     }
 }
 
+.desktop--hidden {
+    @include media('desktop') {
+        display: none;
+    }
+}
+
+.desktop--visible {
+    display: none;
+    @include media('desktop') {
+        display: block;
+    }
+}
+
 .lottie-anim {
     width: 48px;
     height: 48px;
@@ -103,13 +116,6 @@ section.about {
         }
     }
 }
-
-// .main:has(.js-animation) {
-//     overflow: hidden;
-// }
-// .main:has(.js-animation._animated) {
-//     overflow: auto;
-// }
 
 .fancybox__thumbs .carousel__slide .fancybox__thumb::after {
     border-width: 2px;
