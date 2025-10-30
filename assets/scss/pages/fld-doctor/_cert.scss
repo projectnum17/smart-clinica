@@ -24,6 +24,11 @@
             padding: 20px;
             border-radius: 20px;
             background: var(--white);
+            @include media('mobile') {
+                padding: 12px;
+                border-radius: 12px;
+                max-width: 300px;
+            }
 
             @include hover {
                 .cert-box__zoom::after {
@@ -43,6 +48,10 @@
                 position: relative;
                 border-radius: 12px;
                 overflow: hidden;
+                @include media('mobile') {
+                    height: 250px;
+                    overflow: hidden;
+                }
 
                 &::after {
                     content: '';

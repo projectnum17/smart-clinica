@@ -4,12 +4,18 @@
 .main--doctor {
     .info {
         padding-top: 32px;
+        @include media('mobile') {
+            padding-top: 24px;
+        }
 
         .container {
             display: flex;
             align-items: flex-start;
             justify-content: space-between;
             gap: 20px;
+            @include media('tablet') {
+                flex-direction: column;
+            }
         }
 
         &__sticky {
@@ -17,6 +23,11 @@
             top: 170px;
             max-width: 730px;
             width: 100%;
+            @include media('tablet') {
+                position: relative;
+                top: 0;
+                max-width: 100%;
+            }
         }
 
         &__thumbnail {
@@ -26,6 +37,11 @@
             height: 75svh;
             border-radius: 32px;
             overflow: hidden;
+            @include media('mobile') {
+                height: 50vh;
+                height: 50svh;
+                border-radius: 16px;
+            }
 
             img {
                 width: 100%;
@@ -40,10 +56,15 @@
                 left: 50%;
                 transform: translateX(-50%);
                 background: url('../img/decoration-rec.svg') no-repeat center
-                    center;
+                    center / cover;
                 height: 76px;
                 max-width: 512px;
                 width: 100%;
+                @include media('mobile') {
+                    height: 52px;
+                    max-width: 100%;
+                    width: 100%;
+                }
             }
         }
 
@@ -68,11 +89,19 @@
             @include hover {
                 background-color: #0084ad;
             }
+            @include media('mobile') {
+                padding: 13px;
+                font-size: 13px;
+                width: 70%;
+            }
         }
 
         &__about {
             max-width: 604px;
             width: 100%;
+            @include media('tablet') {
+                max-width: 100%;
+            }
         }
 
         &__controls {
@@ -80,6 +109,10 @@
             align-items: center;
             gap: 48px;
             margin-bottom: 32px;
+            @include media('mobile') {
+                margin-bottom: 24px;
+                gap: 20px;
+            }
 
             &-rev {
                 display: inline-flex;
@@ -100,6 +133,10 @@
                 font: 400 48px / 100% var(--ff-base);
                 letter-spacing: -2px;
                 margin: 0 0 24px;
+                @include media('mobile') {
+                    font-size: 32px;
+                    margin: 0 0 18px;
+                }
             }
         }
 
@@ -109,6 +146,9 @@
             flex-wrap: wrap;
             gap: 12px;
             margin-bottom: 24px;
+            @include media('mobile') {
+                gap: 8px;
+            }
 
             span {
                 font: 500 14px / 100% var(--ff-nort);
@@ -124,6 +164,10 @@
             flex-direction: column;
             gap: 24px;
             margin-bottom: 40px;
+            @include media('mobile') {
+                gap: 12px;
+                margin-bottom: 24px;
+            }
 
             &-item {
                 display: flex;
@@ -133,6 +177,9 @@
 
             &-title {
                 font: 500 20px / 100% var(--ff-nort);
+                @include media('mobile') {
+                    font-size: 16px;
+                }
             }
 
             &-descr {
@@ -141,6 +188,9 @@
                 align-items: center;
                 gap: 20px;
                 flex-wrap: wrap;
+                @include media('mobile') {
+                    font-size: 14px;
+                }
 
                 span {
                     font-weight: 500;
@@ -168,11 +218,18 @@
                     rgba(255, 255, 255, 0.3) 100%
                 );
                 @include transitions(0.3s, ease-in-out);
+                @include media('mobile') {
+                    padding: 16px;
+                    border-radius: 12px;
+                }
 
                 &.is-hover {
                     @include hover {
                         box-shadow: 0px 8px 20px 0px #00000014;
                         padding: 19px 19px 19px 39px;
+                        @include media('mobile') {
+                            padding: 16px 16px 16px 22px;
+                        }
 
                         .info__additional-title {
                             color: var(--ball-blue);
@@ -189,6 +246,11 @@
 
                 &.is-open {
                     padding: 19px 19px 35px 39px;
+
+                    @include media('mobile') {
+                        padding: 16px 16px 16px 22px;
+                    }
+
                     .info__additional-inner {
                         grid-template-rows: 1fr;
                     }
@@ -229,9 +291,18 @@
                     border-radius: 8px;
                     background: rgba(38, 170, 204, 0.2);
                     @include transitions(0.3s, ease-in-out);
+                    @include media('mobile') {
+                        width: 25px;
+                        height: 25px;
+                        border-radius: 4px;
+                    }
 
                     svg {
                         @include transitions(0.3s, ease-in-out);
+                        @include media('mobile') {
+                            width: 18px;
+                            height: 18px;
+                        }
                     }
                 }
             }
@@ -240,6 +311,9 @@
                 font: 500 24px / 100% var(--ff-base);
                 letter-spacing: -1px;
                 @include transitions(0.3s, ease-in-out);
+                @include media('mobile') {
+                    font-size: 18px;
+                }
             }
 
             &-points {
@@ -254,6 +328,10 @@
                 display: inline-flex;
                 align-items: flex-start;
                 gap: 12px;
+                @include media('mobile') {
+                    font-size: 14px;
+                    gap: 8px;
+                }
 
                 &::before {
                     content: '';
@@ -263,6 +341,10 @@
                     height: 24px;
                     background: url('../img/icons/ico-logo.svg') no-repeat
                         center center / cover;
+                    @include media('mobile') {
+                        width: 20px;
+                        height: 20px;
+                    }
                 }
 
                 a {
