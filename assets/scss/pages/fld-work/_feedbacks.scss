@@ -21,6 +21,10 @@
             border-radius: 24px;
             border: 1px solid #dde0e3;
             background: #fff;
+            @include media('mobile') {
+                padding: 20px 16px;
+                border-radius: 12px;
+            }
 
             &__head {
                 display: flex;
@@ -33,6 +37,9 @@
             &__name {
                 font: 400 28px / 100% var(--ff-base);
                 letter-spacing: -1px;
+                @include media('mobile') {
+                    font-size: 20px;
+                }
             }
 
             &__date {
@@ -40,6 +47,10 @@
                 display: inline-flex;
                 align-items: center;
                 gap: 20px;
+                @include media('mobile') {
+                    font-size: 13px;
+                    gap: 12px;
+                }
                 &::after {
                     content: '';
                     display: inline-flex;
@@ -47,7 +58,11 @@
                     width: 44px;
                     height: 44px;
                     background: url('../img/icons/ico-quote.svg') no-repeat
-                        center center;
+                        center center / cover;
+                    @include media('mobile') {
+                        width: 20px;
+                        height: 20px;
+                    }
                 }
             }
 
@@ -64,11 +79,17 @@
                     display: inline-flex;
                     padding: 6px 16px;
                     background: #26aacc1f;
+                    @include media('mobile') {
+                        font-size: 13px;
+                    }
                 }
             }
 
             &__text {
                 font: 400 16px / 140% var(--ff-nort);
+                @include media('mobile') {
+                    font-size: 14px;
+                }
 
                 &.is-highest {
                     position: relative;

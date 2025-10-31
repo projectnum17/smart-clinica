@@ -173,25 +173,41 @@
 
     &__body {
         padding: 30px;
+        @include media('mobile') {
+            padding: 20px 16px;
+        }
 
         .feedback-box__head {
             margin-bottom: 24px;
+            @include media('mobile') {
+                margin-bottom: 12px;
+            }
         }
 
         .feedback-box__name {
             font: 400 48px / 100% var(--ff-base);
             letter-spacing: -2px;
             margin-bottom: 16px;
+            @include media('mobile') {
+                font-size: 24px;
+                margin-bottom: 8px;
+            }
         }
 
         .feedback-box__date {
             font: 400 16px / 100% var(--ff-nort);
+            @include media('mobile') {
+                font-size: 14px;
+            }
         }
 
         .feedback-box__text {
             font: 400 16px / 140% var(--ff-nort);
             max-height: 264px;
             overflow-y: auto;
+            @include media('mobile') {
+                font-size: 14px;
+            }
         }
 
         .feedback-box__labels span {

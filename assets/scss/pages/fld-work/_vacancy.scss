@@ -4,6 +4,9 @@
 .main--work {
     .vacancies {
         padding-top: 32px;
+        @include media('mobile') {
+            padding-top: 24px;
+        }
 
         &__head {
             display: flex;
@@ -12,15 +15,25 @@
             text-align: center;
             max-width: 980px;
             margin: 0 auto 60px;
+            @include media('mobile') {
+                margin: 0 auto 24px;
+            }
         }
 
         &__title {
             margin-bottom: 24px;
+            @include media('mobile') {
+                margin-bottom: 12px;
+            }
         }
 
         &__text {
             font: 400 18px / 140% var(--ff-nort);
             margin-bottom: 32px;
+            @include media('mobile') {
+                font-size: 14px;
+                margin-bottom: 24px;
+            }
             a {
                 text-decoration: underline;
                 color: var(--sea-blue);
@@ -42,11 +55,27 @@
             border-radius: 24px;
             border: 1px solid #dde0e3;
             background-color: #fff;
+            @include media('desktop') {
+                padding: 16px 20px;
+                border-radius: 12px;
+            }
+            @include media('tablet') {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
 
             &__info {
                 display: inline-flex;
                 align-items: center;
                 gap: 60px;
+                @include media('desktop') {
+                    flex-direction: column;
+                    gap: 12px;
+                }
+                @include media('mobile') {
+                    gap: 8px;
+                }
             }
 
             &__description {
@@ -55,12 +84,29 @@
                 display: flex;
                 flex-direction: column;
                 gap: 12px;
+                @include media('desktop') {
+                    max-width: 400px;
+                }
+                @include media('tablet') {
+                    align-items: center;
+                    text-align: center;
+                    max-width: 100%;
+                }
+                @include media('mobile') {
+                    gap: 8px;
+                }
             }
 
             &__title {
                 font: 500 24px / 100% var(--ff-base);
                 letter-spacing: -1px;
                 color: #242c33;
+                @include media('tablet') {
+                    font-size: 18px;
+                }
+                @include media('mobile') {
+                    font-size: 15px;
+                }
             }
 
             &__location {
@@ -68,9 +114,19 @@
                 align-items: center;
                 gap: 8px;
                 font: 400 18px / 100% var(--ff-nort);
+                @include media('tablet') {
+                    font-size: 16px;
+                }
+                @include media('mobile') {
+                    font-size: 13px;
+                }
                 img {
                     width: 24px;
                     height: 24px;
+                    @include media('mobile') {
+                        width: 20px;
+                        height: 20px;
+                    }
                 }
             }
 
@@ -79,9 +135,20 @@
                 display: inline-flex;
                 align-items: center;
                 gap: 12px;
+                @include media('tablet') {
+                    font-size: 16px;
+                }
+                @include media('mobile') {
+                    gap: 8px;
+                    font-size: 14px;
+                }
                 img {
                     width: 24px;
                     height: 24px;
+                    @include media('tablet') {
+                        width: 20px;
+                        height: 20px;
+                    }
                 }
             }
 
@@ -90,9 +157,20 @@
                 display: inline-flex;
                 align-items: center;
                 gap: 12px;
+                @include media('tablet') {
+                    font-size: 16px;
+                }
+                @include media('mobile') {
+                    gap: 8px;
+                    font-size: 14px;
+                }
                 img {
                     width: 24px;
                     height: 24px;
+                    @include media('tablet') {
+                        width: 20px;
+                        height: 20px;
+                    }
                 }
             }
         }
