@@ -4,10 +4,16 @@
 .main--programs {
     .info {
         padding-top: 40px;
+        @include media('mobile') {
+            padding-top: 24px;
+        }
 
         &__title {
             text-align: center;
             margin-bottom: 60px;
+            @include media('mobile') {
+                margin-bottom: 36px;
+            }
         }
 
         &__boxes {
@@ -30,6 +36,13 @@
                 #eefaff 47.12%,
                 #ffffff 100%
             );
+
+            @include media('mobile') {
+                border-radius: 12px;
+                padding: 16px;
+                flex-direction: column;
+                gap: 12px;
+            }
 
             &-col {
                 width: 100%;
@@ -55,10 +68,22 @@
                 align-items: flex-start;
                 gap: 20px;
                 background: #26aacc1a;
+                @include media('mobile') {
+                    padding: 12px;
+                    gap: 12px;
+                }
+
+                .info__box-text {
+                    margin: 0 !important;
+                }
 
                 img {
                     width: 40px;
                     height: 40px;
+                    @include media('mobile') {
+                        width: 24px;
+                        height: 24px;
+                    }
                 }
             }
 
@@ -66,6 +91,9 @@
                 display: flex;
                 flex-direction: column;
                 gap: 16px;
+                @include media('mobile') {
+                    gap: 8px;
+                }
 
                 a {
                     text-decoration: underline;
@@ -79,6 +107,10 @@
                 align-items: center;
                 gap: 12px;
                 position: relative;
+                @include media('mobile') {
+                    font-size: 14px;
+                    gap: 8px;
+                }
 
                 &::before {
                     content: '';
@@ -87,7 +119,11 @@
                     display: inline-flex;
                     flex-shrink: 0;
                     background: url('../img/icons/ico-logo.svg') no-repeat
-                        center center;
+                        center center / cover;
+                    @include media('mobile') {
+                        width: 24px;
+                        height: 24px;
+                    }
                 }
             }
 
@@ -95,11 +131,19 @@
                 font: 400 32px / 100% var(--ff-base);
                 letter-spacing: -1px;
                 margin-bottom: 20px;
+                @include media('mobile') {
+                    font-size: 20px;
+                    margin-bottom: 12px;
+                }
             }
 
             &-text {
                 max-width: 565px;
                 font: 400 16px / 140% var(--ff-nort);
+                @include media('mobile') {
+                    font-size: 14px;
+                    max-width: 100%;
+                }
             }
 
             &-qr {
@@ -127,6 +171,9 @@
                         width: auto;
                         height: auto;
                         color: var(--sea-blue);
+                        @include media('mobile') {
+                            font-size: 14px;
+                        }
                     }
                 }
             }
