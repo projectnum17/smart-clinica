@@ -7,11 +7,18 @@
             display: flex;
             align-items: flex-start;
             gap: 30px;
+            @include media('desktop') {
+                flex-direction: column;
+                gap: 24px;
+            }
         }
 
         .prices-kit {
             max-width: 855px;
             width: 100%;
+            @include media('desktop') {
+                max-width: 100%;
+            }
         }
     }
 }
