@@ -120,6 +120,7 @@
             }
 
             &-action {
+                pointer-events: none;
                 z-index: 2;
                 width: 56px;
                 height: 56px;
@@ -137,6 +138,7 @@
                 @include transitions(0.3s, ease-in);
 
                 img {
+                    pointer-events: none;
                     width: 32px;
                     height: 32px;
                     transform: scale(0.9);
