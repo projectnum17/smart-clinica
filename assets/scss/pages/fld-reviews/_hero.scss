@@ -4,6 +4,19 @@
 .main--reviews {
     .hero {
         margin-bottom: 104px;
+        overflow: hidden;
+
+        @include media('desktop') {
+            padding-top: 40px;
+        }
+        @include media('tablet') {
+            margin-bottom: 48px;
+        }
+        @include media('mobile') {
+            margin-bottom: 24px;
+            padding-top: 24px;
+        }
+
         .container {
             display: flex;
             align-items: center;
@@ -16,6 +29,9 @@
 
         &__staff {
             margin-top: -150px;
+            @include media('desktop') {
+                display: none;
+            }
         }
 
         &__details {
@@ -24,16 +40,29 @@
             display: flex;
             flex-direction: column;
             gap: 32px;
+            min-width: 600px;
+            @include media('mobile') {
+                max-width: 100%;
+                gap: 20px;
+                min-width: initial;
+            }
         }
 
         &__text {
             font: 400 18px / 140% var(--ff-nort);
+            @include media('mobile') {
+                font-size: 16px;
+            }
         }
 
         &__btns {
             display: flex;
             align-items: center;
             gap: 16px;
+            @include media('mobile') {
+                flex-direction: column;
+                gap: 8px;
+            }
         }
 
         &__btn {
@@ -47,6 +76,12 @@
                 font: 400 16px / 100% var(--ff-nort);
                 color: var(--white);
                 background: var(--ball-blue);
+                @include media('mobile') {
+                    max-width: 100%;
+                    justify-content: center;
+                    font-size: 13px;
+                    padding: 13px;
+                }
             }
 
             &.btn-report {
@@ -59,6 +94,12 @@
                 @include hover {
                     color: var(--white);
                     background: var(--ball-blue);
+                }
+                @include media('mobile') {
+                    max-width: 100%;
+                    justify-content: center;
+                    font-size: 13px;
+                    padding: 11px;
                 }
             }
         }

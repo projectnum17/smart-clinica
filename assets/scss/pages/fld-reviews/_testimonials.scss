@@ -16,6 +16,24 @@
         border-radius: 24px;
         overflow: hidden;
         border: 1px solid #dde0e3;
+        @include media('tablet') {
+            flex-direction: column;
+        }
+        @include media('mobile') {
+            border-radius: 16px;
+        }
+
+        &__wrapper {
+            @include media('mobile') {
+                padding: 20px 16px;
+                background: linear-gradient(
+                    90deg,
+                    #d6f3ff 0%,
+                    #eefaff 47.12%,
+                    #ffffff 100%
+                );
+            }
+        }
 
         &__source {
             max-width: 354px;
@@ -31,11 +49,53 @@
                 #eefaff 47.12%,
                 #ffffff 100%
             );
+            @include media('tablet') {
+                max-width: 100%;
+                gap: 15px;
+                align-items: center;
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 24px 20px;
+                border: none;
+            }
+
+            @include media('mobile') {
+                padding: 0;
+                background: none;
+                flex-direction: column;
+                align-items: flex-start;
+            }
 
             &-ratings {
                 display: flex;
                 flex-direction: column;
                 gap: 20px;
+
+                &.mobile--hidden {
+                    @include media('mobile') {
+                        display: none;
+                    }
+                }
+
+                &.mobile--visible {
+                    display: none;
+                    @include media('mobile') {
+                        display: flex;
+                        flex-direction: row;
+                        margin-bottom: 12px;
+                    }
+                }
+            }
+
+            &-rating {
+                @include media('tablet') {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+                }
+                @include media('mobile') {
+                    align-items: flex-start;
+                }
             }
 
             &-head {
@@ -53,10 +113,18 @@
                 justify-content: center;
                 border-radius: 50%;
                 background: #f0f4f9;
+                @include media('mobile') {
+                    width: 32px;
+                    height: 32px;
+                }
 
                 img {
                     width: 24px;
                     height: 24px;
+                    @include media('mobile') {
+                        width: 20px;
+                        height: 20px;
+                    }
                 }
             }
 
@@ -64,11 +132,17 @@
                 font: 400 16px / 100% var(--ff-nort);
                 opacity: 0.6;
                 margin-bottom: 4px;
+                @include media('mobile') {
+                    font-size: 13px;
+                }
             }
 
             &-name {
                 font: 400 16px / 100% var(--ff-nort);
                 text-decoration: underline;
+                @include media('mobile') {
+                    font-size: 13px;
+                }
 
                 &.wht-decor {
                     text-decoration: none;
@@ -78,6 +152,9 @@
             &-subtitle {
                 font: 500 16px / 100% var(--ff-nort);
                 margin-bottom: 8px;
+                @include media('mobile') {
+                    font-size: 13px;
+                }
             }
 
             &-stars {
@@ -88,6 +165,10 @@
                 img {
                     width: 24px;
                     height: 24px;
+                    @include media('mobile') {
+                        width: 20px;
+                        height: 20px;
+                    }
                 }
             }
         }
@@ -96,6 +177,12 @@
             padding: 31px 59px;
             width: 100%;
             background: #fff;
+            @include media('tablet') {
+                padding: 24px 20px;
+            }
+            @include media('mobile') {
+                padding: 20px 16px;
+            }
 
             &-head {
                 display: flex;
@@ -107,6 +194,9 @@
             &-name {
                 font: 500 28px / 100% var(--ff-nort);
                 letter-spacing: -1px;
+                @include media('mobile') {
+                    font-size: 20px;
+                }
             }
 
             &-date {
@@ -114,6 +204,9 @@
                 display: inline-flex;
                 align-items: center;
                 gap: 32px;
+                @include media('mobile') {
+                    font-size: 14px;
+                }
 
                 &::after {
                     content: '';
@@ -122,7 +215,11 @@
                     width: 44px;
                     height: 44px;
                     background: url('../img/icons/ico-quote.svg') no-repeat
-                        center center;
+                        center center / cover;
+                    @include media('mobile') {
+                        width: 32px;
+                        height: 32px;
+                    }
                 }
             }
 
@@ -137,6 +234,9 @@
                 overflow: hidden;
                 position: relative;
                 @include transitions(0.5s, ease-in);
+                @include media('mobile') {
+                    font-size: 14px;
+                }
 
                 &.is-open {
                     max-height: 300px;
@@ -219,6 +319,9 @@
                 padding: 20px 32px;
                 border-radius: 8px;
                 background: #f0f4f9;
+                @include media('mobile') {
+                    padding: 16px 12px;
+                }
 
                 .card__content-text {
                     &.is-highest {
@@ -261,6 +364,9 @@
                 align-items: center;
                 gap: 8px;
                 color: var(--sea-blue);
+                @include media('mobile') {
+                    font-size: 14px;
+                }
 
                 &::before {
                     content: '';
@@ -270,6 +376,10 @@
                     height: 28px;
                     background: url('../img/icons/ico-logo.svg') no-repeat
                         center center / cover;
+                    @include media('mobile') {
+                        width: 20px;
+                        height: 20px;
+                    }
                 }
             }
         }

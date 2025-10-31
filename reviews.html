@@ -124,7 +124,8 @@
                                                 <div class="dd-menu-wrap">
                                                     <div class="container">
                                                         <div class="dd-menu-inner">
-                                                            <button type="button" class="dd-menu-back">Діагностика</button>
+                                                            <button type="button"
+                                                                class="dd-menu-back">Діагностика</button>
                                                             <ul class="router-links">
                                                                 <li>
                                                                     <a href="#!">алергологія</a>
@@ -201,7 +202,8 @@
                                                 <div class="dd-menu-wrap">
                                                     <div class="container">
                                                         <div class="dd-menu-inner">
-                                                            <button type="button" class="dd-menu-back">Діагностика</button>
+                                                            <button type="button"
+                                                                class="dd-menu-back">Діагностика</button>
                                                             <ul class="router-links">
                                                                 <li>
                                                                     <a href="#!">алергологія</a>
@@ -570,7 +572,8 @@
                                     <label class="appointment__form-title" for="modalAppDate">Бажана дата
                                         прийому</label>
                                     <div class="appointment__form-inner field-date">
-                                        <input class="appointment__form-field field-date--item" data-lang="uk" name="modalAppDate" id="modalAppDate">
+                                        <input class="appointment__form-field field-date--item" data-lang="uk"
+                                            name="modalAppDate" id="modalAppDate">
                                     </div>
                                 </div>
                             </div>
@@ -1436,8 +1439,8 @@
         </div>
         <section class="hero">
             <div class="container">
-                <div class="hero__details">
-                    <ul class="breadcrumbs js-animation">
+                <div class="hero__details js-animation">
+                    <ul class="breadcrumbs">
                         <li>
                             <a href="#!">Головна</a>
                         </li>
@@ -1445,14 +1448,14 @@
                             <a href="#!">Відгуки</a>
                         </li>
                     </ul>
-                    <h1 class="hero__title content-title js-animation">
+                    <h1 class="hero__title content-title">
                         <span>1710</span> Відгуків наших пацієнтів
                     </h1>
-                    <p class="hero__text js-animation">
+                    <p class="hero__text">
                         Ми цінуємо довіру пацієнтів, а ваш зворотний зв'язок допомагає нам ставати краще. Ви — наша
                         головна мета й натхнення для подальшого розвитку.
                     </p>
-                    <div class="hero__btns js-animation">
+                    <div class="hero__btns">
                         <button type="button" class="hero__btn btn-impressions js-impressions">
                             залишити відгук
                         </button>
@@ -1498,25 +1501,8 @@
             <div class="container">
                 <div class="testimonials__cards js-reviews-cards">
                     <div class="card js-animation">
-                        <div class="card__source">
-                            <div class="card__source-head">
-                                <div class="card__source-item">
-                                    <img src="./assets/img/icons/rev-google.png" alt="Google">
-                                </div>
-                                <div class="card__source-description">
-                                    <p class="card__source-title">Джерело:</p>
-                                    <p class="card__source-name wht-decor">Google Maps</p>
-                                </div>
-                            </div>
-                            <div class="card__source-worker">
-                                <p class="card__source-title">Фахівець:</p>
-                                <p class="card__source-name">Владимирець Олена Сергіївна</p>
-                            </div>
-                            <div class="card__source-skills">
-                                <p class="card__source-title">Напрям:</p>
-                                <p class="card__source-name">Алергологія</p>
-                            </div>
-                            <div class="card__source-ratings">
+                        <div class="card__wrapper">
+                            <div class="card__source-ratings mobile--visible">
                                 <div class="card__source-rating">
                                     <p class="card__source-subtitle">Фахівець:</p>
                                     <div class="card__source-stars">
@@ -1535,6 +1521,47 @@
                                         <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
                                         <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
                                         <img width="24" height="24" src="./assets/img/icons/star-empty.svg" alt="Start">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card__source">
+                                <div class="card__source-head">
+                                    <div class="card__source-item">
+                                        <img src="./assets/img/icons/rev-google.png" alt="Google">
+                                    </div>
+                                    <div class="card__source-description">
+                                        <p class="card__source-title">Джерело:</p>
+                                        <p class="card__source-name wht-decor">Google Maps</p>
+                                    </div>
+                                </div>
+                                <div class="card__source-worker">
+                                    <p class="card__source-title">Фахівець:</p>
+                                    <p class="card__source-name">Владимирець Олена Сергіївна</p>
+                                </div>
+                                <div class="card__source-skills">
+                                    <p class="card__source-title">Напрям:</p>
+                                    <p class="card__source-name">Алергологія</p>
+                                </div>
+                                <div class="card__source-ratings mobile--hidden">
+                                    <div class="card__source-rating">
+                                        <p class="card__source-subtitle">Фахівець:</p>
+                                        <div class="card__source-stars">
+                                            <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                            <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                            <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                            <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                            <img width="24" height="24" src="./assets/img/icons/star-empty.svg" alt="Start">
+                                        </div>
+                                    </div>
+                                    <div class="card__source-rating">
+                                        <p class="card__source-subtitle">Клініка:</p>
+                                        <div class="card__source-stars">
+                                            <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                            <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                            <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                            <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                            <img width="24" height="24" src="./assets/img/icons/star-empty.svg" alt="Start">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1630,25 +1657,8 @@
                         </div>
                     </div>
                     <div class="card js-animation">
-                        <div class="card__source">
-                            <div class="card__source-head">
-                                <div class="card__source-item">
-                                    <img src="./assets/img/icons/rev-google.png" alt="Google">
-                                </div>
-                                <div class="card__source-description">
-                                    <p class="card__source-title">Джерело:</p>
-                                    <p class="card__source-name wht-decor">Google Maps</p>
-                                </div>
-                            </div>
-                            <div class="card__source-worker">
-                                <p class="card__source-title">Фахівець:</p>
-                                <p class="card__source-name">Владимирець Олена Сергіївна</p>
-                            </div>
-                            <div class="card__source-skills">
-                                <p class="card__source-title">Напрям:</p>
-                                <p class="card__source-name">Алергологія</p>
-                            </div>
-                            <div class="card__source-ratings">
+                        <div class="card__wrapper">
+                            <div class="card__source-ratings mobile--visible">
                                 <div class="card__source-rating">
                                     <p class="card__source-subtitle">Фахівець:</p>
                                     <div class="card__source-stars">
@@ -1667,6 +1677,47 @@
                                         <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
                                         <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
                                         <img width="24" height="24" src="./assets/img/icons/star-empty.svg" alt="Start">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card__source">
+                                <div class="card__source-head">
+                                    <div class="card__source-item">
+                                        <img src="./assets/img/icons/rev-google.png" alt="Google">
+                                    </div>
+                                    <div class="card__source-description">
+                                        <p class="card__source-title">Джерело:</p>
+                                        <p class="card__source-name wht-decor">Google Maps</p>
+                                    </div>
+                                </div>
+                                <div class="card__source-worker">
+                                    <p class="card__source-title">Фахівець:</p>
+                                    <p class="card__source-name">Владимирець Олена Сергіївна</p>
+                                </div>
+                                <div class="card__source-skills">
+                                    <p class="card__source-title">Напрям:</p>
+                                    <p class="card__source-name">Алергологія</p>
+                                </div>
+                                <div class="card__source-ratings mobile--hidden">
+                                    <div class="card__source-rating">
+                                        <p class="card__source-subtitle">Фахівець:</p>
+                                        <div class="card__source-stars">
+                                            <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                            <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                            <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                            <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                            <img width="24" height="24" src="./assets/img/icons/star-empty.svg" alt="Start">
+                                        </div>
+                                    </div>
+                                    <div class="card__source-rating">
+                                        <p class="card__source-subtitle">Клініка:</p>
+                                        <div class="card__source-stars">
+                                            <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                            <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                            <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                            <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                            <img width="24" height="24" src="./assets/img/icons/star-empty.svg" alt="Start">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1762,25 +1813,8 @@
                         </div>
                     </div>
                     <div class="card js-animation">
-                        <div class="card__source">
-                            <div class="card__source-head">
-                                <div class="card__source-item">
-                                    <img src="./assets/img/icons/rev-google.png" alt="Google">
-                                </div>
-                                <div class="card__source-description">
-                                    <p class="card__source-title">Джерело:</p>
-                                    <p class="card__source-name wht-decor">Google Maps</p>
-                                </div>
-                            </div>
-                            <div class="card__source-worker">
-                                <p class="card__source-title">Фахівець:</p>
-                                <p class="card__source-name">Владимирець Олена Сергіївна</p>
-                            </div>
-                            <div class="card__source-skills">
-                                <p class="card__source-title">Напрям:</p>
-                                <p class="card__source-name">Алергологія</p>
-                            </div>
-                            <div class="card__source-ratings">
+                        <div class="card__wrapper">
+                            <div class="card__source-ratings mobile--visible">
                                 <div class="card__source-rating">
                                     <p class="card__source-subtitle">Фахівець:</p>
                                     <div class="card__source-stars">
@@ -1799,6 +1833,47 @@
                                         <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
                                         <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
                                         <img width="24" height="24" src="./assets/img/icons/star-empty.svg" alt="Start">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card__source">
+                                <div class="card__source-head">
+                                    <div class="card__source-item">
+                                        <img src="./assets/img/icons/rev-google.png" alt="Google">
+                                    </div>
+                                    <div class="card__source-description">
+                                        <p class="card__source-title">Джерело:</p>
+                                        <p class="card__source-name wht-decor">Google Maps</p>
+                                    </div>
+                                </div>
+                                <div class="card__source-worker">
+                                    <p class="card__source-title">Фахівець:</p>
+                                    <p class="card__source-name">Владимирець Олена Сергіївна</p>
+                                </div>
+                                <div class="card__source-skills">
+                                    <p class="card__source-title">Напрям:</p>
+                                    <p class="card__source-name">Алергологія</p>
+                                </div>
+                                <div class="card__source-ratings mobile--hidden">
+                                    <div class="card__source-rating">
+                                        <p class="card__source-subtitle">Фахівець:</p>
+                                        <div class="card__source-stars">
+                                            <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                            <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                            <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                            <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                            <img width="24" height="24" src="./assets/img/icons/star-empty.svg" alt="Start">
+                                        </div>
+                                    </div>
+                                    <div class="card__source-rating">
+                                        <p class="card__source-subtitle">Клініка:</p>
+                                        <div class="card__source-stars">
+                                            <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                            <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                            <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                            <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                            <img width="24" height="24" src="./assets/img/icons/star-empty.svg" alt="Start">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1894,25 +1969,8 @@
                         </div>
                     </div>
                     <div class="card js-animation">
-                        <div class="card__source">
-                            <div class="card__source-head">
-                                <div class="card__source-item">
-                                    <img src="./assets/img/icons/rev-google.png" alt="Google">
-                                </div>
-                                <div class="card__source-description">
-                                    <p class="card__source-title">Джерело:</p>
-                                    <p class="card__source-name wht-decor">Google Maps</p>
-                                </div>
-                            </div>
-                            <div class="card__source-worker">
-                                <p class="card__source-title">Фахівець:</p>
-                                <p class="card__source-name">Владимирець Олена Сергіївна</p>
-                            </div>
-                            <div class="card__source-skills">
-                                <p class="card__source-title">Напрям:</p>
-                                <p class="card__source-name">Алергологія</p>
-                            </div>
-                            <div class="card__source-ratings">
+                        <div class="card__wrapper">
+                            <div class="card__source-ratings mobile--visible">
                                 <div class="card__source-rating">
                                     <p class="card__source-subtitle">Фахівець:</p>
                                     <div class="card__source-stars">
@@ -1931,6 +1989,47 @@
                                         <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
                                         <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
                                         <img width="24" height="24" src="./assets/img/icons/star-empty.svg" alt="Start">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card__source">
+                                <div class="card__source-head">
+                                    <div class="card__source-item">
+                                        <img src="./assets/img/icons/rev-google.png" alt="Google">
+                                    </div>
+                                    <div class="card__source-description">
+                                        <p class="card__source-title">Джерело:</p>
+                                        <p class="card__source-name wht-decor">Google Maps</p>
+                                    </div>
+                                </div>
+                                <div class="card__source-worker">
+                                    <p class="card__source-title">Фахівець:</p>
+                                    <p class="card__source-name">Владимирець Олена Сергіївна</p>
+                                </div>
+                                <div class="card__source-skills">
+                                    <p class="card__source-title">Напрям:</p>
+                                    <p class="card__source-name">Алергологія</p>
+                                </div>
+                                <div class="card__source-ratings mobile--hidden">
+                                    <div class="card__source-rating">
+                                        <p class="card__source-subtitle">Фахівець:</p>
+                                        <div class="card__source-stars">
+                                            <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                            <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                            <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                            <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                            <img width="24" height="24" src="./assets/img/icons/star-empty.svg" alt="Start">
+                                        </div>
+                                    </div>
+                                    <div class="card__source-rating">
+                                        <p class="card__source-subtitle">Клініка:</p>
+                                        <div class="card__source-stars">
+                                            <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                            <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                            <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                            <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                            <img width="24" height="24" src="./assets/img/icons/star-empty.svg" alt="Start">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -2026,25 +2125,8 @@
                         </div>
                     </div>
                     <div class="card js-animation">
-                        <div class="card__source">
-                            <div class="card__source-head">
-                                <div class="card__source-item">
-                                    <img src="./assets/img/icons/rev-google.png" alt="Google">
-                                </div>
-                                <div class="card__source-description">
-                                    <p class="card__source-title">Джерело:</p>
-                                    <p class="card__source-name wht-decor">Google Maps</p>
-                                </div>
-                            </div>
-                            <div class="card__source-worker">
-                                <p class="card__source-title">Фахівець:</p>
-                                <p class="card__source-name">Владимирець Олена Сергіївна</p>
-                            </div>
-                            <div class="card__source-skills">
-                                <p class="card__source-title">Напрям:</p>
-                                <p class="card__source-name">Алергологія</p>
-                            </div>
-                            <div class="card__source-ratings">
+                        <div class="card__wrapper">
+                            <div class="card__source-ratings mobile--visible">
                                 <div class="card__source-rating">
                                     <p class="card__source-subtitle">Фахівець:</p>
                                     <div class="card__source-stars">
@@ -2063,6 +2145,47 @@
                                         <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
                                         <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
                                         <img width="24" height="24" src="./assets/img/icons/star-empty.svg" alt="Start">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card__source">
+                                <div class="card__source-head">
+                                    <div class="card__source-item">
+                                        <img src="./assets/img/icons/rev-google.png" alt="Google">
+                                    </div>
+                                    <div class="card__source-description">
+                                        <p class="card__source-title">Джерело:</p>
+                                        <p class="card__source-name wht-decor">Google Maps</p>
+                                    </div>
+                                </div>
+                                <div class="card__source-worker">
+                                    <p class="card__source-title">Фахівець:</p>
+                                    <p class="card__source-name">Владимирець Олена Сергіївна</p>
+                                </div>
+                                <div class="card__source-skills">
+                                    <p class="card__source-title">Напрям:</p>
+                                    <p class="card__source-name">Алергологія</p>
+                                </div>
+                                <div class="card__source-ratings mobile--hidden">
+                                    <div class="card__source-rating">
+                                        <p class="card__source-subtitle">Фахівець:</p>
+                                        <div class="card__source-stars">
+                                            <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                            <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                            <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                            <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                            <img width="24" height="24" src="./assets/img/icons/star-empty.svg" alt="Start">
+                                        </div>
+                                    </div>
+                                    <div class="card__source-rating">
+                                        <p class="card__source-subtitle">Клініка:</p>
+                                        <div class="card__source-stars">
+                                            <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                            <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                            <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                            <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                            <img width="24" height="24" src="./assets/img/icons/star-empty.svg" alt="Start">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -2158,25 +2281,8 @@
                         </div>
                     </div>
                     <div class="card js-animation">
-                        <div class="card__source">
-                            <div class="card__source-head">
-                                <div class="card__source-item">
-                                    <img src="./assets/img/icons/rev-google.png" alt="Google">
-                                </div>
-                                <div class="card__source-description">
-                                    <p class="card__source-title">Джерело:</p>
-                                    <p class="card__source-name wht-decor">Google Maps</p>
-                                </div>
-                            </div>
-                            <div class="card__source-worker">
-                                <p class="card__source-title">Фахівець:</p>
-                                <p class="card__source-name">Владимирець Олена Сергіївна</p>
-                            </div>
-                            <div class="card__source-skills">
-                                <p class="card__source-title">Напрям:</p>
-                                <p class="card__source-name">Алергологія</p>
-                            </div>
-                            <div class="card__source-ratings">
+                        <div class="card__wrapper">
+                            <div class="card__source-ratings mobile--visible">
                                 <div class="card__source-rating">
                                     <p class="card__source-subtitle">Фахівець:</p>
                                     <div class="card__source-stars">
@@ -2195,6 +2301,47 @@
                                         <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
                                         <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
                                         <img width="24" height="24" src="./assets/img/icons/star-empty.svg" alt="Start">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card__source">
+                                <div class="card__source-head">
+                                    <div class="card__source-item">
+                                        <img src="./assets/img/icons/rev-google.png" alt="Google">
+                                    </div>
+                                    <div class="card__source-description">
+                                        <p class="card__source-title">Джерело:</p>
+                                        <p class="card__source-name wht-decor">Google Maps</p>
+                                    </div>
+                                </div>
+                                <div class="card__source-worker">
+                                    <p class="card__source-title">Фахівець:</p>
+                                    <p class="card__source-name">Владимирець Олена Сергіївна</p>
+                                </div>
+                                <div class="card__source-skills">
+                                    <p class="card__source-title">Напрям:</p>
+                                    <p class="card__source-name">Алергологія</p>
+                                </div>
+                                <div class="card__source-ratings mobile--hidden">
+                                    <div class="card__source-rating">
+                                        <p class="card__source-subtitle">Фахівець:</p>
+                                        <div class="card__source-stars">
+                                            <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                            <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                            <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                            <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                            <img width="24" height="24" src="./assets/img/icons/star-empty.svg" alt="Start">
+                                        </div>
+                                    </div>
+                                    <div class="card__source-rating">
+                                        <p class="card__source-subtitle">Клініка:</p>
+                                        <div class="card__source-stars">
+                                            <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                            <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                            <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                            <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
+                                            <img width="24" height="24" src="./assets/img/icons/star-empty.svg" alt="Start">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -2289,138 +2436,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card js-animation">
-                        <div class="card__source">
-                            <div class="card__source-head">
-                                <div class="card__source-item">
-                                    <img src="./assets/img/icons/rev-google.png" alt="Google">
-                                </div>
-                                <div class="card__source-description">
-                                    <p class="card__source-title">Джерело:</p>
-                                    <p class="card__source-name wht-decor">Google Maps</p>
-                                </div>
-                            </div>
-                            <div class="card__source-worker">
-                                <p class="card__source-title">Фахівець:</p>
-                                <p class="card__source-name">Владимирець Олена Сергіївна</p>
-                            </div>
-                            <div class="card__source-skills">
-                                <p class="card__source-title">Напрям:</p>
-                                <p class="card__source-name">Алергологія</p>
-                            </div>
-                            <div class="card__source-ratings">
-                                <div class="card__source-rating">
-                                    <p class="card__source-subtitle">Фахівець:</p>
-                                    <div class="card__source-stars">
-                                        <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
-                                        <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
-                                        <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
-                                        <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
-                                        <img width="24" height="24" src="./assets/img/icons/star-empty.svg" alt="Start">
-                                    </div>
-                                </div>
-                                <div class="card__source-rating">
-                                    <p class="card__source-subtitle">Клініка:</p>
-                                    <div class="card__source-stars">
-                                        <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
-                                        <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
-                                        <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
-                                        <img width="24" height="24" src="./assets/img/icons/star.svg" alt="Start">
-                                        <img width="24" height="24" src="./assets/img/icons/star-empty.svg" alt="Start">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card__content js-review-element">
-                            <div class="card__content-head">
-                                <p class="card__content-name">Вікторія</p>
-                                <span class="card__content-date">14 Травня 2025</span>
-                            </div>
-                            <div class="card__content-client">
-                                <p class="card__content-text js-author">
-                                    Сама клініка дійсно хороша, приємна атмосфера, рецепція також приємна. Лікарка
-                                    Євтушенко
-                                    — найкраща терапевтка, яка в мене була (також спеціалізація з гастроентерології
-                                    та
-                                    ендокринології, завдяки чому професійна в багатьох питаннях, і це видно). Хороша
-                                    комунікація, детальні пояснення, детальний огляд, заглиблення в проблему
-                                    пацієнта.
-                                    Обговорили ряд проблем,
-                                    ендокринології, завдяки чому професійна в багатьох питаннях, і це видно). Хороша
-                                    комунікація, детальні пояснення, детальний огляд, заглиблення в проблему
-                                    пацієнта.
-                                    Обговорили ряд проблем,
-                                </p>
-                                <div class="card__content-grid js-author-more">
-                                    <button type="button" class="card__content-more">
-                                        <span>Читати більше</span>
-                                        <span>
-                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <g clip-path="url(#clip0_528_8117)">
-                                                    <path d="M8 13.3335L8 2.66684" stroke="white" stroke-width="1.5"
-                                                        stroke-linecap="round" stroke-linejoin="round"></path>
-                                                    <path
-                                                        d="M4.66634 10.0002C4.66634 10.0002 7.12127 13.3335 7.99967 13.3335C8.87807 13.3335 11.333 10.0002 11.333 10.0002"
-                                                        stroke="white" stroke-width="1.5" stroke-linecap="round"
-                                                        stroke-linejoin="round"></path>
-                                                </g>
-                                                <defs>
-                                                    <clipPath id="clip0_528_8117">
-                                                        <rect width="16" height="16" fill="white"
-                                                            transform="translate(16) rotate(90)"></rect>
-                                                    </clipPath>
-                                                </defs>
-                                            </svg>
-                                        </span>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="card__content-defendant">
-                                <p class="card__content-subtitle">
-                                    Відповідь адміністрації
-                                </p>
-                                <p class="card__content-text js-answer">
-                                    Дякуємо за ваш теплий відгук про роботу клініки та лікаря-терапевта Тетяну
-                                    Євтушенко. Ми щиро раді, що ви високо оцінили професіоналізм і уважність лікаря.
-                                    Бажаємо міцного здоров’я 💙 Дякуємо за ваш теплий відгук про роботу клініки та
-                                    лікаря-терапевта Тетяну Євтушенко. Ми щиро раді, що ви високо оцінили
-                                    професіоналізм
-                                    і уважність лікаря
-                                    Дякуємо за ваш теплий відгук про роботу клініки та лікаря-терапевта Тетяну
-                                    Євтушенко. Ми щиро раді, що ви високо оцінили професіоналізм і уважність лікаря.
-                                    Бажаємо міцного здоров’я 💙 Дякуємо за ваш теплий відгук про роботу клініки та
-                                    лікаря-терапевта Тетяну Євтушенко. Ми щиро раді, що ви високо оцінили
-                                    професіоналізм
-                                    і уважність лікаря
-                                </p>
-                                <div class="card__content-grid js-answer-more">
-                                    <button type="button" class="card__content-more">
-                                        <span>Читати більше</span>
-                                        <span>
-                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <g clip-path="url(#clip0_528_8117)">
-                                                    <path d="M8 13.3335L8 2.66684" stroke="white" stroke-width="1.5"
-                                                        stroke-linecap="round" stroke-linejoin="round"></path>
-                                                    <path
-                                                        d="M4.66634 10.0002C4.66634 10.0002 7.12127 13.3335 7.99967 13.3335C8.87807 13.3335 11.333 10.0002 11.333 10.0002"
-                                                        stroke="white" stroke-width="1.5" stroke-linecap="round"
-                                                        stroke-linejoin="round"></path>
-                                                </g>
-                                                <defs>
-                                                    <clipPath id="clip0_528_8117">
-                                                        <rect width="16" height="16" fill="white"
-                                                            transform="translate(16) rotate(90)"></rect>
-                                                    </clipPath>
-                                                </defs>
-                                            </svg>
-                                        </span>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div>
                 <button type="button" class="btn-more js-reviews-more js-animation">
                     <span>показати ще</span>
@@ -2455,7 +2471,8 @@
                                 <div class="appointment__form-group">
                                     <label class="appointment__form-title" for="mainAppDate">Бажана дата прийому</label>
                                     <div class="appointment__form-inner field-date">
-                                        <input class="appointment__form-field field-date--item" data-lang="uk" name="mainAppDate" id="mainAppDate">
+                                        <input class="appointment__form-field field-date--item" data-lang="uk"
+                                            name="mainAppDate" id="mainAppDate">
                                     </div>
                                 </div>
                             </div>
