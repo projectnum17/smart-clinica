@@ -235,6 +235,23 @@ const sliders = () => {
                 el: '.js-interest-progress',
                 type: 'progressbar',
             },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                    spaceBetween: 12,
+                },
+                768: {
+                    slidesPerView: 2,
+                },
+                992: {
+                    spaceBetween: 15,
+                    slidesPerView: 3,
+                },
+                1200: {
+                    spaceBetween: 20,
+                    slidesPerView: 4,
+                },
+            },
         });
     };
 

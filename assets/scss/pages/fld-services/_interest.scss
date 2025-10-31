@@ -6,12 +6,19 @@
         overflow: hidden;
         &__title {
             margin-bottom: 40px;
+            @include media('mobile') {
+                margin-bottom: 12px;
+            }
         }
 
         &__items {
             &-slide {
                 height: auto;
             }
+        }
+
+        .interest-box {
+            width: 100%;
         }
     }
 }

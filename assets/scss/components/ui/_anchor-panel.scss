@@ -4,6 +4,9 @@ section:has(.anchor-panel) {
     position: relative;
     height: calc(100vh - 120px);
     height: calc(100svh - 120px);
+    @include media('mobile') {
+        height: auto;
+    }
 }
 .anchor-panel {
     position: absolute;
@@ -13,6 +16,9 @@ section:has(.anchor-panel) {
     padding-inline: 12px;
     max-width: 1505px;
     width: 100%;
+    @include media('mobile') {
+        display: none;
+    }
 
     ul {
         padding: 0;

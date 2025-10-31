@@ -7,6 +7,10 @@
             font: 400 48px / 100% var(--ff-base);
             letter-spacing: -2px;
             margin-bottom: 32px;
+            @include media('mobile') {
+                font-size: 24px;
+                margin-bottom: 12px;
+            }
         }
     }
 }
