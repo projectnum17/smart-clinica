@@ -4,9 +4,15 @@
 .main--promotions {
     .offers {
         padding-top: 32px;
+        @include media('mobile') {
+            padding-top: 24px;
+        }
 
         &__title {
             margin-bottom: 40px;
+            @include media('mobile') {
+                margin-bottom: 24px;
+            }
         }
 
         &__cards {
@@ -14,10 +20,23 @@
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 20px;
+            @include media('desktop') {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            @include media('tablet') {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            @include media('mobile') {
+                grid-template-columns: repeat(1, 1fr);
+                padding-top: 24px;
+            }
         }
 
         .btn-more {
             margin: 60px auto 0;
+            @include media('mobile') {
+                margin: 40px auto 0;
+            }
         }
     }
 }
