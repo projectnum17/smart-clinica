@@ -65,7 +65,6 @@ const helpers = () => {
             });
         });
     };
-
     const aboutMoreText = () => {
         const parent = document.querySelector('.js-text-more');
         if (!parent) return;
@@ -77,9 +76,7 @@ const helpers = () => {
         if (!pElements.length || !showMore) return;
 
         dElements.forEach((div, index) => {
-            if (index < 2) {
-                div.classList.add('is-active');
-            }
+            div.classList.toggle('is-active', index < 2);
         });
 
         if (pElements.length <= 2) {
@@ -87,21 +84,14 @@ const helpers = () => {
             return;
         }
 
-        pElements.forEach((p, i) => {
-            if (i > 1) p.style.display = 'none';
-        });
-
         showMore.addEventListener('click', () => {
-            pElements.forEach((p, i) => {
-                if (i > 1) p.style.display = '';
-            });
+            const isShown = parent.classList.toggle('is-shown');
 
             dElements.forEach((div, index) => {
-                if (index > 1) div.classList.add('is-active');
+                if (index > 1) div.classList.toggle('is-active', isShown);
             });
 
-            parent.classList.add('is-shown');
-            showMore.classList.add('is-hide');
+            showMore.classList.toggle('is-hide', isShown);
         });
     };
 

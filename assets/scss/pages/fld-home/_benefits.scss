@@ -4,7 +4,7 @@
 .main--home {
     .benefits {
         padding-bottom: 54px;
-        border-bottom: 1px solid #787e80;
+        border-bottom: 1px solid rgba(120, 126, 128, 0.4);
 
         @include media('mobile') {
             padding-bottom: 0px;

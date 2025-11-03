@@ -50,6 +50,7 @@
         }
 
         &-wrapper {
+            display: grid;
             max-width: 1920px;
             margin: 0 auto;
             height: 100%;
@@ -123,7 +124,7 @@
             padding-top: 56px;
             display: flex;
             align-items: flex-start;
-            gap: 20px;
+            gap: 50px;
         }
 
         &-ul {
@@ -132,7 +133,7 @@
             gap: 24px;
 
             a {
-                font: 400 18px / 100% var(--ff-nort);
+                font: 400 16px / 100% var(--ff-nort);
                 text-transform: capitalize;
                 position: relative;
                 &::after {
@@ -805,6 +806,13 @@
             @include hover {
                 color: var(--sea-blue);
             }
+        }
+    }
+
+    &__cons {
+        @include transitions(0.2s, ease-in);
+        @include hover {
+            background-color: #0084ad;
         }
     }
 

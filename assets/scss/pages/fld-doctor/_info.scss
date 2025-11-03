@@ -34,7 +34,7 @@
             position: absolute;
             bottom: 0;
             pointer-events: none;
-            color: #fff;
+            color: var(--bg-content);
             left: 50%;
             transform: translateX(-50%);
             @include media('mobile') {

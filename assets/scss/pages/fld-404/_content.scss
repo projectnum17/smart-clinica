@@ -24,7 +24,8 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 73px;
+            flex-direction: column;
+            gap: 24px;
             @include media('mobile') {
                 gap: 20px;
             }
@@ -54,9 +55,9 @@
 
         &__wrapper {
             display: flex;
-            flex-direction: column;
-            gap: 24px;
+            gap: 73px;
             align-items: center;
+            flex-direction: row;
             @include media('mobile') {
                 padding-inline: 20px;
                 margin: 0 auto;

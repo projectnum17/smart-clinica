@@ -129,6 +129,35 @@ section.about {
     color: var(--sea-blue);
 }
 
+.js-child-trigger,
+.js-adult-trigger {
+    position: relative;
+    &::before {
+        content: '';
+        width: 118px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0;
+        visibility: hidden;
+        bottom: -25px;
+        height: 6px;
+        background: url('../img/icons/ative-link.svg') no-repeat center center /
+            cover;
+        @include transitions(0.5s, ease-in);
+        @media (max-width: 1440px) {
+            bottom: -22px;
+        }
+    }
+
+    &.is-open {
+        &::before {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
 .js-animation {
     opacity: 0;
     transform: translate3d(0, 60px, 0) scale3d(0.96, 0.96, 1);

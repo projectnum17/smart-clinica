@@ -63,6 +63,7 @@
     height: 100%;
 
     &__inner {
+        margin-bottom: 4px;
         flex-direction: column;
         @include hover {
             .doctor-box__photo img {
@@ -255,7 +256,7 @@
     }
 
     &__location {
-        margin-bottom: 12px;
+        margin-bottom: 8px;
         border-radius: 4px;
         background: #787e801a;
         display: flex;

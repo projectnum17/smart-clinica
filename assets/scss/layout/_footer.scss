@@ -277,8 +277,23 @@
             border-radius: 8px;
             border: 1px solid var(--white);
             @include transitions(0.2s, ease-in);
+
             @include hover {
-                opacity: 0.8;
+                background: #fff;
+                svg {
+                    color: var(--sea-blue);
+                }
+            }
+
+            svg {
+                color: #fff;
+                @include transitions(0.2s, ease-in);
+                width: 28px;
+                height: 28px;
+                @include media('mobile') {
+                    width: 20px;
+                    height: 20px;
+                }
             }
 
             @include media('mobile') {

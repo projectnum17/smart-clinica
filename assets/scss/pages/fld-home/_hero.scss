@@ -160,6 +160,10 @@
         }
 
         &__cons {
+            @include transitions(0.2s, ease-in);
+            @include hover {
+                background-color: #0084ad;
+            }
             @include media('mobile') {
                 width: 50%;
                 flex: 1;
