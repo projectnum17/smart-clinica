@@ -34,4 +34,42 @@
             height: 18px;
         }
     }
+
+    span {
+        &.text:last-of-type {
+            display: none;
+        }
+    }
+
+    &.btn-toggle {
+        span {
+            &.text:last-of-type {
+                height: 0;
+                width: 0;
+                opacity: 0;
+                visibility: hidden;
+                display: inline-block;
+            }
+        }
+
+        &.is-active {
+            span {
+                &.text:last-of-type {
+                    height: auto;
+                    width: auto;
+                    opacity: 1;
+                    visibility: visible;
+                    display: inline-block;
+                }
+
+                &.text:first-of-type {
+                    height: 0;
+                    width: 0;
+                    opacity: 0;
+                    visibility: hidden;
+                    display: inline-block;
+                }
+            }
+        }
+    }
 }

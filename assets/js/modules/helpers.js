@@ -55,6 +55,61 @@ const helpers = () => {
         });
     };
 
+    const showMoreServices = (
+        parentSelector,
+        childSelector,
+        trigger,
+        visibleCount,
+        totalThreshold,
+        scrollTargetSelector
+    ) => {
+        const servicesList = document.querySelector(parentSelector);
+        const handleServicesMore = document.querySelector(trigger);
+        const scrollTarget = scrollTargetSelector
+            ? document.querySelector(scrollTargetSelector)
+            : null;
+
+        if (!servicesList || !handleServicesMore) return;
+
+        const serviceBoxes = servicesList.querySelectorAll(childSelector);
+
+        if (serviceBoxes.length <= visibleCount) {
+            handleServicesMore.style.display = 'none';
+            return;
+        }
+
+        const hideExtraItems = () => {
+            serviceBoxes.forEach((box, i) => {
+                box.style.display = i > totalThreshold ? 'none' : '';
+            });
+            servicesList.classList.add('is-overlay');
+            handleServicesMore.classList.remove('is-active');
+
+            if (scrollTarget) {
+                scrollTarget.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start',
+                });
+            }
+        };
+
+        const showAllItems = () => {
+            serviceBoxes.forEach((box) => (box.style.display = ''));
+            servicesList.classList.remove('is-overlay');
+            handleServicesMore.classList.add('is-active');
+        };
+
+        hideExtraItems();
+
+        handleServicesMore.addEventListener('click', () => {
+            if (handleServicesMore.classList.contains('is-active')) {
+                hideExtraItems();
+            } else {
+                showAllItems();
+            }
+        });
+    };
+
     const formData = () => {
         const formData = document.querySelectorAll('form');
         if (!formData.length) return;
@@ -65,6 +120,7 @@ const helpers = () => {
             });
         });
     };
+
     const aboutMoreText = () => {
         const parent = document.querySelector('.js-text-more');
         if (!parent) return;
@@ -235,12 +291,14 @@ const helpers = () => {
         12,
         11
     );
-    showMoreHandler(
+
+    showMoreServices(
         '.js-smart-services',
         '.services-table__rect',
         '.js-smart-more',
         24,
-        23
+        23,
+        '.services'
     );
     showMoreHandler(
         '.js-offers-list',
