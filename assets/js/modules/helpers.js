@@ -54,13 +54,14 @@ const helpers = () => {
             handleServicesMore.style.display = 'none';
         });
     };
-
     const showMoreServices = (
         parentSelector,
         childSelector,
         trigger,
-        visibleCount,
-        totalThreshold,
+        desktopVisible,
+        desktopThreshold,
+        mobileVisible,
+        mobileThreshold,
         scrollTargetSelector
     ) => {
         const servicesList = document.querySelector(parentSelector);
@@ -73,6 +74,11 @@ const helpers = () => {
 
         const serviceBoxes = servicesList.querySelectorAll(childSelector);
 
+        const isMobile = window.matchMedia('(max-width: 767px)').matches;
+
+        const visibleCount = isMobile ? mobileVisible : desktopVisible;
+        const totalThreshold = isMobile ? mobileThreshold : desktopThreshold;
+
         if (serviceBoxes.length <= visibleCount) {
             handleServicesMore.style.display = 'none';
             return;
@@ -84,13 +90,6 @@ const helpers = () => {
             });
             servicesList.classList.add('is-overlay');
             handleServicesMore.classList.remove('is-active');
-
-            if (scrollTarget) {
-                scrollTarget.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start',
-                });
-            }
         };
 
         const showAllItems = () => {
@@ -104,6 +103,12 @@ const helpers = () => {
         handleServicesMore.addEventListener('click', () => {
             if (handleServicesMore.classList.contains('is-active')) {
                 hideExtraItems();
+                if (scrollTarget) {
+                    scrollTarget.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start',
+                    });
+                }
             } else {
                 showAllItems();
             }
@@ -120,6 +125,34 @@ const helpers = () => {
             });
         });
     };
+
+    const initAttentionMove = () => {
+        const containers = document.querySelectorAll('.js-attention-parent');
+        const mobileQuery = window.matchMedia('(max-width: 767px)');
+
+        const handleMove = (e) => {
+            containers.forEach((parent) => {
+                const attention = parent.querySelector('.js-attention');
+                const firstCol = parent.querySelector(
+                    '.info__box-col:first-child'
+                );
+
+                if (!attention || !firstCol) return;
+
+                if (e.matches) {
+                    parent.appendChild(attention);
+                } else {
+                    firstCol.appendChild(attention);
+                }
+            });
+        };
+
+        mobileQuery.addEventListener('change', handleMove);
+
+        handleMove(mobileQuery);
+    };
+
+    initAttentionMove();
 
     const aboutMoreText = () => {
         const parent = document.querySelector('.js-text-more');
@@ -190,23 +223,149 @@ const helpers = () => {
     };
 
     const anchorPanel = () => {
-        const anchorItems = document.querySelectorAll('.js-anchor-panel a');
+        const anchorBox = document.querySelector('.js-anchor-panel');
+        const mobileParent = document.querySelector('.js-anchor-parent');
+
+        if (!anchorBox || !mobileParent) return;
+
+        const anchorItems = anchorBox.querySelectorAll('a');
         if (!anchorItems.length) return;
+
+        const desktopParent = anchorBox.parentElement;
+        const desktopNextSibling = anchorBox.nextElementSibling;
 
         anchorItems[0].classList.add('is-current');
 
         anchorItems.forEach((item) => {
             item.addEventListener('click', () => {
-                anchorItems.forEach((el) => {
-                    el.classList.remove('is-current');
-                });
-
+                anchorItems.forEach((el) => el.classList.remove('is-current'));
                 item.classList.add('is-current');
+
+                item.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center',
+                });
             });
         });
+
+        let isMobileState = null;
+
+        const updatePosition = () => {
+            const isMobile = window.innerWidth <= 767;
+            if (isMobile === isMobileState) return;
+
+            isMobileState = isMobile;
+
+            if (isMobile) {
+                mobileParent.append(anchorBox);
+            } else {
+                if (desktopNextSibling) {
+                    desktopParent.insertBefore(anchorBox, desktopNextSibling);
+                } else {
+                    desktopParent.append(anchorBox);
+                }
+            }
+        };
+
+        updatePosition();
+        window.addEventListener('resize', updatePosition);
     };
 
+    // Old init (delete in the feature)
+
+    // const datePickerHandler = () => {
+    //     const datepickerLocales = {
+    //         uk: {
+    //             days: [
+    //                 'Неділя',
+    //                 'Понеділок',
+    //                 'Вівторок',
+    //                 'Середа',
+    //                 'Четвер',
+    //                 'П’ятниця',
+    //                 'Субота',
+    //             ],
+    //             daysShort: ['Нд', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
+    //             daysMin: ['Нд', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
+    //             months: [
+    //                 'Січень',
+    //                 'Лютий',
+    //                 'Березень',
+    //                 'Квітень',
+    //                 'Травень',
+    //                 'Червень',
+    //                 'Липень',
+    //                 'Серпень',
+    //                 'Вересень',
+    //                 'Жовтень',
+    //                 'Листопад',
+    //                 'Грудень',
+    //             ],
+    //             monthsShort: [
+    //                 'Січ',
+    //                 'Лют',
+    //                 'Бер',
+    //                 'Кві',
+    //                 'Тра',
+    //                 'Чер',
+    //                 'Лип',
+    //                 'Сер',
+    //                 'Вер',
+    //                 'Жов',
+    //                 'Лис',
+    //                 'Гру',
+    //             ],
+    //             today: 'Сьогодні',
+    //             clear: 'Очистити',
+    //             dateFormat: 'dd.MM.yyyy',
+    //             timeFormat: 'hh:ii aa',
+    //             firstDay: 1,
+    //         },
+    //         en: {},
+    //     };
+
+    //     const ids = [
+    //         'modalAppDate',
+    //         'mainAppDate',
+    //         'doctorAppDate',
+    //         'modalVisitDate',
+    //     ];
+
+    //     ids.forEach((id) => {
+    //         const dateInput = document.querySelector(`#${id}`);
+    //         if (!dateInput) return;
+
+    //         const lang = dateInput.dataset.lang || 'en';
+    //         const locale = datepickerLocales[lang] || {};
+
+    //         new AirDatepicker(dateInput, {
+    //             isMobile: true,
+    //             autoClose: true,
+    //             locale: locale,
+    //         });
+    //     });
+    // };
+
+    // New init
     const datePickerHandler = () => {
+        const getCurrentLang = () => {
+            const path = window.location.pathname;
+            const segments = path
+                .split('/')
+                .filter((segment) => segment.length > 0);
+
+            const firstSegment = segments[0];
+            const supportedLangs = ['en', 'ru', 'uk'];
+
+            if (supportedLangs.includes(firstSegment)) {
+                return firstSegment;
+            }
+            return 'uk';
+        };
+
+        const currentLang = getCurrentLang();
+
         const datepickerLocales = {
             uk: {
                 days: [
@@ -251,10 +410,101 @@ const helpers = () => {
                 today: 'Сьогодні',
                 clear: 'Очистити',
                 dateFormat: 'dd.MM.yyyy',
-                timeFormat: 'hh:ii aa',
+                timeFormat: 'HH:mm',
                 firstDay: 1,
             },
-            en: {},
+            ru: {
+                days: [
+                    'Воскресенье',
+                    'Понедельник',
+                    'Вторник',
+                    'Среда',
+                    'Четверг',
+                    'Пятница',
+                    'Суббота',
+                ],
+                daysShort: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
+                daysMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
+                months: [
+                    'Январь',
+                    'Февраль',
+                    'Март',
+                    'Апрель',
+                    'Май',
+                    'Июнь',
+                    'Июль',
+                    'Август',
+                    'Сентябрь',
+                    'Октябрь',
+                    'Ноябрь',
+                    'Декабрь',
+                ],
+                monthsShort: [
+                    'Янв',
+                    'Фев',
+                    'Мар',
+                    'Апр',
+                    'Май',
+                    'Июн',
+                    'Июл',
+                    'Авг',
+                    'Сен',
+                    'Окт',
+                    'Ноя',
+                    'Дек',
+                ],
+                today: 'Сегодня',
+                clear: 'Очистить',
+                dateFormat: 'dd.MM.yyyy',
+                timeFormat: 'HH:mm',
+                firstDay: 1,
+            },
+            en: {
+                days: [
+                    'Sunday',
+                    'Monday',
+                    'Tuesday',
+                    'Wednesday',
+                    'Thursday',
+                    'Friday',
+                    'Saturday',
+                ],
+                daysShort: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+                daysMin: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
+                months: [
+                    'January',
+                    'February',
+                    'March',
+                    'April',
+                    'May',
+                    'June',
+                    'July',
+                    'August',
+                    'September',
+                    'October',
+                    'November',
+                    'December',
+                ],
+                monthsShort: [
+                    'Jan',
+                    'Feb',
+                    'Mar',
+                    'Apr',
+                    'May',
+                    'Jun',
+                    'Jul',
+                    'Aug',
+                    'Sep',
+                    'Oct',
+                    'Nov',
+                    'Dec',
+                ],
+                today: 'Today',
+                clear: 'Clear',
+                dateFormat: 'dd/MM/yyyy',
+                timeFormat: 'hh:mm aa',
+                firstDay: 1,
+            },
         };
 
         const ids = [
@@ -268,13 +518,14 @@ const helpers = () => {
             const dateInput = document.querySelector(`#${id}`);
             if (!dateInput) return;
 
-            const lang = dateInput.dataset.lang || 'en';
-            const locale = datepickerLocales[lang] || {};
+            const locale =
+                datepickerLocales[currentLang] || datepickerLocales.uk;
 
             new AirDatepicker(dateInput, {
                 isMobile: true,
                 autoClose: true,
                 locale: locale,
+                minDate: new Date(),
             });
         });
     };
@@ -298,6 +549,8 @@ const helpers = () => {
         '.js-smart-more',
         24,
         23,
+        15,
+        14,
         '.services'
     );
     showMoreHandler(

@@ -1,0 +1,60 @@
+@use '../base/media' as *;
+@use '../base/mixins' as *;
+
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+.drop-item {
+    text-transform: inherit !important;
+}
+
+.wpcf7-not-valid-tip {
+    @include media('mobile') {
+        position: relative !important;
+    }
+}
+
+.footer {
+    form {
+        position: relative;
+
+        &[data-status='sent'] {
+            margin-bottom: 10px;
+        }
+
+        .wpcf7-response-output {
+            margin: 0;
+            color: #fff;
+            border: none;
+            margin-top: 2px;
+        }
+    }
+}
+
+.cv__form {
+    .wpcf7-response-output {
+        border: none;
+    }
+    @include media('mobile') {
+        .wpcf7-response-output {
+            position: relative;
+            margin: 0;
+            margin-top: 15px;
+        }
+    }
+}
+
+// for modal without character (add class)
+.feedbacks-modal.wht-character {
+    .feedbacks-modal__thumb {
+        display: none;
+    }
+
+    .feedbacks-modal__done {
+        padding-top: 70px;
+        @include media('mobile') {
+            padding-top: 70px;
+        }
+    }
+}

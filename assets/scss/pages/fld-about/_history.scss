@@ -6,6 +6,16 @@
         max-width: 1920px;
         margin: 0 auto var(--section-mb);
 
+        .container {
+            &:nth-of-type(2) {
+                max-width: 1356px;
+            }
+
+            &:last-child {
+                max-width: 1356px;
+            }
+        }
+
         &__head {
             display: flex;
             align-items: center;
@@ -175,12 +185,14 @@
             }
 
             &-content {
+                padding-top: 64px;
                 max-width: 480px;
                 display: flex;
                 flex-direction: column;
                 gap: 24px;
                 @include media('tablet') {
                     max-width: 100%;
+                    padding-top: 0;
                 }
                 @include media('mobile') {
                     gap: 12px;

@@ -94,6 +94,25 @@ const selectsInit = () => {
                 styledSelect.classList.remove('placeholder');
             }
         });
+
+        const form = selectEl.closest('form');
+
+        if (form) {
+            form.addEventListener('reset', () => {
+                selectEl.selectedIndex = 0;
+
+                styledSelect.textContent = options[0].textContent;
+                styledSelect.classList.add('placeholder');
+
+                list.querySelectorAll('.is-selected').forEach((li) =>
+                    li.classList.remove('is-selected')
+                );
+
+                const firstLi =
+                    list.querySelector('li[data-value=""]') || list.firstChild;
+                if (firstLi) firstLi.classList.add('is-selected');
+            });
+        }
     };
 
     const selects = document.querySelectorAll('.js-select');

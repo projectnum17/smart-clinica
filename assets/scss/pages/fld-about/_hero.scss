@@ -9,6 +9,13 @@
             padding-top: 24px;
         }
 
+        &__title {
+            max-width: 850px;
+            @include media('mobile') {
+                max-width: 100%;
+            }
+        }
+
         &__head {
             margin-bottom: 52px;
             display: flex;
@@ -24,7 +31,7 @@
         }
 
         &__descr {
-            max-width: 348px;
+            max-width: 340px;
             display: flex;
             flex-direction: column;
             gap: 12px;

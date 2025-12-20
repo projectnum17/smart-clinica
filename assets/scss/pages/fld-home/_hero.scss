@@ -19,8 +19,31 @@
     .hero {
         max-width: 1920px;
         margin: 0 auto var(--section-mb);
+
+        .interest-box {
+            @media (max-width: 1440px) {
+                padding: 20px;
+                width: 100%;
+
+                &__img {
+                    margin-bottom: 12px;
+                }
+
+                &__title {
+                    font-size: 18px;
+                }
+            }
+
+            @include media('mobile') {
+                padding: 19px;
+            }
+        }
+
         &__about {
             padding-block: 80px 22px;
+            @media (max-width: 1440px) {
+                padding-block: 20px;
+            }
             @include media('tablet') {
                 padding-block: 30px 22px;
             }
@@ -32,6 +55,12 @@
         &__title {
             margin-bottom: 32px;
             max-width: 605px;
+
+            @media (max-width: 1440px) {
+                font-size: 60px;
+                margin-bottom: 25px;
+            }
+
             @include media('mobile') {
                 margin-bottom: 20px;
                 max-width: 100%;
@@ -44,6 +73,11 @@
             align-items: center;
             gap: 16px;
             margin-bottom: 48px;
+
+            @media (max-width: 1440px) {
+                margin-bottom: 20px;
+            }
+
             @include media('mobile') {
                 padding-inline: 20px;
                 margin-bottom: 32px;
@@ -60,8 +94,13 @@
             height: calc(100vh - 140px);
             height: calc(100svh - 140px);
 
+            @media (max-width: 1440px) {
+                width: 50%;
+            }
+
             @include media('mobile') {
                 height: 380px;
+                width: 100%;
             }
 
             &.mobile--hidden {
@@ -130,6 +169,11 @@
                 border: 1px solid #ffffff99;
                 backdrop-filter: blur(16px);
                 color: var(--white);
+
+                @media (max-width: 1440px) {
+                    padding: 20px;
+                }
+
                 @include media('tablet') {
                     padding: 10px 30px;
                 }
@@ -160,6 +204,9 @@
         }
 
         &__cons {
+            @media (max-width: 1440px) {
+                padding: 12px 24px;
+            }
             @include transitions(0.2s, ease-in);
             @include hover {
                 background-color: #0084ad;
@@ -173,6 +220,9 @@
         }
 
         &__price {
+            @media (max-width: 1440px) {
+                padding: 12px 24px;
+            }
             @include media('mobile') {
                 width: 50%;
                 flex: 1;

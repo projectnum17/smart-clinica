@@ -37,8 +37,12 @@
             gap: 20px;
             display: flex;
             flex-direction: column;
+            @include media('tablet') {
+                gap: 42px;
+            }
             @include media('mobile') {
                 flex-direction: column;
+                gap: 20px;
             }
         }
 
@@ -68,12 +72,14 @@
             display: flex;
             gap: 20px;
             @include media('tablet') {
+                gap: 40px;
                 flex-wrap: wrap;
                 justify-content: center;
             }
 
             @include media('mobile') {
-                height: 296px;
+                gap: 20px;
+                height: 320px;
                 padding-inline: 20px;
                 flex-direction: row;
                 flex-wrap: nowrap;
@@ -97,6 +103,11 @@
                     transform: translateY(-48px);
                     @include media('tablet') {
                         transform: translateY(0);
+                    }
+                }
+                &:nth-child(2n + 1) {
+                    @include media('tablet') {
+                        transform: translateY(20px);
                     }
                 }
             }

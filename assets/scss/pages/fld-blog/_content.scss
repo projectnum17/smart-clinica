@@ -19,7 +19,8 @@
             padding-top: 40px;
             display: grid;
             gap: 32px 20px;
-            grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
             @include media('mobile') {
                 display: flex;
                 flex-direction: column;

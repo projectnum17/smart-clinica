@@ -6,14 +6,10 @@
     align-items: center;
     gap: 44px;
     @include media('mobile') {
-        gap: 20px;
-        overflow-x: auto;
-        scrollbar-width: none;
-        min-height: 30px;
-        -ms-overflow-style: none;
-        &::-webkit-scrollbar {
-            display: none;
-        }
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 18px;
+        align-items: flex-start;
     }
 
     &__item {
@@ -24,8 +20,9 @@
         align-items: center;
         gap: 12px;
         @include media('mobile') {
-            font-size: 24px;
+            font-size: 16px;
             min-width: max-content;
+            gap: 8px;
         }
 
         &::after {
@@ -36,6 +33,11 @@
             height: 24px;
             background: url('../img/icons/icoArrow-r-g.svg') no-repeat center
                 center / cover;
+
+            @include media('mobile') {
+                width: 16px;
+                height: 16px;
+            }
         }
 
         &.is-active {

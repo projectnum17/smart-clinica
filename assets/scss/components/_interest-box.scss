@@ -45,6 +45,12 @@
         }
     }
 
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
     &__tags {
         position: absolute;
         left: 12px;
@@ -89,13 +95,11 @@
         display: -webkit-box;
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 2;
-        margin-bottom: 20px;
         overflow: hidden;
         position: relative;
         color: var(--dark-grey);
         @include transitions(0.3s, ease-in);
         @include media('mobile') {
-            margin-bottom: 12px;
             font-size: 18px;
         }
 

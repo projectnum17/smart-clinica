@@ -27,13 +27,13 @@ const sliders = () => {
         const navPanel = document.querySelector('.js-doctors-nav');
         if (!sliderEl || !navPanel) return;
 
-        const slideCount = sliderEl.querySelectorAll('.swiper-slide');
-        const sliderWrapper = sliderEl.querySelector('.swiper-wrapper');
+        // const slideCount = sliderEl.querySelectorAll('.swiper-slide');
+        // const sliderWrapper = sliderEl.querySelector('.swiper-wrapper');
 
-        if (slideCount.length < 5) {
-            navPanel.style.display = 'none';
-            sliderWrapper.classList.add('is-centered');
-        }
+        // if (slideCount.length < 5) {
+        //     navPanel.style.display = 'none';
+        //     sliderWrapper.classList.add('is-centered');
+        // }
 
         new Swiper(sliderEl, {
             spaceBetween: 15,
@@ -69,13 +69,13 @@ const sliders = () => {
         const navPanel = document.querySelector('.js-reviews-nav');
         if (!sliderEl || !navPanel) return;
 
-        const slideCount = sliderEl.querySelectorAll('.swiper-slide');
-        const sliderWrapper = sliderEl.querySelector('.swiper-wrapper');
+        // const slideCount = sliderEl.querySelectorAll('.swiper-slide');
+        // const sliderWrapper = sliderEl.querySelector('.swiper-wrapper');
 
-        if (slideCount.length < 5) {
-            navPanel.style.display = 'none';
-            sliderWrapper.classList.add('is-centered');
-        }
+        // if (slideCount.length < 5) {
+        //     navPanel.style.display = 'none';
+        //     sliderWrapper.classList.add('is-centered');
+        // }
 
         new Swiper(sliderEl, {
             spaceBetween: 20,
@@ -115,13 +115,13 @@ const sliders = () => {
         const navPanel = document.querySelector('.js-feedback-nav');
         if (!sliderEl || !navPanel) return;
 
-        const slideCount = sliderEl.querySelectorAll('.swiper-slide');
-        const sliderWrapper = sliderEl.querySelector('.swiper-wrapper');
+        // const slideCount = sliderEl.querySelectorAll('.swiper-slide');
+        // const sliderWrapper = sliderEl.querySelector('.swiper-wrapper');
 
-        if (slideCount.length < 4) {
-            navPanel.style.display = 'none';
-            sliderWrapper.classList.add('is-centered');
-        }
+        // if (slideCount.length < 4) {
+        //     navPanel.style.display = 'none';
+        //     sliderWrapper.classList.add('is-centered');
+        // }
 
         new Swiper(sliderEl, {
             spaceBetween: 20,
@@ -161,13 +161,13 @@ const sliders = () => {
         const navPanel = document.querySelector('.js-space-nav');
         if (!sliderEl || !navPanel) return;
 
-        const slideCount = sliderEl.querySelectorAll('.swiper-slide');
-        const sliderWrapper = sliderEl.querySelector('.swiper-wrapper');
+        // const slideCount = sliderEl.querySelectorAll('.swiper-slide');
+        // const sliderWrapper = sliderEl.querySelector('.swiper-wrapper');
 
-        if (slideCount.length < 5) {
-            navPanel.style.display = 'none';
-            sliderWrapper.classList.add('is-centered');
-        }
+        // if (slideCount.length < 5) {
+        //     navPanel.style.display = 'none';
+        //     sliderWrapper.classList.add('is-centered');
+        // }
 
         new Swiper(sliderEl, {
             spaceBetween: 20,
@@ -198,13 +198,13 @@ const sliders = () => {
         const navPanel = document.querySelector('.js-partners-nav');
         if (!sliderEl || !navPanel) return;
 
-        const slideCount = sliderEl.querySelectorAll('.swiper-slide');
-        const sliderWrapper = sliderEl.querySelector('.swiper-wrapper');
+        // const slideCount = sliderEl.querySelectorAll('.swiper-slide');
+        // const sliderWrapper = sliderEl.querySelector('.swiper-wrapper');
 
-        if (slideCount.length <= 6) {
-            navPanel.style.display = 'none';
-            sliderWrapper.classList.add('is-centered');
-        }
+        // // if (slideCount.length <= 6) {
+        // //     navPanel.style.display = 'none';
+        // //     sliderWrapper.classList.add('is-centered');
+        // // }
 
         new Swiper(sliderEl, {
             spaceBetween: 20,
@@ -231,13 +231,13 @@ const sliders = () => {
         const navPanel = document.querySelector('.js-interest-nav');
         if (!sliderEl || !navPanel) return;
 
-        const slideCount = sliderEl.querySelectorAll('.swiper-slide');
-        const sliderWrapper = sliderEl.querySelector('.swiper-wrapper');
+        // const slideCount = sliderEl.querySelectorAll('.swiper-slide');
+        // const sliderWrapper = sliderEl.querySelector('.swiper-wrapper');
 
-        if (slideCount.length <= 4) {
-            navPanel.style.display = 'none';
-            sliderWrapper.classList.add('is-centered');
-        }
+        // if (slideCount.length <= 4) {
+        //     navPanel.style.display = 'none';
+        //     sliderWrapper.classList.add('is-centered');
+        // }
 
         new Swiper(sliderEl, {
             spaceBetween: 20,
@@ -277,13 +277,13 @@ const sliders = () => {
         const navPanel = document.querySelector('.js-cert-nav');
         if (!sliderEl || !navPanel) return;
 
-        const slideCount = sliderEl.querySelectorAll('.swiper-slide');
-        const sliderWrapper = sliderEl.querySelector('.swiper-wrapper');
+        // const slideCount = sliderEl.querySelectorAll('.swiper-slide');
+        // const sliderWrapper = sliderEl.querySelector('.swiper-wrapper');
 
-        if (slideCount.length < 3) {
-            navPanel.style.display = 'none';
-            sliderWrapper.classList.add('is-centered');
-        }
+        // if (slideCount.length < 3) {
+        //     navPanel.style.display = 'none';
+        //     sliderWrapper.classList.add('is-centered');
+        // }
 
         new Swiper(sliderEl, {
             spaceBetween: 20,
@@ -302,13 +302,13 @@ const sliders = () => {
         const navPanel = document.querySelector('.js-intern-nav');
         if (!sliderEl || !navPanel) return;
 
-        const slideCount = sliderEl.querySelectorAll('.swiper-slide');
-        const sliderWrapper = sliderEl.querySelector('.swiper-wrapper');
+        // const slideCount = sliderEl.querySelectorAll('.swiper-slide');
+        // const sliderWrapper = sliderEl.querySelector('.swiper-wrapper');
 
-        if (slideCount.length < 7) {
-            navPanel.style.display = 'none';
-            sliderWrapper.classList.add('is-centered');
-        }
+        // if (slideCount.length < 7) {
+        //     navPanel.style.display = 'none';
+        //     sliderWrapper.classList.add('is-centered');
+        // }
 
         new Swiper(sliderEl, {
             spaceBetween: 20,

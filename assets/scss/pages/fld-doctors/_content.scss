@@ -54,15 +54,9 @@
                 flex-direction: row;
             }
             @include media('mobile') {
-                margin-bottom: 24px;
-                gap: 20px;
-                overflow-x: auto;
-                scrollbar-width: none;
-                min-height: 30px;
-                -ms-overflow-style: none;
-                &::-webkit-scrollbar {
-                    display: none;
-                }
+                flex-direction: column;
+                gap: 10px;
+                margin-bottom: 18px;
             }
         }
 
@@ -87,12 +81,16 @@
             opacity: 0.6;
             @include transitions(0.2s, ease-in);
 
+            @include media('mobile') {
+                gap: 8px;
+            }
+
             span {
                 &:first-child {
                     font: 400 32px / 100% var(--ff-base);
                     letter-spacing: -1px;
                     @include media('mobile') {
-                        font-size: 24px;
+                        font-size: 16px;
                         min-width: max-content;
                     }
                 }
@@ -101,6 +99,11 @@
                     display: inline-flex;
                     width: 24px;
                     height: 24px;
+
+                    @include media('mobile') {
+                        width: 16px;
+                        height: 16px;
+                    }
 
                     svg {
                         width: 100%;

@@ -5,8 +5,6 @@ const ddBlocks = () => {
 
         const { ignoreSelector } = options;
 
-        ddItems[0].classList.add('is-open');
-
         ddItems.forEach((item) => {
             if (ignoreSelector) {
                 const ignoreEls = item.querySelectorAll(ignoreSelector);
@@ -15,24 +13,17 @@ const ddBlocks = () => {
                 });
             }
 
-            if (!item.classList.contains('is-open')) {
-                item.classList.add('is-hover');
-            } else {
+            if (item.classList.contains('js-is-open')) {
+                item.classList.add('is-open');
                 item.classList.remove('is-hover');
+            } else {
+                item.classList.remove('is-open');
+                item.classList.add('is-hover');
             }
 
             item.addEventListener('click', () => {
-                const isOpen = item.classList.contains('is-open');
-
-                ddItems.forEach((el) => {
-                    el.classList.remove('is-open');
-                    el.classList.add('is-hover');
-                });
-
-                if (!isOpen) {
-                    item.classList.add('is-open');
-                    item.classList.remove('is-hover');
-                }
+                item.classList.toggle('is-open');
+                item.classList.toggle('is-hover');
             });
         });
     };
@@ -40,7 +31,7 @@ const ddBlocks = () => {
     initDdItems('.js-dd-item');
 
     initDdItems('.js-prices-dd', {
-        ignoreSelector: ['.js-appointment', '.js-visit-trigger']
+        ignoreSelector: ['.js-appointment', '.js-visit-trigger'],
     });
 };
 

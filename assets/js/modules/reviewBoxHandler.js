@@ -4,6 +4,8 @@ const reviewBoxHandler = () => {
     if (!reviewItems.length || !popup) return;
 
     const popupClose = popup.querySelector('.js-review-close');
+    const popupInner = popup.querySelector('.review-modal__inner');
+
     const popupName = popup.querySelector('.review-modal__head .name');
     const popupDate = popup.querySelector('.review-modal__head .date');
     const popupRating = popup.querySelector('.review-modal__head .rating');
@@ -66,6 +68,15 @@ const reviewBoxHandler = () => {
     };
 
     popupClose.addEventListener('click', closePopup);
+
+    if (popupInner) {
+        popupInner.addEventListener('click', (e) => {
+            if (e.target === popupInner) {
+                closePopup();
+            }
+        });
+    }
+
     popup.addEventListener('click', (e) => {
         if (e.target === popup) closePopup();
     });

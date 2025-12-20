@@ -10,17 +10,22 @@ section:has(.anchor-panel) {
 }
 .anchor-panel {
     position: absolute;
-    bottom: 70px;
+    bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
     padding-inline: 12px;
     max-width: 1505px;
     width: 100%;
     @include media('mobile') {
-        display: none;
+        position: sticky;
+        bottom: 20px;
+        z-index: 10;
+        padding-inline: 3px;
+        transform: translateX(0%);
     }
 
     ul {
+        overflow: scroll;
         padding: 0;
         padding-inline: 40px;
         display: flex;
@@ -32,6 +37,17 @@ section:has(.anchor-panel) {
         width: 100%;
         background: var(--white);
         border: 1px solid #d4dbde;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        @include media('mobile') {
+            padding-inline: 15px;
+            border-radius: 12px;
+            background: #fff;
+        }
     }
 
     li {
@@ -43,6 +59,7 @@ section:has(.anchor-panel) {
     }
 
     a {
+        width: max-content;
         padding: 28px 5px;
         display: inline-flex;
         align-items: center;
@@ -52,6 +69,11 @@ section:has(.anchor-panel) {
         font: 500 18px / 100% var(--ff-nort);
         position: relative;
         overflow: hidden;
+
+        @include media('mobile') {
+            padding: 15px 5px;
+            font-size: 16px;
+        }
 
         &::after {
             content: '';
@@ -64,6 +86,12 @@ section:has(.anchor-panel) {
                 center;
             @include transitions(0.3s, ease-in);
             transform: translateY(100%);
+
+            @include media('mobile') {
+                background: url('../img/icons/anchor-deco.svg') no-repeat center
+                center / contain;
+                height: 3px;
+            }
         }
 
         &.is-current {

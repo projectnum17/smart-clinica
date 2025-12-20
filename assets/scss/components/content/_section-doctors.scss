@@ -169,7 +169,7 @@
         border-radius: 12px;
         overflow: hidden;
 
-        @include media('mobile') {
+        @media (max-width: 576px) {
             height: 296px;
         }
         img {

@@ -58,5 +58,13 @@
                 font-size: 14px;
             }
         }
+
+        .benefits-container {
+            &__thumb {
+                top: auto;
+                bottom: -54px;
+                width: 595px;
+            }
+        }
     }
 }

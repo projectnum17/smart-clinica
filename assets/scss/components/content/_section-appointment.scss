@@ -219,6 +219,8 @@
             background: url('../img/icons/ico-req.svg') no-repeat center center;
             @include media('mobile') {
                 right: 12px;
+                top: 11px;
+                transform: translate(0);
             }
         }
         &--item {
